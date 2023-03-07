@@ -2393,11 +2393,12 @@ function Ci(e, n) {
 }
 function tc(e) {
   Object.keys(e._hover.value).forEach((n) => {
-    e.style[n] = "";
+    var r = e._hover.value[n];
+    r != null && (e.style[n] = "");
   });
 }
 function Bs(e) {
-  tc(e), Ci(e, e._hover.rawStyle), e._hover.rawStyle = {};
+  tc(e), Ci(e, e._hover.rawStyle);
 }
 function Ns() {
   var {
