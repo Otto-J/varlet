@@ -2269,6 +2269,93 @@ Cn.install = function(e) {
   e.component(Cn.name, Cn);
 };
 var iS = Cn;
+function Ds(e) {
+  if (!e)
+    return !1;
+  var n = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  return !!(e === "desktop" && n || e === "mobile" && !n);
+}
+function nc(e) {
+  var n = e.getAttribute("style");
+  return n ? n.split(";").filter(Boolean).reduce((r, a) => {
+    var [t, o] = a.split(":").map((l) => l.trim());
+    return r[ns(t)] = o, r;
+  }, {}) : {};
+}
+function rc(e) {
+  var {
+    value: n
+  } = e._hover, r = nc(e);
+  Object.keys(n).forEach((a) => {
+    var t = ns(a), o = n[t];
+    o != null && r[t] && (e._hover.rawStyle[t] = r[t]);
+  });
+}
+function Si(e, n) {
+  Object.keys(n).forEach((r) => {
+    var a = n[r];
+    a != null && (e.style[r] = a);
+  });
+}
+function ac(e) {
+  Object.keys(e._hover.value).forEach((n) => {
+    var r = e._hover.value[n];
+    r != null && (e.style[n] = "");
+  });
+}
+function As(e) {
+  ac(e), Si(e, e._hover.rawStyle);
+}
+function zs() {
+  var {
+    value: e
+  } = this._hover;
+  if (this._hover.hovering = !0, ui(e)) {
+    e(this._hover.hovering);
+    return;
+  }
+  Si(this, e);
+}
+function Ls() {
+  if (this._hover.hovering = !1, ui(this._hover.value)) {
+    this._hover.value(this._hover.hovering);
+    return;
+  }
+  As(this);
+}
+function Rs(e, n) {
+  var r, a, {
+    arg: t,
+    value: o
+  } = n;
+  Ds(t) || (e._hover = {
+    value: o,
+    hovering: (r = (a = e._hover) == null ? void 0 : a.hovering) != null ? r : !1,
+    rawStyle: {}
+  }, rc(e), e.addEventListener("mouseenter", zs), e.addEventListener("mouseleave", Ls));
+}
+function Us(e, n) {
+  Ds(n.arg) || (As(e), e.removeEventListener("mouseenter", zs), e.removeEventListener("mouseleave", Ls));
+}
+function tc(e, n) {
+  Us(e, n);
+}
+function oc(e, n) {
+  return !ui(n.value) && e._hover.hovering;
+}
+function ic(e, n) {
+  Rs(e, n), oc(e, n) && Si(e, n.value);
+}
+var Ys = {
+  mounted: Rs,
+  unmounted: Us,
+  beforeUpdate: tc,
+  updated: ic,
+  install(e) {
+    e.directive("hover", this);
+  }
+}, lS = Ys;
+const Dt = Ys;
 function Io() {
   return Io = Object.assign ? Object.assign.bind() : function(e) {
     for (var n = 1; n < arguments.length; n++) {
@@ -2279,28 +2366,28 @@ function Io() {
     return e;
   }, Io.apply(this, arguments);
 }
-function Ds(e) {
+function Fs(e) {
   return ["default", "primary", "info", "success", "warning", "danger"].includes(e);
 }
-function nc(e) {
+function lc(e) {
   return ["normal", "mini", "small", "large"].includes(e);
 }
-function rc(e) {
+function sc(e) {
   return ["button", "reset", "submit"].includes(e);
 }
-var ac = {
+var uc = {
   type: {
     type: String,
-    validator: Ds
+    validator: Fs
   },
   nativeType: {
     type: String,
     default: "button",
-    validator: rc
+    validator: sc
   },
   size: {
     type: String,
-    validator: nc
+    validator: lc
   },
   loading: {
     type: Boolean,
@@ -2350,120 +2437,33 @@ var ac = {
   }),
   onClick: R(),
   onTouchstart: R()
-}, As = Symbol("BUTTON_GROUP_BIND_BUTTON_KEY"), zs = Symbol("BUTTON_GROUP_COUNT_BUTTON_KEY");
-function tc() {
+}, Hs = Symbol("BUTTON_GROUP_BIND_BUTTON_KEY"), js = Symbol("BUTTON_GROUP_COUNT_BUTTON_KEY");
+function dc() {
   var {
     bindChildren: e,
     childProviders: n
-  } = Tn(As), {
+  } = Tn(Hs), {
     length: r
-  } = In(zs);
+  } = In(js);
   return {
     length: r,
     buttons: n,
     bindButtons: e
   };
 }
-function oc() {
+function vc() {
   var {
     bindParent: e,
     parentProvider: n
-  } = On(As), {
+  } = On(Hs), {
     index: r
-  } = Bn(zs);
+  } = Bn(js);
   return {
     index: r,
     buttonGroup: n,
     bindButtonGroup: e
   };
 }
-function Ls(e) {
-  if (!e)
-    return !1;
-  var n = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  return !!(e === "desktop" && n || e === "mobile" && !n);
-}
-function ic(e) {
-  var n = e.getAttribute("style");
-  return n ? n.split(";").filter(Boolean).reduce((r, a) => {
-    var [t, o] = a.split(":").map((l) => l.trim());
-    return r[ns(t)] = o, r;
-  }, {}) : {};
-}
-function lc(e) {
-  var {
-    value: n
-  } = e._hover, r = ic(e);
-  Object.keys(n).forEach((a) => {
-    var t = ns(a), o = n[t];
-    o != null && r[t] && (e._hover.rawStyle[t] = r[t]);
-  });
-}
-function Si(e, n) {
-  Object.keys(n).forEach((r) => {
-    var a = n[r];
-    a != null && (e.style[r] = a);
-  });
-}
-function sc(e) {
-  Object.keys(e._hover.value).forEach((n) => {
-    var r = e._hover.value[n];
-    r != null && (e.style[n] = "");
-  });
-}
-function Rs(e) {
-  sc(e), Si(e, e._hover.rawStyle);
-}
-function Us() {
-  var {
-    value: e
-  } = this._hover;
-  if (this._hover.hovering = !0, ui(e)) {
-    e(this._hover.hovering);
-    return;
-  }
-  Si(this, e);
-}
-function Ys() {
-  if (this._hover.hovering = !1, ui(this._hover.value)) {
-    this._hover.value(this._hover.hovering);
-    return;
-  }
-  Rs(this);
-}
-function Fs(e, n) {
-  var r, a, {
-    arg: t,
-    value: o
-  } = n;
-  Ls(t) || (e._hover = {
-    value: o,
-    hovering: (r = (a = e._hover) == null ? void 0 : a.hovering) != null ? r : !1,
-    rawStyle: {}
-  }, lc(e), e.addEventListener("mouseenter", Us), e.addEventListener("mouseleave", Ys));
-}
-function Hs(e, n) {
-  Ls(n.arg) || (Rs(e), e.removeEventListener("mouseenter", Us), e.removeEventListener("mouseleave", Ys));
-}
-function uc(e, n) {
-  Hs(e, n);
-}
-function dc(e, n) {
-  return !ui(n.value) && e._hover.hovering;
-}
-function vc(e, n) {
-  Fs(e, n), dc(e, n) && Si(e, n.value);
-}
-var js = {
-  mounted: Fs,
-  unmounted: Hs,
-  beforeUpdate: uc,
-  updated: vc,
-  install(e) {
-    e.directive("hover", this);
-  }
-}, lS = js;
-const Dt = js;
 var {
   n: fc,
   classes: cc
@@ -2533,11 +2533,11 @@ var Ws = x({
     Ripple: ze,
     Hover: Dt
   },
-  props: ac,
+  props: uc,
   setup(e) {
     var n = I(!1), r = I(!1), {
       buttonGroup: a
-    } = oc(), t = U(() => {
+    } = vc(), t = U(() => {
       if (!a)
         return {
           elevation: 2,
@@ -3368,7 +3368,7 @@ var eu = x({
   setup(e) {
     var {
       bindButtons: n
-    } = tc(), r = {
+    } = dc(), r = {
       elevation: U(() => e.elevation),
       type: U(() => e.type),
       size: U(() => e.size),
@@ -9937,7 +9937,7 @@ var uy = {
   type: {
     type: String,
     default: "primary",
-    validator: Ds
+    validator: Fs
   },
   position: {
     type: String,
@@ -19530,7 +19530,7 @@ export {
   Oc as bottomNavigationProps,
   Rc as breadcrumbProps,
   Wc as breadcrumbsProps,
-  ac as buttonProps,
+  uc as buttonProps,
   nm as cardProps,
   lm as cellProps,
   $m as checkboxGroupProps,
