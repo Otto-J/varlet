@@ -1,1 +1,0 @@
-import"./components-10a3f81f.js";import{u as i}from"./useChildren-a89a72f6.js";const n=Symbol("TABS_ITEMS_BIND_TAB_ITEM_KEY");function o(){const{bindChildren:t,childProviders:e,length:T}=i(n);return{length:T,tabItemList:e,bindTabItem:t}}export{n as T,o as u};
