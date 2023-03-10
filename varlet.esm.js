@@ -4615,7 +4615,7 @@ function Nm() {
     index: n,
     bindParent: r
   } = mr(su);
-  return (!e || !r || !n) && console.warn("col must in row"), {
+  return {
     index: n,
     row: e,
     bindRow: r
