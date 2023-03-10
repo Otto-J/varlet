@@ -3193,7 +3193,7 @@ function Ac() {
     bindParent: n,
     index: r
   } = mr(Js);
-  if (!e || !n || !r)
+  if (!n)
     throw Error("<var-breadcrumb/> must in <var-breadcrumbs/>");
   return {
     index: r,
@@ -17301,7 +17301,7 @@ function gw() {
     bindParent: n,
     index: r
   } = mr(Qd);
-  if (!e || !n || !r)
+  if (!n)
     throw Error("<var-tab/> must in <var-tabs/>");
   return {
     index: r,
@@ -17418,7 +17418,7 @@ function Cw() {
     bindParent: n,
     index: r
   } = mr(xd);
-  if (!e || !n || !r)
+  if (!n)
     throw Error("<var-tab-item/> must in <var-tabs-items/>");
   return {
     index: r,
