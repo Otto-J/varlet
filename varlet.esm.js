@@ -2082,7 +2082,6 @@ function jf(e) {
   return ["normal", "mini", "small", "large"].includes(e);
 }
 var Jn = {
-  // loading类型
   type: {
     type: String,
     default: "circle",
@@ -2091,13 +2090,11 @@ var Jn = {
   radius: {
     type: [String, Number]
   },
-  // loading尺寸
   size: {
     type: String,
     default: "normal",
     validator: jf
   },
-  // loading颜色
   color: {
     type: String
   },
