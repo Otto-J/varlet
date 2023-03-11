@@ -1,0 +1,1 @@
+import"./components-440543a7.js";import{u as t}from"./useChildren-9d793b89.js";const I=Symbol("SWIPE_BIND_SWIPE_ITEM_KEY");function o(){const{childProviders:e,length:i,bindChildren:s}=t(I);return{length:i,swipeItems:e,bindSwipeItems:s}}export{I as S,o as u};
