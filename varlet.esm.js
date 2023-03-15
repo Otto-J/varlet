@@ -15991,7 +15991,7 @@ function M1(e, n) {
             null,
             6
             /* CLASS, STYLE */
-          ), [[t, (l) => e.hover(l, o), "desktop"]]), be((h(), P(
+          ), [[t, (l) => hover(l, o), "desktop"]]), be((h(), P(
             "div",
             {
               class: c(e.classes(e.n("thumb-ripple"), [e.thumbsProps[o.enumValue].active, e.n("thumb-ripple--active")])),
