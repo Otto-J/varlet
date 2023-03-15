@@ -6236,7 +6236,7 @@ function Xp(e, n) {
     [A(
       "div",
       Ve({
-        class: e.classes(e.n("controller"), e.n("$-elevation--2"), [e.disabled || e.formDisabled, e.n("--disabled")], [e.readonly || e.formReadonly, e.n("--readonly")], [e.errorMessage, e.n("--error")]),
+        class: e.classes(e.n("controller"), e.n("$-elevation--2"), [e.disabled || e.formDisabled, e.n("--disabled")], [e.errorMessage, e.n("--error")]),
         style: {
           background: e.color ? e.color : void 0
         }
