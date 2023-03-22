@@ -513,8 +513,7 @@ function R(e) {
   };
 }
 function Wv(e, n) {
-  if (e !== !1)
-    return e === !0 && n && (e = n), "var-elevation--" + e;
+  return e === !1 ? null : (e === !0 && n && (e = n), "var-elevation--" + e);
 }
 function Lt() {
   return Lt = Object.assign ? Object.assign.bind() : function(e) {
