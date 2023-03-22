@@ -17691,17 +17691,6 @@ var zw = {
     type: Boolean,
     default: !1
   },
-  sticky: {
-    type: Boolean,
-    default: !1
-  },
-  stickyCssMode: Je(Nt, "cssMode"),
-  stickyZIndex: Je(Nt, "zIndex"),
-  offsetTop: Je(Nt, "offsetTop"),
-  safeArea: {
-    type: Boolean,
-    default: !1
-  },
   scrollable: {
     type: String,
     default: "auto",
@@ -17712,6 +17701,17 @@ var zw = {
     default: "normal",
     validator: Aw
   },
+  safeArea: {
+    type: Boolean,
+    default: !1
+  },
+  sticky: {
+    type: Boolean,
+    default: !1
+  },
+  stickyCssMode: Je(Nt, "cssMode"),
+  stickyZIndex: Je(Nt, "zIndex"),
+  offsetTop: Je(Nt, "offsetTop"),
   onClick: U(),
   onChange: U(),
   "onUpdate:active": U()
