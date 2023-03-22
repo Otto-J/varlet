@@ -225,7 +225,7 @@ function Rv() {
 function zt(e) {
   return e === "start" || e === "end" ? "flex-" + e : e;
 }
-function ln(e) {
+function sn(e) {
   let n = !1;
   qt(() => {
     e(), Ee(() => {
@@ -263,7 +263,7 @@ function ka(e, n, r, a = {}) {
   const v = () => {
     d == null || d(), u(e), l = !0;
   };
-  return ln(() => {
+  return sn(() => {
     s(e);
   }), Xt(() => {
     u(e);
@@ -292,7 +292,7 @@ function Fv(e) {
   const n = Ma();
   return e in n.provides;
 }
-function sn(e) {
+function un(e) {
   if (!Fv(e))
     return {
       index: null,
@@ -328,7 +328,7 @@ function Hv(e) {
   };
   return r(e), n;
 }
-function un(e) {
+function dn(e) {
   const n = Ma(), r = Ie([]), a = [], t = F(() => r.length), o = () => {
     const u = Hv(n.subTree);
     r.sort((d, v) => u.indexOf(d.vnode) - u.indexOf(v.vnode));
@@ -1584,7 +1584,7 @@ var Ps = ne({
         color: u
       };
     });
-    return ln(o), Kt(o), {
+    return sn(o), Kt(o), {
       n: cf,
       classes: mf,
       rootStyles: i,
@@ -1931,7 +1931,7 @@ var Ns = ne({
     }, l = (s) => {
       T(e.onClick, s);
     };
-    return ln(t), Kt(t), {
+    return sn(t), Kt(t), {
       internalSizeValidator: Es,
       sizeValidator: Ds,
       toSizeUnit: me,
@@ -2217,9 +2217,9 @@ var Ls = ne({
   }
 });
 Ls.render = _f;
-const tn = Ls;
-tn.install = function(e) {
-  e.component(tn.name, tn);
+const on = Ls;
+on.install = function(e) {
+  e.component(on.name, on);
 };
 function hr() {
   var e = B(!1), n = (r) => {
@@ -2230,7 +2230,7 @@ function hr() {
     handleHovering: n
   };
 }
-var oS = tn;
+var oS = on;
 function Rs(e) {
   if (!e)
     return !1;
@@ -2405,7 +2405,7 @@ function sc() {
     bindChildren: e,
     childProviders: n,
     length: r
-  } = un(qs);
+  } = dn(qs);
   return {
     length: r,
     buttons: n,
@@ -2417,7 +2417,7 @@ function uc() {
     bindParent: e,
     parentProvider: n,
     index: r
-  } = sn(qs);
+  } = un(qs);
   return {
     index: r,
     buttonGroup: n,
@@ -2488,7 +2488,7 @@ var Xs = ne({
   name: "VarButton",
   components: {
     VarLoading: Pn,
-    VarHoverOverlay: tn
+    VarHoverOverlay: on
   },
   directives: {
     Ripple: Re,
@@ -2838,7 +2838,7 @@ function Tc() {
     childProviders: e,
     length: n,
     bindChildren: r
-  } = un(Js);
+  } = dn(Js);
   return {
     length: n,
     bottomNavigationItems: e,
@@ -2961,7 +2961,7 @@ var Qs = ne({
     }, {
       immediate: !0,
       deep: !0
-    }), ln(() => {
+    }), sn(() => {
       r.fab && b(s.value);
     }), Kt(() => {
       M(), r.fab && b(s.value);
@@ -3005,7 +3005,7 @@ function Ic() {
     parentProvider: e,
     index: n,
     bindParent: r
-  } = sn(Js);
+  } = un(Js);
   if (!r)
     throw Error("<var-bottom-navigation-item/> must in <var-bottom-navigation/>");
   return {
@@ -3142,7 +3142,7 @@ function Lc() {
     childProviders: e,
     bindChildren: n,
     length: r
-  } = un(xs);
+  } = dn(xs);
   return {
     length: r,
     breadcrumbList: e,
@@ -3154,7 +3154,7 @@ function Rc() {
     parentProvider: e,
     bindParent: n,
     index: r
-  } = sn(xs);
+  } = un(xs);
   if (!n)
     throw Error("<var-breadcrumb/> must in <var-breadcrumbs/>");
   return {
@@ -3964,7 +3964,7 @@ function pm() {
     bindChildren: e,
     childProviders: n,
     length: r
-  } = un(iu);
+  } = dn(iu);
   return {
     length: r,
     checkboxes: n,
@@ -3976,7 +3976,7 @@ function hm() {
     bindParent: e,
     parentProvider: n,
     index: r
-  } = sn(iu);
+  } = un(iu);
   return {
     index: r,
     checkboxGroup: n,
@@ -3999,7 +3999,7 @@ function Cn() {
     parentProvider: e,
     index: n,
     bindParent: r
-  } = sn(lu), a = Ma(), t = r ? (o) => {
+  } = un(lu), a = Ma(), t = r ? (o) => {
     r(Uo({}, o, {
       instance: a
     }));
@@ -4015,7 +4015,7 @@ function gm() {
     childProviders: e,
     length: n,
     bindChildren: r
-  } = un(lu);
+  } = dn(lu);
   return {
     length: n,
     formItems: e,
@@ -4121,7 +4121,7 @@ var su = ne({
   components: {
     VarIcon: $e,
     VarFormDetails: We,
-    VarHoverOverlay: tn
+    VarHoverOverlay: on
   },
   props: mm,
   setup(e) {
@@ -4583,7 +4583,7 @@ function Am() {
     bindChildren: e,
     childProviders: n,
     length: r
-  } = un(vu);
+  } = dn(vu);
   return {
     length: r,
     cols: n,
@@ -4595,7 +4595,7 @@ function zm() {
     parentProvider: e,
     index: n,
     bindParent: r
-  } = sn(vu);
+  } = un(vu);
   return {
     index: n,
     row: e,
@@ -4684,7 +4684,7 @@ function Um() {
     childProviders: e,
     length: n,
     bindChildren: r
-  } = un(cu);
+  } = dn(cu);
   return {
     length: n,
     collapseItem: e,
@@ -4792,7 +4792,7 @@ function jm() {
     parentProvider: e,
     index: n,
     bindParent: r
-  } = sn(cu);
+  } = un(cu);
   if (!r)
     throw Error("[Varlet] Collapse: <var-collapse-item/> must in <var-collapse>");
   return {
@@ -5465,15 +5465,15 @@ q.toBinary = function(e, n) {
 };
 q.toDecimalPlaces = q.toDP = function(e, n) {
   var r = this, a = r.constructor;
-  return r = new a(r), e === void 0 ? r : (on(e, 0, wr), n === void 0 ? n = a.rounding : on(n, 0, 8), ue(r, e + r.e + 1, n));
+  return r = new a(r), e === void 0 ? r : (ln(e, 0, wr), n === void 0 ? n = a.rounding : ln(n, 0, 8), ue(r, e + r.e + 1, n));
 };
 q.toExponential = function(e, n) {
   var r, a = this, t = a.constructor;
-  return e === void 0 ? r = Dn(a, !0) : (on(e, 0, wr), n === void 0 ? n = t.rounding : on(n, 0, 8), a = ue(new t(a), e + 1, n), r = Dn(a, !0, e + 1)), a.isNeg() && !a.isZero() ? "-" + r : r;
+  return e === void 0 ? r = Dn(a, !0) : (ln(e, 0, wr), n === void 0 ? n = t.rounding : ln(n, 0, 8), a = ue(new t(a), e + 1, n), r = Dn(a, !0, e + 1)), a.isNeg() && !a.isZero() ? "-" + r : r;
 };
 q.toFixed = function(e, n) {
   var r, a, t = this, o = t.constructor;
-  return e === void 0 ? r = Dn(t) : (on(e, 0, wr), n === void 0 ? n = o.rounding : on(n, 0, 8), a = ue(new o(t), e + t.e + 1, n), r = Dn(a, !1, e + a.e + 1)), t.isNeg() && !t.isZero() ? "-" + r : r;
+  return e === void 0 ? r = Dn(t) : (ln(e, 0, wr), n === void 0 ? n = o.rounding : ln(n, 0, 8), a = ue(new o(t), e + t.e + 1, n), r = Dn(a, !1, e + a.e + 1)), t.isNeg() && !t.isZero() ? "-" + r : r;
 };
 q.toFraction = function(e) {
   var n, r, a, t, o, i, l, s, u, d, v, f, m = this, h = m.d, y = m.constructor;
@@ -5500,7 +5500,7 @@ q.toNearest = function(e, n) {
       return r;
     e = new a(1), n = a.rounding;
   } else {
-    if (e = new a(e), n === void 0 ? n = a.rounding : on(n, 0, 8), !r.d)
+    if (e = new a(e), n === void 0 ? n = a.rounding : ln(n, 0, 8), !r.d)
       return e.s ? r : e;
     if (!e.d)
       return e.s && (e.s = r.s), e;
@@ -5533,11 +5533,11 @@ q.toPower = q.pow = function(e) {
 };
 q.toPrecision = function(e, n) {
   var r, a = this, t = a.constructor;
-  return e === void 0 ? r = Dn(a, a.e <= t.toExpNeg || a.e >= t.toExpPos) : (on(e, 1, wr), n === void 0 ? n = t.rounding : on(n, 0, 8), a = ue(new t(a), e, n), r = Dn(a, e <= a.e || a.e <= t.toExpNeg, e)), a.isNeg() && !a.isZero() ? "-" + r : r;
+  return e === void 0 ? r = Dn(a, a.e <= t.toExpNeg || a.e >= t.toExpPos) : (ln(e, 1, wr), n === void 0 ? n = t.rounding : ln(n, 0, 8), a = ue(new t(a), e, n), r = Dn(a, e <= a.e || a.e <= t.toExpNeg, e)), a.isNeg() && !a.isZero() ? "-" + r : r;
 };
 q.toSignificantDigits = q.toSD = function(e, n) {
   var r = this, a = r.constructor;
-  return e === void 0 ? (e = a.precision, n = a.rounding) : (on(e, 1, wr), n === void 0 ? n = a.rounding : on(n, 0, 8)), ue(new a(r), e, n);
+  return e === void 0 ? (e = a.precision, n = a.rounding) : (ln(e, 1, wr), n === void 0 ? n = a.rounding : ln(n, 0, 8)), ue(new a(r), e, n);
 };
 q.toString = function() {
   var e = this, n = e.constructor, r = Dn(e, e.e <= n.toExpNeg || e.e >= n.toExpPos);
@@ -5562,7 +5562,7 @@ function qe(e) {
     i /= 10;
   return o + i;
 }
-function on(e, n, r) {
+function ln(e, n, r) {
   if (e !== ~~e || e < n || e > r)
     throw Error(gr + e);
 }
@@ -5888,7 +5888,7 @@ function Pu(e, n) {
 }
 function Ti(e, n, r, a) {
   var t, o, i, l, s, u, d, v, f, m = e.constructor, h = r !== void 0;
-  if (h ? (on(r, 1, wr), a === void 0 ? a = m.rounding : on(a, 0, 8)) : (r = m.precision, a = m.rounding), !e.isFinite())
+  if (h ? (ln(r, 1, wr), a === void 0 ? a = m.rounding : ln(a, 0, 8)) : (r = m.precision, a = m.rounding), !e.isFinite())
     d = Tu(e);
   else {
     for (d = Dn(e), i = d.indexOf("."), h ? (t = 2, n == 16 ? r = r * 4 - 3 : n == 8 && (r = r * 3 - 2)) : t = n, i >= 0 && (d = d.replace(".", ""), f = new m(1), f.e = d.length - i, f.d = Bt(Dn(f), 10, t), f.e = f.d.length), v = Bt(d, 10, t), o = s = v.length; v[--s] == 0; )
@@ -6109,7 +6109,7 @@ function Ep(e, n) {
 }
 function Dp(e) {
   var n, r, a, t, o = 0, i = new this(1), l = [];
-  if (e === void 0 ? e = this.precision : on(e, 1, wr), a = Math.ceil(e / ve), this.crypto)
+  if (e === void 0 ? e = this.precision : ln(e, 1, wr), a = Math.ceil(e / ve), this.crypto)
     if (crypto.getRandomValues)
       for (n = crypto.getRandomValues(new Uint32Array(a)); o < a; )
         t = n[o], t >= 429e7 ? n[o] = crypto.getRandomValues(new Uint32Array(1))[0] : l[o++] = t % 1e7;
@@ -7337,7 +7337,7 @@ var Uu = ne({
     }), t = (o) => {
       r("choose-year", o);
     };
-    return ln(() => {
+    return sn(() => {
       var o = document.querySelector("." + cl("item--active"));
       o == null || o.scrollIntoView({
         block: "center"
@@ -7615,7 +7615,7 @@ var Fu = ne({
     }, E = ($) => {
       u.value.checkDate($);
     };
-    return ln(() => {
+    return sn(() => {
       w(), k();
     }), le(() => e.preview, () => {
       w(), k();
@@ -8484,7 +8484,7 @@ var ju = ne({
     }), i = () => {
       a.withText = Boolean(r.default) || Boolean(e.description);
     };
-    return ln(() => {
+    return sn(() => {
       i();
     }), Kt(() => {
       i();
@@ -9979,6 +9979,10 @@ var ly = {
   right: {
     type: [Number, String]
   },
+  safeArea: {
+    type: Boolean,
+    default: !1
+  },
   teleport: {
     type: String
   },
@@ -9994,7 +9998,7 @@ function Pl(e) {
 }
 var {
   classes: Ol,
-  n: dn
+  n: rn
 } = re("fab");
 const jr = ne({
   name: "VarFab",
@@ -10024,7 +10028,7 @@ const jr = ne({
       active: t.value
     }) : null : we(J(Xe, {
       "var-fab-cover": !0,
-      class: dn("trigger"),
+      class: rn("trigger"),
       type: e.type,
       color: e.color,
       disabled: e.disabled,
@@ -10032,16 +10036,16 @@ const jr = ne({
     }, {
       default: () => [J($e, {
         "var-fab-cover": !0,
-        class: Ol([t.value, dn("trigger-active-icon"), dn("trigger-inactive-icon")]),
+        class: Ol([t.value, rn("trigger-active-icon"), rn("trigger-inactive-icon")]),
         name: t.value ? e.activeIcon : e.inactiveIcon,
         size: t.value ? e.inactiveIconSize : e.activeIconSize,
         transition: 200,
-        animationClass: dn("--trigger-icon-animation")
+        animationClass: rn("--trigger-icon-animation")
       }, null)]
     }), [[pr, e.show]]), v = () => {
       var f, m, h = ms((m = r.default == null ? void 0 : r.default()) != null ? m : []);
       return J("div", Ve({
-        class: Ol(dn(), dn("--position-" + e.position), dn("--direction-" + e.direction), [e.fixed, dn("--fixed"), dn("--absolute")]),
+        class: Ol(rn(), rn("--position-" + e.position), rn("--direction-" + e.direction), [e.fixed, rn("--fixed"), rn("--absolute")], [e.safeArea, rn("--safe-area")]),
         style: {
           zIndex: L(e.zIndex),
           top: me(e.top),
@@ -10054,19 +10058,19 @@ const jr = ne({
         onMouseleave: () => s(!1, h.length),
         onMouseenter: () => s(!0, h.length)
       }, a), [J(Ne, {
-        name: dn("--active-transition")
+        name: rn("--active-transition")
       }, Pl(f = d()) ? f : {
         default: () => [f]
       }), J(Ne, {
-        name: dn("--actions-transition-" + e.direction),
+        name: rn("--actions-transition-" + e.direction),
         onAfterEnter: e.onOpened,
         onAfterLeave: e.onClosed
       }, {
         default: () => [we(J("div", {
-          class: dn("actions"),
+          class: rn("actions"),
           onClick: (y) => y.stopPropagation()
         }, [h.map((y) => J("div", {
-          class: dn("action")
+          class: rn("action")
         }, [y]))]), [[pr, e.show && t.value && h.length]])]
       })]);
     };
@@ -10386,7 +10390,7 @@ function wy() {
     childProviders: e,
     length: n,
     bindChildren: r
-  } = un(nd);
+  } = dn(nd);
   return {
     length: n,
     swipeItems: e,
@@ -10690,7 +10694,7 @@ function Vy() {
     bindParent: e,
     index: n,
     parentProvider: r
-  } = sn(nd);
+  } = un(nd);
   if (!e)
     throw Error("<var-swipe-item/> must in <var-swipe/>");
   return {
@@ -11255,7 +11259,7 @@ var id = ne({
     }(), M = () => {
       m !== window && m.removeEventListener("scroll", y);
     };
-    return le(() => e.disabled, w), ln(k), Ja(M), br(M), ka(window, "scroll", y), {
+    return le(() => e.disabled, w), sn(k), Ja(M), br(M), ka(window, "scroll", y), {
       n: Ly,
       classes: Ry,
       resize: w,
@@ -11286,7 +11290,7 @@ function Fy() {
     bindChildren: e,
     length: n,
     childProviders: r
-  } = un(ld);
+  } = dn(ld);
   return {
     length: n,
     indexAnchors: r,
@@ -11298,7 +11302,7 @@ function Hy() {
     parentProvider: e,
     index: n,
     bindParent: r
-  } = sn(ld);
+  } = un(ld);
   if (!r)
     throw Error('[Varlet] IndexAnchor: You should use this component in "IndexBar"');
   return {
@@ -11591,7 +11595,7 @@ var ud = ne({
         } = S;
         E.value && i.value.push(E.value), $();
       });
-    })), ln(/* @__PURE__ */ Vt(function* () {
+    })), sn(/* @__PURE__ */ Vt(function* () {
       yield M(), b();
     })), Xt(P), br(P), {
       n: Xy,
@@ -11994,7 +11998,7 @@ var dd = ne({
       validate: H,
       resetValidation: f
     };
-    return T(l, W), ln(() => {
+    return T(l, W), sn(() => {
       e.autofocus && Q();
     }), {
       el: r,
@@ -12303,7 +12307,7 @@ var fd = ne({
         return l.apply(this, arguments);
       };
     }();
-    return ln(() => {
+    return sn(() => {
       a = Da(n.value), e.immediateCheck && i(), a.addEventListener("scroll", i);
     }), Ja(() => {
       a.removeEventListener("scroll", i);
@@ -12594,7 +12598,7 @@ function Bb() {
     length: e,
     childProviders: n,
     bindChildren: r
-  } = un(Cd);
+  } = dn(Cd);
   return {
     length: e,
     options: n,
@@ -12606,7 +12610,7 @@ function Ib() {
     index: e,
     parentProvider: n,
     bindParent: r
-  } = sn(Cd);
+  } = un(Cd);
   if (!r)
     throw Error("<var-option/> must in <var-select/>");
   return {
@@ -13650,14 +13654,14 @@ var Td = ne({
 });
 Td.render = xb;
 const mr = Td;
-var rn;
+var an;
 function Va(e) {
   return new Promise((n) => {
     Va.close();
     var r = Ce(e) ? {
       columns: e
     } : e, a = Ie(r);
-    a.dynamic = !0, a.teleport = "body", rn = a;
+    a.dynamic = !0, a.teleport = "body", an = a;
     var {
       unmountInstance: t
     } = _a(mr, a, {
@@ -13666,25 +13670,25 @@ function Va(e) {
           state: "confirm",
           texts: o,
           indexes: i
-        }), a.show = !1, rn === a && (rn = null);
+        }), a.show = !1, an === a && (an = null);
       },
       onCancel: (o, i) => {
         T(a.onCancel, o, i), n({
           state: "cancel",
           texts: o,
           indexes: i
-        }), a.show = !1, rn === a && (rn = null);
+        }), a.show = !1, an === a && (an = null);
       },
       onClose: () => {
         T(a.onClose), n({
           state: "close"
-        }), rn === a && (rn = null);
+        }), an === a && (an = null);
       },
       onClosed: () => {
-        T(a.onClosed), t(), rn === a && (rn = null);
+        T(a.onClosed), t(), an === a && (an = null);
       },
       onRouteChange: () => {
-        t(), rn === a && (rn = null);
+        t(), an === a && (an = null);
       },
       "onUpdate:show": (o) => {
         a.show = o;
@@ -13701,9 +13705,9 @@ Va.install = function(e) {
   e.component(mr.name, mr);
 };
 Va.close = () => {
-  if (rn != null) {
-    var e = rn;
-    rn = null, Ee().then(() => {
+  if (an != null) {
+    var e = an;
+    an = null, Ee().then(() => {
       e.show = !1;
     });
   }
@@ -14107,7 +14111,7 @@ var Od = ne({
       V === !1 && (d.value = !0, u.value = "success", s.value = "checkbox-marked-circle", setTimeout(() => {
         l.value = a.value, I();
       }, L(e.successDuration)));
-    }), ln(() => {
+    }), sn(() => {
       $(), E();
     }), ka(t, "touchmove", D), {
       n: Wl,
@@ -14181,7 +14185,7 @@ function c0() {
     bindChildren: e,
     childProviders: n,
     length: r
-  } = un(Vd);
+  } = dn(Vd);
   return {
     length: r,
     radios: n,
@@ -14193,7 +14197,7 @@ function m0() {
     bindParent: e,
     parentProvider: n,
     index: r
-  } = sn(Vd);
+  } = un(Vd);
   return {
     index: r,
     radioGroup: n,
@@ -14299,7 +14303,7 @@ var Md = ne({
   components: {
     VarIcon: $e,
     VarFormDetails: We,
-    VarHoverOverlay: tn
+    VarHoverOverlay: on
   },
   inheritAttrs: !1,
   props: f0,
@@ -14647,7 +14651,7 @@ var Id = ne({
   components: {
     VarIcon: $e,
     VarFormDetails: We,
-    VarHoverOverlay: tn
+    VarHoverOverlay: on
   },
   directives: {
     Ripple: Re,
@@ -16120,7 +16124,7 @@ var Yd = ne({
   name: "VarSlider",
   components: {
     VarFormDetails: We,
-    VarHoverOverlay: tn
+    VarHoverOverlay: on
   },
   directives: {
     Hover: En
@@ -16272,7 +16276,7 @@ var Yd = ne({
     return T(n, K), le([() => e.modelValue, () => e.step], (A) => {
       var [Y, X] = A;
       !x() || !te() || w.value || U(Y, L(X));
-    }), le(y, () => U()), ln(() => {
+    }), le(y, () => U()), sn(() => {
       !x() || !te() || (y.value = h.value.offsetWidth);
     }), {
       n: ql,
@@ -16484,7 +16488,7 @@ var Wd = ne({
       i ? (T(e.onOpen), o()) : i === !1 && (clearTimeout(n.value), T(e.onClose));
     }), le(() => e._update, () => {
       clearTimeout(n.value), o();
-    }), ln(() => {
+    }), sn(() => {
       e.show && (T(e.onOpen), o());
     }), {
       SNACKBAR_TYPE: Ai,
@@ -16822,7 +16826,7 @@ function nw() {
     bindChildren: e,
     length: n,
     childProviders: r
-  } = un(Jd);
+  } = dn(Jd);
   return {
     length: n,
     step: r,
@@ -16834,7 +16838,7 @@ function rw() {
     parentProvider: e,
     index: n,
     bindParent: r
-  } = sn(Jd);
+  } = un(Jd);
   if (!r)
     throw Error("[Varlet] Steps: <step/> must in <steps>");
   return {
@@ -17242,7 +17246,7 @@ var xd = ne({
   components: {
     VarLoading: Pn,
     VarFormDetails: We,
-    VarHoverOverlay: tn
+    VarHoverOverlay: on
   },
   directives: {
     Ripple: Re,
@@ -17359,7 +17363,7 @@ function bw() {
     childProviders: e,
     bindChildren: n,
     length: r
-  } = un(ev);
+  } = dn(ev);
   return {
     length: r,
     tabList: e,
@@ -17371,7 +17375,7 @@ function ww() {
     parentProvider: e,
     bindParent: n,
     index: r
-  } = sn(ev);
+  } = un(ev);
   if (!n)
     throw Error("<var-tab/> must in <var-tabs/>");
   return {
@@ -17476,7 +17480,7 @@ function kw() {
     bindChildren: e,
     childProviders: n,
     length: r
-  } = un(rv);
+  } = dn(rv);
   return {
     length: r,
     tabItemList: n,
@@ -17488,7 +17492,7 @@ function $w() {
     parentProvider: e,
     bindParent: n,
     index: r
-  } = sn(rv);
+  } = un(rv);
   if (!n)
     throw Error("<var-tab-item/> must in <var-tabs-items/>");
   return {
@@ -18177,7 +18181,7 @@ var $C = {
     hourStr: t,
     hourNum: L(t)
   };
-}, an = (e) => {
+}, tn = (e) => {
   var [n, r, a] = e.split(":");
   return {
     hour: L(n),
@@ -18203,24 +18207,24 @@ var $C = {
     var {
       hour: h,
       minute: y
-    } = an(l);
+    } = tn(l);
     f = h === v && a > y;
   }
   if (!l && s) {
     var {
       hour: w,
       minute: k
-    } = an(s);
+    } = tn(s);
     f = w === v && a < k;
   }
   if (l && s) {
     var {
       hour: M,
       minute: b
-    } = an(l), {
+    } = tn(l), {
       hour: P,
       minute: D
-    } = an(s);
+    } = tn(s);
     f = P === v && a < D || M === v && a > b;
   }
   return (n = e.allowedTime) != null && n.minutes && (m = (r = e.allowedTime) == null ? void 0 : r.minutes(a)), f || m;
@@ -18245,7 +18249,7 @@ var $C = {
       hour: y,
       minute: w,
       second: k
-    } = an(s);
+    } = tn(s);
     m = y === f && w < l || w === l && a > k;
   }
   if (!s && u) {
@@ -18253,7 +18257,7 @@ var $C = {
       hour: M,
       minute: b,
       second: P
-    } = an(u);
+    } = tn(u);
     m = M === f && b > l || b === l && a > P;
   }
   if (s && u) {
@@ -18261,11 +18265,11 @@ var $C = {
       hour: D,
       minute: S,
       second: E
-    } = an(s), {
+    } = tn(s), {
       hour: $,
       minute: I,
       second: V
-    } = an(u);
+    } = tn(u);
     m = D === f && S < l || $ === f && I > l || D === f && S === l && a > E || $ === f && I === l && a < V;
   }
   return (n = e.allowedTime) != null && n.seconds && (h = (r = e.allowedTime) == null ? void 0 : r.seconds(a)), m || h;
@@ -18488,21 +18492,21 @@ var dv = ne({
       if (t.value = [], k && !M) {
         var {
           hour: P
-        } = an(k), D = pn.filter((N) => L(N) > P), S = en.filter((N) => L(N) > P);
+        } = tn(k), D = pn.filter((N) => L(N) > P), S = en.filter((N) => L(N) > P);
         t.value = [...D, ...S];
       }
       if (!k && M) {
         var {
           hour: E
-        } = an(M), $ = pn.filter((N) => L(N) < E), I = en.filter((N) => L(N) < E);
+        } = tn(M), $ = pn.filter((N) => L(N) < E), I = en.filter((N) => L(N) < E);
         t.value = [...$, ...I];
       }
       if (k && M) {
         var {
           hour: V
-        } = an(k), {
+        } = tn(k), {
           hour: g
-        } = an(M), C = pn.filter((N) => L(N) < g || L(N) > V), H = en.filter((N) => L(N) < g || L(N) > V);
+        } = tn(M), C = pn.filter((N) => L(N) < g || L(N) > V), H = en.filter((N) => L(N) < g || L(N) > V);
         t.value = [...C, ...H];
       }
       if (b != null && b.hours) {
@@ -18735,7 +18739,7 @@ var vv = ne({
         hour: K,
         minute: A,
         second: Y
-      } = an(U);
+      } = tn(U);
       return {
         hour: ie().hour(K).format(Z),
         minute: ie().minute(A).format("mm"),
@@ -18836,7 +18840,7 @@ var vv = ne({
           hour: Z,
           minute: K,
           second: A
-        } = an(U), Y = ie().hour(Z).format("hh"), X = ie().hour(Z).format("HH"), de = ie().minute(K).format("mm"), pe = ie().second(A).format("ss");
+        } = tn(U), Y = ie().hour(Z).format("hh"), X = ie().hour(Z).format("HH"), de = ie().minute(K).format("mm"), pe = ie().second(A).format("ss");
         u.value = (Y === "12" ? 0 : L(Y)) * 30, d.value = L(de) * 6, v.value = L(pe) * 6, w.value = V(U), e.format !== "24hr" && (m.value = Sa("" + Z, 2, "0") === X && en.includes(X) ? "pm" : "am"), t.value = e.format === "24hr" && en.includes(X);
       }
     }, {
@@ -19148,7 +19152,7 @@ var fv = ne({
     VarIcon: $e,
     VarPopup: gn,
     VarFormDetails: We,
-    VarHoverOverlay: tn
+    VarHoverOverlay: on
   },
   props: AC,
   setup(e) {
@@ -19349,7 +19353,7 @@ Ca.install = function(e) {
 var bk = Ca;
 const GC = "2.9.2";
 function qC(e) {
-  $a.install && e.use($a), kr.install && e.use(kr), $r.install && e.use($r), Tr.install && e.use(Tr), Pr.install && e.use(Pr), or.install && e.use(or), Or.install && e.use(Or), Vr.install && e.use(Vr), Mr.install && e.use(Mr), Br.install && e.use(Br), Xe.install && e.use(Xe), Ir.install && e.use(Ir), Er.install && e.use(Er), ir.install && e.use(ir), lr.install && e.use(lr), Dr.install && e.use(Dr), sr.install && e.use(sr), Nr.install && e.use(Nr), Ar.install && e.use(Ar), zr.install && e.use(zr), fn.install && e.use(fn), Lr.install && e.use(Lr), Rr.install && e.use(Rr), Fr.install && e.use(Fr), Ta.install && e.use(Ta), Hr.install && e.use(Hr), Yr.install && e.use(Yr), jr.install && e.use(jr), Hn.install && e.use(Hn), We.install && e.use(We), En.install && e.use(En), tn.install && e.use(tn), $e.install && e.use($e), Wr.install && e.use(Wr), Mn.install && e.use(Mn), Gr.install && e.use(Gr), qr.install && e.use(qr), cr.install && e.use(cr), st.install && e.use(st), Xr.install && e.use(Xr), Kr.install && e.use(Kr), Pn.install && e.use(Pn), ti.install && e.use(ti), Mo.install && e.use(Mo), Gn.install && e.use(Gn), Zr.install && e.use(Zr), Jr.install && e.use(Jr), Qr.install && e.use(Qr), _r.install && e.use(_r), Va.install && e.use(Va), gn.install && e.use(gn), xr.install && e.use(xr), ea.install && e.use(ea), na.install && e.use(na), ra.install && e.use(ra), aa.install && e.use(aa), ta.install && e.use(ta), Re.install && e.use(Re), oa.install && e.use(oa), ia.install && e.use(ia), la.install && e.use(la), sa.install && e.use(sa), si.install && e.use(si), da.install && e.use(da), va.install && e.use(va), fa.install && e.use(fa), Wn.install && e.use(Wn), ct.install && e.use(ct), Yn.install && e.use(Yn), jn.install && e.use(jn), ma.install && e.use(ma), pa.install && e.use(pa), ha.install && e.use(ha), ga.install && e.use(ga), ya.install && e.use(ya), ba.install && e.use(ba), di.install && e.use(di), wa.install && e.use(wa), vr.install && e.use(vr), Ca.install && e.use(Ca);
+  $a.install && e.use($a), kr.install && e.use(kr), $r.install && e.use($r), Tr.install && e.use(Tr), Pr.install && e.use(Pr), or.install && e.use(or), Or.install && e.use(Or), Vr.install && e.use(Vr), Mr.install && e.use(Mr), Br.install && e.use(Br), Xe.install && e.use(Xe), Ir.install && e.use(Ir), Er.install && e.use(Er), ir.install && e.use(ir), lr.install && e.use(lr), Dr.install && e.use(Dr), sr.install && e.use(sr), Nr.install && e.use(Nr), Ar.install && e.use(Ar), zr.install && e.use(zr), fn.install && e.use(fn), Lr.install && e.use(Lr), Rr.install && e.use(Rr), Fr.install && e.use(Fr), Ta.install && e.use(Ta), Hr.install && e.use(Hr), Yr.install && e.use(Yr), jr.install && e.use(jr), Hn.install && e.use(Hn), We.install && e.use(We), En.install && e.use(En), on.install && e.use(on), $e.install && e.use($e), Wr.install && e.use(Wr), Mn.install && e.use(Mn), Gr.install && e.use(Gr), qr.install && e.use(qr), cr.install && e.use(cr), st.install && e.use(st), Xr.install && e.use(Xr), Kr.install && e.use(Kr), Pn.install && e.use(Pn), ti.install && e.use(ti), Mo.install && e.use(Mo), Gn.install && e.use(Gn), Zr.install && e.use(Zr), Jr.install && e.use(Jr), Qr.install && e.use(Qr), _r.install && e.use(_r), Va.install && e.use(Va), gn.install && e.use(gn), xr.install && e.use(xr), ea.install && e.use(ea), na.install && e.use(na), ra.install && e.use(ra), aa.install && e.use(aa), ta.install && e.use(ta), Re.install && e.use(Re), oa.install && e.use(oa), ia.install && e.use(ia), la.install && e.use(la), sa.install && e.use(sa), si.install && e.use(si), da.install && e.use(da), va.install && e.use(va), fa.install && e.use(fa), Wn.install && e.use(Wn), ct.install && e.use(ct), Yn.install && e.use(Yn), jn.install && e.use(jn), ma.install && e.use(ma), pa.install && e.use(pa), ha.install && e.use(ha), ga.install && e.use(ga), ya.install && e.use(ya), ba.install && e.use(ba), di.install && e.use(di), wa.install && e.use(wa), vr.install && e.use(vr), Ca.install && e.use(Ca);
 }
 const wk = {
   version: GC,
@@ -19385,7 +19389,7 @@ const wk = {
   Form: Hn,
   FormDetails: We,
   Hover: En,
-  HoverOverlay: tn,
+  HoverOverlay: on,
   Icon: $e,
   Image: Wr,
   ImagePreview: Mn,
@@ -19467,7 +19471,7 @@ export {
   Hn as Form,
   We as FormDetails,
   En as Hover,
-  tn as HoverOverlay,
+  on as HoverOverlay,
   $e as Icon,
   Wr as Image,
   Mn as ImagePreview,
