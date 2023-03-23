@@ -108,7 +108,7 @@ import{_ as n,p as c,f as p,h,M as a,q as l,S as e,aq as i,P as s}from"./vue-rou
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
 
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-swipe"),s(),a("span",{class:"hljs-attr"},"class"),s("="),a("span",{class:"hljs-string"},'"swipe-example"'),s(" @"),a("span",{class:"hljs-attr"},"change"),s("="),a("span",{class:"hljs-string"},'"Snackbar"'),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-swipe"),s(),a("span",{class:"hljs-attr"},"class"),s("="),a("span",{class:"hljs-string"},'"swipe-example"'),s(" @"),a("span",{class:"hljs-attr"},"change"),s("="),a("span",{class:"hljs-string"},'"(index) => Snackbar(String(index))"'),s(">")]),s(`
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-swipe-item"),s(">")]),s(`
       `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"img"),s(),a("span",{class:"hljs-attr"},"class"),s("="),a("span",{class:"hljs-string"},'"swipe-example-image"'),s(),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(">")]),s(`
     `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-swipe-item"),s(">")]),s(`
