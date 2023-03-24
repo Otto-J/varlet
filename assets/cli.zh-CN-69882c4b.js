@@ -32,9 +32,10 @@ or
 varlet-cli test -wa
 `)],-1),F=t("h4",null,"检查代码",-1),G=t("pre",{class:"hljs"},[t("code",null,`varlet-cli lint
 `)],-1),H=t("h4",null,"校验提交信息",-1),J=t("pre",{class:"hljs"},[t("code",null,`varlet-cli commit-lint
-`)],-1),K=t("h4",null,"生成更新日志",-1),Q=t("pre",{class:"hljs"},[t("code",null,`varlet-cli changelog
-`)],-1),W=t("h4",null,"发布组件库",-1),X=t("pre",{class:"hljs"},[t("code",null,`varlet-cli release
-`)],-1),Y=t("h4",null,"生成一个项目模板",-1),Z=t("pre",{class:"hljs"},[t("code",null,[l(`varlet-cli gen
+`)],-1),K=t("h4",null,"显示检查清单",-1),Q=t("pre",{class:"hljs"},[t("code",null,`varlet-cli checklist
+`)],-1),W=t("h4",null,"生成更新日志",-1),X=t("pre",{class:"hljs"},[t("code",null,`varlet-cli changelog
+`)],-1),Y=t("h4",null,"发布组件库",-1),Z=t("pre",{class:"hljs"},[t("code",null,`varlet-cli release
+`)],-1),tt=t("h4",null,"生成一个项目模板",-1),et=t("pre",{class:"hljs"},[t("code",null,[l(`varlet-cli gen
 `),t("span",{class:"hljs-meta"},`
 #`),t("span",{class:"bash"}," Options"),l(`
 -n
@@ -49,7 +50,7 @@ varlet-cli test -wa
 -l
 --locale
   需要支持国际化
-`)])],-1),tt=t("h4",null,"创建组件模板文件",-1),et=t("pre",{class:"hljs"},[t("code",null,[l(`varlet-cli create
+`)])],-1),dt=t("h4",null,"创建组件模板文件",-1),ot=t("pre",{class:"hljs"},[t("code",null,[l(`varlet-cli create
 `),t("span",{class:"hljs-meta"},`
 #`),t("span",{class:"bash"}," Options"),l(`
 -n
@@ -64,4 +65,4 @@ varlet-cli test -wa
 -l
 --locale
   需要支持国际化
-`)])],-1),dt=t("div",{class:"card"},[t("h3",null,"发布前注意"),t("ul",null,[t("li",null,[l("1."),t("code",null,"npm"),l(" 的仓库源必须指向 "),t("code",null,"npm"),l(" 官方镜像")]),t("li",null,[l("2.执行 "),t("code",null,"npm login"),l(" 进行登录")])])],-1);function ot(lt,ct,nt,st,rt,at){const e=s("var-site-code-example");return r(),a("div",h,[u,t("div",_,[g,p,d(e,{"playground-ignore":""},{default:o(()=>[m]),_:1})]),v,t("div",f,[b,y,d(e,{"playground-ignore":""},{default:o(()=>[j]),_:1}),x,d(e,{"playground-ignore":""},{default:o(()=>[C]),_:1})]),t("div",V,[N,S,d(e,{"playground-ignore":""},{default:o(()=>[k]),_:1}),M,d(e,{"playground-ignore":""},{default:o(()=>[R]),_:1}),T,d(e,{"playground-ignore":""},{default:o(()=>[w]),_:1}),z,d(e,{"playground-ignore":""},{default:o(()=>[U]),_:1}),$,d(e,{"playground-ignore":""},{default:o(()=>[B]),_:1}),q,d(e,{"playground-ignore":""},{default:o(()=>[E]),_:1}),L,d(e,{"playground-ignore":""},{default:o(()=>[O]),_:1}),P,d(e,{"playground-ignore":""},{default:o(()=>[A]),_:1}),I,d(e,{"playground-ignore":""},{default:o(()=>[D]),_:1}),F,d(e,{"playground-ignore":""},{default:o(()=>[G]),_:1}),H,d(e,{"playground-ignore":""},{default:o(()=>[J]),_:1}),K,d(e,{"playground-ignore":""},{default:o(()=>[Q]),_:1}),W,d(e,{"playground-ignore":""},{default:o(()=>[X]),_:1}),Y,d(e,{"playground-ignore":""},{default:o(()=>[Z]),_:1}),tt,d(e,{"playground-ignore":""},{default:o(()=>[et]),_:1})]),dt])}const ht=n(i,[["render",ot]]);export{ht as default};
+`)])],-1),lt=t("div",{class:"card"},[t("h3",null,"发布前注意"),t("ul",null,[t("li",null,[l("1."),t("code",null,"npm"),l(" 的仓库源必须指向 "),t("code",null,"npm"),l(" 官方镜像")]),t("li",null,[l("2.执行 "),t("code",null,"npm login"),l(" 进行登录")])])],-1);function ct(nt,st,rt,at,it,ht){const e=s("var-site-code-example");return r(),a("div",h,[u,t("div",_,[g,p,d(e,{"playground-ignore":""},{default:o(()=>[m]),_:1})]),v,t("div",f,[b,y,d(e,{"playground-ignore":""},{default:o(()=>[j]),_:1}),x,d(e,{"playground-ignore":""},{default:o(()=>[C]),_:1})]),t("div",V,[N,S,d(e,{"playground-ignore":""},{default:o(()=>[k]),_:1}),M,d(e,{"playground-ignore":""},{default:o(()=>[R]),_:1}),T,d(e,{"playground-ignore":""},{default:o(()=>[w]),_:1}),z,d(e,{"playground-ignore":""},{default:o(()=>[U]),_:1}),$,d(e,{"playground-ignore":""},{default:o(()=>[B]),_:1}),q,d(e,{"playground-ignore":""},{default:o(()=>[E]),_:1}),L,d(e,{"playground-ignore":""},{default:o(()=>[O]),_:1}),P,d(e,{"playground-ignore":""},{default:o(()=>[A]),_:1}),I,d(e,{"playground-ignore":""},{default:o(()=>[D]),_:1}),F,d(e,{"playground-ignore":""},{default:o(()=>[G]),_:1}),H,d(e,{"playground-ignore":""},{default:o(()=>[J]),_:1}),K,d(e,{"playground-ignore":""},{default:o(()=>[Q]),_:1}),W,d(e,{"playground-ignore":""},{default:o(()=>[X]),_:1}),Y,d(e,{"playground-ignore":""},{default:o(()=>[Z]),_:1}),tt,d(e,{"playground-ignore":""},{default:o(()=>[et]),_:1}),dt,d(e,{"playground-ignore":""},{default:o(()=>[ot]),_:1})]),lt])}const _t=n(i,[["render",ct]]);export{_t as default};

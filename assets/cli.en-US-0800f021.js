@@ -33,9 +33,10 @@ or
 varlet-cli test -wa
 `)],-1),$=e("h4",null,"Lint the code",-1),F=e("pre",{class:"hljs"},[e("code",null,`varlet-cli lint
 `)],-1),W=e("h4",null,"Lint git commit message",-1),Q=e("pre",{class:"hljs"},[e("code",null,`varlet-cli commit-lint
-`)],-1),H=e("h4",null,"Generate changelog",-1),J=e("pre",{class:"hljs"},[e("code",null,`varlet-cli changelog
-`)],-1),K=e("h4",null,"Release component library",-1),X=e("pre",{class:"hljs"},[e("code",null,`varlet-cli release
-`)],-1),Y=e("h4",null,"Generate a project template",-1),Z=e("pre",{class:"hljs"},[e("code",null,[n(`varlet-cli gen
+`)],-1),H=e("h4",null,"Show checklist",-1),J=e("pre",{class:"hljs"},[e("code",null,`varlet-cli checklist
+`)],-1),K=e("h4",null,"Generate changelog",-1),X=e("pre",{class:"hljs"},[e("code",null,`varlet-cli changelog
+`)],-1),Y=e("h4",null,"Release component library",-1),Z=e("pre",{class:"hljs"},[e("code",null,`varlet-cli release
+`)],-1),ee=e("h4",null,"Generate a project template",-1),te=e("pre",{class:"hljs"},[e("code",null,[n(`varlet-cli gen
 `),e("span",{class:"hljs-meta"},`
 #`),e("span",{class:"bash"}," Options"),n(`
 -n
@@ -50,7 +51,7 @@ varlet-cli test -wa
 -l
 --locale
   Need to support internationalization
-`)])],-1),ee=e("h4",null,"Create a component template file",-1),te=e("pre",{class:"hljs"},[e("code",null,[n(`varlet-cli create
+`)])],-1),oe=e("h4",null,"Create a component template file",-1),de=e("pre",{class:"hljs"},[e("code",null,[n(`varlet-cli create
 `),e("span",{class:"hljs-meta"},`
 #`),e("span",{class:"bash"}," Options"),n(`
 -n
@@ -65,4 +66,4 @@ varlet-cli test -wa
 -l
 --locale
   Need to support internationalization
-`)])],-1),oe=e("div",{class:"card"},[e("h3",null,"Note before publish"),e("ul",null,[e("li",null,[n("1."),e("code",null,"npm"),n(" repository registry must set to "),e("code",null,"npm"),n(" official mirror")]),e("li",null,[n("2.Execute "),e("code",null,"npm login"),n(" to log in")])])],-1);function de(ne,le,ce,se,ie,re){const t=s("var-site-code-example");return i(),r("div",h,[u,e("div",p,[m,g,o(t,{"playground-ignore":""},{default:d(()=>[_]),_:1})]),f,e("div",v,[b,y,o(t,{"playground-ignore":""},{default:d(()=>[j]),_:1}),x,o(t,{"playground-ignore":""},{default:d(()=>[w]),_:1})]),e("div",C,[T,S,o(t,{"playground-ignore":""},{default:d(()=>[k]),_:1}),D,o(t,{"playground-ignore":""},{default:d(()=>[N]),_:1}),V,o(t,{"playground-ignore":""},{default:d(()=>[z]),_:1}),M,o(t,{"playground-ignore":""},{default:d(()=>[B]),_:1}),R,o(t,{"playground-ignore":""},{default:d(()=>[E]),_:1}),G,o(t,{"playground-ignore":""},{default:d(()=>[L]),_:1}),O,o(t,{"playground-ignore":""},{default:d(()=>[q]),_:1}),I,o(t,{"playground-ignore":""},{default:d(()=>[P]),_:1}),U,o(t,{"playground-ignore":""},{default:d(()=>[A]),_:1}),$,o(t,{"playground-ignore":""},{default:d(()=>[F]),_:1}),W,o(t,{"playground-ignore":""},{default:d(()=>[Q]),_:1}),H,o(t,{"playground-ignore":""},{default:d(()=>[J]),_:1}),K,o(t,{"playground-ignore":""},{default:d(()=>[X]),_:1}),Y,o(t,{"playground-ignore":""},{default:d(()=>[Z]),_:1}),ee,o(t,{"playground-ignore":""},{default:d(()=>[te]),_:1})]),oe])}const he=c(a,[["render",de]]);export{he as default};
+`)])],-1),ne=e("div",{class:"card"},[e("h3",null,"Note before publish"),e("ul",null,[e("li",null,[n("1."),e("code",null,"npm"),n(" repository registry must set to "),e("code",null,"npm"),n(" official mirror")]),e("li",null,[n("2.Execute "),e("code",null,"npm login"),n(" to log in")])])],-1);function le(ce,se,ie,re,ae,he){const t=s("var-site-code-example");return i(),r("div",h,[u,e("div",p,[m,g,o(t,{"playground-ignore":""},{default:d(()=>[_]),_:1})]),f,e("div",v,[b,y,o(t,{"playground-ignore":""},{default:d(()=>[j]),_:1}),x,o(t,{"playground-ignore":""},{default:d(()=>[w]),_:1})]),e("div",C,[T,S,o(t,{"playground-ignore":""},{default:d(()=>[k]),_:1}),D,o(t,{"playground-ignore":""},{default:d(()=>[N]),_:1}),V,o(t,{"playground-ignore":""},{default:d(()=>[z]),_:1}),M,o(t,{"playground-ignore":""},{default:d(()=>[B]),_:1}),R,o(t,{"playground-ignore":""},{default:d(()=>[E]),_:1}),G,o(t,{"playground-ignore":""},{default:d(()=>[L]),_:1}),O,o(t,{"playground-ignore":""},{default:d(()=>[q]),_:1}),I,o(t,{"playground-ignore":""},{default:d(()=>[P]),_:1}),U,o(t,{"playground-ignore":""},{default:d(()=>[A]),_:1}),$,o(t,{"playground-ignore":""},{default:d(()=>[F]),_:1}),W,o(t,{"playground-ignore":""},{default:d(()=>[Q]),_:1}),H,o(t,{"playground-ignore":""},{default:d(()=>[J]),_:1}),K,o(t,{"playground-ignore":""},{default:d(()=>[X]),_:1}),Y,o(t,{"playground-ignore":""},{default:d(()=>[Z]),_:1}),ee,o(t,{"playground-ignore":""},{default:d(()=>[te]),_:1}),oe,o(t,{"playground-ignore":""},{default:d(()=>[de]),_:1})]),ne])}const pe=c(a,[["render",le]]);export{pe as default};
