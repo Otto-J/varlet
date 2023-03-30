@@ -1490,6 +1490,10 @@ var yf = {
   },
   imageLinearGradient: {
     type: String
+  },
+  safeAreaTop: {
+    type: Boolean,
+    default: !1
   }
 }, {
   n: bf,
@@ -1499,7 +1503,7 @@ function Sf(e, n) {
   return p(), O(
     "div",
     {
-      class: c(e.classes(e.n(), [e.round, e.n("--round")], e.formatElevation(e.elevation, 3))),
+      class: c(e.classes(e.n(), e.n("$--box"), [e.safeAreaTop, e.n("--safe-area-top")], [e.round, e.n("--round")], e.formatElevation(e.elevation, 3))),
       style: G(e.rootStyles)
     },
     [z(
