@@ -11480,7 +11480,12 @@ var qC = Zr, _y = {
     type: [String, Number],
     default: 0
   },
+  /** @deprecated Use stickyCssMode to instead. */
   cssMode: {
+    type: Boolean,
+    default: !1
+  },
+  stickyCssMode: {
     type: Boolean,
     default: !1
   },
@@ -11584,7 +11589,7 @@ var pd = ne({
       length: n,
       indexAnchors: r,
       bindIndexAnchors: a
-    } = qy(), t = M(""), o = M(null), i = M([]), l = M(), s = U(() => e.sticky), u = U(() => e.cssMode), d = U(() => Le(e.stickyOffsetTop)), v = U(() => e.zIndex), f = null, m = {
+    } = qy(), t = M(""), o = M(null), i = M([]), l = M(), s = U(() => e.sticky), u = U(() => e.stickyCssMode || e.cssMode), d = U(() => Le(e.stickyOffsetTop)), v = U(() => e.zIndex), f = null, m = {
       active: l,
       sticky: s,
       cssMode: u,
