@@ -2904,7 +2904,7 @@ function Ac(e, n) {
   return p(), O(
     "div",
     {
-      class: c(e.classes(e.n(), [e.fixed, e.n("--fixed")], [e.border, e.n("--border")], [e.safeArea, e.n("--safe-area")])),
+      class: c(e.classes(e.n(), e.n("$--box"), [e.fixed, e.n("--fixed")], [e.border, e.n("--border")], [e.safeArea, e.n("--safe-area")])),
       ref: "bottomNavigationDom",
       style: G("z-index:" + e.zIndex)
     },
@@ -3060,7 +3060,7 @@ function Hc(e, n) {
   return we((p(), O(
     "button",
     {
-      class: c(e.classes(e.n(), [e.active === e.index || e.active === e.name, e.n("--active")])),
+      class: c(e.classes(e.n(), e.n("$--box"), [e.active === e.index || e.active === e.name, e.n("--active")])),
       style: G({
         color: e.computeColorStyle()
       }),
