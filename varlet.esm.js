@@ -2325,7 +2325,7 @@ function Zs(e, n) {
   Ws(n.arg) || (Gs(e), e.removeEventListener("mouseenter", qs), e.removeEventListener("mouseleave", Xs));
 }
 function sc(e, n) {
-  Zs(e, n);
+  e._hover && Zs(e, n);
 }
 function uc(e, n) {
   return !pi(n.value) && e._hover.hovering;
