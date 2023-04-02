@@ -17531,7 +17531,7 @@ var lv = ne({
       element: t
     };
     l(w);
-    var h = () => e.name != null && u.value === e.name || u.value === (o == null ? void 0 : o.value), y = () => e.disabled ? f.value : h() ? d.value : v.value, V = () => e.disabled ? It("$-tab--disabled") : h() ? It("$-tab--active") : It("$-tab--inactive"), k = (T) => {
+    var h = () => e.name != null ? u.value === e.name : u.value === (o == null ? void 0 : o.value), y = () => e.disabled ? f.value : h() ? d.value : v.value, V = () => e.disabled ? It("$-tab--disabled") : h() ? It("$-tab--active") : It("$-tab--inactive"), k = (T) => {
       var {
         disabled: I,
         name: P,
