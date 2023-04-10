@@ -7651,7 +7651,8 @@ var Xu = ne({
           text: !0,
           outline: !1,
           textColor: "",
-          class: Ra("button")
+          class: Ra("button"),
+          disabled: !0
         };
       var {
         choose: {
