@@ -1,16 +1,17 @@
 import{_ as c,p as e,f as d,h as p,M as a,q as t,S as n,aq as r,P as s}from"./vue-router-a0e39500.js";const h={components:{}},o={class:"varlet-site-doc"},j=a("h1",null,"选择框",-1),i=a("div",{class:"card"},[a("h3",null,"介绍"),a("p",null,"通过下拉菜单展示并选择内容。")],-1),g={class:"card"},m=a("h3",null,"标准外观",-1),v=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" value = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value2 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value3 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value4 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value5 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value6 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
+`),a("span",{class:"hljs-keyword"},"const"),s(` value = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value2 = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value3 = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value4 = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value5 = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value6 = ref()
 `),a("span",{class:"hljs-keyword"},"const"),s(` value7 = ref([])
 `),a("span",{class:"hljs-keyword"},"const"),s(` value8 = ref([])
-`),a("span",{class:"hljs-keyword"},"const"),s(" value9 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
+`),a("span",{class:"hljs-keyword"},"const"),s(` value9 = ref()
 `),a("span",{class:"hljs-keyword"},"const"),s(` value10 = ref([])
+`),a("span",{class:"hljs-keyword"},"const"),s(` value11 = ref()
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
 
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
@@ -93,6 +94,10 @@ import{_ as c,p as e,f as d,h as p,M as a,q as t,S as n,aq as r,P as s}from"./vu
       `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"打游戏"'),s(" />")]),s(`
       `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"写代码"'),s(" />")]),s(`
     `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-select"),s(">")]),s(`
+    `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-select"),s(),a("span",{class:"hljs-attr"},"placeholder"),s("="),a("span",{class:"hljs-string"},'"小尺寸"'),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value11"'),s(">")]),s(`
+      `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"吃饭"'),s(" />")]),s(`
+      `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"睡觉"'),s(" />")]),s(`
+    `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-select"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-space"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
 
@@ -116,16 +121,17 @@ import{_ as c,p as e,f as d,h as p,M as a,q as t,S as n,aq as r,P as s}from"./vu
 `)])],-1),u={class:"card"},b=a("h3",null,"外边框外观",-1),f=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
 
-`),a("span",{class:"hljs-keyword"},"const"),s(" value = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value2 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value3 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value4 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value5 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
-`),a("span",{class:"hljs-keyword"},"const"),s(" value6 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
+`),a("span",{class:"hljs-keyword"},"const"),s(` value = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value2 = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value3 = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value4 = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value5 = ref()
+`),a("span",{class:"hljs-keyword"},"const"),s(` value6 = ref()
 `),a("span",{class:"hljs-keyword"},"const"),s(` value7 = ref([])
 `),a("span",{class:"hljs-keyword"},"const"),s(` value8 = ref([])
-`),a("span",{class:"hljs-keyword"},"const"),s(" value9 = ref("),a("span",{class:"hljs-string"},"''"),s(`)
+`),a("span",{class:"hljs-keyword"},"const"),s(` value9 = ref()
 `),a("span",{class:"hljs-keyword"},"const"),s(` value10 = ref([])
+`),a("span",{class:"hljs-keyword"},"const"),s(` value11 = ref()
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
 
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
@@ -209,6 +215,10 @@ import{_ as c,p as e,f as d,h as p,M as a,q as t,S as n,aq as r,P as s}from"./vu
       `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"睡觉"'),s(" />")]),s(`
       `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"打游戏"'),s(" />")]),s(`
       `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"写代码"'),s(" />")]),s(`
+    `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-select"),s(">")]),s(`
+    `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-select"),s(),a("span",{class:"hljs-attr"},"variant"),s("="),a("span",{class:"hljs-string"},'"outlined"'),s(),a("span",{class:"hljs-attr"},"size"),s("="),a("span",{class:"hljs-string"},'"small"'),s(),a("span",{class:"hljs-attr"},"placeholder"),s("="),a("span",{class:"hljs-string"},'"小尺寸"'),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value11"'),s(">")]),s(`
+      `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"吃饭"'),s(" />")]),s(`
+      `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-option"),s(),a("span",{class:"hljs-attr"},"label"),s("="),a("span",{class:"hljs-string"},'"睡觉"'),s(" />")]),s(`
     `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-select"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-space"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
