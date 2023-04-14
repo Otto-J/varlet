@@ -20,7 +20,7 @@ import{_ as e,p as c,f as n,h as o,M as t,q as d,S as l,P as s,aq as r}from"./vu
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"可清除"'),s(),t("span",{class:"hljs-attr"},"clearable"),s(),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value4"'),s(" />")]),s(`
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(`
       `),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"字段校验"'),s(`
-      `),t("span",{class:"hljs-attr"},":rules"),s("="),t("span",{class:"hljs-string"},'"[(v) => v.length > 6 || pack.maxMessage]"'),s(`
+      `),t("span",{class:"hljs-attr"},":rules"),s("="),t("span",{class:"hljs-string"},`"[(v) => v.length > 6 || '文本长度必须大于6']"`),s(`
       `),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value5"'),s(`
     />`)]),s(`
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"显示图标"'),s(),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value6"'),s(">")]),s(`
@@ -69,7 +69,7 @@ import{_ as e,p as c,f as n,h as o,M as t,q as d,S as l,P as s,aq as r}from"./vu
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(`
       `),t("span",{class:"hljs-attr"},"variant"),s("="),t("span",{class:"hljs-string"},'"outlined"'),s(`
       `),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"字段校验"'),s(`
-      `),t("span",{class:"hljs-attr"},":rules"),s("="),t("span",{class:"hljs-string"},'"[(v) => v.length > 6 || pack.maxMessage]"'),s(`
+      `),t("span",{class:"hljs-attr"},":rules"),s("="),t("span",{class:"hljs-string"},`"[(v) => v.length > 6 || '文本长度必须大于6']"`),s(`
       `),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value5"'),s(`
     />`)]),s(`
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(),t("span",{class:"hljs-attr"},"variant"),s("="),t("span",{class:"hljs-string"},'"outlined"'),s(),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"显示图标"'),s(),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value6"'),s(">")]),s(`

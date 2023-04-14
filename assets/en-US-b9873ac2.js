@@ -20,7 +20,7 @@ import{_ as d,p as n,f as c,h as o,M as t,q as e,S as l,P as s,aq as r}from"./vu
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"Clearable"'),s(),t("span",{class:"hljs-attr"},"clearable"),s(),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value4"'),s(" />")]),s(`
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(`
       `),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"Validate"'),s(`
-      `),t("span",{class:"hljs-attr"},":rules"),s("="),t("span",{class:"hljs-string"},'"[(v) => v.length > 6 || pack.maxMessage]"'),s(`
+      `),t("span",{class:"hljs-attr"},":rules"),s("="),t("span",{class:"hljs-string"},`"[(v) => v.length > 6 || 'Text length must be greater than 6']"`),s(`
       `),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value5"'),s(`
     />`)]),s(`
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"Display Icon"'),s(),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value6"'),s(">")]),s(`
@@ -69,7 +69,7 @@ import{_ as d,p as n,f as c,h as o,M as t,q as e,S as l,P as s,aq as r}from"./vu
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(`
       `),t("span",{class:"hljs-attr"},"variant"),s("="),t("span",{class:"hljs-string"},'"outlined"'),s(`
       `),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"Validate"'),s(`
-      `),t("span",{class:"hljs-attr"},":rules"),s("="),t("span",{class:"hljs-string"},'"[(v) => v.length > 6 || pack.maxMessage]"'),s(`
+      `),t("span",{class:"hljs-attr"},":rules"),s("="),t("span",{class:"hljs-string"},`"[(v) => v.length > 6 || 'Text length must be greater than 6']"`),s(`
       `),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value5"'),s(`
     />`)]),s(`
     `),t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"var-input"),s(),t("span",{class:"hljs-attr"},"variant"),s("="),t("span",{class:"hljs-string"},'"outlined"'),s(),t("span",{class:"hljs-attr"},"placeholder"),s("="),t("span",{class:"hljs-string"},'"Display Icon"'),s(),t("span",{class:"hljs-attr"},"v-model"),s("="),t("span",{class:"hljs-string"},'"value6"'),s(">")]),s(`
