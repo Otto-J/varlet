@@ -11787,7 +11787,6 @@ function ub(e, n) {
   return p(), O(
     "div",
     {
-      ref: "decoratorEl",
       class: c(e.classes(e.n(), e.n("$--box"), e.n("--" + e.variant), [e.size === "small", e.n("--small")], [e.disabled, e.n("--disabled")])),
       onClick: n[0] || (n[0] = function() {
         return e.handleClick && e.handleClick(...arguments);
@@ -11816,13 +11815,12 @@ function ub(e, n) {
         {
           class: c(e.classes(e.n("wrap"), [!e.hint, e.n("--wrap-non-hint")]))
         },
-        [Y(e.$slots, "default"), e.decoratorEl && (e.hint || e.alwaysCustomPlaceholder) ? (p(), O(
+        [Y(e.$slots, "default"), e.hint || e.alwaysCustomPlaceholder ? (p(), O(
           "label",
           {
             key: 0,
             class: c(e.classes(e.n("placeholder"), e.n("$--ellipsis"), [e.isFocus, e.n("--focus")], [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], [!e.hint, e.n("--placeholder-non-hint")], e.computePlaceholderState())),
             style: q({
-              "--field-decorator-placeholder-max-width": e.placeholderMaxWidth,
               transform: e.placeholderTransform,
               color: e.color
             }),
@@ -11876,7 +11874,7 @@ function ub(e, n) {
           [A(
             "span",
             {
-              class: c(e.classes(e.n("line-legend-placeholder")))
+              class: c(e.n("line-legend-placeholder"))
             },
             ae(e.placeholder),
             3
@@ -11925,49 +11923,48 @@ var Cd = ee({
   },
   props: Ui,
   setup(e) {
-    var n = B(null), r = B(null), a = B(""), t = B(""), o = R(() => e.errorMessage ? void 0 : e.isFocus ? e.focusColor : e.blurColor), l = () => {
+    var n = B(null), r = B(null), a = B(""), t = R(() => e.errorMessage ? void 0 : e.isFocus ? e.focusColor : e.blurColor), o = () => {
       var {
-        hint: u,
-        value: d,
-        isFocus: v,
-        composing: f
+        hint: s,
+        value: u,
+        isFocus: d,
+        composing: v
       } = e;
-      if (!u && (!Rn(d) || f))
+      if (!s && (!Rn(u) || v))
         return So("--placeholder-hidden");
-      if (u && (!Rn(d) || v))
+      if (s && (!Rn(u) || d))
         return So("--placeholder-hint");
-    }, i = (u) => {
-      S(e.onClear, u);
-    }, s = (u) => {
-      S(e.onClick, u);
+    }, l = (s) => {
+      S(e.onClear, s);
+    }, i = (s) => {
+      S(e.onClick, s);
     };
     return zv(() => {
       var {
-        hint: u,
-        value: d,
-        isFocus: v,
-        variant: f
+        hint: s,
+        value: u,
+        isFocus: d,
+        variant: v
       } = e;
-      if (!(!n.value || !r.value)) {
-        if (u && (!Rn(d) || v)) {
-          var m, h = ((m = window.getComputedStyle(n.value)) == null ? void 0 : m.width) || 0;
-          t.value = "translate(-" + h + ", " + (f === "outlined" ? "-50%" : 0) + ") scale(0.75)", a.value = r.value.getBoundingClientRect().width + "px";
+      if (n.value) {
+        if (s && (!Rn(u) || d)) {
+          var f, m = ((f = window.getComputedStyle(n.value)) == null ? void 0 : f.width) || 0, h = v === "outlined" ? "-50%" : 0;
+          a.value = "translate(-" + m + ", " + h + ") scale(0.75)";
           return;
         }
-        a.value = "100%", t.value = "";
+        a.value = "";
       }
     }), {
       prependIconEl: n,
       decoratorEl: r,
-      placeholderMaxWidth: a,
-      placeholderTransform: t,
-      color: o,
-      computePlaceholderState: l,
+      placeholderTransform: a,
+      color: t,
+      computePlaceholderState: o,
       n: So,
       classes: lb,
       isEmpty: Rn,
-      handleClear: i,
-      handleClick: s
+      handleClear: l,
+      handleClick: i
     };
   }
 });
