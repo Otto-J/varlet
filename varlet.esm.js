@@ -11883,15 +11883,7 @@ function ub(e, n) {
               width: e.legendWidth
             })
           },
-          [z(
-            "span",
-            {
-              class: c(e.n("line-legend-placeholder"))
-            },
-            ae(e.placeholder),
-            3
-            /* TEXT, CLASS */
-          )],
+          null,
           6
           /* CLASS, STYLE */
         )],
