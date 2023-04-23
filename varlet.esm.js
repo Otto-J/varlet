@@ -11804,7 +11804,7 @@ function ub(e, n) {
       [z(
         "div",
         {
-          class: c(e.classes(e.n("icon"), [!e.hint, e.n("--non-hint")])),
+          class: c(e.classes(e.n("icon"), [!e.hint, e.n("--icon-non-hint")])),
           ref: "prependIconEl"
         },
         [Y(e.$slots, "prepend-icon")],
@@ -11819,7 +11819,7 @@ function ub(e, n) {
           "label",
           {
             key: 0,
-            class: c(e.classes(e.n("placeholder"), e.n("$--ellipsis"), [e.isFocus, e.n("--focus")], [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], e.computePlaceholderState())),
+            class: c(e.classes(e.n("placeholder"), e.n("$--ellipsis"), [e.isFocus, e.n("--focus")], [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], [!e.hint, e.n("--placeholder-non-hint")], e.computePlaceholderState())),
             style: q({
               transform: e.placeholderTransform,
               color: e.color
@@ -11844,7 +11844,7 @@ function ub(e, n) {
       ), z(
         "div",
         {
-          class: c(e.classes(e.n("icon"), [!e.hint, e.n("--non-hint")]))
+          class: c(e.classes(e.n("icon"), [!e.hint, e.n("--icon-non-hint")]))
         },
         [e.clearable && !e.isEmpty(e.value) ? (g(), he(
           r,
@@ -11873,7 +11873,7 @@ function ub(e, n) {
         "fieldset",
         {
           key: 0,
-          class: c(e.classes(e.n("line"), e.n("$--box"), [e.isFocus, e.n("--line-focus")], [e.errorMessage, e.n("--line-error")], [e.formDisabled || e.disabled, e.n("--line-disabled")]))
+          class: c(e.classes(e.n("line"), [e.isFocus, e.n("--line-focus")], [e.errorMessage, e.n("--line-error")], [e.formDisabled || e.disabled, e.n("--line-disabled")]))
         },
         [z(
           "legend",
@@ -15606,7 +15606,7 @@ function z1(e, n) {
           "div",
           {
             ref: "menuEl",
-            class: c(e.classes(e.n("scroller"), e.n("scroller-" + e.variant), [!e.hint, e.n("scroller-non-hint")], e.n("$-elevation--3")))
+            class: c(e.classes(e.n("scroller"), e.n("--scroller-" + e.variant), e.n("$-elevation--3"), [!e.hint, e.n("--scroller-non-hint")]))
           },
           [Y(e.$slots, "default")],
           2
