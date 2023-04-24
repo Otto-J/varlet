@@ -13241,7 +13241,7 @@ function r0(e, n) {
       ze(e.pageList, (i, s) => we((g(), O(
         "li",
         {
-          key: e.toNumber(i) + s,
+          key: s,
           "item-mode": e.getMode(i, s),
           class: c(e.classes(e.n("item"), e.formatElevation(e.elevation, 2), [i === e.current && !e.disabled, e.n("item--active")], [e.isHideEllipsis(i, s), e.n("item--hide")], [e.disabled, e.n("item--disabled")], [i === e.current && e.disabled, e.n("item--disabled--active")])),
           onClick: (u) => e.clickItem(i, s)
