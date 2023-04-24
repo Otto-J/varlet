@@ -13207,16 +13207,17 @@ function r0(e, n) {
       [_(
         a,
         {
+          "var-pagination-cover": "",
+          hint: !1,
+          disabled: e.disabled,
           modelValue: e.simpleCurrentValue,
           "onUpdate:modelValue": n[1] || (n[1] = (i) => e.simpleCurrentValue = i),
-          disabled: e.disabled,
-          "var-pagination-cover": "",
           onBlur: n[2] || (n[2] = (i) => e.setPage("simple", e.simpleCurrentValue, i)),
           onKeydown: n[3] || (n[3] = qi((i) => e.setPage("simple", e.simpleCurrentValue, i), ["enter"]))
         },
         null,
         8,
-        ["modelValue", "disabled"]
+        ["disabled", "modelValue"]
       ), z("span", null, [be(
         " / " + ae(e.pageCount) + " ",
         1
