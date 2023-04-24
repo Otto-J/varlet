@@ -11813,7 +11813,7 @@ function ub(e, n) {
       ), z(
         "div",
         {
-          class: c(e.classes(e.n("wrap"), [!e.hint, e.n("--wrap-non-hint")]))
+          class: c(e.classes(e.n("middle"), [!e.hint, e.n("--middle-non-hint")]))
         },
         [Y(e.$slots, "default"), e.hint || e.alwaysCustomPlaceholder ? (g(), O(
           "label",
