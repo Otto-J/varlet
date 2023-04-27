@@ -7176,7 +7176,7 @@ function Ph(e, n) {
                 ripple: !1,
                 elevation: e.componentProps.buttonElevation
               }, ni({}, e.buttonProps(t.index)), {
-                onClick: n[0] || (n[0] = (o) => chooseMonth(t, o))
+                onClick: (o) => e.chooseMonth(t, o)
               }),
               {
                 default: ve(() => [we(
@@ -7188,7 +7188,7 @@ function Ph(e, n) {
                 /* DYNAMIC */
               },
               1040,
-              ["elevation"]
+              ["elevation", "onClick"]
             )]))),
             128
             /* KEYED_FRAGMENT */
@@ -7519,7 +7519,7 @@ function Nh(e, n) {
                   ripple: !1,
                   elevation: e.componentProps.buttonElevation
                 }, ri({}, e.buttonProps(t)), {
-                  onClick: n[0] || (n[0] = (l) => chooseDay(t, l))
+                  onClick: (l) => e.chooseDay(t, l)
                 }),
                 {
                   default: ve(() => [we(
@@ -7531,7 +7531,7 @@ function Nh(e, n) {
                   /* DYNAMIC */
                 },
                 1040,
-                ["elevation"]
+                ["elevation", "onClick"]
               )]))),
               128
               /* KEYED_FRAGMENT */
@@ -16332,7 +16332,7 @@ function W1(e, n) {
             null,
             6
             /* CLASS, STYLE */
-          ), [[t, (l) => hover(l, o), "desktop"]]), z(
+          ), [[t, (l) => e.hover(l, o), "desktop"]]), z(
             "div",
             {
               class: c(e.classes(e.n(e.direction + "-thumb-ripple"), [e.thumbsProps[o.enumValue].active, e.n(e.direction + "-thumb-ripple--active")])),
