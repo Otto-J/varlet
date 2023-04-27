@@ -16269,7 +16269,7 @@ function W1(e, n) {
     [z(
       "div",
       {
-        class: c(e.classes(e.n(e.direction + "__block"), [e.isDisabled, e.n("--disabled")], [e.errorMessage, e.n("--error")])),
+        class: c(e.classes(e.n(e.direction + "-block"), [e.isDisabled, e.n("--disabled")], [e.errorMessage, e.n("--error")])),
         ref: "sliderEl",
         onClick: n[0] || (n[0] = function() {
           return e.click && e.click(...arguments);
@@ -16278,12 +16278,12 @@ function W1(e, n) {
       [z(
         "div",
         {
-          class: c(e.n(e.direction + "__track"))
+          class: c(e.n(e.direction + "-track"))
         },
         [z(
           "div",
           {
-            class: c(e.n(e.direction + "__track-background")),
+            class: c(e.n(e.direction + "-track-background")),
             style: G({
               background: e.trackColor,
               height: e.isVertical ? "100%" : e.multiplySizeUnit(e.trackHeight),
@@ -16296,7 +16296,7 @@ function W1(e, n) {
         ), z(
           "div",
           {
-            class: c(e.n(e.direction + "__track-fill")),
+            class: c(e.n(e.direction + "-track-fill")),
             style: G(e.getFillStyle)
           },
           null,
@@ -16311,7 +16311,7 @@ function W1(e, n) {
         Ae(e.thumbList, (o) => (h(), O(
           "div",
           {
-            class: c(e.n(e.direction + "__thumb")),
+            class: c(e.n(e.direction + "-thumb")),
             key: o.enumValue,
             style: G(e.thumbStyle(o)),
             onTouchstart: gn((l) => e.start(l, o.enumValue), ["stop"]),
@@ -16324,7 +16324,7 @@ function W1(e, n) {
           }, () => [Se(z(
             "div",
             {
-              class: c(e.n(e.direction + "__thumb-block")),
+              class: c(e.n(e.direction + "-thumb-block")),
               style: G({
                 background: e.thumbColor
               })
@@ -16335,7 +16335,7 @@ function W1(e, n) {
           ), [[t, (l) => hover(l, o), "desktop"]]), z(
             "div",
             {
-              class: c(e.classes(e.n(e.direction + "__thumb-ripple"), [e.thumbsProps[o.enumValue].active, e.n(e.direction + "__thumb-ripple--active")])),
+              class: c(e.classes(e.n(e.direction + "-thumb-ripple"), [e.thumbsProps[o.enumValue].active, e.n(e.direction + "-thumb-ripple--active")])),
               style: G({
                 background: e.thumbsProps[o.enumValue].active ? e.thumbColor : void 0
               })
@@ -16354,7 +16354,7 @@ function W1(e, n) {
           ), z(
             "div",
             {
-              class: c(e.classes(e.n(e.direction + "__thumb-label"), [e.showLabel(o.enumValue), e.n(e.direction + "__thumb-label--active")])),
+              class: c(e.classes(e.n(e.direction + "-thumb-label"), [e.showLabel(o.enumValue), e.n(e.direction + "-thumb-label--active")])),
               style: G({
                 background: e.labelColor,
                 color: e.labelTextColor,
