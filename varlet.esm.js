@@ -19557,7 +19557,8 @@ var Tv = _({
       url: "",
       cover: "",
       name: j.name,
-      file: j
+      file: j,
+      progress: 0
     }), p = (j) => {
       var se = j.target, {
         files: G
