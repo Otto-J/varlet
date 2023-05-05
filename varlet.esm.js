@@ -12022,7 +12022,7 @@ function di() {
   }, di.apply(this, arguments);
 }
 function ub(e) {
-  return ["text", "password", "number"].includes(e);
+  return ["text", "password", "number", "tel", "email"].includes(e);
 }
 var db = di({
   modelValue: {
@@ -12067,6 +12067,9 @@ var db = di({
   rules: {
     type: Array
   },
+  enterkeyhint: {
+    type: String
+  },
   onFocus: U(),
   onBlur: U(),
   onInput: U(),
@@ -12076,7 +12079,7 @@ var db = di({
 }, qe(Ui, ["size", "variant", "placeholder", "line", "hint", "textColor", "focusColor", "blurColor", "disabled", "clearable", "onClick"])), {
   n: vb,
   classes: fb
-} = x("input"), cb = ["placeholder"], mb = ["id", "disabled", "type", "value", "placeholder", "maxlength", "rows"], pb = ["id", "disabled", "type", "value", "placeholder", "maxlength"];
+} = x("input"), cb = ["placeholder", "enterkeyhint"], mb = ["id", "disabled", "type", "value", "placeholder", "maxlength", "rows", "enterkeyhint", "inputmode"], pb = ["id", "disabled", "type", "value", "placeholder", "maxlength", "enterkeyhint", "inputmode"];
 function hb(e, n) {
   var r = te("var-field-decorator"), a = te("var-form-details");
   return h(), O(
@@ -12114,7 +12117,7 @@ function hb(e, n) {
       {
         "prepend-icon": ve(() => [F(e.$slots, "prepend-icon")]),
         "append-icon": ve(() => [F(e.$slots, "append-icon")]),
-        default: ve(() => [e.type === "password" ? (h(), O(
+        default: ve(() => [e.normalizedType === "password" ? (h(), O(
           "input",
           {
             key: 0,
@@ -12122,7 +12125,8 @@ function hb(e, n) {
             placeholder: e.hint ? void 0 : e.placeholder,
             style: W({
               "--input-placeholder-color": e.placeholderColor
-            })
+            }),
+            enterkeyhint: e.enterkeyhint
           },
           null,
           14,
@@ -12136,11 +12140,13 @@ function hb(e, n) {
             autocomplete: "new-password",
             id: e.id,
             disabled: e.formDisabled || e.disabled || e.formReadonly || e.readonly,
-            type: e.type,
+            type: e.normalizedType,
             value: e.modelValue,
             placeholder: e.hint ? void 0 : e.placeholder,
             maxlength: e.maxlength,
             rows: e.rows,
+            enterkeyhint: e.enterkeyhint,
+            inputmode: e.type === "number" ? "numeric" : void 0,
             style: W({
               color: e.errorMessage ? void 0 : e.textColor,
               caretColor: e.errorMessage ? void 0 : e.focusColor,
@@ -12182,10 +12188,12 @@ function hb(e, n) {
             autocomplete: "new-password",
             id: e.id,
             disabled: e.formDisabled || e.disabled || e.formReadonly || e.readonly,
-            type: e.type,
+            type: e.normalizedType,
             value: e.modelValue,
             placeholder: e.hint ? void 0 : e.placeholder,
             maxlength: e.maxlength,
+            enterkeyhint: e.enterkeyhint,
+            inputmode: e.type === "number" ? "numeric" : void 0,
             style: W({
               color: e.errorMessage ? void 0 : e.textColor,
               caretColor: e.errorMessage ? void 0 : e.focusColor,
@@ -12350,7 +12358,7 @@ var kd = _({
       isComposing: t,
       errorMessage: v,
       placeholderColor: s,
-      type: o,
+      normalizedType: o,
       cursor: i,
       maxlengthText: l,
       formDisabled: d == null ? void 0 : d.disabled,
