@@ -4988,7 +4988,7 @@ var Pu = Q({
         var {
           offsetHeight: E
         } = o.value;
-        o.value.style.height = 0 + "px", bn(() => {
+        o.value.style.height = "0px", bn(() => {
           o.value.style.height = E + "px", t && ro(() => {
             t && S();
           });
@@ -5002,7 +5002,7 @@ var Pu = Q({
           offsetHeight: E
         } = o.value;
         o.value.style.height = E + "px", bn(() => {
-          o.value.style.height = 0 + "px";
+          o.value.style.height = "0px";
         });
       }
     }, S = () => {
@@ -5752,7 +5752,8 @@ function fe(e, n, r, a) {
           t++;
         o %= ce, l = o - ce + t, s = l < 0 ? 0 : d / qe(10, t - l - 1) % 10 | 0;
       }
-      if (a = a || n < 0 || v[f + 1] !== void 0 || (l < 0 ? d : d % qe(10, t - l - 1)), u = r < 4 ? (s || a) && (r == 0 || r == (e.s < 0 ? 3 : 2)) : s > 5 || s == 5 && (r == 4 || a || r == 6 && (o > 0 ? l > 0 ? d / qe(10, t - l) : 0 : v[f - 1]) % 10 & 1 || r == (e.s < 0 ? 8 : 7)), n < 1 || !v[0])
+      if (a = a || n < 0 || v[f + 1] !== void 0 || (l < 0 ? d : d % qe(10, t - l - 1)), u = r < 4 ? (s || a) && (r == 0 || r == (e.s < 0 ? 3 : 2)) : s > 5 || s == 5 && (r == 4 || a || r == 6 && // Check whether the digit to the left of the rounding digit is odd.
+      (o > 0 ? l > 0 ? d / qe(10, t - l) : 0 : v[f - 1]) % 10 & 1 || r == (e.s < 0 ? 8 : 7)), n < 1 || !v[0])
         return v.length = 0, u ? (n -= e.e + 1, v[0] = qe(10, (ce - n % ce) % ce), e.e = -n || 0) : v[0] = e.e = 0, e;
       if (o == 0 ? (v.length = f, i = 1, f--) : (v.length = f + 1, i = qe(10, ce - o), v[f] = l > 0 ? (d / qe(10, t - l) % qe(10, l) | 0) * i : 0), u)
         for (; ; )
@@ -6688,9 +6689,9 @@ Be.w = yh;
 var bh = function(n) {
   var r = n.date, a = n.utc;
   if (r === null)
-    return new Date(NaN);
+    return /* @__PURE__ */ new Date(NaN);
   if (Be.u(r))
-    return new Date();
+    return /* @__PURE__ */ new Date();
   if (r instanceof Date)
     return new Date(r);
   if (typeof r == "string" && !/Z$/i.test(r)) {
@@ -8566,7 +8567,7 @@ var ed = Q({
         left: v > 0 ? he(f) : he(0)
       });
     }), l = () => {
-      a.withText = Boolean(r.default) || Boolean(e.description);
+      a.withText = !!r.default || !!e.description;
     };
     return tn(() => {
       l();
