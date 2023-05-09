@@ -11901,7 +11901,10 @@ function ub(e, n) {
         "fieldset",
         {
           key: 0,
-          class: c(e.classes(e.n("line"), [e.isFocus, e.n("--line-focus")], [e.errorMessage, e.n("--line-error")], [e.formDisabled || e.disabled, e.n("--line-disabled")]))
+          class: c(e.classes(e.n("line"), [e.isFocus, e.n("--line-focus")], [e.errorMessage, e.n("--line-error")], [e.formDisabled || e.disabled, e.n("--line-disabled")])),
+          style: G({
+            borderColor: e.color
+          })
         },
         [A(
           "legend",
@@ -11915,8 +11918,8 @@ function ub(e, n) {
           6
           /* CLASS, STYLE */
         )],
-        2
-        /* CLASS */
+        6
+        /* CLASS, STYLE */
       )) : (p(), P(
         "div",
         {
