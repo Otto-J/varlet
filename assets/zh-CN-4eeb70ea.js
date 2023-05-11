@@ -109,13 +109,13 @@ onUnmounted(`),a("span",{class:"hljs-function"},"() =>"),s(` {
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-uploader"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"files"'),s(),a("span",{class:"hljs-attr"},":maxsize"),s("="),a("span",{class:"hljs-string"},'"1024"'),s(" @"),a("span",{class:"hljs-attr"},"oversize"),s("="),a("span",{class:"hljs-string"},`"Snackbar.warning('文件大小超出限制')"`),s(" />")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),$={class:"card"},M={id:"文件列表过滤"},T=a("p",null,[s("通过 "),a("code",null,"before-filter"),s(" 事件可以对文件进行过滤，返回"),a("code",null,"VarFile"),s("数组对上传文件操作，可以进行条件过滤、追加文件等操作。")],-1),q=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`)])],-1),$={class:"card"},M={id:"文件列表过滤"},T=a("p",null,[s("通过 "),a("code",null,"before-filter"),s(" 事件对文件进行过滤，返回一个被过滤之后的 "),a("code",null,"VarFile"),s(" 数组。")],-1),q=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
 
 `),a("span",{class:"hljs-keyword"},"const"),s(` files = ref([])
 
 `),a("span",{class:"hljs-function"},[a("span",{class:"hljs-keyword"},"function"),s(),a("span",{class:"hljs-title"},"handleBeforeFilter"),s("("),a("span",{class:"hljs-params"},"files"),s(") ")]),s(`{
-  `),a("span",{class:"hljs-keyword"},"return"),s(" files.filter("),a("span",{class:"hljs-function"},[s("("),a("span",{class:"hljs-params"},"file"),s(") =>")]),s(" file.file.size <= "),a("span",{class:"hljs-number"},"3"),s(" * "),a("span",{class:"hljs-number"},"1024"),s(" * "),a("span",{class:"hljs-number"},"1024"),s(`)
+  `),a("span",{class:"hljs-keyword"},"return"),s(" files.filter("),a("span",{class:"hljs-function"},[a("span",{class:"hljs-params"},"file"),s(" =>")]),s(" file.file.size <= "),a("span",{class:"hljs-number"},"3"),s(" * "),a("span",{class:"hljs-number"},"1024"),s(" * "),a("span",{class:"hljs-number"},"1024"),s(`)
 }
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
 
