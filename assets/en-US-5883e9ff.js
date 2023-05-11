@@ -115,7 +115,7 @@ onUnmounted(`),t("span",{class:"hljs-function"},"() =>"),s(` {
 `),t("span",{class:"hljs-keyword"},"const"),s(` files = ref([])
 
 `),t("span",{class:"hljs-function"},[t("span",{class:"hljs-keyword"},"function"),s(),t("span",{class:"hljs-title"},"handleBeforeFilter"),s("("),t("span",{class:"hljs-params"},"files"),s(") ")]),s(`{
-  `),t("span",{class:"hljs-keyword"},"return"),s(" files.filter("),t("span",{class:"hljs-function"},[s("("),t("span",{class:"hljs-params"},"file"),s(") =>")]),s(" file.file.size <= "),t("span",{class:"hljs-number"},"3"),s(" * "),t("span",{class:"hljs-number"},"1024"),s(" * "),t("span",{class:"hljs-number"},"1024"),s(`)
+  `),t("span",{class:"hljs-keyword"},"return"),s(" files.filter("),t("span",{class:"hljs-function"},[t("span",{class:"hljs-params"},"file"),s(" =>")]),s(" file.file.size <= "),t("span",{class:"hljs-number"},"3"),s(" * "),t("span",{class:"hljs-number"},"1024"),s(" * "),t("span",{class:"hljs-number"},"1024"),s(`)
 }
 `)]),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"script"),s(">")]),s(`
 
