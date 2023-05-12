@@ -1926,8 +1926,8 @@ function Kf(e, n) {
         46,
         Xf
       ))],
-      2112
-      /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+      64
+      /* STABLE_FRAGMENT */
     )) : (p(), O(
       "div",
       {
@@ -2782,7 +2782,8 @@ function Ac(e, n) {
     [H(e.$slots, "default"), Z(
       Le,
       {
-        name: e.n("$-badge-fade")
+        name: e.n("$-badge-fade"),
+        persisted: ""
       },
       {
         default: ve(() => [ke(A(
@@ -3128,8 +3129,8 @@ function Xc(e, n) {
           1
           /* TEXT */
         )],
-        2112
-        /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+        64
+        /* STABLE_FRAGMENT */
       )), H(e.$slots, "default")],
       2
       /* CLASS */
@@ -9783,7 +9784,8 @@ function iy(e, n) {
         {
           name: e.n(),
           onAfterEnter: e.onOpened,
-          onAfterLeave: e.onClosed
+          onAfterLeave: e.onClosed,
+          persisted: ""
         },
         {
           default: ve(() => [ke(A(
@@ -11944,8 +11946,8 @@ function db(e, n) {
         6
         /* CLASS, STYLE */
       ))],
-      2112
-      /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+      64
+      /* STABLE_FRAGMENT */
     )) : x("v-if", !0)],
     2
     /* CLASS */
@@ -12908,7 +12910,8 @@ function Kb(e, n) {
         {
           name: e.n(),
           onAfterEnter: e.onOpened,
-          onAfterLeave: e.onClosed
+          onAfterLeave: e.onClosed,
+          persisted: ""
         },
         {
           default: ve(() => [ke(A(
@@ -15782,8 +15785,8 @@ function F1(e, n) {
                     3
                     /* TEXT, CLASS */
                   ))],
-                  2112
-                  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
+                  64
+                  /* STABLE_FRAGMENT */
                 )) : (p(), O(
                   "span",
                   U1,
