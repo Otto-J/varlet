@@ -120,7 +120,7 @@ onUnmounted(`),a("span",{class:"hljs-function"},"() =>"),s(` {
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
 
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-uploader"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"values.files14"'),s(),a("span",{class:"hljs-attr"},"multiple"),s(" @"),a("span",{class:"hljs-attr"},"before-filter"),s("="),a("span",{class:"hljs-string"},'"handleBeforeFilter"'),s(" />")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-uploader"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"files"'),s(),a("span",{class:"hljs-attr"},"multiple"),s(" @"),a("span",{class:"hljs-attr"},"before-filter"),s("="),a("span",{class:"hljs-string"},'"handleBeforeFilter"'),s(" />")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
 
 `)])],-1),D={class:"card"},L={id:"上传预处理"},W=a("p",null,[s("通过注册 "),a("code",null,"before-read"),s(" 事件对文件进行操作，返回假值阻止文件读取。")],-1),G=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
