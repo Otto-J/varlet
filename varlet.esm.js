@@ -16345,7 +16345,7 @@ function Z1(e, n) {
     [A(
       "div",
       {
-        class: c(e.classes(e.n(e.direction + "-block"), [e.isDisabled, e.n("--disabled")], [e.errorMessage, e.n("--error")])),
+        class: c(e.classes(e.n(e.direction + "-block"), [e.isDisabled, e.n("--disabled")], [e.errorMessage, e.n(e.direction + "--error")])),
         ref: "sliderEl",
         onClick: n[0] || (n[0] = function() {
           return e.click && e.click(...arguments);
