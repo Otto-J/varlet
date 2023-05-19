@@ -192,7 +192,7 @@ var ws = (e) => Fe(e) && e.endsWith("rem"), Zv = (e) => Fe(e) && e.endsWith("em"
     return "" + parseFloat(r) * n + a;
   }
 };
-function wn(e) {
+function Sn(e) {
   var n = ys();
   return n.requestAnimationFrame ? n.requestAnimationFrame(e) : n.setTimeout(e, 16);
 }
@@ -201,20 +201,20 @@ function tl(e) {
   n.cancelAnimationFrame ? n.cancelAnimationFrame(e) : n.clearTimeout(e);
 }
 function oo(e) {
-  wn(() => {
-    wn(e);
+  Sn(() => {
+    Sn(e);
   });
 }
 function Rn() {
   return new Promise((e) => {
-    wn(() => {
-      wn(e);
+    Sn(() => {
+      Sn(e);
     });
   });
 }
 function ef() {
   return new Promise((e) => {
-    wn(e);
+    Sn(e);
   });
 }
 function pt(e, n) {
@@ -229,11 +229,11 @@ function pt(e, n) {
       var v = (Date.now() - l) / t;
       if (v < 1) {
         var f = i + (r - i) * o(v), m = s + (a - s) * o(v);
-        e.scrollTo(m, f), wn(d);
+        e.scrollTo(m, f), Sn(d);
       } else
         e.scrollTo(a, r), u();
     };
-    wn(d);
+    Sn(d);
   });
 }
 function Ts(e) {
@@ -4992,11 +4992,11 @@ var Mu = Q({
     }, p = (M) => {
       e.disabled || M || f(e.name || n.value, !i.value);
     }, y = () => {
-      o.value && (o.value.style.height = "", l.value = !0, wn(() => {
+      o.value && (o.value.style.height = "", l.value = !0, Sn(() => {
         var {
           offsetHeight: M
         } = o.value;
-        o.value.style.height = "0px", wn(() => {
+        o.value.style.height = "0px", Sn(() => {
           o.value.style.height = M + "px", t && oo(() => {
             t && C();
           });
@@ -5009,7 +5009,7 @@ var Mu = Q({
         var {
           offsetHeight: M
         } = o.value;
-        o.value.style.height = M + "px", wn(() => {
+        o.value.style.height = M + "px", Sn(() => {
           o.value.style.height = "0px";
         });
       }
@@ -5113,7 +5113,7 @@ var Bu = Q({
         S(p);
         return;
       }
-      t && (o = wn(d));
+      t && (o = Sn(d));
     }, v = function(g) {
       g === void 0 && (g = !1), !(t && !g) && (t = !0, a = performance.now() + (l || R(e.time)), d());
     }, f = () => {
@@ -7976,7 +7976,7 @@ var nd = Q({
         return "" + C.value.length + Ze.value.datePickerSelected;
       if (!m.value || !f.value || !g.value)
         return "";
-      var Cn = le(m.value + "-" + f.value.index + "-" + g.value).day(), Fa = lt.find((Co) => Co.index === "" + Cn), Ki = (oe = (be = Ze.value.datePickerWeekDict) == null ? void 0 : be[Fa.index].name) != null ? oe : "", Bv = (pe = (Se = Ze.value.datePickerMonthDict) == null ? void 0 : Se[f.value.index].name) != null ? pe : "", Ev = Ia(g.value, 2, "0");
+      var wn = le(m.value + "-" + f.value.index + "-" + g.value).day(), Fa = lt.find((Co) => Co.index === "" + wn), Ki = (oe = (be = Ze.value.datePickerWeekDict) == null ? void 0 : be[Fa.index].name) != null ? oe : "", Bv = (pe = (Se = Ze.value.datePickerMonthDict) == null ? void 0 : Se[f.value.index].name) != null ? pe : "", Ev = Ia(g.value, 2, "0");
       return Ze.value.lang === "zh-CN" ? f.value.index + "-" + Ev + " " + Ki.slice(0, 3) : Ki.slice(0, 3) + ", " + Bv.slice(0, 3) + " " + g.value;
     }), X = L(() => u.value ? "year" : e.type === "month" || d.value ? "month" : e.type === "date" ? "date" : ""), z = L(() => !e.touchable || ["", "year"].includes(X.value)), N = L(() => {
       var oe, be, pe, Se, $e = le(m.value + "-" + ((oe = f.value) == null ? void 0 : oe.index) + "-" + g.value).day(), Re = g.value ? Ia(g.value, 2, "0") : "";
@@ -8033,8 +8033,8 @@ var nd = Q({
       } = e;
       if (!(oe < 0 || be)) {
         w.value = we("day", oe);
-        var rn = y.value + "-" + p.value.index + "-" + oe, Cn = le(rn).format("YYYY-MM-DD");
-        pe ? se(Cn, "day") : Se ? de(Cn, "day") : (S(Re, Cn), S($e, Cn));
+        var rn = y.value + "-" + p.value.index + "-" + oe, wn = le(rn).format("YYYY-MM-DD");
+        pe ? se(wn, "day") : Se ? de(wn, "day") : (S(Re, wn), S($e, wn));
       }
     }, dn = (oe) => {
       var {
@@ -8044,11 +8044,11 @@ var nd = Q({
         multiple: $e,
         onChange: Re,
         onPreview: rn,
-        "onUpdate:modelValue": Cn
+        "onUpdate:modelValue": wn
       } = e;
       if (w.value = we("month", oe), be === "month" && !pe) {
         var Fa = y.value + "-" + oe.index;
-        Se ? se(Fa, "month") : $e ? de(Fa, "month") : (S(Cn, Fa), S(Re, Fa));
+        Se ? se(Fa, "month") : $e ? de(Fa, "month") : (S(wn, Fa), S(Re, Fa));
       } else
         p.value = oe, S(rn, R(y.value), R(p.value.index));
       d.value = !1;
@@ -8064,7 +8064,7 @@ var nd = Q({
       }
       S(e.onPreview, R(y.value), R(p.value.index));
     }, me = () => (e.multiple || e.range) && !Te(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be an Array'), !1) : !e.multiple && !e.range && Te(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be a String'), !1) : !0, De = (oe) => Te(oe) ? !1 : oe === "Invalid Date" ? (console.error('[Varlet] DatePicker: "modelValue" is an Invalid Date'), !0) : !1, Ke = (oe, be) => {
-      var pe = be === "month" ? k : M, Se = be === "month" ? "YYYY-MM" : "YYYY-MM-D", $e = oe.map((Cn) => le(Cn).format(Se)).slice(0, 2), Re = pe.value.some((Cn) => De(Cn));
+      var pe = be === "month" ? k : M, Se = be === "month" ? "YYYY-MM" : "YYYY-MM-D", $e = oe.map((wn) => le(wn).format(Se)).slice(0, 2), Re = pe.value.some((wn) => De(wn));
       if (!Re) {
         pe.value = $e;
         var rn = le(pe.value[0]).isAfter(pe.value[1]);
@@ -11679,7 +11679,7 @@ var kd = Q({
     }, M = () => {
       f.removeEventListener("scroll", w);
     }, $ = (I, b) => {
-      wn(() => O({
+      Sn(() => O({
         anchorName: I,
         options: b
       }));
@@ -13947,10 +13947,10 @@ var jd = Q({
     }, w = (z, N) => {
       i || (z.index = N, z.scrolling = !0, p(z, es));
     }, O = (z, N) => {
-      N.touching = !0, N.scrolling = !1, N.duration = 0, N.translate = So(N.scrollEl);
+      N.touching = !0, N.translate = So(N.scrollEl);
     }, C = (z, N) => {
       if (N.touching) {
-        i = !0;
+        i = !0, N.scrolling = !1, N.duration = 0;
         var {
           clientY: F
         } = z.touches[0], W = N.prevY !== void 0 ? F - N.prevY : 0;
@@ -13963,7 +13963,7 @@ var jd = Q({
       var F = N.translate - N.momentumPrevY, W = performance.now() - N.momentumTime, te = Math.abs(F) >= g0 && W <= xl;
       te && y(N, F, W), N.index = f(N, N.translate);
       var G = N.translate, U = m(N);
-      N.scrolling = U !== G, p(N, te ? y0 : es), N.scrolling || D(N), wn(() => {
+      N.scrolling = U !== G, p(N, te ? y0 : es), N.scrolling || D(N), window.setTimeout(() => {
         i = !1;
       });
     }, M = (z) => {
@@ -14016,15 +14016,14 @@ var jd = Q({
       var {
         cascade: N,
         onChange: F
-      } = e;
-      N && P(z);
-      var W = n.value.some((E) => E.scrolling);
-      if (!W) {
-        var {
-          texts: te,
-          indexes: G
-        } = g(), U = G.every((E, q) => E === l[q]);
-        U || (l = [...G], S(F, te, G));
+      } = e, {
+        texts: W,
+        indexes: te
+      } = g(), G = te.every((E, q) => E === l[q]);
+      if (!G) {
+        N && P(z);
+        var U = n.value.some((E) => E.scrolling);
+        U || (l = [...te], S(F, W, te));
       }
     }, B = () => {
       if (e.cascade) {
@@ -18528,7 +18527,7 @@ var GC = {
   dark: WC
 }, Fk = null;
 const wi = GC;
-var Sn = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], tn = ["00", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"], fs = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"];
+var Cn = ["12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"], tn = ["00", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"], fs = ["00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"];
 function qC(e) {
   return ["ampm", "24hr"].includes(e);
 }
@@ -18571,7 +18570,7 @@ var XC = {
   "onUpdate:modelValue": H(),
   onChange: H()
 }, $v = (e, n) => e === "24hr" || n === "am", Xi = (e, n, r) => {
-  var a = Sn.findIndex((o) => R(o) === R(r)), t = $v(e, n) ? r : tn[a];
+  var a = Cn.findIndex((o) => R(o) === R(r)), t = $v(e, n) ? r : tn[a];
   return {
     hourStr: t,
     hourNum: R(t)
@@ -18795,7 +18794,7 @@ var Pv = Q({
         var y = e.rad / 30;
         return y >= 0 ? y : y + 12;
       }
-    }), s = L(() => e.type === "hour" ? Sn : fs), u = (y, w) => {
+    }), s = L(() => e.type === "hour" ? Cn : fs), u = (y, w) => {
       var O;
       y = (O = y) != null ? O : e.type === "minute" ? e.time.minute : e.time.second;
       var C = e.type === "minute" ? Tv : Ov, k = {
@@ -18819,7 +18818,7 @@ var Pv = Q({
       if (e.type === "hour") {
         if ($v(e.format, e.ampm))
           return t.value.includes(y);
-        var w = Sn.findIndex((O) => O === y);
+        var w = Cn.findIndex((O) => O === y);
         return o.value.includes(w);
       }
       return u(y, !0);
@@ -18854,7 +18853,7 @@ var Pv = Q({
       };
     }, p = () => {
       if (i.value !== void 0) {
-        var y = e.ampm === "am" ? Sn : tn;
+        var y = e.ampm === "am" ? Cn : tn;
         return Ia(y[i.value], 2, "0");
       }
     };
@@ -18887,13 +18886,13 @@ var Pv = Q({
       if (t.value = [], w && !O) {
         var {
           hour: k
-        } = cn(w), M = Sn.filter((W) => R(W) > k), $ = tn.filter((W) => R(W) > k);
+        } = cn(w), M = Cn.filter((W) => R(W) > k), $ = tn.filter((W) => R(W) > k);
         t.value = [...M, ...$];
       }
       if (!w && O) {
         var {
           hour: I
-        } = cn(O), b = Sn.filter((W) => R(W) < I), P = tn.filter((W) => R(W) < I);
+        } = cn(O), b = Cn.filter((W) => R(W) < I), P = tn.filter((W) => R(W) < I);
         t.value = [...b, ...P];
       }
       if (w && O) {
@@ -18901,13 +18900,13 @@ var Pv = Q({
           hour: D
         } = cn(w), {
           hour: B
-        } = cn(O), j = Sn.filter((W) => R(W) < B || R(W) > D), X = tn.filter((W) => R(W) < B || R(W) > D);
+        } = cn(O), j = Cn.filter((W) => R(W) < B || R(W) > D), X = tn.filter((W) => R(W) < B || R(W) > D);
         t.value = [...j, ...X];
       }
       if (C != null && C.hours) {
         var {
           hours: z
-        } = C, N = Sn.filter((W) => !z(R(W))), F = tn.filter((W) => !z(R(W)));
+        } = C, N = Cn.filter((W) => !z(R(W))), F = tn.filter((W) => !z(R(W)));
         t.value = [.../* @__PURE__ */ new Set([...t.value, ...N, ...F])];
       }
       o.value = t.value.map((W) => tn.findIndex((te) => W === te)).filter((W) => W >= 0);
@@ -19115,7 +19114,7 @@ var Vv = Q({
     }, I = (U) => {
       var {
         disableHour: E
-      } = a.value, q = Sn.findIndex((de) => R(de) === R(y.value.hour)), ee = U === "am" ? Sn : tn, se = [...ee.slice(q), ...ee.slice(0, q)];
+      } = a.value, q = Cn.findIndex((de) => R(de) === R(y.value.hour)), ee = U === "am" ? Cn : tn, se = [...ee.slice(q), ...ee.slice(0, q)];
       return se.find((de, we) => (o.value = we !== 0, !E.includes(de)));
     }, b = (U) => {
       if (!e.readonly) {
@@ -19159,9 +19158,9 @@ var Vv = Q({
         disableHour: ee
       } = a.value;
       l.value = P(U, E);
-      var se = Math.round(q / 30) * 30 + 90, de = B(se), we = t.value ? Sn[de] : tn[de];
+      var se = Math.round(q / 30) * 30 + 90, de = B(se), we = t.value ? Cn[de] : tn[de];
       if (ee.includes(we) || (t.value = e.format === "24hr" ? P(U, E) : !1), t.value === l.value) {
-        var Pe = t.value || m.value === "pm" ? tn[de] : Sn[de];
+        var Pe = t.value || m.value === "pm" ? tn[de] : Cn[de];
         g.value = ee.includes(Pe), !g.value && (u.value = se, i.value = !0);
       }
     }, z = (U) => {
