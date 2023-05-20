@@ -13719,7 +13719,7 @@ var m0 = mi({
 }, Je(Pt, ["show", "onUpdate:show", "closeOnClickOverlay", "teleport", "safeArea", "onOpen", "onClose", "onOpened", "onClosed", "onClickOverlay", "onRouteChange"])), {
   n: p0,
   classes: h0
-} = Q("picker"), xl = 300, g0 = 15, es = 200, y0 = 1e3, rs = 0, b0 = ["onTouchstart", "onTouchmove", "onTouchend"], w0 = ["onTransitionend"], C0 = ["onTouchend"];
+} = Q("picker"), xl = 300, g0 = 15, es = 200, y0 = 1e3, rs = 0, b0 = ["onTouchstart", "onTouchmove", "onTouchend"], w0 = ["onTransitionend"], C0 = ["onClick"];
 function S0(e, r) {
   var n = ae("var-button");
   return g(), ye(
@@ -13848,7 +13848,7 @@ function S0(e, r) {
                         height: e.optionHeight + "px"
                       }),
                       key: t,
-                      onTouchend: (l) => e.handleClick(a, o)
+                      onClick: (l) => e.handleClick(a, o)
                     },
                     [A(
                       "div",
@@ -13859,7 +13859,7 @@ function S0(e, r) {
                       3
                       /* TEXT, CLASS */
                     )],
-                    46,
+                    14,
                     C0
                   ))),
                   128
