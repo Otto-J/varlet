@@ -1,0 +1,1 @@
+import{d as a,aB as r}from"./vue-router-6d66666a.js";const t=a({name:"AppType",setup(n,{slots:e}){return()=>{var p;return r("div",{class:"app-type"},[(p=e.default)===null||p===void 0?void 0:p.call(e)])}}});export{t as A};
