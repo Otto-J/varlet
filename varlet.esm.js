@@ -10383,7 +10383,7 @@ function Iy(e, r) {
       style: G({
         width: e.toSizeUnit(e.width),
         height: e.toSizeUnit(e.height),
-        "border-radius": e.toSizeUnit(e.radius)
+        borderRadius: e.toSizeUnit(e.radius)
       })
     },
     [e.lazy && !e.showErrorSlot ? $e((p(), $(
@@ -10452,14 +10452,17 @@ var hd = x({
     var {
       slots: n
     } = r, a = M(!1), t = (i) => {
-      var s = i.currentTarget, {
-        lazy: u,
-        onLoad: d,
-        onError: v
-      } = e;
-      u ? (s._lazy.state === "success" && k(d, i), s._lazy.state === "error" && (n != null && n.error && (a.value = !0), k(v, i))) : k(d, i);
+      a.value = !!n.error, k(e.onError, i);
     }, o = (i) => {
-      a.value = !!(n != null && n.error), k(e.onError, i);
+      var s = i.currentTarget;
+      if (e.lazy) {
+        if (s._lazy.state === "success") {
+          k(e.onLoad, i);
+          return;
+        }
+        s._lazy.state === "error" && t(i);
+      } else
+        k(e.onLoad, i);
     }, l = (i) => {
       k(e.onClick, i);
     };
@@ -10470,8 +10473,8 @@ var hd = x({
       classes: My,
       showErrorSlot: a,
       toSizeUnit: ye,
-      handleLoad: t,
-      handleError: o,
+      handleLoad: o,
+      handleError: t,
       handleClick: l
     };
   }
