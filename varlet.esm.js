@@ -16871,14 +16871,6 @@ function vw(e, r) {
         {
           class: c([e.n("icon")])
         },
-        [Y(e.$slots, "icon")],
-        2
-        /* CLASS */
-      ), N(
-        "div",
-        {
-          class: c(e.n("action"))
-        },
         [e.iconName ? (p(), be(
           n,
           {
@@ -16900,7 +16892,15 @@ function vw(e, r) {
           null,
           8,
           ["type", "size", "color", "radius"]
-        )) : _("v-if", !0), Y(e.$slots, "action")],
+        )) : _("v-if", !0), Y(e.$slots, "icon")],
+        2
+        /* CLASS */
+      ), N(
+        "div",
+        {
+          class: c(e.n("action"))
+        },
+        [Y(e.$slots, "action")],
         2
         /* CLASS */
       )],
