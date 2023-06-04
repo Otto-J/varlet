@@ -13443,7 +13443,7 @@ function p0(e, r) {
       "li",
       {
         key: 3,
-        class: c(e.classes(e.n("quickly"), [e.disabled, "item--disabled"]))
+        class: c(e.classes(e.n("quickly"), [e.disabled, e.n("item--disabled")]))
       },
       [Se(
         ae(e.pack.paginationJump) + " ",
@@ -13469,7 +13469,7 @@ function p0(e, r) {
       "li",
       {
         key: 4,
-        class: c(e.n("total"))
+        class: c(e.classes(e.n("total"), [e.disabled, e.n("item--disabled")]))
       },
       ae(e.totalText),
       3
@@ -18472,8 +18472,9 @@ const hC = {
   "--field-decorator-text-color": "#fff",
   "--field-decorator-blur-color": "rgb(255, 255, 255, .7)"
 }, VC = {
+  "--pagination-text-color": "#fff",
   "--pagination-list-bg-color": "#303030",
-  "--pagination-hover-bg-color": "#25293a",
+  "--pagination-hover-bg-color": "rgba(255, 255, 255, .15)",
   "--pagination-list-active-bg-color": "#25293a",
   "--pagination-list-active-color": "#4a7afe",
   "--pagination-item-background": "#303030"
