@@ -13372,10 +13372,10 @@ function p0(e, r) {
       [J(
         o,
         {
+          placement: "cover-top",
           disabled: e.disabled,
           show: e.menuVisible,
-          "onUpdate:show": r[6] || (r[6] = (i) => e.menuVisible = i),
-          "offset-x": -4
+          "onUpdate:show": r[6] || (r[6] = (i) => e.menuVisible = i)
         },
         {
           menu: ve(() => [(p(!0), k(
