@@ -1,0 +1,1 @@
+import{c as e}from"./index-b78d9f2d.js";import{a as o,w as x}from"./vue-router-7db650a3.js";function m(n,r){const t=o(e.zIndex);return x(n,a=>{a&&(e.zIndex+=r,t.value=e.zIndex)},{immediate:!0}),{zIndex:t}}export{m as u};
