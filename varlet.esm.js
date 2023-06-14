@@ -17741,12 +17741,7 @@ var Sv = ee({
           width: or(w, 2)
         }
       };
-    }), f = A(() => {
-      var {
-        size: w = "5.333vw"
-      } = e;
-      return or(w, 0.4);
-    }), m = (w) => {
+    }), f = A(() => or(e.size || 0, 0.4)), m = (w) => {
       var {
         onClick: O,
         onChange: $,
