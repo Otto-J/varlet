@@ -18449,6 +18449,7 @@ const yC = {
   "--day-picker-head-item-color": "#aaaaaa"
 }, OC = {
   "--dialog-background": "#1e1e1e",
+  "--dialog-title-color": "#fff",
   "--dialog-message-color": "#bbb"
 }, VC = {
   "--divider-color": "rgba(255, 255, 255, 0.2)",
