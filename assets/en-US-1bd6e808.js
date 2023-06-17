@@ -133,7 +133,7 @@ import{_ as r,p as d,f as o,h,M as a,q as l,S as t,P as s,aq as c}from"./vue-rou
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-slider"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(),a("span",{class:"hljs-attr"},":rules"),s("="),a("span",{class:"hljs-string"},`"[(v) => v > 35 || 'error message']"`),s(" />")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),ls={class:"card"},ts={id:"Vertical"},es=a("p",null,[s("Set the "),a("code",null,"direction"),s(" attribute value to "),a("code",null,"vertical"),s(" to make the slider display vertically.")],-1),ns=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(">")]),a("span",{class:"javascript"},[s(`
+`)])],-1),ls={class:"card"},ts={id:"Vertical"},es=a("p",null,[s("Set the "),a("code",null,"direction"),s(" attribute value to "),a("code",null,"vertical"),s(" to make the slider display vertically.")],-1),ns=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
 
 `),a("span",{class:"hljs-keyword"},"const"),s(" value1 = ref("),a("span",{class:"hljs-number"},"50"),s(`)
