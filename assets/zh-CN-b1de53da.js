@@ -144,7 +144,7 @@ import{_ as o,p as d,f as r,h as p,M as t,q as a,S as e,P as s,aq as c}from"./vu
     `),t("span",{class:"hljs-attr"},"image-prevent-default"),s(`
     `),t("span",{class:"hljs-attr"},":images"),s("="),t("span",{class:"hljs-string"},'"images"'),s(`
     `),t("span",{class:"hljs-attr"},"v-model:show"),s("="),t("span",{class:"hljs-string"},'"show"'),s(`
-    @`),t("span",{class:"hljs-attr"},"long-press"),s("="),t("span",{class:"hljs-string"},`"Snackbar('该图片享有版权！！')"`),s(`
+    @`),t("span",{class:"hljs-attr"},"long-press"),s("="),t("span",{class:"hljs-string"},`"Snackbar('触发了长按事件')"`),s(`
   />`)]),s(`
 `),t("span",{class:"hljs-tag"},[s("</"),t("span",{class:"hljs-name"},"template"),s(">")]),s(`
 `)])],-1),A={class:"card"},E={id:"展示额外插槽"},M=t("pre",{class:"hljs"},[t("code",null,[t("span",{class:"hljs-tag"},[s("<"),t("span",{class:"hljs-name"},"script"),s(),t("span",{class:"hljs-attr"},"setup"),s(">")]),t("span",{class:"javascript"},[s(`
