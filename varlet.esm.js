@@ -9806,7 +9806,7 @@ function by(e, n) {
     "div",
     {
       ref: "host",
-      class: c(e.n()),
+      class: c(e.classes(e.n(), e.n("$--box"))),
       onClick: n[3] || (n[3] = function() {
         return e.handleHostClick && e.handleHostClick(...arguments);
       }),
@@ -9835,7 +9835,7 @@ function by(e, n) {
             "div",
             {
               ref: "popover",
-              class: c(e.n("tooltip")),
+              class: c(e.classes(e.n("tooltip"), e.n("$--box"))),
               style: G({
                 zIndex: e.zIndex
               }),
@@ -11980,6 +11980,9 @@ function $b(e, n) {
             "span",
             {
               ref: "placeholderTextEl",
+              style: {
+                "font-size": "var(--field-decorator-placeholder-size)"
+              },
               class: c(e.classes(e.n("placeholder-text"), e.n("$--ellipsis"), [e.size === "small", e.n("placeholder-text--small")]))
             },
             te(e.placeholder),
@@ -12960,7 +12963,7 @@ function s0(e, n) {
     "div",
     {
       ref: "host",
-      class: c(e.n()),
+      class: c(e.classes(e.n(), e.n("$--box"))),
       onClick: n[3] || (n[3] = function() {
         return e.handleHostClick && e.handleHostClick(...arguments);
       }),
@@ -12993,7 +12996,7 @@ function s0(e, n) {
                 zIndex: e.zIndex,
                 width: e.sameWidth ? e.toSizeUnit(Math.ceil(e.hostSize.width)) : void 0
               }),
-              class: c(e.classes(e.n("menu"), [e.defaultStyle, e.n("--menu-background-color")], [e.defaultStyle, e.formatElevation(e.elevation, 3)])),
+              class: c(e.classes(e.n("menu"), e.n("$--box"), [e.defaultStyle, e.n("--menu-background-color")], [e.defaultStyle, e.formatElevation(e.elevation, 3)])),
               onClick: n[0] || (n[0] = Pn(() => {
               }, ["stop"])),
               onMouseenter: n[1] || (n[1] = function() {
