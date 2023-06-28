@@ -1,10 +1,10 @@
-import { reactive as ze, onMounted as no, nextTick as Ae, onActivated as Vr, isRef as Hv, watch as ie, onBeforeUnmount as ro, onDeactivated as xa, unref as ut, onUnmounted as ao, inject as Fv, getCurrentInstance as et, computed as A, provide as Yv, isVNode as kt, ref as M, Comment as jv, Fragment as Me, createApp as Wv, h as ws, onBeforeMount as Gv, defineComponent as ee, createVNode as Q, Teleport as Mr, Transition as Re, withDirectives as ke, vShow as Qn, mergeProps as Ne, openBlock as h, createBlock as be, resolveDynamicComponent as nt, normalizeClass as c, normalizeStyle as G, resolveComponent as oe, resolveDirective as De, withCtx as fe, createElementVNode as N, renderSlot as Y, toDisplayString as te, createElementBlock as k, renderList as He, createCommentVNode as x, onUpdated as $t, createTextVNode as Se, pushScopeId as La, popScopeId as Ra, withModifiers as Pn, normalizeProps as Tt, guardReactiveProps as to, vModelText as qv, toRefs as Xv, createSlots as Cs, withKeys as nl, toRaw as rl, TransitionGroup as Kv } from "vue";
+import { reactive as ze, onMounted as no, nextTick as Ae, onActivated as Vr, isRef as Hv, watch as ie, onBeforeUnmount as ro, onDeactivated as xa, unref as ut, onUnmounted as ao, inject as Fv, getCurrentInstance as et, computed as A, provide as Yv, isVNode as kt, ref as M, Comment as jv, Fragment as Me, createApp as Wv, h as ws, onBeforeMount as Gv, defineComponent as ee, createVNode as Q, Teleport as Mr, Transition as Le, withDirectives as ke, vShow as Qn, mergeProps as Ne, openBlock as h, createBlock as be, resolveDynamicComponent as nt, normalizeClass as c, normalizeStyle as G, resolveComponent as oe, resolveDirective as De, withCtx as fe, createElementVNode as N, renderSlot as Y, toDisplayString as te, createElementBlock as k, renderList as Ue, createCommentVNode as x, onUpdated as $t, createTextVNode as Se, pushScopeId as La, popScopeId as Ra, withModifiers as Pn, normalizeProps as Tt, guardReactiveProps as to, vModelText as qv, toRefs as Xv, createSlots as Cs, withKeys as nl, toRaw as rl, TransitionGroup as Kv } from "vue";
 var Ss = {
   locks: {},
   zIndex: 2e3,
   enableRipple: !0
 }, NS = ze(Ss);
-const bn = ze(Ss), Fe = (e) => typeof e == "string", Ao = (e) => typeof e == "boolean", dn = (e) => typeof e == "number", Oi = (e) => Object.prototype.toString.call(e) === "[object Object]", Zv = (e) => typeof e == "object" && e !== null, rt = (e) => typeof e == "function", Oe = (e) => Array.isArray(e), Jv = (e) => e ? /^(http)|(\.*\/)/.test(e) : !1, Yn = (e) => e == null || e === "" || Array.isArray(e) && !e.length, Vi = (e) => e === window, z = (e) => e == null ? 0 : Fe(e) ? (e = parseFloat(e), e = Number.isNaN(e) ? 0 : e, e) : Ao(e) ? Number(e) : e, Wt = (e, n) => {
+const bn = ze(Ss), He = (e) => typeof e == "string", Ao = (e) => typeof e == "boolean", dn = (e) => typeof e == "number", Oi = (e) => Object.prototype.toString.call(e) === "[object Object]", Zv = (e) => typeof e == "object" && e !== null, rt = (e) => typeof e == "function", Oe = (e) => Array.isArray(e), Jv = (e) => e ? /^(http)|(\.*\/)/.test(e) : !1, Yn = (e) => e == null || e === "" || Array.isArray(e) && !e.length, Vi = (e) => e === window, z = (e) => e == null ? 0 : He(e) ? (e = parseFloat(e), e = Number.isNaN(e) ? 0 : e, e) : Ao(e) ? Number(e) : e, Wt = (e, n) => {
   if (e.length) {
     const r = e.indexOf(n);
     if (r > -1)
@@ -142,7 +142,7 @@ function af(e) {
   return n;
 }
 function Ps(e, n) {
-  if (Fe(e)) {
+  if (He(e)) {
     var r = document.querySelector(e);
     return r || On(n, "target element cannot found"), r;
   }
@@ -163,7 +163,7 @@ function ul() {
     vMax: n
   };
 }
-var Os = (e) => Fe(e) && e.endsWith("rem"), tf = (e) => Fe(e) && e.endsWith("em") && !e.endsWith("rem"), of = (e) => Fe(e) && e.endsWith("px") || dn(e), lf = (e) => Fe(e) && e.endsWith("%"), Vs = (e) => Fe(e) && e.endsWith("vw"), Ms = (e) => Fe(e) && e.endsWith("vh"), Es = (e) => Fe(e) && e.endsWith("vmin"), Bs = (e) => Fe(e) && e.endsWith("vmax"), sf = (e) => Fe(e) && e.startsWith("calc("), uf = (e) => Fe(e) && e.startsWith("var("), Ge = (e) => {
+var Os = (e) => He(e) && e.endsWith("rem"), tf = (e) => He(e) && e.endsWith("em") && !e.endsWith("rem"), of = (e) => He(e) && e.endsWith("px") || dn(e), lf = (e) => He(e) && e.endsWith("%"), Vs = (e) => He(e) && e.endsWith("vw"), Ms = (e) => He(e) && e.endsWith("vh"), Es = (e) => He(e) && e.endsWith("vmin"), Bs = (e) => He(e) && e.endsWith("vmax"), sf = (e) => He(e) && e.startsWith("calc("), uf = (e) => He(e) && e.startsWith("var("), Ge = (e) => {
   if (dn(e))
     return e;
   if (of(e))
@@ -182,7 +182,7 @@ var Os = (e) => Fe(e) && e.endsWith("rem"), tf = (e) => Fe(e) && e.endsWith("em"
     var a = +e.replace("rem", ""), t = tt(document.documentElement).fontSize;
     return a * parseFloat(t);
   }
-  return Es(e) ? ul().vMin : Bs(e) ? ul().vMax : Fe(e) ? z(e) : 0;
+  return Es(e) ? ul().vMin : Bs(e) ? ul().vMax : He(e) ? z(e) : 0;
 }, ye = (e) => {
   if (e != null)
     return lf(e) || Vs(e) || Ms(e) || tf(e) || Os(e) || sf(e) || uf(e) || Es(e) || Bs(e) ? e : Ge(e) + "px";
@@ -857,7 +857,7 @@ const kn = ee({
       }
     }, a), [t.value && w(r.default)]), [[Qn, e.show]]), v = () => {
       var f;
-      return Q(Re, {
+      return Q(Le, {
         name: Bn("$-fade"),
         onAfterEnter: e.onOpened,
         onAfterLeave: e.onClosed
@@ -867,7 +867,7 @@ const kn = ee({
           style: {
             zIndex: o.value - 2
           }
-        }, [e.overlay && u(), Q(Re, {
+        }, [e.overlay && u(), Q(Le, {
           name: e.transition || Bn("$-pop-" + e.position)
         }, ml(f = d()) ? f : {
           default: () => [f]
@@ -950,24 +950,18 @@ var {
   classes: Vf
 } = re("icon");
 function Mf(e, n) {
-  return h(), be(
-    nt(e.isURL(e.name) ? "img" : "i"),
-    {
-      class: c(e.classes(e.n(), [e.namespace !== e.n(), e.namespace], e.namespace + "--set", [e.isURL(e.name), e.n("image"), e.namespace + "-" + e.nextName], [e.animateInProgress, e.animationClass == null ? e.n("--shrinking") : e.animationClass])),
-      style: G({
-        color: e.color,
-        "transition-duration": e.toNumber(e.transition) + "ms",
-        width: e.isURL(e.name) ? e.toSizeUnit(e.size) : null,
-        height: e.isURL(e.name) ? e.toSizeUnit(e.size) : null,
-        fontSize: e.toSizeUnit(e.size)
-      }),
-      src: e.isURL(e.name) ? e.nextName : null,
-      onClick: e.onClick
-    },
-    null,
-    8,
-    ["class", "style", "src", "onClick"]
-  );
+  return h(), be(nt(e.isURL(e.name) ? "img" : "i"), {
+    class: c(e.classes(e.n(), [e.namespace !== e.n(), e.namespace], e.namespace + "--set", [e.isURL(e.name), e.n("image"), e.namespace + "-" + e.nextName], [e.animateInProgress, e.animationClass == null ? e.n("--shrinking") : e.animationClass])),
+    style: G({
+      color: e.color,
+      "transition-duration": e.toNumber(e.transition) + "ms",
+      width: e.isURL(e.name) ? e.toSizeUnit(e.size) : null,
+      height: e.isURL(e.name) ? e.toSizeUnit(e.size) : null,
+      fontSize: e.toSizeUnit(e.size)
+    }),
+    src: e.isURL(e.name) ? e.nextName : null,
+    onClick: e.onClick
+  }, null, 8, ["class", "style", "src", "onClick"]);
 }
 var js = ee({
   name: "VarIcon",
@@ -1323,93 +1317,75 @@ var {
 } = re("action-sheet"), Nf = ["onClick"];
 function Df(e, n) {
   var r = oe("var-icon"), a = oe("var-popup"), t = De("ripple");
-  return h(), be(
-    a,
-    Ne({
-      class: e.n("popup-radius"),
-      position: "bottom",
-      show: e.popupShow,
-      overlay: e.overlay,
-      "overlay-class": e.overlayClass,
-      "overlay-style": e.overlayStyle,
-      "lock-scroll": e.lockScroll,
-      "close-on-click-overlay": e.closeOnClickOverlay,
-      teleport: e.teleport,
-      "safe-area": e.safeArea
-    }, {
-      "onUpdate:show": e.handlePopupUpdateShow
-    }, {
-      onOpen: e.onOpen,
-      onClose: e.onClose,
-      onClosed: e.onClosed,
-      onOpened: e.onOpened,
-      onRouteChange: e.onRouteChange
-    }),
-    {
-      default: fe(() => [N(
+  return h(), be(a, Ne({
+    class: e.n("popup-radius"),
+    position: "bottom",
+    show: e.popupShow,
+    overlay: e.overlay,
+    "overlay-class": e.overlayClass,
+    "overlay-style": e.overlayStyle,
+    "lock-scroll": e.lockScroll,
+    "close-on-click-overlay": e.closeOnClickOverlay,
+    teleport: e.teleport,
+    "safe-area": e.safeArea
+  }, {
+    "onUpdate:show": e.handlePopupUpdateShow
+  }, {
+    onOpen: e.onOpen,
+    onClose: e.onClose,
+    onClosed: e.onClosed,
+    onOpened: e.onOpened,
+    onRouteChange: e.onRouteChange
+  }), {
+    default: fe(() => [N(
+      "div",
+      Ne({
+        class: e.classes(e.n(), e.n("$--box"))
+      }, e.$attrs),
+      [Y(e.$slots, "title", {}, () => [N(
         "div",
-        Ne({
-          class: e.classes(e.n(), e.n("$--box"))
-        }, e.$attrs),
-        [Y(e.$slots, "title", {}, () => [N(
+        {
+          class: c(e.n("title"))
+        },
+        te(e.dt(e.title, e.pack.actionSheetTitle)),
+        3
+        /* TEXT, CLASS */
+      )]), Y(e.$slots, "actions", {}, () => [(h(!0), k(
+        Me,
+        null,
+        Ue(e.actions, (o) => ke((h(), k("div", {
+          class: c(e.classes(e.n("action-item"), o.className, [o.disabled, e.n("--disabled")])),
+          key: o.name,
+          style: G({
+            color: o.color
+          }),
+          onClick: (l) => e.handleSelect(o)
+        }, [o.icon ? (h(), be(r, {
+          key: 0,
+          class: c(e.n("action-icon")),
+          "var-action-sheet-cover": "",
+          name: o.icon,
+          size: o.iconSize
+        }, null, 8, ["class", "name", "size"])) : x("v-if", !0), N(
           "div",
           {
-            class: c(e.n("title"))
+            class: c(e.n("action-name"))
           },
-          te(e.dt(e.title, e.pack.actionSheetTitle)),
+          te(o.name),
           3
           /* TEXT, CLASS */
-        )]), Y(e.$slots, "actions", {}, () => [(h(!0), k(
-          Me,
-          null,
-          He(e.actions, (o) => ke((h(), k(
-            "div",
-            {
-              class: c(e.classes(e.n("action-item"), o.className, [o.disabled, e.n("--disabled")])),
-              key: o.name,
-              style: G({
-                color: o.color
-              }),
-              onClick: (l) => e.handleSelect(o)
-            },
-            [o.icon ? (h(), be(
-              r,
-              {
-                key: 0,
-                class: c(e.n("action-icon")),
-                "var-action-sheet-cover": "",
-                name: o.icon,
-                size: o.iconSize
-              },
-              null,
-              8,
-              ["class", "name", "size"]
-            )) : x("v-if", !0), N(
-              "div",
-              {
-                class: c(e.n("action-name"))
-              },
-              te(o.name),
-              3
-              /* TEXT, CLASS */
-            )],
-            14,
-            Nf
-          )), [[t, {
-            disabled: o.disabled
-          }]])),
-          128
-          /* KEYED_FRAGMENT */
-        ))])],
-        16
-        /* FULL_PROPS */
-      )]),
-      _: 3
-      /* FORWARDED */
-    },
-    16,
-    ["class", "show", "overlay", "overlay-class", "overlay-style", "lock-scroll", "close-on-click-overlay", "teleport", "safe-area", "onOpen", "onClose", "onClosed", "onOpened", "onRouteChange"]
-  );
+        )], 14, Nf)), [[t, {
+          disabled: o.disabled
+        }]])),
+        128
+        /* KEYED_FRAGMENT */
+      ))])],
+      16
+      /* FULL_PROPS */
+    )]),
+    _: 3
+    /* FORWARDED */
+  }, 16, ["class", "show", "overlay", "overlay-class", "overlay-style", "lock-scroll", "close-on-click-overlay", "teleport", "safe-area", "onOpen", "onClose", "onClosed", "onOpened", "onRouteChange"]);
 }
 var Xs = ee({
   name: "VarActionSheet",
@@ -1857,7 +1833,7 @@ function nc(e) {
 }
 var eu = (e) => ["mini", "small", "normal", "large"].includes(e);
 function nu(e) {
-  return eu(e) || dn(e) || Fe(e);
+  return eu(e) || dn(e) || He(e);
 }
 var rc = {
   round: {
@@ -1926,44 +1902,32 @@ function lc(e, n) {
       {
         key: 0
       },
-      [e.lazy ? ke((h(), k(
-        "img",
-        {
-          key: 0,
-          class: c(e.n("image")),
-          src: e.src,
-          style: G({
-            objectFit: e.fit
-          }),
-          "lazy-loading": e.loading,
-          "lazy-error": e.error,
-          onLoad: n[0] || (n[0] = function() {
-            return e.handleLoad && e.handleLoad(...arguments);
-          })
-        },
-        null,
-        46,
-        oc
-      )), [[r, e.src]]) : (h(), k(
-        "img",
-        {
-          key: 1,
-          class: c(e.n("image")),
-          src: e.src,
-          style: G({
-            objectFit: e.fit
-          }),
-          onLoad: n[1] || (n[1] = function() {
-            return e.handleLoad && e.handleLoad(...arguments);
-          }),
-          onError: n[2] || (n[2] = function() {
-            return e.handleError && e.handleError(...arguments);
-          })
-        },
-        null,
-        46,
-        ic
-      ))],
+      [e.lazy ? ke((h(), k("img", {
+        key: 0,
+        class: c(e.n("image")),
+        src: e.src,
+        style: G({
+          objectFit: e.fit
+        }),
+        "lazy-loading": e.loading,
+        "lazy-error": e.error,
+        onLoad: n[0] || (n[0] = function() {
+          return e.handleLoad && e.handleLoad(...arguments);
+        })
+      }, null, 46, oc)), [[r, e.src]]) : (h(), k("img", {
+        key: 1,
+        class: c(e.n("image")),
+        src: e.src,
+        style: G({
+          objectFit: e.fit
+        }),
+        onLoad: n[1] || (n[1] = function() {
+          return e.handleLoad && e.handleLoad(...arguments);
+        }),
+        onError: n[2] || (n[2] = function() {
+          return e.handleError && e.handleError(...arguments);
+        })
+      }, null, 46, ic))],
       64
       /* STABLE_FRAGMENT */
     )) : (h(), k(
@@ -2177,7 +2141,7 @@ function bc(e, n) {
       )) : x("v-if", !0), (h(!0), k(
         Me,
         null,
-        He(e.loadingTypeDict, (r, a) => (h(), k(
+        Ue(e.loadingTypeDict, (r, a) => (h(), k(
           Me,
           {
             key: a
@@ -2191,7 +2155,7 @@ function bc(e, n) {
             [(h(!0), k(
               Me,
               null,
-              He(r, (t) => (h(), k(
+              Ue(r, (t) => (h(), k(
                 "div",
                 {
                   key: t + a,
@@ -2513,57 +2477,39 @@ var {
 } = re("button"), Lc = ["type", "disabled"];
 function Rc(e, n) {
   var r = oe("var-loading"), a = oe("var-hover-overlay"), t = De("ripple"), o = De("hover");
-  return ke((h(), k(
-    "button",
+  return ke((h(), k("button", {
+    class: c(e.classes(e.n(), e.n("$--box"), e.n("--" + e.states.size), [e.block, e.n("$--flex") + " " + e.n("--block"), e.n("$--inline-flex")], [e.disabled, e.n("--disabled")], [e.states.text, e.n("--text-" + e.states.type) + " " + e.n("--text"), e.n("--" + e.states.type) + " " + e.states.elevation], [e.states.text && e.disabled, e.n("--text-disabled")], [e.round, e.n("--round")], [e.states.outline, e.n("--outline")])),
+    style: G({
+      color: e.states.textColor,
+      background: e.states.color
+    }),
+    type: e.nativeType,
+    disabled: e.disabled,
+    onClick: n[0] || (n[0] = function() {
+      return e.handleClick && e.handleClick(...arguments);
+    }),
+    onTouchstart: n[1] || (n[1] = function() {
+      return e.handleTouchstart && e.handleTouchstart(...arguments);
+    })
+  }, [e.loading || e.pending ? (h(), be(r, {
+    key: 0,
+    class: c(e.n("loading")),
+    "var-button-cover": "",
+    color: e.loadingColor,
+    type: e.loadingType,
+    size: e.loadingSize,
+    radius: e.loadingRadius
+  }, null, 8, ["class", "color", "type", "size", "radius"])) : x("v-if", !0), N(
+    "div",
     {
-      class: c(e.classes(e.n(), e.n("$--box"), e.n("--" + e.states.size), [e.block, e.n("$--flex") + " " + e.n("--block"), e.n("$--inline-flex")], [e.disabled, e.n("--disabled")], [e.states.text, e.n("--text-" + e.states.type) + " " + e.n("--text"), e.n("--" + e.states.type) + " " + e.states.elevation], [e.states.text && e.disabled, e.n("--text-disabled")], [e.round, e.n("--round")], [e.states.outline, e.n("--outline")])),
-      style: G({
-        color: e.states.textColor,
-        background: e.states.color
-      }),
-      type: e.nativeType,
-      disabled: e.disabled,
-      onClick: n[0] || (n[0] = function() {
-        return e.handleClick && e.handleClick(...arguments);
-      }),
-      onTouchstart: n[1] || (n[1] = function() {
-        return e.handleTouchstart && e.handleTouchstart(...arguments);
-      })
+      class: c(e.classes(e.n("content"), [e.loading || e.pending, e.n("--hidden")]))
     },
-    [e.loading || e.pending ? (h(), be(
-      r,
-      {
-        key: 0,
-        class: c(e.n("loading")),
-        "var-button-cover": "",
-        color: e.loadingColor,
-        type: e.loadingType,
-        size: e.loadingSize,
-        radius: e.loadingRadius
-      },
-      null,
-      8,
-      ["class", "color", "type", "size", "radius"]
-    )) : x("v-if", !0), N(
-      "div",
-      {
-        class: c(e.classes(e.n("content"), [e.loading || e.pending, e.n("--hidden")]))
-      },
-      [Y(e.$slots, "default")],
-      2
-      /* CLASS */
-    ), Q(
-      a,
-      {
-        hovering: e.hovering
-      },
-      null,
-      8,
-      ["hovering"]
-    )],
-    46,
-    Lc
-  )), [[t, {
+    [Y(e.$slots, "default")],
+    2
+    /* CLASS */
+  ), Q(a, {
+    hovering: e.hovering
+  }, null, 8, ["hovering"])], 46, Lc)), [[t, {
     disabled: e.disabled || !e.ripple
   }], [o, e.handleHovering, "desktop"]]);
 }
@@ -2678,50 +2624,38 @@ var qS = rn, Uc = {
 } = re("back-top");
 function Yc(e, n) {
   var r = oe("var-icon"), a = oe("var-button");
-  return h(), be(
-    Mr,
-    {
-      to: "body",
-      disabled: e.disabled
-    },
-    [N(
-      "div",
-      Ne({
-        class: e.classes(e.n(), [e.show, e.n("--active")]),
-        ref: "backTopEl",
-        style: {
-          right: e.toSizeUnit(e.right),
-          bottom: e.toSizeUnit(e.bottom)
-        }
-      }, e.$attrs, {
-        onClick: n[0] || (n[0] = Pn(function() {
-          return e.handleClick && e.handleClick(...arguments);
-        }, ["stop"]))
-      }),
-      [Y(e.$slots, "default", {}, () => [Q(
-        a,
-        {
-          elevation: e.elevation,
-          type: "primary",
-          round: "",
-          "var-back-top-cover": ""
-        },
-        {
-          default: fe(() => [Q(r, {
-            name: "chevron-up"
-          })]),
-          _: 1
-          /* STABLE */
-        },
-        8,
-        ["elevation"]
-      )])],
-      16
-      /* FULL_PROPS */
-    )],
-    8,
-    ["disabled"]
-  );
+  return h(), be(Mr, {
+    to: "body",
+    disabled: e.disabled
+  }, [N(
+    "div",
+    Ne({
+      class: e.classes(e.n(), [e.show, e.n("--active")]),
+      ref: "backTopEl",
+      style: {
+        right: e.toSizeUnit(e.right),
+        bottom: e.toSizeUnit(e.bottom)
+      }
+    }, e.$attrs, {
+      onClick: n[0] || (n[0] = Pn(function() {
+        return e.handleClick && e.handleClick(...arguments);
+      }, ["stop"]))
+    }),
+    [Y(e.$slots, "default", {}, () => [Q(a, {
+      elevation: e.elevation,
+      type: "primary",
+      round: "",
+      "var-back-top-cover": ""
+    }, {
+      default: fe(() => [Q(r, {
+        name: "chevron-up"
+      })]),
+      _: 1
+      /* STABLE */
+    }, 8, ["elevation"])])],
+    16
+    /* FULL_PROPS */
+  )], 8, ["disabled"]);
 }
 var hu = ee({
   name: "VarBackTop",
@@ -2817,51 +2751,39 @@ function Kc(e, n) {
     {
       class: c(e.classes(e.n(), e.n("$--box")))
     },
-    [Y(e.$slots, "default"), Q(
-      Re,
-      {
-        name: e.n("$-badge-fade"),
-        persisted: ""
-      },
-      {
-        default: fe(() => [ke(N(
+    [Y(e.$slots, "default"), Q(Le, {
+      name: e.n("$-badge-fade"),
+      persisted: ""
+    }, {
+      default: fe(() => [ke(N(
+        "span",
+        Ne({
+          class: e.classes(e.n("content"), e.n("--" + e.type), [e.$slots.default, e.n("--" + e.position)], [e.dot, e.n("--dot")], [e.icon, e.n("--icon")]),
+          style: {
+            background: e.color
+          }
+        }, e.$attrs),
+        [e.icon ? (h(), be(r, {
+          key: 0,
+          class: c(e.n("icon")),
+          "var-badge-cover": "",
+          name: e.icon
+        }, null, 8, ["class", "name"])) : x("v-if", !0), Y(e.$slots, "value", {}, () => [!e.icon && !e.dot ? (h(), k(
           "span",
-          Ne({
-            class: e.classes(e.n("content"), e.n("--" + e.type), [e.$slots.default, e.n("--" + e.position)], [e.dot, e.n("--dot")], [e.icon, e.n("--icon")]),
-            style: {
-              background: e.color
-            }
-          }, e.$attrs),
-          [e.icon ? (h(), be(
-            r,
-            {
-              key: 0,
-              class: c(e.n("icon")),
-              "var-badge-cover": "",
-              name: e.icon
-            },
-            null,
-            8,
-            ["class", "name"]
-          )) : x("v-if", !0), Y(e.$slots, "value", {}, () => [!e.icon && !e.dot ? (h(), k(
-            "span",
-            {
-              key: 0,
-              class: c(e.n("value"))
-            },
-            te(e.value),
-            3
-            /* TEXT, CLASS */
-          )) : x("v-if", !0)])],
-          16
-          /* FULL_PROPS */
-        ), [[Qn, !e.hidden]])]),
-        _: 3
-        /* FORWARDED */
-      },
-      8,
-      ["name"]
-    )],
+          {
+            key: 0,
+            class: c(e.n("value"))
+          },
+          te(e.value),
+          3
+          /* TEXT, CLASS */
+        )) : x("v-if", !0)])],
+        16
+        /* FULL_PROPS */
+      ), [[Qn, !e.hidden]])]),
+      _: 3
+      /* FORWARDED */
+    }, 8, ["name"])],
     2
     /* CLASS */
   );
@@ -2967,24 +2889,18 @@ function em(e, n) {
       ref: "bottomNavigationDom",
       style: G("z-index:" + e.zIndex)
     },
-    [Y(e.$slots, "default"), e.$slots.fab ? (h(), be(
-      r,
-      Ne({
-        key: 0,
-        class: e.classes(e.n("fab"), [e.length % 2, e.n("--fab-right"), e.n("--fab-center")]),
-        "var-bottom-navigation__fab": "",
-        onClick: e.handleFabClick
-      }, e.fabProps, {
-        round: ""
-      }),
-      {
-        default: fe(() => [Y(e.$slots, "fab")]),
-        _: 3
-        /* FORWARDED */
-      },
-      16,
-      ["class", "onClick"]
-    )) : x("v-if", !0)],
+    [Y(e.$slots, "default"), e.$slots.fab ? (h(), be(r, Ne({
+      key: 0,
+      class: e.classes(e.n("fab"), [e.length % 2, e.n("--fab-right"), e.n("--fab-center")]),
+      "var-bottom-navigation__fab": "",
+      onClick: e.handleFabClick
+    }, e.fabProps, {
+      round: ""
+    }), {
+      default: fe(() => [Y(e.$slots, "fab")]),
+      _: 3
+      /* FORWARDED */
+    }, 16, ["class", "onClick"])) : x("v-if", !0)],
     6
     /* CLASS, STYLE */
   );
@@ -3127,32 +3043,20 @@ function im(e, n) {
         return e.handleClick && e.handleClick(...arguments);
       })
     },
-    [e.icon && !e.$slots.icon ? (h(), be(
-      r,
-      {
-        key: 0,
-        name: e.icon,
-        namespace: e.namespace,
-        class: c(e.n("icon")),
-        "var-bottom-navigation-item-cover": ""
-      },
-      null,
-      8,
-      ["name", "namespace", "class"]
-    )) : x("v-if", !0), Y(e.$slots, "icon", {
+    [e.icon && !e.$slots.icon ? (h(), be(r, {
+      key: 0,
+      name: e.icon,
+      namespace: e.namespace,
+      class: c(e.n("icon")),
+      "var-bottom-navigation-item-cover": ""
+    }, null, 8, ["name", "namespace", "class"])) : x("v-if", !0), Y(e.$slots, "icon", {
       active: e.active === e.index || e.active === e.name
-    }), e.badge ? (h(), be(
-      a,
-      Ne({
-        key: 1
-      }, e.badgeProps, {
-        class: e.n("badge"),
-        "var-bottom-navigation-item-cover": ""
-      }),
-      null,
-      16,
-      ["class"]
-    )) : x("v-if", !0), N(
+    }), e.badge ? (h(), be(a, Ne({
+      key: 1
+    }, e.badgeProps, {
+      class: e.n("badge"),
+      "var-bottom-navigation-item-cover": ""
+    }), null, 16, ["class"])) : x("v-if", !0), N(
       "span",
       {
         class: c(e.n("label"))
@@ -3554,23 +3458,17 @@ function Mm(e, n) {
           transition: e.floated ? "background-color " + e.floatingDuration + "ms, color " + e.floatingDuration + "ms, width " + e.floatingDuration + "ms, height " + e.floatingDuration + "ms, top " + e.floatingDuration + "ms, left " + e.floatingDuration + "ms" : void 0
         })
       },
-      [Y(e.$slots, "image", {}, () => [e.src ? (h(), k(
-        "img",
-        {
-          key: 0,
-          class: c(e.n("image")),
-          style: G({
-            objectFit: e.fit,
-            height: e.toSizeUnit(e.imageHeight),
-            width: e.toSizeUnit(e.imageWidth)
-          }),
-          src: e.src,
-          alt: e.alt
-        },
-        null,
-        14,
-        Vm
-      )) : x("v-if", !0)]), N(
+      [Y(e.$slots, "image", {}, () => [e.src ? (h(), k("img", {
+        key: 0,
+        class: c(e.n("image")),
+        style: G({
+          objectFit: e.fit,
+          height: e.toSizeUnit(e.imageHeight),
+          width: e.toSizeUnit(e.imageWidth)
+        }),
+        src: e.src,
+        alt: e.alt
+      }, null, 14, Vm)) : x("v-if", !0)]), N(
         "div",
         {
           class: c(e.n("container"))
@@ -3639,32 +3537,20 @@ function Mm(e, n) {
             transition: "opacity " + e.floatingDuration * 2 + "ms"
           })
         },
-        [Y(e.$slots, "close-button", {}, () => [Q(
-          a,
-          {
+        [Y(e.$slots, "close-button", {}, () => [Q(a, {
+          "var-card-cover": "",
+          round: "",
+          class: c(e.classes(e.n("close-button"), e.n("$-elevation--6"))),
+          onClick: Pn(e.close, ["stop"])
+        }, {
+          default: fe(() => [Q(r, {
             "var-card-cover": "",
-            round: "",
-            class: c(e.classes(e.n("close-button"), e.n("$-elevation--6"))),
-            onClick: Pn(e.close, ["stop"])
-          },
-          {
-            default: fe(() => [Q(
-              r,
-              {
-                "var-card-cover": "",
-                name: "window-close",
-                class: c(e.n("close-button-icon"))
-              },
-              null,
-              8,
-              ["class"]
-            )]),
-            _: 1
-            /* STABLE */
-          },
-          8,
-          ["class", "onClick"]
-        )])],
+            name: "window-close",
+            class: c(e.n("close-button-icon"))
+          }, null, 8, ["class"])]),
+          _: 1
+          /* STABLE */
+        }, 8, ["class", "onClick"])])],
         6
         /* CLASS, STYLE */
       )) : x("v-if", !0)],
@@ -3821,15 +3707,9 @@ function Nm(e, n) {
         key: 0,
         class: c(e.classes(e.n("icon"), e.iconClass))
       },
-      [Q(
-        r,
-        {
-          name: e.icon
-        },
-        null,
-        8,
-        ["name"]
-      )],
+      [Q(r, {
+        name: e.icon
+      }, null, 8, ["name"])],
       2
       /* CLASS */
     )) : x("v-if", !0)]), N(
@@ -3921,80 +3801,62 @@ var nk = mr, Dm = {
   key: 0
 };
 function Rm(e, n) {
-  return h(), be(
-    Re,
-    {
-      name: e.n()
-    },
-    {
-      default: fe(() => [e.errorMessage || e.extraMessage ? (h(), k(
+  return h(), be(Le, {
+    name: e.n()
+  }, {
+    default: fe(() => [e.errorMessage || e.extraMessage ? (h(), k(
+      "div",
+      {
+        key: 0,
+        class: c(e.n())
+      },
+      [N(
         "div",
         {
-          key: 0,
-          class: c(e.n())
+          class: c(e.n("error-message"))
         },
-        [N(
-          "div",
-          {
-            class: c(e.n("error-message"))
-          },
-          [Q(
-            Re,
-            {
-              name: e.n("message")
-            },
-            {
-              default: fe(() => [e.errorMessage ? (h(), k(
-                "div",
-                zm,
-                te(e.errorMessage),
-                1
-                /* TEXT */
-              )) : x("v-if", !0)]),
-              _: 1
-              /* STABLE */
-            },
-            8,
-            ["name"]
-          )],
-          2
-          /* CLASS */
-        ), N(
-          "div",
-          {
-            class: c(e.n("extra-message"))
-          },
-          [Q(
-            Re,
-            {
-              name: e.n("message")
-            },
-            {
-              default: fe(() => [e.extraMessage ? (h(), k(
-                "div",
-                Lm,
-                te(e.extraMessage),
-                1
-                /* TEXT */
-              )) : x("v-if", !0)]),
-              _: 1
-              /* STABLE */
-            },
-            8,
-            ["name"]
-          )],
-          2
-          /* CLASS */
-        )],
+        [Q(Le, {
+          name: e.n("message")
+        }, {
+          default: fe(() => [e.errorMessage ? (h(), k(
+            "div",
+            zm,
+            te(e.errorMessage),
+            1
+            /* TEXT */
+          )) : x("v-if", !0)]),
+          _: 1
+          /* STABLE */
+        }, 8, ["name"])],
         2
         /* CLASS */
-      )) : x("v-if", !0)]),
-      _: 1
-      /* STABLE */
-    },
-    8,
-    ["name"]
-  );
+      ), N(
+        "div",
+        {
+          class: c(e.n("extra-message"))
+        },
+        [Q(Le, {
+          name: e.n("message")
+        }, {
+          default: fe(() => [e.extraMessage ? (h(), k(
+            "div",
+            Lm,
+            te(e.extraMessage),
+            1
+            /* TEXT */
+          )) : x("v-if", !0)]),
+          _: 1
+          /* STABLE */
+        }, 8, ["name"])],
+        2
+        /* CLASS */
+      )],
+      2
+      /* CLASS */
+    )) : x("v-if", !0)]),
+    _: 1
+    /* STABLE */
+  }, 8, ["name"]);
 }
 var Ou = ee({
   name: "VarFormDetails",
@@ -4145,39 +4007,21 @@ function Gm(e, n) {
         },
         [e.checked ? Y(e.$slots, "checked-icon", {
           key: 0
-        }, () => [Q(
-          r,
-          {
-            class: c(e.classes(e.n("icon"), [e.withAnimation, e.n("--with-animation")])),
-            name: "checkbox-marked",
-            size: e.iconSize,
-            "var-checkbox-cover": ""
-          },
-          null,
-          8,
-          ["class", "size"]
-        )]) : Y(e.$slots, "unchecked-icon", {
+        }, () => [Q(r, {
+          class: c(e.classes(e.n("icon"), [e.withAnimation, e.n("--with-animation")])),
+          name: "checkbox-marked",
+          size: e.iconSize,
+          "var-checkbox-cover": ""
+        }, null, 8, ["class", "size"])]) : Y(e.$slots, "unchecked-icon", {
           key: 1
-        }, () => [Q(
-          r,
-          {
-            class: c(e.classes(e.n("icon"), [e.withAnimation, e.n("--with-animation")])),
-            name: "checkbox-blank-outline",
-            size: e.iconSize,
-            "var-checkbox-cover": ""
-          },
-          null,
-          8,
-          ["class", "size"]
-        )]), Q(
-          a,
-          {
-            hovering: !e.disabled && !e.formDisabled && e.hovering
-          },
-          null,
-          8,
-          ["hovering"]
-        )],
+        }, () => [Q(r, {
+          class: c(e.classes(e.n("icon"), [e.withAnimation, e.n("--with-animation")])),
+          name: "checkbox-blank-outline",
+          size: e.iconSize,
+          "var-checkbox-cover": ""
+        }, null, 8, ["class", "size"])]), Q(a, {
+          hovering: !e.disabled && !e.formDisabled && e.hovering
+        }, null, 8, ["hovering"])],
         6
         /* CLASS, STYLE */
       )), [[o, e.handleHovering, "desktop"], [l, {
@@ -4193,15 +4037,9 @@ function Gm(e, n) {
       )],
       2
       /* CLASS */
-    ), Q(
-      t,
-      {
-        "error-message": e.errorMessage
-      },
-      null,
-      8,
-      ["error-message"]
-    )],
+    ), Q(t, {
+      "error-message": e.errorMessage
+    }, null, 8, ["error-message"])],
     2
     /* CLASS */
   );
@@ -4363,15 +4201,9 @@ function Jm(e, n) {
       [Y(e.$slots, "default")],
       2
       /* CLASS */
-    ), Q(
-      r,
-      {
-        "error-message": e.errorMessage
-      },
-      null,
-      8,
-      ["error-message"]
-    )],
+    ), Q(r, {
+      "error-message": e.errorMessage
+    }, null, 8, ["error-message"])],
     2
     /* CLASS */
   );
@@ -4525,56 +4357,44 @@ var xm = {
 } = re("chip");
 function np(e, n) {
   var r = oe("var-icon");
-  return h(), be(
-    Re,
-    {
-      name: e.n("$-fade")
-    },
-    {
-      default: fe(() => [N(
+  return h(), be(Le, {
+    name: e.n("$-fade")
+  }, {
+    default: fe(() => [N(
+      "span",
+      Ne({
+        class: e.classes(e.n(), e.n("$--box"), ...e.contentClass),
+        style: e.chipStyles
+      }, e.$attrs),
+      [Y(e.$slots, "left"), N(
         "span",
-        Ne({
-          class: e.classes(e.n(), e.n("$--box"), ...e.contentClass),
-          style: e.chipStyles
-        }, e.$attrs),
-        [Y(e.$slots, "left"), N(
-          "span",
-          {
-            class: c(e.n("text-" + e.size))
-          },
-          [Y(e.$slots, "default")],
-          2
-          /* CLASS */
-        ), Y(e.$slots, "right"), e.closable ? (h(), k(
-          "span",
-          {
-            key: 0,
-            class: c(e.n("--close")),
-            onClick: n[0] || (n[0] = function() {
-              return e.handleClose && e.handleClose(...arguments);
-            })
-          },
-          [Q(
-            r,
-            {
-              name: "" + (e.iconName ? e.iconName : "close-circle")
-            },
-            null,
-            8,
-            ["name"]
-          )],
-          2
-          /* CLASS */
-        )) : x("v-if", !0)],
-        16
-        /* FULL_PROPS */
-      )]),
-      _: 3
-      /* FORWARDED */
-    },
-    8,
-    ["name"]
-  );
+        {
+          class: c(e.n("text-" + e.size))
+        },
+        [Y(e.$slots, "default")],
+        2
+        /* CLASS */
+      ), Y(e.$slots, "right"), e.closable ? (h(), k(
+        "span",
+        {
+          key: 0,
+          class: c(e.n("--close")),
+          onClick: n[0] || (n[0] = function() {
+            return e.handleClose && e.handleClose(...arguments);
+          })
+        },
+        [Q(r, {
+          name: "" + (e.iconName ? e.iconName : "close-circle")
+        }, null, 8, ["name"])],
+        2
+        /* CLASS */
+      )) : x("v-if", !0)],
+      16
+      /* FULL_PROPS */
+    )]),
+    _: 3
+    /* FORWARDED */
+  }, 8, ["name"]);
 }
 var Iu = ee({
   name: "VarChip",
@@ -4962,17 +4782,11 @@ function yp(e, n) {
         {
           class: c(e.n("header-icon"))
         },
-        [Y(e.$slots, "icon", {}, () => [Q(
-          r,
-          {
-            name: e.icon,
-            transition: 250,
-            class: c(e.classes(e.n("header-icon"), [e.isShow && e.icon === "chevron-down", e.n("header-open")], [e.disabled, e.n("header--disable")]))
-          },
-          null,
-          8,
-          ["name", "class"]
-        )])],
+        [Y(e.$slots, "icon", {}, () => [Q(r, {
+          name: e.icon,
+          transition: 250,
+          class: c(e.classes(e.n("header-icon"), [e.isShow && e.icon === "chevron-down", e.n("header-open")], [e.disabled, e.n("header--disable")]))
+        }, null, 8, ["name", "class"])])],
         2
         /* CLASS */
       )],
@@ -6396,87 +6210,63 @@ function bh(e, n) {
           background: e.color ? e.color : void 0
         }
       }, e.$attrs),
-      [Q(
-        a,
-        {
-          class: c(e.classes(e.n("decrement-button"), [!e.decrementButton, e.n("--hidden")], [e.disabled || e.formDisabled, e.n("--not-allowed")])),
-          style: G({
-            width: e.toSizeUnit(e.buttonSize),
-            height: e.toSizeUnit(e.buttonSize)
-          }),
-          round: "",
-          "var-counter-cover": "",
-          ripple: e.ripple && e.decrementButton && !e.disabled && !e.formDisabled && !e.readonly && !e.formReadonly && !e.disableDecrement && !e.isMin,
-          onClick: e.decrement,
-          onTouchstart: e.pressDecrement,
-          onTouchend: e.releaseDecrement,
-          onTouchcancel: e.releaseDecrement
-        },
-        {
-          default: fe(() => [Q(r, {
-            name: "minus"
-          })]),
-          _: 1
-          /* STABLE */
-        },
-        8,
-        ["class", "style", "ripple", "onClick", "onTouchstart", "onTouchend", "onTouchcancel"]
-      ), ke(N(
-        "input",
-        {
-          class: c(e.classes(e.n("input"), [e.disabled || e.formDisabled, e.n("--not-allowed")])),
-          style: G({
-            width: e.toSizeUnit(e.inputWidth),
-            fontSize: e.toSizeUnit(e.inputTextSize)
-          }),
-          inputmode: e.toNumber(e.decimalLength) === 0 ? "numeric" : "decimal",
-          readonly: e.readonly || e.formReadonly,
-          disabled: e.disabled || e.formDisabled || e.disableInput,
-          "onUpdate:modelValue": n[0] || (n[0] = (o) => e.inputValue = o),
-          onChange: n[1] || (n[1] = function() {
-            return e.handleChange && e.handleChange(...arguments);
-          })
-        },
-        null,
-        46,
-        yh
-      ), [[qv, e.inputValue]]), Q(
-        a,
-        {
-          class: c(e.classes(e.n("increment-button"), [!e.incrementButton, e.n("--hidden")], [e.disabled || e.formDisabled, e.n("--not-allowed")])),
-          style: G({
-            width: e.toSizeUnit(e.buttonSize),
-            height: e.toSizeUnit(e.buttonSize)
-          }),
-          round: "",
-          "var-counter-cover": "",
-          ripple: e.ripple && e.incrementButton && !e.disabled && !e.formDisabled && !e.readonly && !e.formReadonly && !e.disableIncrement && !e.isMax,
-          onClick: e.increment,
-          onTouchstart: e.pressIncrement,
-          onTouchend: e.releaseIncrement,
-          onTouchcancel: e.releaseIncrement
-        },
-        {
-          default: fe(() => [Q(r, {
-            name: "plus"
-          })]),
-          _: 1
-          /* STABLE */
-        },
-        8,
-        ["class", "style", "ripple", "onClick", "onTouchstart", "onTouchend", "onTouchcancel"]
-      )],
+      [Q(a, {
+        class: c(e.classes(e.n("decrement-button"), [!e.decrementButton, e.n("--hidden")], [e.disabled || e.formDisabled, e.n("--not-allowed")])),
+        style: G({
+          width: e.toSizeUnit(e.buttonSize),
+          height: e.toSizeUnit(e.buttonSize)
+        }),
+        round: "",
+        "var-counter-cover": "",
+        ripple: e.ripple && e.decrementButton && !e.disabled && !e.formDisabled && !e.readonly && !e.formReadonly && !e.disableDecrement && !e.isMin,
+        onClick: e.decrement,
+        onTouchstart: e.pressDecrement,
+        onTouchend: e.releaseDecrement,
+        onTouchcancel: e.releaseDecrement
+      }, {
+        default: fe(() => [Q(r, {
+          name: "minus"
+        })]),
+        _: 1
+        /* STABLE */
+      }, 8, ["class", "style", "ripple", "onClick", "onTouchstart", "onTouchend", "onTouchcancel"]), ke(N("input", {
+        class: c(e.classes(e.n("input"), [e.disabled || e.formDisabled, e.n("--not-allowed")])),
+        style: G({
+          width: e.toSizeUnit(e.inputWidth),
+          fontSize: e.toSizeUnit(e.inputTextSize)
+        }),
+        inputmode: e.toNumber(e.decimalLength) === 0 ? "numeric" : "decimal",
+        readonly: e.readonly || e.formReadonly,
+        disabled: e.disabled || e.formDisabled || e.disableInput,
+        "onUpdate:modelValue": n[0] || (n[0] = (o) => e.inputValue = o),
+        onChange: n[1] || (n[1] = function() {
+          return e.handleChange && e.handleChange(...arguments);
+        })
+      }, null, 46, yh), [[qv, e.inputValue]]), Q(a, {
+        class: c(e.classes(e.n("increment-button"), [!e.incrementButton, e.n("--hidden")], [e.disabled || e.formDisabled, e.n("--not-allowed")])),
+        style: G({
+          width: e.toSizeUnit(e.buttonSize),
+          height: e.toSizeUnit(e.buttonSize)
+        }),
+        round: "",
+        "var-counter-cover": "",
+        ripple: e.ripple && e.incrementButton && !e.disabled && !e.formDisabled && !e.readonly && !e.formReadonly && !e.disableIncrement && !e.isMax,
+        onClick: e.increment,
+        onTouchstart: e.pressIncrement,
+        onTouchend: e.releaseIncrement,
+        onTouchcancel: e.releaseIncrement
+      }, {
+        default: fe(() => [Q(r, {
+          name: "plus"
+        })]),
+        _: 1
+        /* STABLE */
+      }, 8, ["class", "style", "ripple", "onClick", "onTouchstart", "onTouchend", "onTouchcancel"])],
       16
       /* FULL_PROPS */
-    ), Q(
-      t,
-      {
-        "error-message": e.errorMessage
-      },
-      null,
-      8,
-      ["error-message"]
-    )],
+    ), Q(t, {
+      "error-message": e.errorMessage
+    }, null, 8, ["error-message"])],
     2
     /* CLASS */
   );
@@ -7042,76 +6832,58 @@ function Rh(e, n) {
     {
       class: c(e.n())
     },
-    [Q(
-      a,
-      {
-        round: "",
-        text: "",
-        style: {
-          filter: "opacity(0.54)"
-        },
-        disabled: e.disabled.left,
-        onClick: n[0] || (n[0] = (t) => e.checkDate("prev"))
+    [Q(a, {
+      round: "",
+      text: "",
+      style: {
+        filter: "opacity(0.54)"
       },
-      {
-        default: fe(() => [Q(r, {
-          name: "chevron-left"
-        })]),
-        _: 1
-        /* STABLE */
-      },
-      8,
-      ["disabled"]
-    ), N(
+      disabled: e.disabled.left,
+      onClick: n[0] || (n[0] = (t) => e.checkDate("prev"))
+    }, {
+      default: fe(() => [Q(r, {
+        name: "chevron-left"
+      })]),
+      _: 1
+      /* STABLE */
+    }, 8, ["disabled"]), N(
       "div",
       {
         class: c(e.n("value")),
         onClick: n[1] || (n[1] = (t) => e.$emit("check-panel"))
       },
-      [Q(
-        Re,
-        {
-          name: "var-date-picker" + (e.reverse ? "-reverse" : "") + "-translatex"
-        },
-        {
-          default: fe(() => [(h(), k(
-            "div",
-            {
-              key: e.showDate
-            },
-            te(e.showDate),
-            1
-            /* TEXT */
-          ))]),
-          _: 1
-          /* STABLE */
-        },
-        8,
-        ["name"]
-      )],
-      2
-      /* CLASS */
-    ), Q(
-      a,
-      {
-        round: "",
-        text: "",
-        style: {
-          filter: "opacity(0.54)"
-        },
-        disabled: e.disabled.right,
-        onClick: n[2] || (n[2] = (t) => e.checkDate("next"))
-      },
-      {
-        default: fe(() => [Q(r, {
-          name: "chevron-right"
-        })]),
+      [Q(Le, {
+        name: "var-date-picker" + (e.reverse ? "-reverse" : "") + "-translatex"
+      }, {
+        default: fe(() => [(h(), k(
+          "div",
+          {
+            key: e.showDate
+          },
+          te(e.showDate),
+          1
+          /* TEXT */
+        ))]),
         _: 1
         /* STABLE */
+      }, 8, ["name"])],
+      2
+      /* CLASS */
+    ), Q(a, {
+      round: "",
+      text: "",
+      style: {
+        filter: "opacity(0.54)"
       },
-      8,
-      ["disabled"]
-    )],
+      disabled: e.disabled.right,
+      onClick: n[2] || (n[2] = (t) => e.checkDate("next"))
+    }, {
+      default: fe(() => [Q(r, {
+        name: "chevron-right"
+      })]),
+      _: 1
+      /* STABLE */
+    }, 8, ["disabled"])],
     2
     /* CLASS */
   );
@@ -7197,63 +6969,45 @@ function Hh(e, n) {
       {
         class: c(e.n("content"))
       },
-      [Q(
-        r,
-        {
-          ref: "headerEl",
-          type: "month",
-          date: e.preview,
-          disabled: e.panelBtnDisabled,
-          onCheckPanel: e.clickYear,
-          onCheckDate: e.checkDate
-        },
-        null,
-        8,
-        ["date", "disabled", "onCheckPanel", "onCheckDate"]
-      ), Q(
-        Re,
-        {
-          name: "" + e.nDate() + (e.reverse ? "-reverse" : "") + "-translatex"
-        },
-        {
-          default: fe(() => [(h(), k("ul", {
-            key: e.panelKey
-          }, [(h(!0), k(
-            Me,
-            null,
-            He(e.MONTH_LIST, (t) => (h(), k("li", {
-              key: t.index
-            }, [Q(
-              a,
-              Ne({
-                type: "primary",
-                "var-month-picker-cover": "",
-                ripple: !1,
-                elevation: e.componentProps.buttonElevation
-              }, ui({}, e.buttonProps(t.index)), {
-                onClick: (o) => e.chooseMonth(t, o)
-              }),
-              {
-                default: fe(() => [Se(
-                  te(e.getMonthAbbr(t.index)),
-                  1
-                  /* TEXT */
-                )]),
-                _: 2
-                /* DYNAMIC */
-              },
-              1040,
-              ["elevation", "onClick"]
-            )]))),
-            128
-            /* KEYED_FRAGMENT */
-          ))]))]),
-          _: 1
-          /* STABLE */
-        },
-        8,
-        ["name"]
-      )],
+      [Q(r, {
+        ref: "headerEl",
+        type: "month",
+        date: e.preview,
+        disabled: e.panelBtnDisabled,
+        onCheckPanel: e.clickYear,
+        onCheckDate: e.checkDate
+      }, null, 8, ["date", "disabled", "onCheckPanel", "onCheckDate"]), Q(Le, {
+        name: "" + e.nDate() + (e.reverse ? "-reverse" : "") + "-translatex"
+      }, {
+        default: fe(() => [(h(), k("ul", {
+          key: e.panelKey
+        }, [(h(!0), k(
+          Me,
+          null,
+          Ue(e.MONTH_LIST, (t) => (h(), k("li", {
+            key: t.index
+          }, [Q(a, Ne({
+            type: "primary",
+            "var-month-picker-cover": "",
+            ripple: !1,
+            elevation: e.componentProps.buttonElevation
+          }, ui({}, e.buttonProps(t.index)), {
+            onClick: (o) => e.chooseMonth(t, o)
+          }), {
+            default: fe(() => [Se(
+              te(e.getMonthAbbr(t.index)),
+              1
+              /* TEXT */
+            )]),
+            _: 2
+            /* DYNAMIC */
+          }, 1040, ["elevation", "onClick"])]))),
+          128
+          /* KEYED_FRAGMENT */
+        ))]))]),
+        _: 1
+        /* STABLE */
+      }, 8, ["name"])],
       2
       /* CLASS */
     )],
@@ -7403,20 +7157,14 @@ function Wh(e, n) {
     [(h(!0), k(
       Me,
       null,
-      He(e.yearList, (r) => (h(), k(
-        "li",
-        {
-          key: r,
-          class: c(e.classes(e.n("item"), [r === e.toNumber(e.preview), e.n("item--active")])),
-          style: G({
-            color: r === e.toNumber(e.preview) ? e.componentProps.color : ""
-          }),
-          onClick: (a) => e.chooseYear(r)
-        },
-        te(r),
-        15,
-        jh
-      ))),
+      Ue(e.yearList, (r) => (h(), k("li", {
+        key: r,
+        class: c(e.classes(e.n("item"), [r === e.toNumber(e.preview), e.n("item--active")])),
+        style: G({
+          color: r === e.toNumber(e.preview) ? e.componentProps.color : ""
+        }),
+        onClick: (a) => e.chooseYear(r)
+      }, te(r), 15, jh))),
       128
       /* KEYED_FRAGMENT */
     ))],
@@ -7512,94 +7260,76 @@ function Xh(e, n) {
       {
         class: c(e.n("content"))
       },
-      [Q(
-        r,
-        {
-          ref: "headerEl",
-          type: "day",
-          date: e.preview,
-          disabled: e.panelBtnDisabled,
-          onCheckPanel: e.clickMonth,
-          onCheckDate: e.checkDate
-        },
-        null,
-        8,
-        ["date", "disabled", "onCheckPanel", "onCheckDate"]
-      ), Q(
-        Re,
-        {
-          name: "" + e.nDate() + (e.reverse ? "-reverse" : "") + "-translatex"
-        },
-        {
-          default: fe(() => [(h(), k("div", {
-            key: e.panelKey
-          }, [N(
-            "ul",
-            {
-              class: c(e.n("head"))
-            },
-            [(h(!0), k(
-              Me,
-              null,
-              He(e.sortWeekList, (t) => (h(), k(
-                "li",
-                {
-                  key: t.index
-                },
-                te(e.getDayAbbr(t.index)),
+      [Q(r, {
+        ref: "headerEl",
+        type: "day",
+        date: e.preview,
+        disabled: e.panelBtnDisabled,
+        onCheckPanel: e.clickMonth,
+        onCheckDate: e.checkDate
+      }, null, 8, ["date", "disabled", "onCheckPanel", "onCheckDate"]), Q(Le, {
+        name: "" + e.nDate() + (e.reverse ? "-reverse" : "") + "-translatex"
+      }, {
+        default: fe(() => [(h(), k("div", {
+          key: e.panelKey
+        }, [N(
+          "ul",
+          {
+            class: c(e.n("head"))
+          },
+          [(h(!0), k(
+            Me,
+            null,
+            Ue(e.sortWeekList, (t) => (h(), k(
+              "li",
+              {
+                key: t.index
+              },
+              te(e.getDayAbbr(t.index)),
+              1
+              /* TEXT */
+            ))),
+            128
+            /* KEYED_FRAGMENT */
+          ))],
+          2
+          /* CLASS */
+        ), N(
+          "ul",
+          {
+            class: c(e.n("body"))
+          },
+          [(h(!0), k(
+            Me,
+            null,
+            Ue(e.days, (t, o) => (h(), k("li", {
+              key: o
+            }, [Q(a, Ne({
+              type: "primary",
+              "var-day-picker-cover": "",
+              round: "",
+              ripple: !1,
+              elevation: e.componentProps.buttonElevation
+            }, di({}, e.buttonProps(t)), {
+              onClick: (l) => e.chooseDay(t, l)
+            }), {
+              default: fe(() => [Se(
+                te(e.filterDay(t)),
                 1
                 /* TEXT */
-              ))),
-              128
-              /* KEYED_FRAGMENT */
-            ))],
-            2
-            /* CLASS */
-          ), N(
-            "ul",
-            {
-              class: c(e.n("body"))
-            },
-            [(h(!0), k(
-              Me,
-              null,
-              He(e.days, (t, o) => (h(), k("li", {
-                key: o
-              }, [Q(
-                a,
-                Ne({
-                  type: "primary",
-                  "var-day-picker-cover": "",
-                  round: "",
-                  ripple: !1,
-                  elevation: e.componentProps.buttonElevation
-                }, di({}, e.buttonProps(t)), {
-                  onClick: (l) => e.chooseDay(t, l)
-                }),
-                {
-                  default: fe(() => [Se(
-                    te(e.filterDay(t)),
-                    1
-                    /* TEXT */
-                  )]),
-                  _: 2
-                  /* DYNAMIC */
-                },
-                1040,
-                ["elevation", "onClick"]
-              )]))),
-              128
-              /* KEYED_FRAGMENT */
-            ))],
-            2
-            /* CLASS */
-          )]))]),
-          _: 1
-          /* STABLE */
-        },
-        8,
-        ["name"]
-      )],
+              )]),
+              _: 2
+              /* DYNAMIC */
+            }, 1040, ["elevation", "onClick"])]))),
+            128
+            /* KEYED_FRAGMENT */
+          ))],
+          2
+          /* CLASS */
+        )]))]),
+        _: 1
+        /* STABLE */
+      }, 8, ["name"])],
       2
       /* CLASS */
     )],
@@ -7811,68 +7541,62 @@ function Qh(e, n) {
           class: c(e.classes(e.n("title-date"), [!e.isYearPanel, e.n("title-date--active")], [e.range, e.n("title-date--range")])),
           onClick: n[1] || (n[1] = (o) => e.clickEl("date"))
         },
-        [Q(
-          Re,
-          {
-            name: e.multiple ? "" : "" + e.n() + (e.reverse ? "-reverse" : "") + "-translatey"
-          },
-          {
-            default: fe(() => {
-              var o, l, i;
-              return [e.type === "month" ? (h(), k("div", {
-                key: "" + e.chooseYear + ((o = e.chooseMonth) == null ? void 0 : o.index)
-              }, [e.range ? Y(e.$slots, "range", {
-                key: 0,
-                choose: e.getChoose.chooseRangeMonth
-              }, () => [Se(
-                te(e.getMonthTitle),
-                1
-                /* TEXT */
-              )]) : e.multiple ? Y(e.$slots, "multiple", {
-                key: 1,
-                choose: e.getChoose.chooseMonths
-              }, () => [Se(
-                te(e.getMonthTitle),
-                1
-                /* TEXT */
-              )]) : Y(e.$slots, "month", {
-                key: 2,
-                month: (l = e.chooseMonth) == null ? void 0 : l.index,
-                year: e.chooseYear
-              }, () => [Se(
-                te(e.getMonthTitle),
-                1
-                /* TEXT */
-              )])])) : (h(), k("div", {
-                key: "" + e.chooseYear + ((i = e.chooseMonth) == null ? void 0 : i.index) + e.chooseDay
-              }, [e.range ? Y(e.$slots, "range", {
-                key: 0,
-                choose: e.formatRange
-              }, () => [Se(
-                te(e.getDateTitle),
-                1
-                /* TEXT */
-              )]) : e.multiple ? Y(e.$slots, "multiple", {
-                key: 1,
-                choose: e.getChoose.chooseDays
-              }, () => [Se(
-                te(e.getDateTitle),
-                1
-                /* TEXT */
-              )]) : Y(e.$slots, "date", Tt(Ne({
-                key: 2
-              }, e.slotProps)), () => [Se(
-                te(e.getDateTitle),
-                1
-                /* TEXT */
-              )])]))];
-            }),
-            _: 3
-            /* FORWARDED */
-          },
-          8,
-          ["name"]
-        )],
+        [Q(Le, {
+          name: e.multiple ? "" : "" + e.n() + (e.reverse ? "-reverse" : "") + "-translatey"
+        }, {
+          default: fe(() => {
+            var o, l, i;
+            return [e.type === "month" ? (h(), k("div", {
+              key: "" + e.chooseYear + ((o = e.chooseMonth) == null ? void 0 : o.index)
+            }, [e.range ? Y(e.$slots, "range", {
+              key: 0,
+              choose: e.getChoose.chooseRangeMonth
+            }, () => [Se(
+              te(e.getMonthTitle),
+              1
+              /* TEXT */
+            )]) : e.multiple ? Y(e.$slots, "multiple", {
+              key: 1,
+              choose: e.getChoose.chooseMonths
+            }, () => [Se(
+              te(e.getMonthTitle),
+              1
+              /* TEXT */
+            )]) : Y(e.$slots, "month", {
+              key: 2,
+              month: (l = e.chooseMonth) == null ? void 0 : l.index,
+              year: e.chooseYear
+            }, () => [Se(
+              te(e.getMonthTitle),
+              1
+              /* TEXT */
+            )])])) : (h(), k("div", {
+              key: "" + e.chooseYear + ((i = e.chooseMonth) == null ? void 0 : i.index) + e.chooseDay
+            }, [e.range ? Y(e.$slots, "range", {
+              key: 0,
+              choose: e.formatRange
+            }, () => [Se(
+              te(e.getDateTitle),
+              1
+              /* TEXT */
+            )]) : e.multiple ? Y(e.$slots, "multiple", {
+              key: 1,
+              choose: e.getChoose.chooseDays
+            }, () => [Se(
+              te(e.getDateTitle),
+              1
+              /* TEXT */
+            )]) : Y(e.$slots, "date", Tt(Ne({
+              key: 2
+            }, e.slotProps)), () => [Se(
+              te(e.getDateTitle),
+              1
+              /* TEXT */
+            )])]))];
+          }),
+          _: 3
+          /* FORWARDED */
+        }, 8, ["name"])],
         2
         /* CLASS */
       )],
@@ -7892,62 +7616,38 @@ function Qh(e, n) {
           return e.handleTouchend && e.handleTouchend(...arguments);
         })
       },
-      [Q(
-        Re,
-        {
-          name: e.n() + "-panel-fade"
-        },
-        {
-          default: fe(() => [e.getPanelType === "year" ? (h(), be(
-            r,
-            {
-              key: 0,
-              "component-props": e.componentProps,
-              preview: e.previewYear,
-              onChooseYear: e.getChooseYear
-            },
-            null,
-            8,
-            ["component-props", "preview", "onChooseYear"]
-          )) : e.getPanelType === "month" ? (h(), be(
-            a,
-            {
-              key: 1,
-              ref: "monthPanelEl",
-              current: e.currentDate,
-              choose: e.getChoose,
-              preview: e.getPreview,
-              "click-year": () => e.clickEl("year"),
-              "component-props": e.componentProps,
-              onChooseMonth: e.getChooseMonth,
-              onCheckPreview: e.checkPreview
-            },
-            null,
-            8,
-            ["current", "choose", "preview", "click-year", "component-props", "onChooseMonth", "onCheckPreview"]
-          )) : e.getPanelType === "date" ? (h(), be(
-            t,
-            {
-              key: 2,
-              ref: "dayPanelEl",
-              current: e.currentDate,
-              choose: e.getChoose,
-              preview: e.getPreview,
-              "component-props": e.componentProps,
-              "click-month": () => e.clickEl("month"),
-              onChooseDay: e.getChooseDay,
-              onCheckPreview: e.checkPreview
-            },
-            null,
-            8,
-            ["current", "choose", "preview", "component-props", "click-month", "onChooseDay", "onCheckPreview"]
-          )) : x("v-if", !0)]),
-          _: 1
-          /* STABLE */
-        },
-        8,
-        ["name"]
-      )],
+      [Q(Le, {
+        name: e.n() + "-panel-fade"
+      }, {
+        default: fe(() => [e.getPanelType === "year" ? (h(), be(r, {
+          key: 0,
+          "component-props": e.componentProps,
+          preview: e.previewYear,
+          onChooseYear: e.getChooseYear
+        }, null, 8, ["component-props", "preview", "onChooseYear"])) : e.getPanelType === "month" ? (h(), be(a, {
+          key: 1,
+          ref: "monthPanelEl",
+          current: e.currentDate,
+          choose: e.getChoose,
+          preview: e.getPreview,
+          "click-year": () => e.clickEl("year"),
+          "component-props": e.componentProps,
+          onChooseMonth: e.getChooseMonth,
+          onCheckPreview: e.checkPreview
+        }, null, 8, ["current", "choose", "preview", "click-year", "component-props", "onChooseMonth", "onCheckPreview"])) : e.getPanelType === "date" ? (h(), be(t, {
+          key: 2,
+          ref: "dayPanelEl",
+          current: e.currentDate,
+          choose: e.getChoose,
+          preview: e.getPreview,
+          "component-props": e.componentProps,
+          "click-month": () => e.clickEl("month"),
+          onChooseDay: e.getChooseDay,
+          onCheckPreview: e.checkPreview
+        }, null, 8, ["current", "choose", "preview", "component-props", "click-month", "onChooseDay", "onCheckPreview"])) : x("v-if", !0)]),
+        _: 1
+        /* STABLE */
+      }, 8, ["name"])],
       34
       /* CLASS, HYDRATE_EVENTS */
     )],
@@ -8002,9 +7702,9 @@ var ud = ee({
     }), K = A(() => {
       var le, we, he, $e, {
         multiple: Te,
-        range: Ue
+        range: Re
       } = e;
-      if (Ue) {
+      if (Re) {
         var ln = E.value.map((To) => se(To).format("YYYY-MM-DD"));
         return ln.length ? ln[0] + " ~ " + ln[1] : "";
       }
@@ -8015,12 +7715,12 @@ var ud = ee({
       var Cn = se(m.value + "-" + f.value.index + "-" + y.value).day(), Ua = st.find((To) => To.index === "" + Cn), el = (le = (we = Je.value.datePickerWeekDict) == null ? void 0 : we[Ua.index].name) != null ? le : "", Rv = (he = ($e = Je.value.datePickerMonthDict) == null ? void 0 : $e[f.value.index].name) != null ? he : "", Uv = Na(y.value, 2, "0");
       return Je.value.lang === "zh-CN" ? f.value.index + "-" + Uv + " " + el.slice(0, 3) : el.slice(0, 3) + ", " + Rv.slice(0, 3) + " " + y.value;
     }), q = A(() => u.value ? "year" : e.type === "month" || d.value ? "month" : e.type === "date" ? "date" : ""), R = A(() => !e.touchable || ["", "year"].includes(q.value)), V = A(() => {
-      var le, we, he, $e, Te = se(m.value + "-" + ((le = f.value) == null ? void 0 : le.index) + "-" + y.value).day(), Ue = y.value ? Na(y.value, 2, "0") : "";
+      var le, we, he, $e, Te = se(m.value + "-" + ((le = f.value) == null ? void 0 : le.index) + "-" + y.value).day(), Re = y.value ? Na(y.value, 2, "0") : "";
       return {
         week: "" + Te,
         year: (we = m.value) != null ? we : "",
         month: (he = ($e = f.value) == null ? void 0 : $e.index) != null ? he : "",
-        date: Ue
+        date: Re
       };
     }), I = A(() => P.value.chooseRangeDay.map((le) => se(le).format("YYYY-MM-DD"))), D = A(() => m.value === g.value), _ = A(() => {
       var le;
@@ -8047,7 +7747,7 @@ var ud = ee({
       if (!(R.value || t !== "x")) {
         var le = q.value === "month" ? B : T;
         lo(() => {
-          le.value.forwardRef(a), We();
+          le.value.forwardRef(a), je();
         });
       }
     }, Z = (le, we) => {
@@ -8057,20 +7757,20 @@ var ud = ee({
         w(e["onUpdate:modelValue"], Te), w(e.onChange, Te);
       }
     }, ne = (le, we) => {
-      var he = we === "month" ? O : $, $e = we === "month" ? "YYYY-MM" : "YYYY-MM-DD", Te = he.value.map((ln) => se(ln).format($e)), Ue = Te.findIndex((ln) => ln === le);
-      Ue === -1 ? Te.push(le) : Te.splice(Ue, 1), w(e["onUpdate:modelValue"], Te), w(e.onChange, Te);
+      var he = we === "month" ? O : $, $e = we === "month" ? "YYYY-MM" : "YYYY-MM-DD", Te = he.value.map((ln) => se(ln).format($e)), Re = Te.findIndex((ln) => ln === le);
+      Re === -1 ? Te.push(le) : Te.splice(Re, 1), w(e["onUpdate:modelValue"], Te), w(e.onChange, Te);
     }, de = (le, we) => !m.value || !f.value ? !1 : D.value ? le === "month" ? we.index < f.value.index : _.value ? we < z(y.value) : f.value.index > b.value.index : m.value > g.value, Ce = (le) => {
       var {
         readonly: we,
         range: he,
         multiple: $e,
         onChange: Te,
-        "onUpdate:modelValue": Ue
+        "onUpdate:modelValue": Re
       } = e;
       if (!(le < 0 || we)) {
         C.value = de("day", le);
         var ln = g.value + "-" + b.value.index + "-" + le, Cn = se(ln).format("YYYY-MM-DD");
-        he ? Z(Cn, "day") : $e ? ne(Cn, "day") : (w(Ue, Cn), w(Te, Cn));
+        he ? Z(Cn, "day") : $e ? ne(Cn, "day") : (w(Re, Cn), w(Te, Cn));
       }
     }, Ee = (le) => {
       var {
@@ -8078,13 +7778,13 @@ var ud = ee({
         readonly: he,
         range: $e,
         multiple: Te,
-        onChange: Ue,
+        onChange: Re,
         onPreview: ln,
         "onUpdate:modelValue": Cn
       } = e;
       if (C.value = de("month", le), we === "month" && !he) {
         var Ua = g.value + "-" + le.index;
-        $e ? Z(Ua, "month") : Te ? ne(Ua, "month") : (w(Cn, Ua), w(Ue, Ua));
+        $e ? Z(Ua, "month") : Te ? ne(Ua, "month") : (w(Cn, Ua), w(Re, Ua));
       } else
         b.value = le, w(ln, z(g.value), z(b.value.index));
       d.value = !1;
@@ -8099,23 +7799,23 @@ var ud = ee({
         $e < 1 && (g.value = "" + (z(g.value) - 1), $e = 12), $e > 12 && (g.value = "" + (z(g.value) + 1), $e = 1), b.value = Ft.find((Te) => z(Te.index) === $e);
       }
       w(e.onPreview, z(g.value), z(b.value.index));
-    }, me = () => (e.multiple || e.range) && !Oe(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be an Array'), !1) : !e.multiple && !e.range && Oe(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be a String'), !1) : !0, Pe = (le) => Oe(le) ? !1 : le === "Invalid Date" ? (console.error('[Varlet] DatePicker: "modelValue" is an Invalid Date'), !0) : !1, Ye = (le, we) => {
-      var he = we === "month" ? S : E, $e = we === "month" ? "YYYY-MM" : "YYYY-MM-D", Te = le.map((Cn) => se(Cn).format($e)).slice(0, 2), Ue = he.value.some((Cn) => Pe(Cn));
-      if (!Ue) {
+    }, me = () => (e.multiple || e.range) && !Oe(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be an Array'), !1) : !e.multiple && !e.range && Oe(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be a String'), !1) : !0, Pe = (le) => Oe(le) ? !1 : le === "Invalid Date" ? (console.error('[Varlet] DatePicker: "modelValue" is an Invalid Date'), !0) : !1, Fe = (le, we) => {
+      var he = we === "month" ? S : E, $e = we === "month" ? "YYYY-MM" : "YYYY-MM-D", Te = le.map((Cn) => se(Cn).format($e)).slice(0, 2), Re = he.value.some((Cn) => Pe(Cn));
+      if (!Re) {
         he.value = Te;
         var ln = se(he.value[0]).isAfter(he.value[1]);
         he.value.length === 2 && ln && (he.value = [he.value[1], he.value[0]]);
       }
     }, Xe = (le, we) => {
-      var he = we === "month" ? O : $, $e = we === "month" ? "YYYY-MM" : "YYYY-MM-D", Te = Array.from(new Set(le.map((Ue) => se(Ue).format($e))));
-      he.value = Te.filter((Ue) => Ue !== "Invalid Date");
-    }, je = (le) => {
+      var he = we === "month" ? O : $, $e = we === "month" ? "YYYY-MM" : "YYYY-MM-D", Te = Array.from(new Set(le.map((Re) => se(Re).format($e))));
+      he.value = Te.filter((Re) => Re !== "Invalid Date");
+    }, Ye = (le) => {
       var we = se(le).format("YYYY-MM-D");
       if (!Pe(we)) {
-        var [he, $e, Te] = we.split("-"), Ue = Ft.find((ln) => ln.index === $e);
-        f.value = Ue, m.value = he, y.value = Te, b.value = Ue, g.value = he;
+        var [he, $e, Te] = we.split("-"), Re = Ft.find((ln) => ln.index === $e);
+        f.value = Re, m.value = he, y.value = Te, b.value = Re, g.value = he;
       }
-    }, We = () => {
+    }, je = () => {
       r = 0, n = 0, a = "", t = void 0;
     };
     return ie(() => e.modelValue, (le) => {
@@ -8123,16 +7823,16 @@ var ud = ee({
         if (e.range) {
           if (!Oe(le))
             return;
-          v.value = le.length !== 1, Ye(le, e.type);
+          v.value = le.length !== 1, Fe(le, e.type);
         } else if (e.multiple) {
           if (!Oe(le))
             return;
           Xe(le, e.type);
         } else
-          je(le);
+          Ye(le);
     }, {
       immediate: !0
-    }), ie(q, We), {
+    }), ie(q, je), {
       n: Zh,
       classes: Jh,
       monthPanelEl: B,
@@ -8270,123 +7970,105 @@ var {
 } = re("dialog");
 function rg(e, n) {
   var r = oe("var-button"), a = oe("var-popup");
-  return h(), be(
-    a,
-    {
-      class: c(e.n("popup")),
-      "var-dialog-cover": "",
-      show: e.popupShow,
-      overlay: e.overlay,
-      "overlay-class": e.overlayClass,
-      "overlay-style": e.overlayStyle,
-      "lock-scroll": e.lockScroll,
-      "close-on-click-overlay": e.popupCloseOnClickOverlay,
-      teleport: e.teleport,
-      onOpen: e.onOpen,
-      onClose: e.onClose,
-      onClosed: e.onClosed,
-      onOpened: e.onOpened,
-      onRouteChange: e.onRouteChange,
-      onClickOverlay: e.handleClickOverlay
-    },
-    {
-      default: fe(() => [N(
+  return h(), be(a, {
+    class: c(e.n("popup")),
+    "var-dialog-cover": "",
+    show: e.popupShow,
+    overlay: e.overlay,
+    "overlay-class": e.overlayClass,
+    "overlay-style": e.overlayStyle,
+    "lock-scroll": e.lockScroll,
+    "close-on-click-overlay": e.popupCloseOnClickOverlay,
+    teleport: e.teleport,
+    onOpen: e.onOpen,
+    onClose: e.onClose,
+    onClosed: e.onClosed,
+    onOpened: e.onOpened,
+    onRouteChange: e.onRouteChange,
+    onClickOverlay: e.handleClickOverlay
+  }, {
+    default: fe(() => [N(
+      "div",
+      Ne({
+        class: e.classes(e.n("$--box"), e.n(), e.dialogClass),
+        style: fi({
+          width: e.toSizeUnit(e.width)
+        }, e.dialogStyle)
+      }, e.$attrs),
+      [N(
         "div",
-        Ne({
-          class: e.classes(e.n("$--box"), e.n(), e.dialogClass),
-          style: fi({
-            width: e.toSizeUnit(e.width)
-          }, e.dialogStyle)
-        }, e.$attrs),
-        [N(
-          "div",
-          {
-            class: c(e.n("title"))
-          },
-          [Y(e.$slots, "title", {}, () => [Se(
-            te(e.dt(e.title, e.pack.dialogTitle)),
+        {
+          class: c(e.n("title"))
+        },
+        [Y(e.$slots, "title", {}, () => [Se(
+          te(e.dt(e.title, e.pack.dialogTitle)),
+          1
+          /* TEXT */
+        )])],
+        2
+        /* CLASS */
+      ), N(
+        "div",
+        {
+          class: c(e.n("message")),
+          style: G({
+            textAlign: e.messageAlign
+          })
+        },
+        [Y(e.$slots, "default", {}, () => [Se(
+          te(e.message),
+          1
+          /* TEXT */
+        )])],
+        6
+        /* CLASS, STYLE */
+      ), N(
+        "div",
+        {
+          class: c(e.n("actions"))
+        },
+        [e.cancelButton ? (h(), be(r, {
+          key: 0,
+          class: c(e.classes(e.n("button"), e.n("cancel-button"))),
+          "var-dialog-cover": "",
+          text: "",
+          "text-color": e.cancelButtonTextColor,
+          color: e.cancelButtonColor,
+          onClick: e.cancel
+        }, {
+          default: fe(() => [Se(
+            te(e.dt(e.cancelButtonText, e.pack.dialogCancelButtonText)),
             1
             /* TEXT */
-          )])],
-          2
-          /* CLASS */
-        ), N(
-          "div",
-          {
-            class: c(e.n("message")),
-            style: G({
-              textAlign: e.messageAlign
-            })
-          },
-          [Y(e.$slots, "default", {}, () => [Se(
-            te(e.message),
+          )]),
+          _: 1
+          /* STABLE */
+        }, 8, ["class", "text-color", "color", "onClick"])) : x("v-if", !0), e.confirmButton ? (h(), be(r, {
+          key: 1,
+          class: c(e.classes(e.n("button"), e.n("confirm-button"))),
+          "var-dialog-cover": "",
+          text: "",
+          "text-color": e.confirmButtonTextColor,
+          color: e.confirmButtonColor,
+          onClick: e.confirm
+        }, {
+          default: fe(() => [Se(
+            te(e.dt(e.confirmButtonText, e.pack.dialogConfirmButtonText)),
             1
             /* TEXT */
-          )])],
-          6
-          /* CLASS, STYLE */
-        ), N(
-          "div",
-          {
-            class: c(e.n("actions"))
-          },
-          [e.cancelButton ? (h(), be(
-            r,
-            {
-              key: 0,
-              class: c(e.classes(e.n("button"), e.n("cancel-button"))),
-              "var-dialog-cover": "",
-              text: "",
-              "text-color": e.cancelButtonTextColor,
-              color: e.cancelButtonColor,
-              onClick: e.cancel
-            },
-            {
-              default: fe(() => [Se(
-                te(e.dt(e.cancelButtonText, e.pack.dialogCancelButtonText)),
-                1
-                /* TEXT */
-              )]),
-              _: 1
-              /* STABLE */
-            },
-            8,
-            ["class", "text-color", "color", "onClick"]
-          )) : x("v-if", !0), e.confirmButton ? (h(), be(
-            r,
-            {
-              key: 1,
-              class: c(e.classes(e.n("button"), e.n("confirm-button"))),
-              "var-dialog-cover": "",
-              text: "",
-              "text-color": e.confirmButtonTextColor,
-              color: e.confirmButtonColor,
-              onClick: e.confirm
-            },
-            {
-              default: fe(() => [Se(
-                te(e.dt(e.confirmButtonText, e.pack.dialogConfirmButtonText)),
-                1
-                /* TEXT */
-              )]),
-              _: 1
-              /* STABLE */
-            },
-            8,
-            ["class", "text-color", "color", "onClick"]
-          )) : x("v-if", !0)],
-          2
-          /* CLASS */
-        )],
-        16
-        /* FULL_PROPS */
-      )]),
-      _: 3
-      /* FORWARDED */
-    },
-    8,
-    ["class", "show", "overlay", "overlay-class", "overlay-style", "lock-scroll", "close-on-click-overlay", "teleport", "onOpen", "onClose", "onClosed", "onOpened", "onRouteChange", "onClickOverlay"]
-  );
+          )]),
+          _: 1
+          /* STABLE */
+        }, 8, ["class", "text-color", "color", "onClick"])) : x("v-if", !0)],
+        2
+        /* CLASS */
+      )],
+      16
+      /* FULL_PROPS */
+    )]),
+    _: 3
+    /* FORWARDED */
+  }, 8, ["class", "show", "overlay", "overlay-class", "overlay-style", "lock-scroll", "close-on-click-overlay", "teleport", "onOpen", "onClose", "onClosed", "onOpened", "onRouteChange", "onClickOverlay"]);
 }
 var dd = ee({
   name: "VarDialog",
@@ -8471,7 +8153,7 @@ function _t() {
 }
 var lr, xt = {};
 function ag(e) {
-  return e === void 0 && (e = {}), Fe(e) ? _t({}, xt, {
+  return e === void 0 && (e = {}), He(e) ? _t({}, xt, {
     message: e
   }) : _t({}, xt, e);
 }
@@ -9817,66 +9499,54 @@ function by(e, n) {
         return e.handleHostMouseleave && e.handleHostMouseleave(...arguments);
       })
     },
-    [Y(e.$slots, "default"), (h(), be(
-      Mr,
-      {
-        to: e.teleport
-      },
-      [Q(
-        Re,
+    [Y(e.$slots, "default"), (h(), be(Mr, {
+      to: e.teleport
+    }, [Q(Le, {
+      name: e.n(),
+      onAfterEnter: e.onOpened,
+      onAfterLeave: e.onClosed,
+      persisted: ""
+    }, {
+      default: fe(() => [ke(N(
+        "div",
         {
-          name: e.n(),
-          onAfterEnter: e.onOpened,
-          onAfterLeave: e.onClosed,
-          persisted: ""
+          ref: "popover",
+          class: c(e.classes(e.n("tooltip"), e.n("$--box"))),
+          style: G({
+            zIndex: e.zIndex
+          }),
+          onClick: n[0] || (n[0] = Pn(() => {
+          }, ["stop"])),
+          onMouseenter: n[1] || (n[1] = function() {
+            return e.handlePopoverMouseenter && e.handlePopoverMouseenter(...arguments);
+          }),
+          onMouseleave: n[2] || (n[2] = function() {
+            return e.handlePopoverMouseleave && e.handlePopoverMouseleave(...arguments);
+          })
         },
-        {
-          default: fe(() => [ke(N(
-            "div",
-            {
-              ref: "popover",
-              class: c(e.classes(e.n("tooltip"), e.n("$--box"))),
-              style: G({
-                zIndex: e.zIndex
-              }),
-              onClick: n[0] || (n[0] = Pn(() => {
-              }, ["stop"])),
-              onMouseenter: n[1] || (n[1] = function() {
-                return e.handlePopoverMouseenter && e.handlePopoverMouseenter(...arguments);
-              }),
-              onMouseleave: n[2] || (n[2] = function() {
-                return e.handlePopoverMouseleave && e.handlePopoverMouseleave(...arguments);
-              })
-            },
-            [N(
-              "div",
-              {
-                style: G({
-                  background: e.color,
-                  width: e.sameWidth ? e.toSizeUnit(Math.ceil(e.hostSize.width)) : void 0
-                }),
-                class: c(e.classes(e.n("content-container"), e.n("--" + e.type)))
-              },
-              [Y(e.$slots, "content", {}, () => [Se(
-                te(e.content),
-                1
-                /* TEXT */
-              )])],
-              6
-              /* CLASS, STYLE */
-            )],
-            38
-            /* CLASS, STYLE, HYDRATE_EVENTS */
-          ), [[Qn, e.show]])]),
-          _: 3
-          /* FORWARDED */
-        },
-        8,
-        ["name", "onAfterEnter", "onAfterLeave"]
-      )],
-      8,
-      ["to"]
-    ))],
+        [N(
+          "div",
+          {
+            style: G({
+              background: e.color,
+              width: e.sameWidth ? e.toSizeUnit(Math.ceil(e.hostSize.width)) : void 0
+            }),
+            class: c(e.classes(e.n("content-container"), e.n("--" + e.type)))
+          },
+          [Y(e.$slots, "content", {}, () => [Se(
+            te(e.content),
+            1
+            /* TEXT */
+          )])],
+          6
+          /* CLASS, STYLE */
+        )],
+        38
+        /* CLASS, STYLE, HYDRATE_EVENTS */
+      ), [[Qn, e.show]])]),
+      _: 3
+      /* FORWARDED */
+    }, 8, ["name", "onAfterEnter", "onAfterLeave"])], 8, ["to"]))],
     34
     /* CLASS, HYDRATE_EVENTS */
   );
@@ -10195,11 +9865,11 @@ const ea = ee({
         onClick: (b) => i(b, !t.value, y.length),
         onMouseleave: () => s(!1, y.length),
         onMouseenter: () => s(!0, y.length)
-      }, a), [Q(Re, {
+      }, a), [Q(Le, {
         name: fn("--active-transition")
       }, Wl(f = d()) ? f : {
         default: () => [f]
-      }), Q(Re, {
+      }), Q(Le, {
         name: fn("--actions-transition-" + e.direction),
         onAfterEnter: e.onOpened,
         onAfterLeave: e.onClosed
@@ -10427,53 +10097,41 @@ function Fy(e, n) {
         borderRadius: e.toSizeUnit(e.radius)
       })
     },
-    [e.lazy && !e.showErrorSlot ? ke((h(), k(
-      "img",
-      {
-        key: 0,
-        class: c(e.n("image")),
-        alt: e.alt,
-        title: e.title,
-        "lazy-loading": e.loading,
-        "lazy-error": e.error,
-        style: G({
-          objectFit: e.fit
-        }),
-        onLoad: n[0] || (n[0] = function() {
-          return e.handleLoad && e.handleLoad(...arguments);
-        }),
-        onClick: n[1] || (n[1] = function() {
-          return e.handleClick && e.handleClick(...arguments);
-        })
-      },
-      null,
-      46,
-      Uy
-    )), [[r, e.src]]) : x("v-if", !0), !e.lazy && !e.showErrorSlot ? (h(), k(
-      "img",
-      {
-        key: 1,
-        class: c(e.n("image")),
-        alt: e.alt,
-        title: e.title,
-        style: G({
-          objectFit: e.fit
-        }),
-        src: e.src,
-        onLoad: n[2] || (n[2] = function() {
-          return e.handleLoad && e.handleLoad(...arguments);
-        }),
-        onError: n[3] || (n[3] = function() {
-          return e.handleError && e.handleError(...arguments);
-        }),
-        onClick: n[4] || (n[4] = function() {
-          return e.handleClick && e.handleClick(...arguments);
-        })
-      },
-      null,
-      46,
-      Hy
-    )) : x("v-if", !0), e.showErrorSlot ? Y(e.$slots, "error", {
+    [e.lazy && !e.showErrorSlot ? ke((h(), k("img", {
+      key: 0,
+      class: c(e.n("image")),
+      alt: e.alt,
+      title: e.title,
+      "lazy-loading": e.loading,
+      "lazy-error": e.error,
+      style: G({
+        objectFit: e.fit
+      }),
+      onLoad: n[0] || (n[0] = function() {
+        return e.handleLoad && e.handleLoad(...arguments);
+      }),
+      onClick: n[1] || (n[1] = function() {
+        return e.handleClick && e.handleClick(...arguments);
+      })
+    }, null, 46, Uy)), [[r, e.src]]) : x("v-if", !0), !e.lazy && !e.showErrorSlot ? (h(), k("img", {
+      key: 1,
+      class: c(e.n("image")),
+      alt: e.alt,
+      title: e.title,
+      style: G({
+        objectFit: e.fit
+      }),
+      src: e.src,
+      onLoad: n[2] || (n[2] = function() {
+        return e.handleLoad && e.handleLoad(...arguments);
+      }),
+      onError: n[3] || (n[3] = function() {
+        return e.handleError && e.handleError(...arguments);
+      }),
+      onClick: n[4] || (n[4] = function() {
+        return e.handleClick && e.handleClick(...arguments);
+      })
+    }, null, 46, Hy)) : x("v-if", !0), e.showErrorSlot ? Y(e.$slots, "error", {
       key: 2
     }) : x("v-if", !0)],
     6
@@ -10641,20 +10299,14 @@ function Ky(e, n) {
       [(h(!0), k(
         Me,
         null,
-        He(e.length, (r, a) => (h(), k(
-          "div",
-          {
-            class: c(e.classes(e.n("indicator"), [e.index === a, e.n("--indicator-active")], [e.vertical, e.n("--indicator-vertical")])),
-            style: G({
-              background: e.indicatorColor
-            }),
-            key: r,
-            onClick: (t) => e.to(a)
-          },
-          null,
-          14,
-          Xy
-        ))),
+        Ue(e.length, (r, a) => (h(), k("div", {
+          class: c(e.classes(e.n("indicator"), [e.index === a, e.n("--indicator-active")], [e.vertical, e.n("--indicator-vertical")])),
+          style: G({
+            background: e.indicatorColor
+          }),
+          key: r,
+          onClick: (t) => e.to(a)
+        }, null, 14, Xy))),
         128
         /* KEYED_FRAGMENT */
       ))],
@@ -10736,8 +10388,8 @@ var Td = ee({
         } = W.touches[0], Ee = Math.abs(de - g), ae = Math.abs(Ce - C), ue = R(Ee, ae), me = ne ? "vertical" : "horizontal";
         if (ue === me) {
           W.preventDefault();
-          var Pe = $ !== void 0 ? de - $ : 0, Ye = S !== void 0 ? Ce - S : 0;
-          $ = de, S = Ce, o.value += ne ? Ye : Pe, B();
+          var Pe = $ !== void 0 ? de - $ : 0, Fe = S !== void 0 ? Ce - S : 0;
+          $ = de, S = Ce, o.value += ne ? Fe : Pe, B();
         }
       }
     }, D = () => {
@@ -10949,141 +10601,105 @@ var _y = gi({
 } = re("image-preview"), Mo = 12, Jl = 200, eb = 350, Ql = 200, nb = 500, rb = ["onTouchstart"], ab = ["src", "alt"];
 function tb(e, n) {
   var r = oe("var-swipe-item"), a = oe("var-swipe"), t = oe("var-icon"), o = oe("var-popup");
-  return h(), be(
-    o,
-    {
-      class: c(e.n("popup")),
+  return h(), be(o, {
+    class: c(e.n("popup")),
+    "var-image-preview-cover": "",
+    transition: e.n("$-fade"),
+    show: e.popupShow,
+    overlay: !1,
+    "close-on-click-overlay": !1,
+    "lock-scroll": e.lockScroll,
+    teleport: e.teleport,
+    onOpen: e.onOpen,
+    onClose: e.onClose,
+    onClosed: e.onClosed,
+    onOpened: e.onOpened,
+    onRouteChange: e.onRouteChange
+  }, {
+    default: fe(() => [Q(a, Ne({
+      class: e.n("swipe"),
       "var-image-preview-cover": "",
-      transition: e.n("$-fade"),
-      show: e.popupShow,
-      overlay: !1,
-      "close-on-click-overlay": !1,
-      "lock-scroll": e.lockScroll,
-      teleport: e.teleport,
-      onOpen: e.onOpen,
-      onClose: e.onClose,
-      onClosed: e.onClosed,
-      onOpened: e.onOpened,
-      onRouteChange: e.onRouteChange
-    },
-    {
-      default: fe(() => [Q(
-        a,
-        Ne({
-          class: e.n("swipe"),
-          "var-image-preview-cover": "",
-          touchable: e.canSwipe,
-          indicator: e.indicator && e.images.length > 1,
-          "initial-index": e.initialIndex,
-          loop: e.loop,
-          onChange: e.onChange
-        }, e.$attrs),
-        {
-          default: fe(() => [(h(!0), k(
-            Me,
-            null,
-            He(e.images, (l, i) => (h(), be(
-              r,
-              {
-                class: c(e.n("swipe-item")),
-                "var-image-preview-cover": "",
-                key: l
-              },
-              {
-                default: fe(() => [N(
-                  "div",
-                  {
-                    class: c(e.n("zoom-container")),
-                    style: G({
-                      transform: "scale(" + e.scale + ") translate(" + e.translateX + "px, " + e.translateY + "px)",
-                      transitionTimingFunction: e.transitionTimingFunction,
-                      transitionDuration: e.transitionDuration
-                    }),
-                    onTouchstart: (s) => e.handleTouchstart(s, i),
-                    onTouchmove: n[0] || (n[0] = function() {
-                      return e.handleTouchmove && e.handleTouchmove(...arguments);
-                    }),
-                    onTouchend: n[1] || (n[1] = function() {
-                      return e.handleTouchend && e.handleTouchend(...arguments);
-                    }),
-                    onTouchcancel: n[2] || (n[2] = function() {
-                      return e.handleTouchcancel && e.handleTouchcancel(...arguments);
-                    })
-                  },
-                  [N(
-                    "img",
-                    {
-                      class: c(e.classes(e.n("image"), [e.isPreventDefault, e.n("--prevent")])),
-                      src: l,
-                      alt: l
-                    },
-                    null,
-                    10,
-                    ab
-                  )],
-                  46,
-                  rb
-                )]),
-                _: 2
-                /* DYNAMIC */
-              },
-              1032,
-              ["class"]
-            ))),
-            128
-            /* KEYED_FRAGMENT */
-          ))]),
-          indicator: fe((l) => {
-            var {
-              index: i,
-              length: s
-            } = l;
-            return [Y(e.$slots, "indicator", {
-              index: i,
-              length: s
-            }, () => [e.indicator && e.images.length > 1 ? (h(), k(
-              "div",
-              {
-                key: 0,
-                class: c(e.n("indicators"))
-              },
-              te(i + 1) + " / " + te(s),
-              3
-              /* TEXT, CLASS */
-            )) : x("v-if", !0)])];
-          }),
-          _: 3
-          /* FORWARDED */
-        },
-        16,
-        ["class", "touchable", "indicator", "initial-index", "loop", "onChange"]
-      ), Y(e.$slots, "close-icon", {}, () => [e.closeable ? (h(), be(
-        t,
-        {
-          key: 0,
-          class: c(e.n("close-icon")),
-          name: "close-circle",
-          "var-image-preview-cover": "",
-          onClick: e.close
-        },
+      touchable: e.canSwipe,
+      indicator: e.indicator && e.images.length > 1,
+      "initial-index": e.initialIndex,
+      loop: e.loop,
+      onChange: e.onChange
+    }, e.$attrs), {
+      default: fe(() => [(h(!0), k(
+        Me,
         null,
-        8,
-        ["class", "onClick"]
-      )) : x("v-if", !0)]), N(
-        "div",
-        {
-          class: c(e.n("extra"))
-        },
-        [Y(e.$slots, "extra")],
-        2
-        /* CLASS */
-      )]),
+        Ue(e.images, (l, i) => (h(), be(r, {
+          class: c(e.n("swipe-item")),
+          "var-image-preview-cover": "",
+          key: l
+        }, {
+          default: fe(() => [N("div", {
+            class: c(e.n("zoom-container")),
+            style: G({
+              transform: "scale(" + e.scale + ") translate(" + e.translateX + "px, " + e.translateY + "px)",
+              transitionTimingFunction: e.transitionTimingFunction,
+              transitionDuration: e.transitionDuration
+            }),
+            onTouchstart: (s) => e.handleTouchstart(s, i),
+            onTouchmove: n[0] || (n[0] = function() {
+              return e.handleTouchmove && e.handleTouchmove(...arguments);
+            }),
+            onTouchend: n[1] || (n[1] = function() {
+              return e.handleTouchend && e.handleTouchend(...arguments);
+            }),
+            onTouchcancel: n[2] || (n[2] = function() {
+              return e.handleTouchcancel && e.handleTouchcancel(...arguments);
+            })
+          }, [N("img", {
+            class: c(e.classes(e.n("image"), [e.isPreventDefault, e.n("--prevent")])),
+            src: l,
+            alt: l
+          }, null, 10, ab)], 46, rb)]),
+          _: 2
+          /* DYNAMIC */
+        }, 1032, ["class"]))),
+        128
+        /* KEYED_FRAGMENT */
+      ))]),
+      indicator: fe((l) => {
+        var {
+          index: i,
+          length: s
+        } = l;
+        return [Y(e.$slots, "indicator", {
+          index: i,
+          length: s
+        }, () => [e.indicator && e.images.length > 1 ? (h(), k(
+          "div",
+          {
+            key: 0,
+            class: c(e.n("indicators"))
+          },
+          te(i + 1) + " / " + te(s),
+          3
+          /* TEXT, CLASS */
+        )) : x("v-if", !0)])];
+      }),
       _: 3
       /* FORWARDED */
-    },
-    8,
-    ["class", "transition", "show", "lock-scroll", "teleport", "onOpen", "onClose", "onClosed", "onOpened", "onRouteChange"]
-  );
+    }, 16, ["class", "touchable", "indicator", "initial-index", "loop", "onChange"]), Y(e.$slots, "close-icon", {}, () => [e.closeable ? (h(), be(t, {
+      key: 0,
+      class: c(e.n("close-icon")),
+      name: "close-circle",
+      "var-image-preview-cover": "",
+      onClick: e.close
+    }, null, 8, ["class", "onClick"])) : x("v-if", !0)]), N(
+      "div",
+      {
+        class: c(e.n("extra"))
+      },
+      [Y(e.$slots, "extra")],
+      2
+      /* CLASS */
+    )]),
+    _: 3
+    /* FORWARDED */
+  }, 8, ["class", "transition", "show", "lock-scroll", "teleport", "onOpen", "onClose", "onClosed", "onOpened", "onRouteChange"]);
 }
 var Od = ee({
   name: "VarImagePreview",
@@ -11247,7 +10863,7 @@ function ct() {
 }
 var sr, mt = {};
 function ob(e) {
-  return e === void 0 && (e = {}), Fe(e) ? ct({}, mt, {
+  return e === void 0 && (e = {}), He(e) ? ct({}, mt, {
     images: [e]
   }) : Oe(e) ? ct({}, mt, {
     images: e
@@ -11488,35 +11104,29 @@ var vb = {
   classes: cb
 } = re("index-anchor");
 function mb(e, n) {
-  return h(), be(
-    nt(e.sticky ? e.n("$-sticky") : e.Transition),
-    {
-      "offset-top": e.sticky ? e.stickyOffsetTop : null,
-      "z-index": e.sticky ? e.zIndex : null,
-      disabled: e.disabled && !e.cssMode,
-      "css-mode": e.cssMode,
-      ref: "anchorEl"
-    },
-    {
-      default: fe(() => [N(
-        "div",
-        Ne({
-          class: e.n()
-        }, e.$attrs),
-        [Y(e.$slots, "default", {}, () => [Se(
-          te(e.name),
-          1
-          /* TEXT */
-        )])],
-        16
-        /* FULL_PROPS */
-      )]),
-      _: 3
-      /* FORWARDED */
-    },
-    8,
-    ["offset-top", "z-index", "disabled", "css-mode"]
-  );
+  return h(), be(nt(e.sticky ? e.n("$-sticky") : e.Transition), {
+    "offset-top": e.sticky ? e.stickyOffsetTop : null,
+    "z-index": e.sticky ? e.zIndex : null,
+    disabled: e.disabled && !e.cssMode,
+    "css-mode": e.cssMode,
+    ref: "anchorEl"
+  }, {
+    default: fe(() => [N(
+      "div",
+      Ne({
+        class: e.n()
+      }, e.$attrs),
+      [Y(e.$slots, "default", {}, () => [Se(
+        te(e.name),
+        1
+        /* TEXT */
+      )])],
+      16
+      /* FULL_PROPS */
+    )]),
+    _: 3
+    /* FORWARDED */
+  }, 8, ["offset-top", "z-index", "disabled", "css-mode"]);
 }
 var Ed = ee({
   name: "VarIndexAnchor",
@@ -11558,7 +11168,7 @@ var Ed = ee({
       disabled: o,
       cssMode: d,
       stickyOffsetTop: v,
-      Transition: Re
+      Transition: Le
     };
   }
 });
@@ -11650,23 +11260,17 @@ function bb(e, n) {
       [(h(!0), k(
         Me,
         null,
-        He(e.anchorNameList, (r) => (h(), k(
-          "li",
-          {
-            key: r,
-            class: c(e.classes(e.n("anchor-item"), [e.active === r, e.n("anchor-item--active")])),
-            style: G({
-              color: e.active === r && e.highlightColor ? e.highlightColor : ""
-            }),
-            onClick: (a) => e.anchorClick({
-              anchorName: r,
-              manualCall: !0
-            })
-          },
-          te(r),
-          15,
-          yb
-        ))),
+        Ue(e.anchorNameList, (r) => (h(), k("li", {
+          key: r,
+          class: c(e.classes(e.n("anchor-item"), [e.active === r, e.n("anchor-item--active")])),
+          style: G({
+            color: e.active === r && e.highlightColor ? e.highlightColor : ""
+          }),
+          onClick: (a) => e.anchorClick({
+            anchorName: r,
+            manualCall: !0
+          })
+        }, te(r), 15, yb))),
         128
         /* KEYED_FRAGMENT */
       ))],
@@ -11909,43 +11513,31 @@ function $b(e, n) {
         [Y(e.$slots, "default")],
         2
         /* CLASS */
-      ), e.placeholder && e.hint ? (h(), k(
-        "label",
-        {
-          key: 0,
-          class: c(e.classes(e.n("placeholder"), e.n("$--ellipsis"), [e.isFocus, e.n("--focus")], [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], e.computePlaceholderState())),
-          style: G({
-            color: e.color
-          }),
-          for: e.id
-        },
-        [N(
-          "span",
-          null,
-          te(e.placeholder),
-          1
-          /* TEXT */
-        )],
-        14,
-        kb
-      )) : x("v-if", !0), N(
+      ), e.placeholder && e.hint ? (h(), k("label", {
+        key: 0,
+        class: c(e.classes(e.n("placeholder"), e.n("$--ellipsis"), [e.isFocus, e.n("--focus")], [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], e.computePlaceholderState())),
+        style: G({
+          color: e.color
+        }),
+        for: e.id
+      }, [N(
+        "span",
+        null,
+        te(e.placeholder),
+        1
+        /* TEXT */
+      )], 14, kb)) : x("v-if", !0), N(
         "div",
         {
           class: c(e.classes(e.n("icon"), [!e.hint, e.n("--icon-non-hint")]))
         },
-        [e.clearable && !e.isEmpty(e.value) ? (h(), be(
-          r,
-          {
-            key: 0,
-            class: c(e.n("clear-icon")),
-            "var-field-decorator-cover": "",
-            name: "close-circle",
-            onClick: e.handleClear
-          },
-          null,
-          8,
-          ["class", "onClick"]
-        )) : x("v-if", !0), Y(e.$slots, "append-icon")],
+        [e.clearable && !e.isEmpty(e.value) ? (h(), be(r, {
+          key: 0,
+          class: c(e.n("clear-icon")),
+          "var-field-decorator-cover": "",
+          name: "close-circle",
+          onClick: e.handleClear
+        }, null, 8, ["class", "onClick"])) : x("v-if", !0), Y(e.$slots, "append-icon")],
         2
         /* CLASS */
       )],
@@ -12179,114 +11771,96 @@ function Ib(e, n) {
       })),
       Cs({
         "append-icon": fe(() => [Y(e.$slots, "append-icon")]),
-        default: fe(() => [e.normalizedType === "password" ? (h(), k(
-          "input",
-          {
-            key: 0,
-            class: c(e.n("autocomplete")),
-            placeholder: e.hint ? void 0 : e.placeholder,
-            style: G({
-              "--input-placeholder-color": e.placeholderColor
-            }),
-            enterkeyhint: e.enterkeyhint
-          },
-          null,
-          14,
-          Mb
-        )) : x("v-if", !0), e.textarea ? (h(), k(
-          "textarea",
-          {
-            key: 1,
-            class: c(e.classes(e.n("input"), e.n("--textarea"), [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], [e.errorMessage, e.n("--caret-error")])),
-            ref: "el",
-            autocomplete: "new-password",
-            id: e.id,
-            disabled: e.formDisabled || e.disabled || e.formReadonly || e.readonly,
-            type: e.normalizedType,
-            value: e.modelValue,
-            placeholder: e.hint ? void 0 : e.placeholder,
-            maxlength: e.maxlength,
-            rows: e.rows,
-            enterkeyhint: e.enterkeyhint,
-            inputmode: e.type === "number" ? "numeric" : void 0,
-            style: G({
-              color: e.errorMessage ? void 0 : e.textColor,
-              caretColor: e.errorMessage ? void 0 : e.focusColor,
-              resize: e.resize ? "vertical" : "none",
-              "--input-placeholder-color": e.placeholderColor
-            }),
-            onFocus: n[0] || (n[0] = function() {
-              return e.handleFocus && e.handleFocus(...arguments);
-            }),
-            onBlur: n[1] || (n[1] = function() {
-              return e.handleBlur && e.handleBlur(...arguments);
-            }),
-            onInput: n[2] || (n[2] = function() {
-              return e.handleInput && e.handleInput(...arguments);
-            }),
-            onChange: n[3] || (n[3] = function() {
-              return e.handleChange && e.handleChange(...arguments);
-            }),
-            onTouchstart: n[4] || (n[4] = function() {
-              return e.handleTouchstart && e.handleTouchstart(...arguments);
-            }),
-            onCompositionstart: n[5] || (n[5] = function() {
-              return e.handleCompositionStart && e.handleCompositionStart(...arguments);
-            }),
-            onCompositionend: n[6] || (n[6] = function() {
-              return e.handleCompositionEnd && e.handleCompositionEnd(...arguments);
-            })
-          },
-          `
-      `,
-          46,
-          Eb
-        )) : (h(), k(
-          "input",
-          {
-            key: 2,
-            class: c(e.classes(e.n("input"), [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], [e.errorMessage, e.n("--caret-error")])),
-            ref: "el",
-            autocomplete: "new-password",
-            id: e.id,
-            disabled: e.formDisabled || e.disabled || e.formReadonly || e.readonly,
-            type: e.normalizedType,
-            value: e.modelValue,
-            placeholder: e.hint ? void 0 : e.placeholder,
-            maxlength: e.maxlength,
-            enterkeyhint: e.enterkeyhint,
-            inputmode: e.type === "number" ? "numeric" : void 0,
-            style: G({
-              color: e.errorMessage ? void 0 : e.textColor,
-              caretColor: e.errorMessage ? void 0 : e.focusColor,
-              "--input-placeholder-color": e.placeholderColor
-            }),
-            onFocus: n[7] || (n[7] = function() {
-              return e.handleFocus && e.handleFocus(...arguments);
-            }),
-            onBlur: n[8] || (n[8] = function() {
-              return e.handleBlur && e.handleBlur(...arguments);
-            }),
-            onInput: n[9] || (n[9] = function() {
-              return e.handleInput && e.handleInput(...arguments);
-            }),
-            onChange: n[10] || (n[10] = function() {
-              return e.handleChange && e.handleChange(...arguments);
-            }),
-            onTouchstart: n[11] || (n[11] = function() {
-              return e.handleTouchstart && e.handleTouchstart(...arguments);
-            }),
-            onCompositionstart: n[12] || (n[12] = function() {
-              return e.handleCompositionStart && e.handleCompositionStart(...arguments);
-            }),
-            onCompositionend: n[13] || (n[13] = function() {
-              return e.handleCompositionEnd && e.handleCompositionEnd(...arguments);
-            })
-          },
-          null,
-          46,
-          Bb
-        ))]),
+        default: fe(() => [e.normalizedType === "password" ? (h(), k("input", {
+          key: 0,
+          class: c(e.n("autocomplete")),
+          placeholder: e.hint ? void 0 : e.placeholder,
+          style: G({
+            "--input-placeholder-color": e.placeholderColor
+          }),
+          enterkeyhint: e.enterkeyhint
+        }, null, 14, Mb)) : x("v-if", !0), e.textarea ? (h(), k("textarea", {
+          key: 1,
+          class: c(e.classes(e.n("input"), e.n("--textarea"), [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], [e.errorMessage, e.n("--caret-error")])),
+          ref: "el",
+          autocomplete: "new-password",
+          id: e.id,
+          disabled: e.formDisabled || e.disabled || e.formReadonly || e.readonly,
+          type: e.normalizedType,
+          value: e.modelValue,
+          placeholder: e.hint ? void 0 : e.placeholder,
+          maxlength: e.maxlength,
+          rows: e.rows,
+          enterkeyhint: e.enterkeyhint,
+          inputmode: e.type === "number" ? "numeric" : void 0,
+          style: G({
+            color: e.errorMessage ? void 0 : e.textColor,
+            caretColor: e.errorMessage ? void 0 : e.focusColor,
+            resize: e.resize ? "vertical" : "none",
+            "--input-placeholder-color": e.placeholderColor
+          }),
+          onFocus: n[0] || (n[0] = function() {
+            return e.handleFocus && e.handleFocus(...arguments);
+          }),
+          onBlur: n[1] || (n[1] = function() {
+            return e.handleBlur && e.handleBlur(...arguments);
+          }),
+          onInput: n[2] || (n[2] = function() {
+            return e.handleInput && e.handleInput(...arguments);
+          }),
+          onChange: n[3] || (n[3] = function() {
+            return e.handleChange && e.handleChange(...arguments);
+          }),
+          onTouchstart: n[4] || (n[4] = function() {
+            return e.handleTouchstart && e.handleTouchstart(...arguments);
+          }),
+          onCompositionstart: n[5] || (n[5] = function() {
+            return e.handleCompositionStart && e.handleCompositionStart(...arguments);
+          }),
+          onCompositionend: n[6] || (n[6] = function() {
+            return e.handleCompositionEnd && e.handleCompositionEnd(...arguments);
+          })
+        }, `
+      `, 46, Eb)) : (h(), k("input", {
+          key: 2,
+          class: c(e.classes(e.n("input"), [e.formDisabled || e.disabled, e.n("--disabled")], [e.errorMessage, e.n("--error")], [e.errorMessage, e.n("--caret-error")])),
+          ref: "el",
+          autocomplete: "new-password",
+          id: e.id,
+          disabled: e.formDisabled || e.disabled || e.formReadonly || e.readonly,
+          type: e.normalizedType,
+          value: e.modelValue,
+          placeholder: e.hint ? void 0 : e.placeholder,
+          maxlength: e.maxlength,
+          enterkeyhint: e.enterkeyhint,
+          inputmode: e.type === "number" ? "numeric" : void 0,
+          style: G({
+            color: e.errorMessage ? void 0 : e.textColor,
+            caretColor: e.errorMessage ? void 0 : e.focusColor,
+            "--input-placeholder-color": e.placeholderColor
+          }),
+          onFocus: n[7] || (n[7] = function() {
+            return e.handleFocus && e.handleFocus(...arguments);
+          }),
+          onBlur: n[8] || (n[8] = function() {
+            return e.handleBlur && e.handleBlur(...arguments);
+          }),
+          onInput: n[9] || (n[9] = function() {
+            return e.handleInput && e.handleInput(...arguments);
+          }),
+          onChange: n[10] || (n[10] = function() {
+            return e.handleChange && e.handleChange(...arguments);
+          }),
+          onTouchstart: n[11] || (n[11] = function() {
+            return e.handleTouchstart && e.handleTouchstart(...arguments);
+          }),
+          onCompositionstart: n[12] || (n[12] = function() {
+            return e.handleCompositionStart && e.handleCompositionStart(...arguments);
+          }),
+          onCompositionend: n[13] || (n[13] = function() {
+            return e.handleCompositionEnd && e.handleCompositionEnd(...arguments);
+          })
+        }, null, 46, Bb))]),
         _: 2
         /* DYNAMIC */
       }, [e.$slots["prepend-icon"] ? {
@@ -12296,18 +11870,12 @@ function Ib(e, n) {
       } : void 0]),
       1040
       /* FULL_PROPS, DYNAMIC_SLOTS */
-    ), Q(
-      a,
-      {
-        "error-message": e.errorMessage,
-        "extra-message": e.maxlengthText,
-        onMousedown: n[14] || (n[14] = Pn(() => {
-        }, ["stop"]))
-      },
-      null,
-      8,
-      ["error-message", "extra-message"]
-    )],
+    ), Q(a, {
+      "error-message": e.errorMessage,
+      "extra-message": e.maxlengthText,
+      onMousedown: n[14] || (n[14] = Pn(() => {
+      }, ["stop"]))
+    }, null, 8, ["error-message", "extra-message"])],
     34
     /* CLASS, HYDRATE_EVENTS */
   );
@@ -12502,24 +12070,18 @@ var Ab = {
   classes: Lb
 } = re("link");
 function Rb(e, n) {
-  return h(), be(
-    nt(e.tag),
-    Ne(e.linkProps, {
-      class: e.classes(e.n(), e.n("$--box"), e.n("$--inline-flex"), e.n("--" + e.type), [e.underline !== "none", e.n("--underline-" + e.underline)], [e.disabled, e.n("--disabled")]),
-      style: {
-        color: e.textColor,
-        fontSize: e.toSizeUnit(e.textSize)
-      },
-      onClick: e.handleClick
-    }),
-    {
-      default: fe(() => [Y(e.$slots, "default")]),
-      _: 3
-      /* FORWARDED */
+  return h(), be(nt(e.tag), Ne(e.linkProps, {
+    class: e.classes(e.n(), e.n("$--box"), e.n("$--inline-flex"), e.n("--" + e.type), [e.underline !== "none", e.n("--underline-" + e.underline)], [e.disabled, e.n("--disabled")]),
+    style: {
+      color: e.textColor,
+      fontSize: e.toSizeUnit(e.textSize)
     },
-    16,
-    ["class", "style", "onClick"]
-  );
+    onClick: e.handleClick
+  }), {
+    default: fe(() => [Y(e.$slots, "default")]),
+    _: 3
+    /* FORWARDED */
+  }, 16, ["class", "style", "onClick"]);
 }
 var Ad = ee({
   name: "VarLink",
@@ -12971,51 +12533,39 @@ function s0(e, n) {
         return e.handleHostMouseleave && e.handleHostMouseleave(...arguments);
       })
     },
-    [Y(e.$slots, "default"), (h(), be(
-      Mr,
-      {
-        to: e.teleport
-      },
-      [Q(
-        Re,
+    [Y(e.$slots, "default"), (h(), be(Mr, {
+      to: e.teleport
+    }, [Q(Le, {
+      name: e.n(),
+      onAfterEnter: e.onOpened,
+      onAfterLeave: e.onClosed,
+      persisted: ""
+    }, {
+      default: fe(() => [ke(N(
+        "div",
         {
-          name: e.n(),
-          onAfterEnter: e.onOpened,
-          onAfterLeave: e.onClosed,
-          persisted: ""
+          ref: "popover",
+          style: G({
+            zIndex: e.zIndex,
+            width: e.sameWidth ? e.toSizeUnit(Math.ceil(e.hostSize.width)) : void 0
+          }),
+          class: c(e.classes(e.n("menu"), e.n("$--box"), [e.defaultStyle, e.n("--menu-background-color")], [e.defaultStyle, e.formatElevation(e.elevation, 3)])),
+          onClick: n[0] || (n[0] = Pn(() => {
+          }, ["stop"])),
+          onMouseenter: n[1] || (n[1] = function() {
+            return e.handlePopoverMouseenter && e.handlePopoverMouseenter(...arguments);
+          }),
+          onMouseleave: n[2] || (n[2] = function() {
+            return e.handlePopoverMouseleave && e.handlePopoverMouseleave(...arguments);
+          })
         },
-        {
-          default: fe(() => [ke(N(
-            "div",
-            {
-              ref: "popover",
-              style: G({
-                zIndex: e.zIndex,
-                width: e.sameWidth ? e.toSizeUnit(Math.ceil(e.hostSize.width)) : void 0
-              }),
-              class: c(e.classes(e.n("menu"), e.n("$--box"), [e.defaultStyle, e.n("--menu-background-color")], [e.defaultStyle, e.formatElevation(e.elevation, 3)])),
-              onClick: n[0] || (n[0] = Pn(() => {
-              }, ["stop"])),
-              onMouseenter: n[1] || (n[1] = function() {
-                return e.handlePopoverMouseenter && e.handlePopoverMouseenter(...arguments);
-              }),
-              onMouseleave: n[2] || (n[2] = function() {
-                return e.handlePopoverMouseleave && e.handlePopoverMouseleave(...arguments);
-              })
-            },
-            [Y(e.$slots, "menu")],
-            38
-            /* CLASS, STYLE, HYDRATE_EVENTS */
-          ), [[Qn, e.show]])]),
-          _: 3
-          /* FORWARDED */
-        },
-        8,
-        ["name", "onAfterEnter", "onAfterLeave"]
-      )],
-      8,
-      ["to"]
-    ))],
+        [Y(e.$slots, "menu")],
+        38
+        /* CLASS, STYLE, HYDRATE_EVENTS */
+      ), [[Qn, e.show]])]),
+      _: 3
+      /* FORWARDED */
+    }, 8, ["name", "onAfterEnter", "onAfterLeave"])], 8, ["to"]))],
     34
     /* CLASS, HYDRATE_EVENTS */
   );
@@ -13126,22 +12676,16 @@ function m0(e, n) {
       null,
       6
       /* CLASS, STYLE */
-    ), e.multiple ? (h(), be(
-      r,
-      {
-        key: 0,
-        ref: "checkbox",
-        "checked-color": e.focusColor,
-        modelValue: e.optionSelected,
-        "onUpdate:modelValue": n[0] || (n[0] = (t) => e.optionSelected = t),
-        onClick: n[1] || (n[1] = Pn(() => {
-        }, ["stop"])),
-        onChange: e.handleSelect
-      },
-      null,
-      8,
-      ["checked-color", "modelValue", "onChange"]
-    )) : x("v-if", !0), N(
+    ), e.multiple ? (h(), be(r, {
+      key: 0,
+      ref: "checkbox",
+      "checked-color": e.focusColor,
+      modelValue: e.optionSelected,
+      "onUpdate:modelValue": n[0] || (n[0] = (t) => e.optionSelected = t),
+      onClick: n[1] || (n[1] = Pn(() => {
+      }, ["stop"])),
+      onChange: e.handleSelect
+    }, null, 8, ["checked-color", "modelValue", "onChange"])) : x("v-if", !0), N(
       "div",
       {
         class: c(e.classes(e.n("text"), e.n("$--ellipsis")))
@@ -13250,7 +12794,7 @@ const la = ee({
       var {
         show: u
       } = e;
-      return Q(Re, {
+      return Q(Le, {
         name: ts("--fade")
       }, {
         default: () => [u && i()]
@@ -13352,21 +12896,15 @@ function C0(e, n) {
         key: 0,
         class: c(e.classes(e.n("simple"), [e.disabled, e.n("item--disabled")]))
       },
-      [Q(
-        a,
-        {
-          "var-pagination-cover": "",
-          hint: !1,
-          disabled: e.disabled,
-          modelValue: e.simpleCurrentValue,
-          "onUpdate:modelValue": n[1] || (n[1] = (i) => e.simpleCurrentValue = i),
-          onBlur: n[2] || (n[2] = (i) => e.setPage("simple", e.simpleCurrentValue, i)),
-          onKeydown: n[3] || (n[3] = nl((i) => e.setPage("simple", e.simpleCurrentValue, i), ["enter"]))
-        },
-        null,
-        8,
-        ["disabled", "modelValue"]
-      ), N("span", null, [Se(
+      [Q(a, {
+        "var-pagination-cover": "",
+        hint: !1,
+        disabled: e.disabled,
+        modelValue: e.simpleCurrentValue,
+        "onUpdate:modelValue": n[1] || (n[1] = (i) => e.simpleCurrentValue = i),
+        onBlur: n[2] || (n[2] = (i) => e.setPage("simple", e.simpleCurrentValue, i)),
+        onKeydown: n[3] || (n[3] = nl((i) => e.setPage("simple", e.simpleCurrentValue, i), ["enter"]))
+      }, null, 8, ["disabled", "modelValue"]), N("span", null, [Se(
         " / " + te(e.pageCount) + " ",
         1
         /* TEXT */
@@ -13386,22 +12924,16 @@ function C0(e, n) {
       {
         key: 1
       },
-      He(e.pageList, (i, s) => ke((h(), k(
-        "li",
-        {
-          key: s,
-          "item-mode": e.getMode(i, s),
-          class: c(e.classes(e.n("item"), e.formatElevation(e.elevation, 2), [i === e.current && !e.disabled, e.n("item--active")], [e.isHideEllipsis(i, s), e.n("item--hide")], [e.disabled, e.n("item--disabled")], [i === e.current && e.disabled, e.n("item--disabled--active")])),
-          onClick: (u) => e.clickItem(i, s)
-        },
-        [Se(
-          te(i),
-          1
-          /* TEXT */
-        )],
-        10,
-        w0
-      )), [[l, {
+      Ue(e.pageList, (i, s) => ke((h(), k("li", {
+        key: s,
+        "item-mode": e.getMode(i, s),
+        class: c(e.classes(e.n("item"), e.formatElevation(e.elevation, 2), [i === e.current && !e.disabled, e.n("item--active")], [e.isHideEllipsis(i, s), e.n("item--hide")], [e.disabled, e.n("item--disabled")], [i === e.current && e.disabled, e.n("item--disabled--active")])),
+        onClick: (u) => e.clickItem(i, s)
+      }, [Se(
+        te(i),
+        1
+        /* TEXT */
+      )], 10, w0)), [[l, {
         disabled: e.disabled
       }]])),
       128
@@ -13425,74 +12957,56 @@ function C0(e, n) {
         key: 2,
         class: c(e.classes(e.n("size"), [e.disabled, e.n("item--disabled")]))
       },
-      [Q(
-        o,
-        {
-          placement: "cover-top",
-          disabled: e.disabled,
-          show: e.menuVisible,
-          "onUpdate:show": n[6] || (n[6] = (i) => e.menuVisible = i)
-        },
-        {
-          menu: fe(() => [(h(!0), k(
-            Me,
-            null,
-            He(e.sizeOption, (i, s) => ke((h(), be(
-              t,
-              {
-                class: c(e.classes(e.n("list"), [e.size === i, e.n("list--active")])),
-                key: s,
-                onClick: (u) => e.clickSize(i)
-              },
-              {
-                default: fe(() => [Se(
-                  te(i) + te(e.pack.paginationItem) + " / " + te(e.pack.paginationPage),
-                  1
-                  /* TEXT */
-                )]),
-                _: 2
-                /* DYNAMIC */
-              },
-              1032,
-              ["class", "onClick"]
-            )), [[l]])),
-            128
-            /* KEYED_FRAGMENT */
-          ))]),
-          default: fe(() => [N(
-            "div",
-            {
-              class: c(e.classes(e.n("size--open"), [e.current <= 1 || e.disabled, e.n("size--open--disabled")])),
-              onClick: n[5] || (n[5] = Pn(function() {
-                return e.showMenu && e.showMenu(...arguments);
-              }, ["stop"]))
-            },
-            [N(
-              "span",
-              null,
-              te(e.size) + te(e.pack.paginationItem) + " / " + te(e.pack.paginationPage),
+      [Q(o, {
+        placement: "cover-top",
+        disabled: e.disabled,
+        show: e.menuVisible,
+        "onUpdate:show": n[6] || (n[6] = (i) => e.menuVisible = i)
+      }, {
+        menu: fe(() => [(h(!0), k(
+          Me,
+          null,
+          Ue(e.sizeOption, (i, s) => ke((h(), be(t, {
+            class: c(e.classes(e.n("list"), [e.size === i, e.n("list--active")])),
+            key: s,
+            onClick: (u) => e.clickSize(i)
+          }, {
+            default: fe(() => [Se(
+              te(i) + te(e.pack.paginationItem) + " / " + te(e.pack.paginationPage),
               1
               /* TEXT */
-            ), Q(
-              r,
-              {
-                class: c(e.n("size--open-icon")),
-                "var-pagination-cover": "",
-                name: "menu-down"
-              },
-              null,
-              8,
-              ["class"]
-            )],
-            2
-            /* CLASS */
-          )]),
-          _: 1
-          /* STABLE */
-        },
-        8,
-        ["disabled", "show"]
-      )],
+            )]),
+            _: 2
+            /* DYNAMIC */
+          }, 1032, ["class", "onClick"])), [[l]])),
+          128
+          /* KEYED_FRAGMENT */
+        ))]),
+        default: fe(() => [N(
+          "div",
+          {
+            class: c(e.classes(e.n("size--open"), [e.current <= 1 || e.disabled, e.n("size--open--disabled")])),
+            onClick: n[5] || (n[5] = Pn(function() {
+              return e.showMenu && e.showMenu(...arguments);
+            }, ["stop"]))
+          },
+          [N(
+            "span",
+            null,
+            te(e.size) + te(e.pack.paginationItem) + " / " + te(e.pack.paginationPage),
+            1
+            /* TEXT */
+          ), Q(r, {
+            class: c(e.n("size--open-icon")),
+            "var-pagination-cover": "",
+            name: "menu-down"
+          }, null, 8, ["class"])],
+          2
+          /* CLASS */
+        )]),
+        _: 1
+        /* STABLE */
+      }, 8, ["disabled", "show"])],
       2
       /* CLASS */
     )) : x("v-if", !0), e.showQuickJumper && !e.simple ? (h(), k(
@@ -13505,20 +13019,14 @@ function C0(e, n) {
         te(e.pack.paginationJump) + " ",
         1
         /* TEXT */
-      ), Q(
-        a,
-        {
-          modelValue: e.quickJumperValue,
-          "onUpdate:modelValue": n[7] || (n[7] = (i) => e.quickJumperValue = i),
-          disabled: e.disabled,
-          "var-pagination-cover": "",
-          onBlur: n[8] || (n[8] = (i) => e.setPage("quick", e.quickJumperValue, i)),
-          onKeydown: n[9] || (n[9] = nl((i) => e.setPage("quick", e.quickJumperValue, i), ["enter"]))
-        },
-        null,
-        8,
-        ["modelValue", "disabled"]
-      )],
+      ), Q(a, {
+        modelValue: e.quickJumperValue,
+        "onUpdate:modelValue": n[7] || (n[7] = (i) => e.quickJumperValue = i),
+        disabled: e.disabled,
+        "var-pagination-cover": "",
+        onBlur: n[8] || (n[8] = (i) => e.setPage("quick", e.quickJumperValue, i)),
+        onKeydown: n[9] || (n[9] = nl((i) => e.setPage("quick", e.quickJumperValue, i), ["enter"]))
+      }, null, 8, ["modelValue", "disabled"])],
       2
       /* CLASS */
     )) : x("v-if", !0), e.totalText ? (h(), k(
@@ -13825,27 +13333,21 @@ function D0(e, n) {
             key: 0,
             class: c(e.n("toolbar"))
           },
-          [Y(e.$slots, "cancel", {}, () => [Q(
-            r,
-            {
-              class: c(e.n("cancel-button")),
-              "var-picker-cover": "",
-              text: "",
-              "text-color": e.cancelButtonTextColor,
-              onClick: e.cancel
-            },
-            {
-              default: fe(() => [Se(
-                te(e.dt(e.cancelButtonText, e.pack.pickerCancelButtonText)),
-                1
-                /* TEXT */
-              )]),
-              _: 1
-              /* STABLE */
-            },
-            8,
-            ["class", "text-color", "onClick"]
-          )]), Y(e.$slots, "title", {}, () => [N(
+          [Y(e.$slots, "cancel", {}, () => [Q(r, {
+            class: c(e.n("cancel-button")),
+            "var-picker-cover": "",
+            text: "",
+            "text-color": e.cancelButtonTextColor,
+            onClick: e.cancel
+          }, {
+            default: fe(() => [Se(
+              te(e.dt(e.cancelButtonText, e.pack.pickerCancelButtonText)),
+              1
+              /* TEXT */
+            )]),
+            _: 1
+            /* STABLE */
+          }, 8, ["class", "text-color", "onClick"])]), Y(e.$slots, "title", {}, () => [N(
             "div",
             {
               class: c(e.n("title"))
@@ -13853,27 +13355,21 @@ function D0(e, n) {
             te(e.dt(e.title, e.pack.pickerTitle)),
             3
             /* TEXT, CLASS */
-          )]), Y(e.$slots, "confirm", {}, () => [Q(
-            r,
-            {
-              class: c(e.n("confirm-button")),
-              text: "",
-              "var-picker-cover": "",
-              "text-color": e.confirmButtonTextColor,
-              onClick: e.confirm
-            },
-            {
-              default: fe(() => [Se(
-                te(e.dt(e.confirmButtonText, e.pack.pickerConfirmButtonText)),
-                1
-                /* TEXT */
-              )]),
-              _: 1
-              /* STABLE */
-            },
-            8,
-            ["class", "text-color", "onClick"]
-          )])],
+          )]), Y(e.$slots, "confirm", {}, () => [Q(r, {
+            class: c(e.n("confirm-button")),
+            text: "",
+            "var-picker-cover": "",
+            "text-color": e.confirmButtonTextColor,
+            onClick: e.confirm
+          }, {
+            default: fe(() => [Se(
+              te(e.dt(e.confirmButtonText, e.pack.pickerConfirmButtonText)),
+              1
+              /* TEXT */
+            )]),
+            _: 1
+            /* STABLE */
+          }, 8, ["class", "text-color", "onClick"])])],
           2
           /* CLASS */
         )) : x("v-if", !0), N(
@@ -13887,62 +13383,44 @@ function D0(e, n) {
           [(h(!0), k(
             Me,
             null,
-            He(e.scrollColumns, (a) => (h(), k(
-              "div",
-              {
-                class: c(e.n("column")),
-                key: a.id,
-                onTouchstartPassive: (t) => e.handleTouchstart(a),
-                onTouchmove: Pn((t) => e.handleTouchmove(t, a), ["prevent"]),
-                onTouchend: (t) => e.handleTouchend(t, a)
-              },
-              [N(
+            Ue(e.scrollColumns, (a) => (h(), k("div", {
+              class: c(e.n("column")),
+              key: a.id,
+              onTouchstartPassive: (t) => e.handleTouchstart(a),
+              onTouchmove: Pn((t) => e.handleTouchmove(t, a), ["prevent"]),
+              onTouchend: (t) => e.handleTouchend(t, a)
+            }, [N("div", {
+              class: c(e.n("scroller")),
+              ref_for: !0,
+              ref: (t) => e.setScrollEl(t, a),
+              style: G({
+                transform: "translateY(" + a.translate + "px)",
+                transitionDuration: a.duration + "ms",
+                transitionProperty: a.duration ? "transform" : "none"
+              }),
+              onTransitionend: (t) => e.handleTransitionend(a)
+            }, [(h(!0), k(
+              Me,
+              null,
+              Ue(a.column.texts, (t, o) => (h(), k("div", {
+                class: c(e.n("option")),
+                style: G({
+                  height: e.optionHeight + "px"
+                }),
+                key: t,
+                onClick: (l) => e.handleClick(a, o)
+              }, [N(
                 "div",
                 {
-                  class: c(e.n("scroller")),
-                  ref_for: !0,
-                  ref: (t) => e.setScrollEl(t, a),
-                  style: G({
-                    transform: "translateY(" + a.translate + "px)",
-                    transitionDuration: a.duration + "ms",
-                    transitionProperty: a.duration ? "transform" : "none"
-                  }),
-                  onTransitionend: (t) => e.handleTransitionend(a)
+                  class: c(e.n("text"))
                 },
-                [(h(!0), k(
-                  Me,
-                  null,
-                  He(a.column.texts, (t, o) => (h(), k(
-                    "div",
-                    {
-                      class: c(e.n("option")),
-                      style: G({
-                        height: e.optionHeight + "px"
-                      }),
-                      key: t,
-                      onClick: (l) => e.handleClick(a, o)
-                    },
-                    [N(
-                      "div",
-                      {
-                        class: c(e.n("text"))
-                      },
-                      te(e.textFormatter(t, a.columnIndex)),
-                      3
-                      /* TEXT, CLASS */
-                    )],
-                    14,
-                    N0
-                  ))),
-                  128
-                  /* KEYED_FRAGMENT */
-                ))],
-                46,
-                I0
-              )],
-              42,
-              B0
-            ))),
+                te(e.textFormatter(t, a.columnIndex)),
+                3
+                /* TEXT, CLASS */
+              )], 14, N0))),
+              128
+              /* KEYED_FRAGMENT */
+            ))], 46, I0)], 42, B0))),
             128
             /* KEYED_FRAGMENT */
           )), N(
@@ -14141,7 +13619,7 @@ var Qd = ee({
       scrollColumns: n,
       columnHeight: o,
       center: t,
-      Transition: Re,
+      Transition: Le,
       setScrollEl: s,
       handlePopupUpdateShow: u,
       handleTouchstart: C,
@@ -14339,54 +13817,36 @@ function Y0(e, n) {
           height: e.toSizeUnit(e.size)
         })
       },
-      [(h(), k(
-        "svg",
-        {
-          class: c(e.n("circle-svg")),
-          style: G({
-            transform: "rotate(" + (e.rotate - 90) + "deg)"
-          }),
-          viewBox: e.circleProps.viewBox
-        },
-        [e.track ? (h(), k(
-          "circle",
-          {
-            key: 0,
-            class: c(e.n("circle-background")),
-            cx: e.multiplySizeUnit(e.size, 0.5),
-            cy: e.multiplySizeUnit(e.size, 0.5),
-            r: e.circleProps.radius,
-            fill: "transparent",
-            "stroke-width": e.toSizeUnit(e.lineWidth),
-            style: G({
-              strokeDasharray: e.circleProps.perimeter,
-              stroke: e.trackColor
-            })
-          },
-          null,
-          14,
-          H0
-        )) : x("v-if", !0), N(
-          "circle",
-          {
-            class: c(e.n("circle-certain")),
-            cx: e.multiplySizeUnit(e.size, 0.5),
-            cy: e.multiplySizeUnit(e.size, 0.5),
-            r: e.circleProps.radius,
-            fill: "transparent",
-            "stroke-width": e.toSizeUnit(e.lineWidth),
-            style: G({
-              strokeDasharray: e.circleProps.strokeDasharray,
-              stroke: e.color
-            })
-          },
-          null,
-          14,
-          F0
-        )],
-        14,
-        U0
-      )), e.label ? (h(), k(
+      [(h(), k("svg", {
+        class: c(e.n("circle-svg")),
+        style: G({
+          transform: "rotate(" + (e.rotate - 90) + "deg)"
+        }),
+        viewBox: e.circleProps.viewBox
+      }, [e.track ? (h(), k("circle", {
+        key: 0,
+        class: c(e.n("circle-background")),
+        cx: e.multiplySizeUnit(e.size, 0.5),
+        cy: e.multiplySizeUnit(e.size, 0.5),
+        r: e.circleProps.radius,
+        fill: "transparent",
+        "stroke-width": e.toSizeUnit(e.lineWidth),
+        style: G({
+          strokeDasharray: e.circleProps.perimeter,
+          stroke: e.trackColor
+        })
+      }, null, 14, H0)) : x("v-if", !0), N("circle", {
+        class: c(e.n("circle-certain")),
+        cx: e.multiplySizeUnit(e.size, 0.5),
+        cy: e.multiplySizeUnit(e.size, 0.5),
+        r: e.circleProps.radius,
+        fill: "transparent",
+        "stroke-width": e.toSizeUnit(e.lineWidth),
+        style: G({
+          strokeDasharray: e.circleProps.strokeDasharray,
+          stroke: e.color
+        })
+      }, null, 14, F0)], 14, U0)), e.label ? (h(), k(
         "div",
         {
           key: 0,
@@ -14539,18 +13999,12 @@ function G0(e, n) {
         class: c(e.classes(e.n("control"), e.n("$-elevation--2"), [e.isSuccess, e.n("control-success")])),
         style: G(e.controlStyle)
       },
-      [Q(
-        r,
-        {
-          name: e.iconName,
-          transition: e.ICON_TRANSITION,
-          class: c(e.classes(e.n("icon"), [e.refreshStatus === "loading", e.n("animation")])),
-          "var-pull-refresh-cover": ""
-        },
-        null,
-        8,
-        ["name", "transition", "class"]
-      )],
+      [Q(r, {
+        name: e.iconName,
+        transition: e.ICON_TRANSITION,
+        class: c(e.classes(e.n("icon"), [e.refreshStatus === "loading", e.n("animation")])),
+        "var-pull-refresh-cover": ""
+      }, null, 8, ["name", "transition", "class"])],
       6
       /* CLASS, STYLE */
     ), Y(e.$slots, "default")],
@@ -14576,7 +14030,7 @@ var xd = ee({
         return p.apply(this, arguments);
       };
     }(), y = A(() => i.value !== "loading" && i.value !== "success" && !e.disabled), b = A(() => ({
-      transform: "translate3d(0px, " + (Fe(o.value) ? o.value : o.value + "px") + ", 0px) translate(-50%, 0)",
+      transform: "translate3d(0px, " + (He(o.value) ? o.value : o.value + "px") + ", 0px) translate(-50%, 0)",
       transition: s.value ? "transform " + e.animationDuration + "ms" : void 0,
       background: C.value ? e.successBgColor : e.bgColor,
       color: C.value ? e.successColor : e.color
@@ -14742,39 +14196,21 @@ function Q0(e, n) {
         },
         [e.checked ? Y(e.$slots, "checked-icon", {
           key: 0
-        }, () => [Q(
-          r,
-          {
-            class: c(e.classes(e.n("icon"), [e.withAnimation, e.n("--with-animation")])),
-            "var-radio-cover": "",
-            name: "radio-marked",
-            size: e.iconSize
-          },
-          null,
-          8,
-          ["class", "size"]
-        )]) : Y(e.$slots, "unchecked-icon", {
+        }, () => [Q(r, {
+          class: c(e.classes(e.n("icon"), [e.withAnimation, e.n("--with-animation")])),
+          "var-radio-cover": "",
+          name: "radio-marked",
+          size: e.iconSize
+        }, null, 8, ["class", "size"])]) : Y(e.$slots, "unchecked-icon", {
           key: 1
-        }, () => [Q(
-          r,
-          {
-            class: c(e.classes(e.n("icon"), [e.withAnimation, e.n("--with-animation")])),
-            "var-radio-cover": "",
-            name: "radio-blank",
-            size: e.iconSize
-          },
-          null,
-          8,
-          ["class", "size"]
-        )]), Q(
-          a,
-          {
-            hovering: !e.disabled && !e.formDisabled && e.hovering
-          },
-          null,
-          8,
-          ["hovering"]
-        )],
+        }, () => [Q(r, {
+          class: c(e.classes(e.n("icon"), [e.withAnimation, e.n("--with-animation")])),
+          "var-radio-cover": "",
+          name: "radio-blank",
+          size: e.iconSize
+        }, null, 8, ["class", "size"])]), Q(a, {
+          hovering: !e.disabled && !e.formDisabled && e.hovering
+        }, null, 8, ["hovering"])],
         6
         /* CLASS, STYLE */
       )), [[o, {
@@ -14790,15 +14226,9 @@ function Q0(e, n) {
       )],
       16
       /* FULL_PROPS */
-    ), Q(
-      t,
-      {
-        "error-message": e.errorMessage
-      },
-      null,
-      8,
-      ["error-message"]
-    )],
+    ), Q(t, {
+      "error-message": e.errorMessage
+    }, null, 8, ["error-message"])],
     2
     /* CLASS */
   );
@@ -14948,15 +14378,9 @@ function r1(e, n) {
       [Y(e.$slots, "default")],
       2
       /* CLASS */
-    ), Q(
-      r,
-      {
-        "error-message": e.errorMessage
-      },
-      null,
-      8,
-      ["error-message"]
-    )],
+    ), Q(r, {
+      "error-message": e.errorMessage
+    }, null, 8, ["error-message"])],
     2
     /* CLASS */
   );
@@ -15104,41 +14528,23 @@ function o1(e, n) {
       [(h(!0), k(
         Me,
         null,
-        He(e.toNumber(e.count), (i) => ke((h(), k(
-          "div",
-          {
-            key: i,
-            style: G(e.getStyle(i)),
-            class: c(e.getClass(i)),
-            onClick: (s) => e.handleClick(i, s)
-          },
-          [Q(
-            r,
-            {
-              class: c(e.n("content-icon")),
-              "var-rate-cover": "",
-              transition: 0,
-              namespace: e.namespace,
-              name: e.getCurrentState(i).name,
-              style: G({
-                fontSize: e.toSizeUnit(e.size)
-              })
-            },
-            null,
-            8,
-            ["class", "namespace", "name", "style"]
-          ), Q(
-            a,
-            {
-              hovering: e.hovering && i === e.currentHoveringValue && !e.disabled && !e.formDisabled
-            },
-            null,
-            8,
-            ["hovering"]
-          )],
-          14,
-          t1
-        )), [[o, {
+        Ue(e.toNumber(e.count), (i) => ke((h(), k("div", {
+          key: i,
+          style: G(e.getStyle(i)),
+          class: c(e.getClass(i)),
+          onClick: (s) => e.handleClick(i, s)
+        }, [Q(r, {
+          class: c(e.n("content-icon")),
+          "var-rate-cover": "",
+          transition: 0,
+          namespace: e.namespace,
+          name: e.getCurrentState(i).name,
+          style: G({
+            fontSize: e.toSizeUnit(e.size)
+          })
+        }, null, 8, ["class", "namespace", "name", "style"]), Q(a, {
+          hovering: e.hovering && i === e.currentHoveringValue && !e.disabled && !e.formDisabled
+        }, null, 8, ["hovering"])], 14, t1)), [[o, {
           disabled: e.formReadonly || e.readonly || e.formDisabled || e.disabled || !e.ripple
         }], [l, e.createHoverHandler(i), "desktop"]])),
         128
@@ -15146,15 +14552,9 @@ function o1(e, n) {
       ))],
       2
       /* CLASS */
-    ), Q(
-      t,
-      {
-        "error-message": e.errorMessage
-      },
-      null,
-      8,
-      ["error-message"]
-    )],
+    ), Q(t, {
+      "error-message": e.errorMessage
+    }, null, 8, ["error-message"])],
     2
     /* CLASS */
   );
@@ -15513,16 +14913,10 @@ function W1(e, n) {
             borderWidth: e.borderSize
           })
         },
-        [(h(), be(
-          nt(e.type),
-          {
-            "border-size": e.borderSize,
-            animation: e.animation
-          },
-          null,
-          8,
-          ["border-size", "animation"]
-        ))],
+        [(h(), be(nt(e.type), {
+          "border-size": e.borderSize,
+          animation: e.animation
+        }, null, 8, ["border-size", "animation"]))],
         6
         /* CLASS, STYLE */
       )],
@@ -15754,191 +15148,167 @@ function rw(e, n) {
         return e.handleFocus && e.handleFocus(...arguments);
       })
     },
-    [Q(
-      o,
-      {
-        "var-select-cover": "",
-        "same-width": "",
-        "close-on-click-reference": "",
-        show: e.showMenu,
-        "onUpdate:show": n[1] || (n[1] = (i) => e.showMenu = i),
-        class: c(e.n("menu")),
-        "offset-y": e.offsetY,
-        disabled: e.formReadonly || e.readonly || e.formDisabled || e.disabled,
-        placement: e.placement,
-        "default-style": !1,
-        onClickOutside: e.handleBlur
-      },
-      {
-        menu: fe(() => [N(
-          "div",
-          {
-            ref: "menuEl",
-            class: c(e.classes(e.n("scroller"), e.n("--scroller-" + e.variant), e.n("$-elevation--3"), [!e.hint, e.n("--scroller-non-hint")]))
-          },
-          [Y(e.$slots, "default")],
-          2
-          /* CLASS */
-        )]),
-        default: fe(() => [Q(
-          t,
-          Tt(to({
-            value: e.modelValue,
-            size: e.size,
-            variant: e.variant,
-            placeholder: e.placeholder,
-            line: e.line,
-            hint: e.hint,
-            textColor: e.textColor,
-            focusColor: e.focusColor,
-            blurColor: e.blurColor,
-            isFocus: e.isFocus,
-            errorMessage: e.errorMessage,
-            formDisabled: e.formDisabled,
-            disabled: e.disabled,
-            clearable: e.clearable,
-            cursor: e.cursor,
-            onClick: e.handleClick,
-            onClear: e.handleClear
-          })),
-          Cs({
-            "append-icon": fe(() => [Y(e.$slots, "append-icon")]),
-            default: fe(() => [N(
+    [Q(o, {
+      "var-select-cover": "",
+      "same-width": "",
+      "close-on-click-reference": "",
+      show: e.showMenu,
+      "onUpdate:show": n[1] || (n[1] = (i) => e.showMenu = i),
+      class: c(e.n("menu")),
+      "offset-y": e.offsetY,
+      disabled: e.formReadonly || e.readonly || e.formDisabled || e.disabled,
+      placement: e.placement,
+      "default-style": !1,
+      onClickOutside: e.handleBlur
+    }, {
+      menu: fe(() => [N(
+        "div",
+        {
+          ref: "menuEl",
+          class: c(e.classes(e.n("scroller"), e.n("--scroller-" + e.variant), e.n("$-elevation--3"), [!e.hint, e.n("--scroller-non-hint")]))
+        },
+        [Y(e.$slots, "default")],
+        2
+        /* CLASS */
+      )]),
+      default: fe(() => [Q(
+        t,
+        Tt(to({
+          value: e.modelValue,
+          size: e.size,
+          variant: e.variant,
+          placeholder: e.placeholder,
+          line: e.line,
+          hint: e.hint,
+          textColor: e.textColor,
+          focusColor: e.focusColor,
+          blurColor: e.blurColor,
+          isFocus: e.isFocus,
+          errorMessage: e.errorMessage,
+          formDisabled: e.formDisabled,
+          disabled: e.disabled,
+          clearable: e.clearable,
+          cursor: e.cursor,
+          onClick: e.handleClick,
+          onClear: e.handleClear
+        })),
+        Cs({
+          "append-icon": fe(() => [Y(e.$slots, "append-icon")]),
+          default: fe(() => [N(
+            "div",
+            {
+              class: c(e.classes(e.n("select"), [e.errorMessage, e.n("--error")], [e.formDisabled || e.disabled, e.n("--disabled")])),
+              style: G({
+                textAlign: e.textAlign,
+                color: e.textColor
+              })
+            },
+            [N(
               "div",
               {
-                class: c(e.classes(e.n("select"), [e.errorMessage, e.n("--error")], [e.formDisabled || e.disabled, e.n("--disabled")])),
+                class: c(e.n("label"))
+              },
+              [e.isEmptyModelValue ? x("v-if", !0) : Y(e.$slots, "selected", {
+                key: 0
+              }, () => [e.multiple ? (h(), k(
+                Me,
+                {
+                  key: 0
+                },
+                [e.chip ? (h(), k(
+                  "div",
+                  {
+                    key: 0,
+                    class: c(e.n("chips"))
+                  },
+                  [(h(!0), k(
+                    Me,
+                    null,
+                    Ue(e.labels, (i) => (h(), be(r, {
+                      class: c(e.n("chip")),
+                      "var-select-cover": "",
+                      closable: "",
+                      size: "small",
+                      type: e.errorMessage ? "danger" : void 0,
+                      key: i,
+                      onClick: n[0] || (n[0] = Pn(() => {
+                      }, ["stop"])),
+                      onClose: () => e.handleClose(i)
+                    }, {
+                      default: fe(() => [Se(
+                        te(i),
+                        1
+                        /* TEXT */
+                      )]),
+                      _: 2
+                      /* DYNAMIC */
+                    }, 1032, ["class", "type", "onClose"]))),
+                    128
+                    /* KEYED_FRAGMENT */
+                  ))],
+                  2
+                  /* CLASS */
+                )) : (h(), k(
+                  "div",
+                  {
+                    key: 1,
+                    class: c(e.n("values"))
+                  },
+                  te(e.labels.join(e.separator)),
+                  3
+                  /* TEXT, CLASS */
+                ))],
+                64
+                /* STABLE_FRAGMENT */
+              )) : (h(), k(
+                "span",
+                nw,
+                te(e.label),
+                1
+                /* TEXT */
+              ))])],
+              2
+              /* CLASS */
+            ), e.useCustomPlaceholder ? (h(), k(
+              "span",
+              {
+                key: 0,
+                class: c(e.classes(e.n("placeholder"), e.n("$--ellipsis"))),
                 style: G({
-                  textAlign: e.textAlign,
-                  color: e.textColor
+                  color: e.placeholderColor
                 })
               },
-              [N(
-                "div",
-                {
-                  class: c(e.n("label"))
-                },
-                [e.isEmptyModelValue ? x("v-if", !0) : Y(e.$slots, "selected", {
-                  key: 0
-                }, () => [e.multiple ? (h(), k(
-                  Me,
-                  {
-                    key: 0
-                  },
-                  [e.chip ? (h(), k(
-                    "div",
-                    {
-                      key: 0,
-                      class: c(e.n("chips"))
-                    },
-                    [(h(!0), k(
-                      Me,
-                      null,
-                      He(e.labels, (i) => (h(), be(
-                        r,
-                        {
-                          class: c(e.n("chip")),
-                          "var-select-cover": "",
-                          closable: "",
-                          size: "small",
-                          type: e.errorMessage ? "danger" : void 0,
-                          key: i,
-                          onClick: n[0] || (n[0] = Pn(() => {
-                          }, ["stop"])),
-                          onClose: () => e.handleClose(i)
-                        },
-                        {
-                          default: fe(() => [Se(
-                            te(i),
-                            1
-                            /* TEXT */
-                          )]),
-                          _: 2
-                          /* DYNAMIC */
-                        },
-                        1032,
-                        ["class", "type", "onClose"]
-                      ))),
-                      128
-                      /* KEYED_FRAGMENT */
-                    ))],
-                    2
-                    /* CLASS */
-                  )) : (h(), k(
-                    "div",
-                    {
-                      key: 1,
-                      class: c(e.n("values"))
-                    },
-                    te(e.labels.join(e.separator)),
-                    3
-                    /* TEXT, CLASS */
-                  ))],
-                  64
-                  /* STABLE_FRAGMENT */
-                )) : (h(), k(
-                  "span",
-                  nw,
-                  te(e.label),
-                  1
-                  /* TEXT */
-                ))])],
-                2
-                /* CLASS */
-              ), e.useCustomPlaceholder ? (h(), k(
-                "span",
-                {
-                  key: 0,
-                  class: c(e.classes(e.n("placeholder"), e.n("$--ellipsis"))),
-                  style: G({
-                    color: e.placeholderColor
-                  })
-                },
-                te(e.placeholder),
-                7
-                /* TEXT, CLASS, STYLE */
-              )) : x("v-if", !0), Y(e.$slots, "arrow-icon", {
-                focus: e.showMenu
-              }, () => [Q(
-                a,
-                {
-                  class: c(e.classes(e.n("arrow"), [e.showMenu, e.n("--arrow-rotate")])),
-                  "var-select-cover": "",
-                  name: "menu-down",
-                  transition: 300
-                },
-                null,
-                8,
-                ["class"]
-              )])],
-              6
-              /* CLASS, STYLE */
-            )]),
-            _: 2
-            /* DYNAMIC */
-          }, [e.$slots["prepend-icon"] ? {
-            name: "prepend-icon",
-            fn: fe(() => [Y(e.$slots, "prepend-icon")]),
-            key: "0"
-          } : void 0]),
-          1040
-          /* FULL_PROPS, DYNAMIC_SLOTS */
-        )]),
-        _: 3
-        /* FORWARDED */
-      },
-      8,
-      ["show", "class", "offset-y", "disabled", "placement", "onClickOutside"]
-    ), Q(
-      l,
-      {
-        "error-message": e.errorMessage,
-        onClick: n[2] || (n[2] = Pn(() => {
-        }, ["stop"]))
-      },
-      null,
-      8,
-      ["error-message"]
-    )],
+              te(e.placeholder),
+              7
+              /* TEXT, CLASS, STYLE */
+            )) : x("v-if", !0), Y(e.$slots, "arrow-icon", {
+              focus: e.showMenu
+            }, () => [Q(a, {
+              class: c(e.classes(e.n("arrow"), [e.showMenu, e.n("--arrow-rotate")])),
+              "var-select-cover": "",
+              name: "menu-down",
+              transition: 300
+            }, null, 8, ["class"])])],
+            6
+            /* CLASS, STYLE */
+          )]),
+          _: 2
+          /* DYNAMIC */
+        }, [e.$slots["prepend-icon"] ? {
+          name: "prepend-icon",
+          fn: fe(() => [Y(e.$slots, "prepend-icon")]),
+          key: "0"
+        } : void 0]),
+        1040
+        /* FULL_PROPS, DYNAMIC_SLOTS */
+      )]),
+      _: 3
+      /* FORWARDED */
+    }, 8, ["show", "class", "offset-y", "disabled", "placement", "onClickOutside"]), Q(l, {
+      "error-message": e.errorMessage,
+      onClick: n[2] || (n[2] = Pn(() => {
+      }, ["stop"]))
+    }, null, 8, ["error-message"])],
     2
     /* CLASS */
   );
@@ -16294,7 +15664,7 @@ function iw(e, n) {
           )) : x("v-if", !0), (h(!0), k(
             Me,
             null,
-            He(e.toNumber(e.rows), (r, a) => (h(), k(
+            Ue(e.toNumber(e.rows), (r, a) => (h(), k(
               "div",
               {
                 class: c(e.n("row")),
@@ -16372,11 +15742,9 @@ var jk = ya;
 function lw(e) {
   return ["always", "normal", "never"].includes(e);
 }
-var Le;
-(function(e) {
-  e.First = "1", e.Second = "2";
-})(Le || (Le = {}));
-var sw = {
+var We = /* @__PURE__ */ function(e) {
+  return e.First = "1", e.Second = "2", e;
+}({}), sw = {
   // 当前进度百分比
   modelValue: {
     type: [Number, Array],
@@ -16499,86 +15867,68 @@ function vw(e, n) {
       ), (h(!0), k(
         Me,
         null,
-        He(e.thumbList, (o) => (h(), k(
+        Ue(e.thumbList, (o) => (h(), k("div", {
+          class: c(e.n(e.direction + "-thumb")),
+          key: o.enumValue,
+          style: G(e.thumbStyle(o)),
+          onTouchstart: Pn((l) => e.start(l, o.enumValue), ["stop"])
+        }, [Y(e.$slots, "button", {
+          currentValue: o.text
+        }, () => [ke(N(
           "div",
           {
-            class: c(e.n(e.direction + "-thumb")),
-            key: o.enumValue,
-            style: G(e.thumbStyle(o)),
-            onTouchstart: Pn((l) => e.start(l, o.enumValue), ["stop"])
+            class: c(e.n(e.direction + "-thumb-block")),
+            style: G({
+              background: e.thumbColor
+            })
           },
-          [Y(e.$slots, "button", {
-            currentValue: o.text
-          }, () => [ke(N(
-            "div",
-            {
-              class: c(e.n(e.direction + "-thumb-block")),
-              style: G({
-                background: e.thumbColor
-              })
-            },
+          null,
+          6
+          /* CLASS, STYLE */
+        ), [[t, (l) => e.hover(l, o), "desktop"]]), N(
+          "div",
+          {
+            class: c(e.classes(e.n(e.direction + "-thumb-ripple"), [e.thumbsProps[o.enumValue].active, e.n(e.direction + "-thumb-ripple--active")])),
+            style: G({
+              background: e.thumbsProps[o.enumValue].active ? e.thumbColor : void 0
+            })
+          },
+          [Q(r, {
+            hovering: o.hovering
+          }, null, 8, ["hovering"])],
+          6
+          /* CLASS, STYLE */
+        ), N(
+          "div",
+          {
+            class: c(e.classes(e.n(e.direction + "-thumb-label"), [e.showLabel(o.enumValue), e.n(e.direction + "-thumb-label--active")])),
+            style: G({
+              background: e.labelColor,
+              color: e.labelTextColor,
+              height: e.thumbSize === void 0 ? e.thumbSize : e.multiplySizeUnit(e.thumbSize, 2),
+              width: e.thumbSize === void 0 ? e.thumbSize : e.multiplySizeUnit(e.thumbSize, 2)
+            })
+          },
+          [N(
+            "span",
             null,
-            6
-            /* CLASS, STYLE */
-          ), [[t, (l) => e.hover(l, o), "desktop"]]), N(
-            "div",
-            {
-              class: c(e.classes(e.n(e.direction + "-thumb-ripple"), [e.thumbsProps[o.enumValue].active, e.n(e.direction + "-thumb-ripple--active")])),
-              style: G({
-                background: e.thumbsProps[o.enumValue].active ? e.thumbColor : void 0
-              })
-            },
-            [Q(
-              r,
-              {
-                hovering: o.hovering
-              },
-              null,
-              8,
-              ["hovering"]
-            )],
-            6
-            /* CLASS, STYLE */
-          ), N(
-            "div",
-            {
-              class: c(e.classes(e.n(e.direction + "-thumb-label"), [e.showLabel(o.enumValue), e.n(e.direction + "-thumb-label--active")])),
-              style: G({
-                background: e.labelColor,
-                color: e.labelTextColor,
-                height: e.thumbSize === void 0 ? e.thumbSize : e.multiplySizeUnit(e.thumbSize, 2),
-                width: e.thumbSize === void 0 ? e.thumbSize : e.multiplySizeUnit(e.thumbSize, 2)
-              })
-            },
-            [N(
-              "span",
-              null,
-              te(o.text),
-              1
-              /* TEXT */
-            )],
-            6
-            /* CLASS, STYLE */
-          )])],
-          46,
-          dw
-        ))),
+            te(o.text),
+            1
+            /* TEXT */
+          )],
+          6
+          /* CLASS, STYLE */
+        )])], 46, dw))),
         128
         /* KEYED_FRAGMENT */
       ))],
       2
       /* CLASS */
-    ), Q(
-      a,
-      {
-        "error-message": e.errorMessage,
-        class: c(e.n("form")),
-        "var-slider-cover": ""
-      },
-      null,
-      8,
-      ["error-message", "class"]
-    )],
+    ), Q(a, {
+      "error-message": e.errorMessage,
+      class: c(e.n("form")),
+      "var-slider-cover": ""
+    }, null, 8, ["error-message", "class"])],
     2
     /* CLASS */
   );
@@ -16614,8 +15964,8 @@ var mv = ee({
       active: !1,
       percentValue: 0
     }), m = () => Ae(() => t(["onChange"], "onChange", e.rules, e.modelValue)), y = M(null), b = M(0), g = M(!1), C = ze({
-      [Le.First]: f(),
-      [Le.Second]: f()
+      [We.First]: f(),
+      [We.Second]: f()
     }), O = A(() => z(e.max) - z(e.min)), $ = A(() => b.value / O.value * z(e.step)), S = A(() => {
       var {
         modelValue: ae,
@@ -16623,19 +15973,19 @@ var mv = ee({
       } = e, me = [];
       return ue && Oe(ae) ? me = [{
         value: q(ae[0]),
-        enumValue: Le.First,
+        enumValue: We.First,
         text: R(ae[0]),
         hovering: ut(i),
         handleHovering: s
       }, {
         value: q(ae[1]),
-        enumValue: Le.Second,
+        enumValue: We.Second,
         text: R(ae[1]),
         hovering: ut(u),
         handleHovering: d
       }] : dn(ae) && (me = [{
         value: q(ae),
-        enumValue: Le.First,
+        enumValue: We.First,
         text: R(ae),
         hovering: ut(i),
         handleHovering: s
@@ -16645,15 +15995,15 @@ var mv = ee({
         activeColor: ae,
         range: ue,
         modelValue: me
-      } = e, Pe = ue && Oe(me) ? q(Math.min(me[0], me[1])) : 0, Ye = ue && Oe(me) ? q(Math.max(me[0], me[1])) - Pe : q(me);
+      } = e, Pe = ue && Oe(me) ? q(Math.min(me[0], me[1])) : 0, Fe = ue && Oe(me) ? q(Math.max(me[0], me[1])) - Pe : q(me);
       return p.value ? {
         left: "0px",
-        height: Ye + "%",
+        height: Fe + "%",
         bottom: Pe + "%",
         background: ae
       } : {
         top: "0px",
-        width: Ye + "%",
+        width: Fe + "%",
         left: Pe + "%",
         background: ae
       };
@@ -16684,20 +16034,20 @@ var mv = ee({
     }, I = (ae, ue) => {
       var me = [], {
         step: Pe,
-        range: Ye,
+        range: Fe,
         modelValue: Xe,
-        onChange: je,
-        min: We
-      } = e, le = z(Pe), we = Math.round(ae / $.value), he = we * le + z(We), $e = C[ue].percentValue * le + z(We);
-      if (C[ue].percentValue = we, Ye && Oe(Xe) && (me = ue === Le.First ? [he, Xe[1]] : [Xe[0], he]), $e !== he) {
-        var Te = Ye ? me.map((Ue) => R(Ue)) : R(he);
-        w(je, Te), w(e["onUpdate:modelValue"], Te), m();
+        onChange: Ye,
+        min: je
+      } = e, le = z(Pe), we = Math.round(ae / $.value), he = we * le + z(je), $e = C[ue].percentValue * le + z(je);
+      if (C[ue].percentValue = we, Fe && Oe(Xe) && (me = ue === We.First ? [he, Xe[1]] : [Xe[0], he]), $e !== he) {
+        var Te = Fe ? me.map((Re) => R(Re)) : R(he);
+        w(Ye, Te), w(e["onUpdate:modelValue"], Te), m();
       }
     }, D = (ae) => {
       if (!e.range)
-        return Le.First;
-      var ue = C[Le.First].percentValue * $.value, me = C[Le.Second].percentValue * $.value, Pe = Math.abs(ae - ue), Ye = Math.abs(ae - me);
-      return Pe <= Ye ? Le.First : Le.Second;
+        return We.First;
+      var ue = C[We.First].percentValue * $.value, me = C[We.Second].percentValue * $.value, Pe = Math.abs(ae - ue), Fe = Math.abs(ae - me);
+      return Pe <= Fe ? We.First : We.Second;
     }, _ = () => {
       document.addEventListener("touchmove", J, {
         passive: !1
@@ -16720,8 +16070,8 @@ var mv = ee({
           currentOffset: me
         } = C[P], {
           clientX: Pe,
-          clientY: Ye
-        } = ae.touches[0], Xe = (p.value ? ue - Ye : Pe - ue) + me;
+          clientY: Fe
+        } = ae.touches[0], Xe = (p.value ? ue - Fe : Pe - ue) + me;
         Xe <= 0 ? Xe = 0 : Xe >= b.value && (Xe = b.value), I(Xe, P);
       }
     }, ve = () => {
@@ -16731,13 +16081,13 @@ var mv = ee({
         modelValue: ue,
         onEnd: me,
         step: Pe,
-        min: Ye
+        min: Fe
       } = e;
       if (B.value || (C[P].active = !1), !(B.value || T.value)) {
         var Xe = [];
         C[P].currentOffset = C[P].percentValue * $.value;
-        var je = C[P].percentValue * z(Pe) + z(Ye);
-        ae && Oe(ue) && (Xe = P === Le.First ? [je, ue[1]] : [ue[0], je]), w(me, ae ? Xe : je), g.value = !1;
+        var Ye = C[P].percentValue * z(Pe) + z(Fe);
+        ae && Oe(ue) && (Xe = P === We.First ? [Ye, ue[1]] : [ue[0], Ye]), w(me, ae ? Xe : Ye), g.value = !1;
       }
     }, W = (ae) => {
       if (!(B.value || T.value) && !ae.target.closest("." + fs("thumb"))) {
@@ -16757,12 +16107,12 @@ var mv = ee({
       ae === void 0 && (ae = e.modelValue), ue === void 0 && (ue = z(e.step));
       var me = (Pe) => {
         var {
-          min: Ye,
+          min: Fe,
           max: Xe
         } = e;
-        return Pe < z(Ye) ? 0 : Pe > z(Xe) ? O.value / ue : (Pe - z(Ye)) / ue;
+        return Pe < z(Fe) ? 0 : Pe > z(Xe) ? O.value / ue : (Pe - z(Fe)) / ue;
       };
-      e.range && Oe(ae) ? (C[Le.First].percentValue = me(ae[0]), C[Le.First].currentOffset = C[Le.First].percentValue * $.value, C[Le.Second].percentValue = me(ae[1]), C[Le.Second].currentOffset = C[Le.Second].percentValue * $.value) : dn(ae) && (C[Le.First].currentOffset = me(ae) * $.value);
+      e.range && Oe(ae) ? (C[We.First].percentValue = me(ae[0]), C[We.First].currentOffset = C[We.First].percentValue * $.value, C[We.Second].percentValue = me(ae[1]), C[We.Second].currentOffset = C[We.Second].percentValue * $.value) : dn(ae) && (C[We.First].currentOffset = me(ae) * $.value);
     }, Ce = () => {
       var ae = e.range ? [0, 0] : 0;
       w(e["onUpdate:modelValue"], ae), l();
@@ -16781,7 +16131,7 @@ var mv = ee({
     }), {
       n: fs,
       classes: uw,
-      Thumbs: Le,
+      Thumbs: We,
       sliderEl: y,
       getFillStyle: E,
       isDisabled: B,
@@ -16937,28 +16287,16 @@ function gw(e, n) {
         {
           class: c([e.n("icon")])
         },
-        [e.iconName ? (h(), be(
-          r,
-          {
-            key: 0,
-            name: e.iconName
-          },
-          null,
-          8,
-          ["name"]
-        )) : x("v-if", !0), e.type === "loading" ? (h(), be(
-          a,
-          {
-            key: 1,
-            type: e.loadingType,
-            size: e.loadingSize,
-            color: e.loadingColor,
-            radius: e.loadingRadius
-          },
-          null,
-          8,
-          ["type", "size", "color", "radius"]
-        )) : x("v-if", !0), Y(e.$slots, "icon")],
+        [e.iconName ? (h(), be(r, {
+          key: 0,
+          name: e.iconName
+        }, null, 8, ["name"])) : x("v-if", !0), e.type === "loading" ? (h(), be(a, {
+          key: 1,
+          type: e.loadingType,
+          size: e.loadingSize,
+          color: e.loadingColor,
+          radius: e.loadingRadius
+        }, null, 8, ["type", "size", "color", "radius"])) : x("v-if", !0), Y(e.$slots, "icon")],
         2
         /* CLASS */
       ), N(
@@ -17017,48 +16355,30 @@ var {
 } = re("snackbar");
 function bw(e, n) {
   var r = oe("var-snackbar-core");
-  return h(), be(
-    Mr,
-    {
-      to: e.teleport,
-      disabled: e.disabled
-    },
-    [Q(
-      Re,
-      {
-        name: e.n() + "-fade",
-        onAfterEnter: e.onOpened,
-        onAfterLeave: e.onClosed
-      },
-      {
-        default: fe(() => [Q(
-          r,
-          Ne(e.$props, {
-            class: e.n("transition")
-          }),
-          {
-            icon: fe(() => [Y(e.$slots, "icon")]),
-            action: fe(() => [Y(e.$slots, "action")]),
-            default: fe(() => [Y(e.$slots, "default", {}, () => [Se(
-              te(e.content),
-              1
-              /* TEXT */
-            )])]),
-            _: 3
-            /* FORWARDED */
-          },
-          16,
-          ["class"]
-        )]),
-        _: 3
-        /* FORWARDED */
-      },
-      8,
-      ["name", "onAfterEnter", "onAfterLeave"]
-    )],
-    8,
-    ["to", "disabled"]
-  );
+  return h(), be(Mr, {
+    to: e.teleport,
+    disabled: e.disabled
+  }, [Q(Le, {
+    name: e.n() + "-fade",
+    onAfterEnter: e.onOpened,
+    onAfterLeave: e.onClosed
+  }, {
+    default: fe(() => [Q(r, Ne(e.$props, {
+      class: e.n("transition")
+    }), {
+      icon: fe(() => [Y(e.$slots, "icon")]),
+      action: fe(() => [Y(e.$slots, "action")]),
+      default: fe(() => [Y(e.$slots, "default", {}, () => [Se(
+        te(e.content),
+        1
+        /* TEXT */
+      )])]),
+      _: 3
+      /* FORWARDED */
+    }, 16, ["class"])]),
+    _: 3
+    /* FORWARDED */
+  }, 8, ["name", "onAfterEnter", "onAfterLeave"])], 8, ["to", "disabled"]);
 }
 var yv = ee({
   name: "VarSnackbar",
@@ -17220,7 +16540,7 @@ function Tw(e) {
   Tn.push(e);
 }
 function Pw(e) {
-  return e === void 0 && (e = {}), Fe(e) ? {
+  return e === void 0 && (e = {}), He(e) ? {
     content: e
   } : e;
 }
@@ -17240,7 +16560,7 @@ wa.install = function(e) {
 };
 var Gk = wa;
 const $i = er;
-var Cv = (e) => ["mini", "small", "normal", "large"].includes(e), Mw = (e) => Cv(e) || Oe(e) || dn(e) || Fe(e), Ew = (e) => ["start", "end", "center", "space-around", "space-between", "flex-start", "flex-end"].includes(e), Bw = (e) => ["stretch", "center", "start", "end", "baseline", "flex-start", "flex-end"].includes(e), Iw = {
+var Cv = (e) => ["mini", "small", "normal", "large"].includes(e), Mw = (e) => Cv(e) || Oe(e) || dn(e) || He(e), Ew = (e) => ["start", "end", "center", "space-around", "space-between", "flex-start", "flex-end"].includes(e), Bw = (e) => ["stretch", "center", "start", "end", "baseline", "flex-start", "flex-end"].includes(e), Iw = {
   size: {
     type: [String, Number, Array],
     default: "normal",
@@ -17393,40 +16713,22 @@ function Fw(e, n) {
             return e.click && e.click(...arguments);
           })
         },
-        [e.isActive ? (h(), be(
-          r,
-          {
-            key: 0,
-            class: c(e.n("icon")),
-            "var-step-cover": "",
-            name: e.activeIcon
-          },
-          null,
-          8,
-          ["class", "name"]
-        )) : e.isCurrent && e.currentIcon ? (h(), be(
-          r,
-          {
-            key: 1,
-            class: c(e.n("icon")),
-            "var-step-cover": "",
-            name: e.currentIcon
-          },
-          null,
-          8,
-          ["class", "name"]
-        )) : e.inactiveIcon ? (h(), be(
-          r,
-          {
-            key: 2,
-            class: c(e.n("icon")),
-            "var-step-cover": "",
-            name: e.inactiveIcon
-          },
-          null,
-          8,
-          ["class", "name"]
-        )) : (h(), k(
+        [e.isActive ? (h(), be(r, {
+          key: 0,
+          class: c(e.n("icon")),
+          "var-step-cover": "",
+          name: e.activeIcon
+        }, null, 8, ["class", "name"])) : e.isCurrent && e.currentIcon ? (h(), be(r, {
+          key: 1,
+          class: c(e.n("icon")),
+          "var-step-cover": "",
+          name: e.currentIcon
+        }, null, 8, ["class", "name"])) : e.inactiveIcon ? (h(), be(r, {
+          key: 2,
+          class: c(e.n("icon")),
+          "var-step-cover": "",
+          name: e.inactiveIcon
+        }, null, 8, ["class", "name"])) : (h(), k(
           "span",
           Hw,
           te(e.index + 1),
@@ -17689,28 +16991,16 @@ function _w(e, n) {
             style: G(e.styleComputed.handle),
             class: c(e.classes(e.n("handle"), e.n("$-elevation--2"), [e.modelValue === e.activeValue, e.n("handle--active")], [e.errorMessage, e.n("handle--error")]))
           },
-          [e.loading ? (h(), be(
-            r,
-            {
-              key: 0,
-              radius: e.radius,
-              color: "currentColor"
-            },
-            null,
-            8,
-            ["radius"]
-          )) : x("v-if", !0)],
+          [e.loading ? (h(), be(r, {
+            key: 0,
+            radius: e.radius,
+            color: "currentColor"
+          }, null, 8, ["radius"])) : x("v-if", !0)],
           6
           /* CLASS, STYLE */
-        ), Q(
-          a,
-          {
-            hovering: e.hovering
-          },
-          null,
-          8,
-          ["hovering"]
-        )],
+        ), Q(a, {
+          hovering: e.hovering
+        }, null, 8, ["hovering"])],
         6
         /* CLASS, STYLE */
       )), [[o, {
@@ -17718,15 +17008,9 @@ function _w(e, n) {
       }]])],
       6
       /* CLASS, STYLE */
-    ), Q(
-      t,
-      {
-        "error-message": e.errorMessage
-      },
-      null,
-      8,
-      ["error-message"]
-    )],
+    ), Q(t, {
+      "error-message": e.errorMessage
+    }, null, 8, ["error-message"])],
     2
     /* CLASS */
   )), [[l, e.hover, "desktop"]]);
@@ -17955,20 +17239,14 @@ var Qk = Pa, tC = {
 } = re("tab-item");
 function lC(e, n) {
   var r = oe("var-swipe-item");
-  return h(), be(
-    r,
-    {
-      class: c(e.classes(e.n(), [!e.current, e.n("--inactive")])),
-      "var-tab-item-cover": ""
-    },
-    {
-      default: fe(() => [Y(e.$slots, "default")]),
-      _: 3
-      /* FORWARDED */
-    },
-    8,
-    ["class"]
-  );
+  return h(), be(r, {
+    class: c(e.classes(e.n(), [!e.current, e.n("--inactive")])),
+    "var-tab-item-cover": ""
+  }, {
+    default: fe(() => [Y(e.$slots, "default")]),
+    _: 3
+    /* FORWARDED */
+  }, 8, ["class"]);
 }
 var Vv = ee({
   name: "VarTabItem",
@@ -18176,66 +17454,60 @@ var {
   classes: hC
 } = re("tabs");
 function gC(e, n) {
-  return h(), be(
-    nt(e.sticky ? e.n("$-sticky") : e.Transition),
-    {
-      ref: e.sticky ? "stickyComponent" : void 0,
-      "css-mode": e.sticky ? e.stickyCssMode : void 0,
-      "offset-top": e.sticky ? e.offsetTop : void 0,
-      "z-index": e.sticky ? e.stickyZIndex : void 0
-    },
-    {
-      default: fe(() => [N(
+  return h(), be(nt(e.sticky ? e.n("$-sticky") : e.Transition), {
+    ref: e.sticky ? "stickyComponent" : void 0,
+    "css-mode": e.sticky ? e.stickyCssMode : void 0,
+    "offset-top": e.sticky ? e.offsetTop : void 0,
+    "z-index": e.sticky ? e.stickyZIndex : void 0
+  }, {
+    default: fe(() => [N(
+      "div",
+      Ne({
+        class: e.classes(e.n(), e.n("$--box"), e.n("--item-" + e.itemDirection), e.n("--layout-" + e.layoutDirection + "-padding"), e.formatElevation(e.elevation, 4), [e.fixedBottom, e.n("--fixed-bottom")], [e.safeArea, e.n("--safe-area")]),
+        style: {
+          background: e.color
+        }
+      }, e.$attrs),
+      [N(
         "div",
-        Ne({
-          class: e.classes(e.n(), e.n("$--box"), e.n("--item-" + e.itemDirection), e.n("--layout-" + e.layoutDirection + "-padding"), e.formatElevation(e.elevation, 4), [e.fixedBottom, e.n("--fixed-bottom")], [e.safeArea, e.n("--safe-area")]),
-          style: {
-            background: e.color
-          }
-        }, e.$attrs),
-        [N(
+        {
+          ref: "scrollerEl",
+          class: c(e.classes(e.n("tab-wrap"), [e.localScrollable, e.n("--layout-" + e.layoutDirection + "-scrollable")], e.n("--layout-" + e.layoutDirection)))
+        },
+        [Y(e.$slots, "default"), N(
           "div",
           {
-            ref: "scrollerEl",
-            class: c(e.classes(e.n("tab-wrap"), [e.localScrollable, e.n("--layout-" + e.layoutDirection + "-scrollable")], e.n("--layout-" + e.layoutDirection)))
+            class: c(e.classes(e.n("indicator"), e.n("--layout-" + e.layoutDirection + e.indicatorPosition + "-indicator"))),
+            style: G({
+              width: e.layoutDirection === "horizontal" ? e.indicatorWidth : e.toSizeUnit(e.indicatorSize),
+              height: e.layoutDirection === "horizontal" ? e.toSizeUnit(e.indicatorSize) : e.indicatorHeight,
+              transform: e.layoutDirection === "horizontal" ? "translateX(" + e.indicatorX + ")" : "translateY(" + e.indicatorY + ")"
+            })
           },
-          [Y(e.$slots, "default"), N(
+          [N(
             "div",
             {
-              class: c(e.classes(e.n("indicator"), e.n("--layout-" + e.layoutDirection + e.indicatorPosition + "-indicator"))),
+              class: c(e.classes(e.n("indicator-inner"), e.n("--layout-" + e.layoutDirection + "-indicator-inner"))),
               style: G({
-                width: e.layoutDirection === "horizontal" ? e.indicatorWidth : e.toSizeUnit(e.indicatorSize),
-                height: e.layoutDirection === "horizontal" ? e.toSizeUnit(e.indicatorSize) : e.indicatorHeight,
-                transform: e.layoutDirection === "horizontal" ? "translateX(" + e.indicatorX + ")" : "translateY(" + e.indicatorY + ")"
+                background: e.indicatorColor || e.activeColor
               })
             },
-            [N(
-              "div",
-              {
-                class: c(e.classes(e.n("indicator-inner"), e.n("--layout-" + e.layoutDirection + "-indicator-inner"))),
-                style: G({
-                  background: e.indicatorColor || e.activeColor
-                })
-              },
-              null,
-              6
-              /* CLASS, STYLE */
-            )],
+            null,
             6
             /* CLASS, STYLE */
           )],
-          2
-          /* CLASS */
+          6
+          /* CLASS, STYLE */
         )],
-        16
-        /* FULL_PROPS */
-      )]),
-      _: 3
-      /* FORWARDED */
-    },
-    8,
-    ["css-mode", "offset-top", "z-index"]
-  );
+        2
+        /* CLASS */
+      )],
+      16
+      /* FULL_PROPS */
+    )]),
+    _: 3
+    /* FORWARDED */
+  }, 8, ["css-mode", "offset-top", "z-index"]);
 }
 var Ev = ee({
   name: "VarTabs",
@@ -18333,7 +17605,7 @@ var Ev = ee({
       indicatorPosition: s,
       localScrollable: o,
       scrollerEl: l,
-      Transition: Re,
+      Transition: Le,
       toSizeUnit: ye,
       n: pC,
       classes: hC,
@@ -18392,24 +17664,18 @@ var {
 } = re("tabs-items");
 function CC(e, n) {
   var r = oe("var-swipe");
-  return h(), be(
-    r,
-    {
-      class: c(e.n()),
-      ref: "swipe",
-      loop: e.loop,
-      touchable: e.canSwipe,
-      indicator: !1,
-      onChange: e.handleSwipeChange
-    },
-    {
-      default: fe(() => [Y(e.$slots, "default")]),
-      _: 3
-      /* FORWARDED */
-    },
-    8,
-    ["class", "loop", "touchable", "onChange"]
-  );
+  return h(), be(r, {
+    class: c(e.n()),
+    ref: "swipe",
+    loop: e.loop,
+    touchable: e.canSwipe,
+    indicator: !1,
+    onChange: e.handleSwipeChange
+  }, {
+    default: fe(() => [Y(e.$slots, "default")]),
+    _: 3
+    /* FORWARDED */
+  }, 8, ["class", "loop", "touchable", "onChange"]);
 }
 var Bv = ee({
   name: "VarTabsItems",
@@ -18790,7 +18056,7 @@ function fS(e, n) {
     ), (h(!0), k(
       Me,
       null,
-      He(e.timeScales, (r, a) => (h(), k(
+      Ue(e.timeScales, (r, a) => (h(), k(
         "div",
         {
           class: c(e.classes(e.n("clock-item"), [e.isActive(a, !1), e.n("clock-item--active")], [e.isDisable(r), e.n("clock-item--disable")])),
@@ -18813,7 +18079,7 @@ function fS(e, n) {
       [(h(!0), k(
         Me,
         null,
-        He(e.hours24, (r, a) => (h(), k(
+        Ue(e.hours24, (r, a) => (h(), k(
           "div",
           {
             class: c(e.classes(e.n("clock-item"), [e.isActive(a, !0), e.n("clock-item--active")], [e.isDisable(r), e.n("clock-item--disable")])),
@@ -19145,42 +18411,30 @@ function bS(e, n) {
           }),
           ref: "container"
         },
-        [Q(
-          Re,
-          {
-            name: e.n() + "-panel-fade"
-          },
-          {
-            default: fe(() => [(h(), be(
-              r,
-              {
-                key: e.type,
-                ref: "inner",
-                type: e.type,
-                ampm: e.ampm,
-                color: e.color,
-                "is-inner": e.isInner,
-                format: e.format,
-                "allowed-time": e.allowedTime,
-                rad: e.getRad,
-                time: e.time,
-                "prevent-next-update": e.isPreventNextUpdate,
-                "use-seconds": e.useSeconds,
-                max: e.max,
-                min: e.min,
-                onUpdate: e.update,
-                onChangePreventUpdate: e.changePreventUpdate
-              },
-              null,
-              8,
-              ["type", "ampm", "color", "is-inner", "format", "allowed-time", "rad", "time", "prevent-next-update", "use-seconds", "max", "min", "onUpdate", "onChangePreventUpdate"]
-            ))]),
-            _: 1
-            /* STABLE */
-          },
-          8,
-          ["name"]
-        )],
+        [Q(Le, {
+          name: e.n() + "-panel-fade"
+        }, {
+          default: fe(() => [(h(), be(r, {
+            key: e.type,
+            ref: "inner",
+            type: e.type,
+            ampm: e.ampm,
+            color: e.color,
+            "is-inner": e.isInner,
+            format: e.format,
+            "allowed-time": e.allowedTime,
+            rad: e.getRad,
+            time: e.time,
+            "prevent-next-update": e.isPreventNextUpdate,
+            "use-seconds": e.useSeconds,
+            max: e.max,
+            min: e.min,
+            onUpdate: e.update,
+            onChangePreventUpdate: e.changePreventUpdate
+          }, null, 8, ["type", "ampm", "color", "is-inner", "format", "allowed-time", "rad", "time", "prevent-next-update", "use-seconds", "max", "min", "onUpdate", "onChangePreventUpdate"]))]),
+          _: 1
+          /* STABLE */
+        }, 8, ["name"])],
         34
         /* CLASS, HYDRATE_EVENTS */
       )],
@@ -19476,78 +18730,54 @@ function MS(e, n) {
       [(h(!0), k(
         Me,
         null,
-        He(e.files, (s) => ke((h(), k(
+        Ue(e.files, (s) => ke((h(), k("div", {
+          class: c(e.classes(e.n("file"), e.formatElevation(e.elevation, 2), [s.state === "loading", e.n("--loading")])),
+          key: s.id,
+          onClick: (u) => e.preview(s)
+        }, [N(
           "div",
           {
-            class: c(e.classes(e.n("file"), e.formatElevation(e.elevation, 2), [s.state === "loading", e.n("--loading")])),
-            key: s.id,
-            onClick: (u) => e.preview(s)
+            class: c(e.n("file-name"))
+          },
+          te(s.name || s.url),
+          3
+          /* TEXT, CLASS */
+        ), e.removable ? (h(), k("div", {
+          key: 0,
+          class: c(e.n("file-close")),
+          onClick: Pn((u) => e.handleRemove(s), ["stop"])
+        }, [Q(r, {
+          class: c(e.n("file-close-icon")),
+          "var-uploader-cover": "",
+          name: "delete"
+        }, null, 8, ["class"])], 10, TS)) : x("v-if", !0), s.cover ? (h(), k("img", {
+          key: 1,
+          class: c(e.n("file-cover")),
+          style: G({
+            objectFit: s.fit
+          }),
+          src: s.cover,
+          alt: s.name
+        }, null, 14, PS)) : x("v-if", !0), N(
+          "div",
+          {
+            class: c(e.n("file-indicator"))
           },
           [N(
             "div",
             {
-              class: c(e.n("file-name"))
-            },
-            te(s.name || s.url),
-            3
-            /* TEXT, CLASS */
-          ), e.removable ? (h(), k(
-            "div",
-            {
-              key: 0,
-              class: c(e.n("file-close")),
-              onClick: Pn((u) => e.handleRemove(s), ["stop"])
-            },
-            [Q(
-              r,
-              {
-                class: c(e.n("file-close-icon")),
-                "var-uploader-cover": "",
-                name: "delete"
-              },
-              null,
-              8,
-              ["class"]
-            )],
-            10,
-            TS
-          )) : x("v-if", !0), s.cover ? (h(), k(
-            "img",
-            {
-              key: 1,
-              class: c(e.n("file-cover")),
+              class: c(e.classes(e.n("progress"), [s.state === "success", e.n("--success")], [s.state === "error", e.n("--error")])),
               style: G({
-                objectFit: s.fit
-              }),
-              src: s.cover,
-              alt: s.name
+                width: s.state === "success" || s.state === "error" ? "100%" : s.progress + "%"
+              })
             },
             null,
-            14,
-            PS
-          )) : x("v-if", !0), N(
-            "div",
-            {
-              class: c(e.n("file-indicator"))
-            },
-            [N(
-              "div",
-              {
-                class: c(e.classes(e.n("progress"), [s.state === "success", e.n("--success")], [s.state === "error", e.n("--error")])),
-                style: G({
-                  width: s.state === "success" || s.state === "error" ? "100%" : s.progress + "%"
-                })
-              },
-              null,
-              6
-              /* CLASS, STYLE */
-            )],
-            2
-            /* CLASS */
+            6
+            /* CLASS, STYLE */
           )],
-          10,
-          $S
-        )), [[l, {
+          2
+          /* CLASS */
+        )], 10, $S)), [[l, {
           disabled: e.disabled || e.formDisabled || e.readonly || e.formReadonly || !e.ripple
         }]])),
         128
@@ -19561,42 +18791,24 @@ function MS(e, n) {
             return e.chooseFile && e.chooseFile(...arguments);
           })
         },
-        [N(
-          "input",
-          {
-            ref: "input",
-            type: "file",
-            class: c(e.n("action-input")),
-            multiple: e.multiple,
-            accept: e.accept,
-            capture: e.capture,
-            disabled: e.disabled || e.formDisabled || e.readonly || e.formReadonly,
-            onChange: n[0] || (n[0] = function() {
-              return e.handleChange && e.handleChange(...arguments);
-            })
-          },
-          null,
-          42,
-          OS
-        ), Y(e.$slots, "default", {}, () => [Q(
-          r,
-          {
-            class: c(e.n("action-icon")),
-            "var-uploader-cover": "",
-            name: "plus"
-          },
-          null,
-          8,
-          ["class"]
-        ), Q(
-          a,
-          {
-            hovering: e.hovering && !e.disabled && !e.formDisabled
-          },
-          null,
-          8,
-          ["hovering"]
-        )])],
+        [N("input", {
+          ref: "input",
+          type: "file",
+          class: c(e.n("action-input")),
+          multiple: e.multiple,
+          accept: e.accept,
+          capture: e.capture,
+          disabled: e.disabled || e.formDisabled || e.readonly || e.formReadonly,
+          onChange: n[0] || (n[0] = function() {
+            return e.handleChange && e.handleChange(...arguments);
+          })
+        }, null, 42, OS), Y(e.$slots, "default", {}, () => [Q(r, {
+          class: c(e.n("action-icon")),
+          "var-uploader-cover": "",
+          name: "plus"
+        }, null, 8, ["class"]), Q(a, {
+          hovering: e.hovering && !e.disabled && !e.formDisabled
+        }, null, 8, ["hovering"])])],
         2
         /* CLASS */
       )), [[l, {
@@ -19604,52 +18816,34 @@ function MS(e, n) {
       }], [i, e.handleHovering, "desktop"]]) : x("v-if", !0)],
       2
       /* CLASS */
-    ), Q(
-      t,
-      {
-        "error-message": e.errorMessage,
-        "extra-message": e.maxlengthText
-      },
-      null,
-      8,
-      ["error-message", "extra-message"]
-    ), Q(
-      o,
-      {
-        class: c(e.n("preview")),
-        "var-uploader-cover": "",
-        position: "center",
-        show: e.showPreview,
-        "onUpdate:show": n[2] || (n[2] = (s) => e.showPreview = s),
-        onClosed: n[3] || (n[3] = (s) => e.currentPreview = null)
-      },
-      {
-        default: fe(() => {
-          var s, u;
-          return [e.currentPreview && e.isHTMLSupportVideo((s = e.currentPreview) == null ? void 0 : s.url) ? (h(), k(
-            "video",
-            {
-              key: 0,
-              class: c(e.n("preview-video")),
-              playsinline: "true",
-              "webkit-playsinline": "true",
-              "x5-playsinline": "true",
-              "x5-video-player-type": "h5",
-              "x5-video-player-fullscreen": "false",
-              controls: "",
-              src: (u = e.currentPreview) == null ? void 0 : u.url
-            },
-            null,
-            10,
-            VS
-          )) : x("v-if", !0)];
-        }),
-        _: 1
-        /* STABLE */
-      },
-      8,
-      ["class", "show"]
-    )],
+    ), Q(t, {
+      "error-message": e.errorMessage,
+      "extra-message": e.maxlengthText
+    }, null, 8, ["error-message", "extra-message"]), Q(o, {
+      class: c(e.n("preview")),
+      "var-uploader-cover": "",
+      position: "center",
+      show: e.showPreview,
+      "onUpdate:show": n[2] || (n[2] = (s) => e.showPreview = s),
+      onClosed: n[3] || (n[3] = (s) => e.currentPreview = null)
+    }, {
+      default: fe(() => {
+        var s, u;
+        return [e.currentPreview && e.isHTMLSupportVideo((s = e.currentPreview) == null ? void 0 : s.url) ? (h(), k("video", {
+          key: 0,
+          class: c(e.n("preview-video")),
+          playsinline: "true",
+          "webkit-playsinline": "true",
+          "x5-playsinline": "true",
+          "x5-video-player-type": "h5",
+          "x5-video-player-fullscreen": "false",
+          controls: "",
+          src: (u = e.currentPreview) == null ? void 0 : u.url
+        }, null, 10, VS)) : x("v-if", !0)];
+      }),
+      _: 1
+      /* STABLE */
+    }, 8, ["class", "show"])],
     2
     /* CLASS */
   );
@@ -19704,11 +18898,11 @@ var Lv = ee({
         var {
           url: J
         } = D;
-        if (Fe(J) && tl(J)) {
+        if (He(J) && tl(J)) {
           Rn(J);
           return;
         }
-        Fe(J) && ol(J) && (a.value = D, r.value = !0);
+        He(J) && ol(J) && (a.value = D, r.value = !0);
       }
     }, b = (D) => ({
       id: kS++,
@@ -19762,35 +18956,35 @@ var Lv = ee({
           disabled: de
         } = e;
         if (!(o != null && o.disabled.value || o != null && o.readonly.value || de || ne)) {
-          var Ce = (je) => je.filter((We) => We.file.size > z(H) ? (w(ve, ze(We)), !1) : !0), Ee = (je) => {
-            var We = Math.min(je.length, z(F) - J.length);
-            return je.slice(0, We);
+          var Ce = (Ye) => Ye.filter((je) => je.file.size > z(H) ? (w(ve, ze(je)), !1) : !0), Ee = (Ye) => {
+            var je = Math.min(Ye.length, z(F) - J.length);
+            return Ye.slice(0, je);
           }, ae = /* @__PURE__ */ function() {
-            var je = Do(function* (We) {
+            var Ye = Do(function* (je) {
               if (!Z)
-                return We;
+                return je;
               var le = Rt(Z);
               for (var we of le)
-                We = yield we(We);
-              return We;
+                je = yield we(je);
+              return je;
             });
             return function(le) {
-              return je.apply(this, arguments);
+              return Ye.apply(this, arguments);
             };
           }(), ue = g(_), me = ue.map(b);
           me = yield ae(me), me = H != null ? Ce(me) : me, me = F != null ? Ee(me) : me;
-          var Pe = yield Promise.all(O(me)), Ye = yield Promise.all($(Pe)), Xe = Ye.filter((je) => {
+          var Pe = yield Promise.all(O(me)), Fe = yield Promise.all($(Pe)), Xe = Fe.filter((Ye) => {
             var {
-              valid: We
-            } = je;
-            return We;
-          }).map((je) => {
+              valid: je
+            } = Ye;
+            return je;
+          }).map((Ye) => {
             var {
-              varFile: We
-            } = je;
-            return We;
+              varFile: je
+            } = Ye;
+            return je;
           });
-          w(e["onUpdate:modelValue"], [...J, ...Xe]), _.target.value = "", Xe.forEach((je) => w(W, ze(je)));
+          w(e["onUpdate:modelValue"], [...J, ...Xe]), _.target.value = "", Xe.forEach((Ye) => w(W, ze(Ye)));
         }
       });
       return function(H) {
