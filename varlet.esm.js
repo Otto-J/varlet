@@ -11980,9 +11980,6 @@ function $b(e, n) {
             "span",
             {
               ref: "placeholderTextEl",
-              style: {
-                "font-size": "var(--field-decorator-placeholder-size)"
-              },
               class: c(e.classes(e.n("placeholder-text"), e.n("$--ellipsis"), [e.size === "small", e.n("placeholder-text--small")]))
             },
             te(e.placeholder),
