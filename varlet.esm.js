@@ -9856,7 +9856,7 @@ const ea = ee({
         animationClass: fn("--trigger-icon-animation")
       }, null)]
     }), [[Qn, e.show]]), v = () => {
-      var f, m, g = Ns((m = r.default == null ? void 0 : r.default()) != null ? m : []);
+      var f, m, g = Ns((m = w(r.default)) != null ? m : []);
       return Q("div", Ne({
         class: Wl(fn(), fn("--position-" + e.position), fn("--direction-" + e.direction), [e.fixed, fn("--fixed"), fn("--absolute")], [e.safeArea, fn("--safe-area")]),
         style: {
