@@ -10856,6 +10856,7 @@ var Pd = ee({
     }), {
       n: Kl,
       classes: xy,
+      swipeRef: u,
       isPreventDefault: b,
       initialIndex: r,
       popupShow: n,
