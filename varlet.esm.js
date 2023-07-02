@@ -732,7 +732,8 @@ var Pt = {
     default: !1
   },
   teleport: {
-    type: String
+    type: String,
+    default: "body"
   },
   onOpen: U(),
   onOpened: U(),
