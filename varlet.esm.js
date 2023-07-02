@@ -18811,7 +18811,7 @@ function MS(e, n) {
         }]])),
         128
         /* KEYED_FRAGMENT */
-      )), !e.maxlength || e.modelValue.length < e.maxlength ? ke((h(), k(
+      )), !e.maxlength || e.modelValue.length < e.toNumber(e.maxlength) ? ke((h(), k(
         "div",
         {
           key: 0,
@@ -19082,6 +19082,7 @@ var zv = ee({
       hovering: v,
       formDisabled: o == null ? void 0 : o.disabled,
       formReadonly: o == null ? void 0 : o.readonly,
+      toNumber: A,
       handleHovering: f,
       isHTMLSupportVideo: ol,
       isHTMLSupportImage: tl,
