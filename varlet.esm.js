@@ -13826,7 +13826,7 @@ function Y0(e, n) {
           [N(
             "div",
             {
-              class: c(e.classes(e.n("linear--" + e.linearProps.type))),
+              class: c(e.classes(e.n("linear--" + e.type))),
               style: q({
                 background: e.color
               })
@@ -13837,7 +13837,7 @@ function Y0(e, n) {
           ), N(
             "div",
             {
-              class: c(e.classes(e.n("linear--" + e.linearProps.type))),
+              class: c(e.classes(e.n("linear--" + e.type))),
               style: q({
                 background: e.color
               })
@@ -13852,7 +13852,7 @@ function Y0(e, n) {
           "div",
           {
             key: 2,
-            class: c(e.classes(e.n("linear-certain"), e.n("linear--" + e.linearProps.type), [e.ripple, e.n("linear-ripple")])),
+            class: c(e.classes(e.n("linear-certain"), e.n("linear--" + e.type), [e.ripple, e.n("linear-ripple")])),
             style: q({
               background: e.color,
               width: e.linearProps.width
@@ -13909,7 +13909,7 @@ function Y0(e, n) {
           stroke: e.trackColor
         })
       }, null, 14, F0)) : x("v-if", !0), N("circle", {
-        class: c(e.classes(e.n("circle-certain"), e.n("circle--" + e.circleProps.type), [e.indeterminate, e.n("circle-overlay")])),
+        class: c(e.classes(e.n("circle-certain"), e.n("circle--" + e.type), [e.indeterminate, e.n("circle-overlay")])),
         cx: "50%",
         cy: "50%",
         r: e.RADIUS,
@@ -13946,29 +13946,22 @@ var Jd = ee({
   props: z0,
   setup(e) {
     var n = 100, r = 20, a = 2 * Math.PI * r, t = D(() => {
-      var {
-        type: l,
-        indeterminate: i
-      } = e, s = A(e.value), u = s > n ? n : s, d = s > n ? n : Math.round(s);
+      var l = A(e.value), i = l > n ? n : l, s = l > n ? n : Math.round(l);
       return {
-        indeterminate: i,
-        type: l,
-        width: u + "%",
-        roundValue: d + "%"
+        width: i + "%",
+        roundValue: s + "%"
       };
     }), o = D(() => {
       var {
         size: l,
         lineWidth: i,
-        value: s,
-        type: u
-      } = e, d = r / (1 - Ze(i) / Ze(l)) * 2, v = "0 0 " + d + " " + d, f = A(s) > n ? n : Math.round(A(s)), m = "" + (n - f) / n * a, g = i / Ze(l) * d;
+        value: s
+      } = e, u = r / (1 - Ze(i) / Ze(l)) * 2, d = "0 0 " + u + " " + u, v = A(s) > n ? n : Math.round(A(s)), f = "" + (n - v) / n * a, m = i / Ze(l) * u;
       return {
-        strokeWidth: g,
-        type: u,
-        viewBox: v,
-        strokeOffset: m,
-        roundValue: f + "%"
+        strokeWidth: m,
+        viewBox: d,
+        strokeOffset: f,
+        roundValue: v + "%"
       };
     });
     return {
