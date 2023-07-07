@@ -11802,6 +11802,7 @@ function Ib(e, n) {
         "append-icon": fe(() => [Y(e.$slots, "append-icon")]),
         default: fe(() => [e.normalizedType === "password" ? (h(), k("input", {
           key: 0,
+          tabindex: "-1",
           class: c(e.n("autocomplete")),
           placeholder: e.hint ? void 0 : e.placeholder,
           style: q({
