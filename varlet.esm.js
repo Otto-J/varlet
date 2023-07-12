@@ -15905,7 +15905,7 @@ function vw(e, n) {
   return h(), k(
     "div",
     {
-      class: c(e.n(e.direction))
+      class: c(e.classes(e.n(e.direction), e.n("$--box")))
     },
     [N(
       "div",
