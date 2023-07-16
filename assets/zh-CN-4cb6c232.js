@@ -18,11 +18,11 @@ import{_ as o,p as c,f as h,h as r,M as a,q as t,S as l,P as s,aq as d}from"./vu
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
 `)])],-1),V={class:"card"},$={id:"禁用"},z=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-drag"),s(),a("span",{class:"hljs-attr"},"disabled"),s(">")]),s(`
-    `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-button"),s(),a("span",{class:"hljs-attr"},"type"),s("="),a("span",{class:"hljs-string"},'"primary"'),s(">")]),s("禁用"),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-button"),s(">")]),s(`
+    `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-button"),s(),a("span",{class:"hljs-attr"},"type"),s("="),a("span",{class:"hljs-string"},'"primary"'),s(),a("span",{class:"hljs-attr"},"disabled"),s(">")]),s("禁用"),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-button"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-drag"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
 `)])],-1),B={class:"card"},C={id:"拖拽区域"},P=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-drag"),s(),a("span",{class:"hljs-attr"},":boundary"),s("="),a("span",{class:"hljs-string"},'"{ top: 80, bottom: 80, left: 80, right: 80 }"'),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-drag"),s(),a("span",{class:"hljs-attr"},"style"),s("="),a("span",{class:"hljs-string"},'"top: 80px; left: 80px"'),s(),a("span",{class:"hljs-attr"},":boundary"),s("="),a("span",{class:"hljs-string"},'"{ top: 80, bottom: 80, left: 80, right: 80 }"'),s(">")]),s(`
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-button"),s(),a("span",{class:"hljs-attr"},"type"),s("="),a("span",{class:"hljs-string"},'"primary"'),s(">")]),s("拖拽区域"),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-button"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-drag"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`

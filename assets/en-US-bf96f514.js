@@ -18,11 +18,11 @@ import{_ as d,p as c,f as r,h,M as a,q as t,S as l,P as s,aq as o}from"./vue-rou
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
 `)])],-1),k={class:"card"},w={id:"Disabled"},A=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-drag"),s(),a("span",{class:"hljs-attr"},"disabled"),s(">")]),s(`
-    `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-button"),s(),a("span",{class:"hljs-attr"},"type"),s("="),a("span",{class:"hljs-string"},'"primary"'),s(">")]),s("Disabled"),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-button"),s(">")]),s(`
+    `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-button"),s(),a("span",{class:"hljs-attr"},"type"),s("="),a("span",{class:"hljs-string"},'"primary"'),s(),a("span",{class:"hljs-attr"},"disabled"),s(">")]),s("Disabled"),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-button"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-drag"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
 `)])],-1),S={class:"card"},M={id:"Boundary"},R=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-drag"),s(),a("span",{class:"hljs-attr"},":boundary"),s("="),a("span",{class:"hljs-string"},'"{ top: 80, bottom: 80, left: 80, right: 80 }"'),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-drag"),s(),a("span",{class:"hljs-attr"},"style"),s("="),a("span",{class:"hljs-string"},'"top: 80px; left: 80px"'),s(),a("span",{class:"hljs-attr"},":boundary"),s("="),a("span",{class:"hljs-string"},'"{ top: 80, bottom: 80, left: 80, right: 80 }"'),s(">")]),s(`
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-button"),s(),a("span",{class:"hljs-attr"},"type"),s("="),a("span",{class:"hljs-string"},'"primary"'),s(">")]),s("Boundary"),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-button"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-drag"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
