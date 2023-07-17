@@ -15479,7 +15479,7 @@ function uw(e, n) {
       show: e.showMenu,
       "onUpdate:show": n[1] || (n[1] = (i) => e.showMenu = i),
       class: c(e.n("menu")),
-      "popover-class": e.variant === "standard" && e.hint ? e.n("--menu-margin") : void 0,
+      "popover-class": e.variant === "standard" && e.hint ? e.n("--standard-menu-margin") : void 0,
       "offset-y": e.offsetY,
       disabled: e.formReadonly || e.readonly || e.formDisabled || e.disabled,
       placement: e.placement,
