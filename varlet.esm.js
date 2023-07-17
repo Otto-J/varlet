@@ -12779,6 +12779,9 @@ var v0 = {
     type: Boolean,
     default: !0
   },
+  popoverClass: {
+    type: String
+  },
   closeOnClickReference: {
     type: Boolean,
     default: !1
@@ -12825,7 +12828,7 @@ function m0(e, n) {
             zIndex: e.zIndex,
             width: e.sameWidth ? e.toSizeUnit(Math.ceil(e.hostSize.width)) : void 0
           }),
-          class: c(e.classes(e.n("menu"), e.n("$--box"), [e.defaultStyle, e.n("--menu-background-color")], [e.defaultStyle, e.formatElevation(e.elevation, 3)])),
+          class: c(e.classes(e.n("menu"), e.n("$--box"), e.popoverClass, [e.defaultStyle, e.n("--menu-background-color")], [e.defaultStyle, e.formatElevation(e.elevation, 3)])),
           onClick: n[0] || (n[0] = Pn(() => {
           }, ["stop"])),
           onMouseenter: n[1] || (n[1] = function() {
@@ -15476,6 +15479,7 @@ function uw(e, n) {
       show: e.showMenu,
       "onUpdate:show": n[1] || (n[1] = (i) => e.showMenu = i),
       class: c(e.n("menu")),
+      "popover-class": e.variant === "standard" && e.hint ? e.n("--menu-margin") : void 0,
       "offset-y": e.offsetY,
       disabled: e.formReadonly || e.readonly || e.formDisabled || e.disabled,
       placement: e.placement,
@@ -15486,7 +15490,7 @@ function uw(e, n) {
         "div",
         {
           ref: "menuEl",
-          class: c(e.classes(e.n("scroller"), e.n("--scroller-" + e.variant), e.n("$-elevation--3"), [!e.hint, e.n("--scroller-non-hint")]))
+          class: c(e.classes(e.n("scroller"), e.n("$-elevation--3")))
         },
         [j(e.$slots, "default")],
         2
@@ -15590,7 +15594,7 @@ function uw(e, n) {
               ))])],
               2
               /* CLASS */
-            ), e.useCustomPlaceholder ? (h(), $(
+            ), e.enableCustomPlaceholder ? (h(), $(
               "span",
               {
                 key: 0,
@@ -15625,7 +15629,7 @@ function uw(e, n) {
       )]),
       _: 3
       /* FORWARDED */
-    }, 8, ["show", "class", "offset-y", "disabled", "placement", "onClickOutside"]), Q(l, {
+    }, 8, ["show", "class", "popover-class", "offset-y", "disabled", "placement", "onClickOutside"]), Q(l, {
       "error-message": e.errorMessage,
       onClick: n[2] || (n[2] = Pn(() => {
       }, ["stop"]))
@@ -15666,7 +15670,7 @@ var cv = ee({
       } = e;
       if (!H)
         return b.value ? "var(--field-decorator-error-color)" : n.value ? _ || "var(--field-decorator-focus-color)" : Z || "var(--field-decorator-blur-color)";
-    }), M = R(() => !e.hint && Fn(e.modelValue) && !n.value), P = () => {
+    }), M = R(() => !e.hint && Fn(e.modelValue)), P = () => {
       var {
         multiple: H,
         modelValue: Z
@@ -15821,7 +15825,7 @@ var cv = ee({
       placement: k,
       cursor: s,
       placeholderColor: E,
-      useCustomPlaceholder: M,
+      enableCustomPlaceholder: M,
       n: iw,
       classes: lw,
       handleFocus: N,
