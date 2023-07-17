@@ -12997,7 +12997,7 @@ var Zd = ee({
       onSelect: u,
       computeLabel: d
     } = o, v = () => {
-      n.value = !n.value, u(y);
+      i.value && (n.value = !n.value), u(y);
     }, f = () => u(y), m = (b) => {
       n.value = b;
     }, y = {
