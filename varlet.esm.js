@@ -193,7 +193,7 @@ var Os = (e) => Fe(e) && e.endsWith("rem"), lf = (e) => Fe(e) && e.endsWith("em"
     return uf(e) || Vs(e) || Ms(e) || lf(e) || Os(e) || df(e) || vf(e) || Is(e) || Es(e) ? e : ze(e) + "px";
 }, ur = function(e, r) {
   if (r === void 0 && (r = 1), e != null) {
-    var n = be(e), a = n.match(/(vh|%|rem|px|vw)$/)[0];
+    var n = be(e), a = n.match(/(vh|%|rem|px|vw|vmin|vmax)$/)[0];
     return "" + parseFloat(n) * r + a;
   }
 };
