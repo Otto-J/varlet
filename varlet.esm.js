@@ -10068,7 +10068,7 @@ const Ya = ee({
           S(e.onClick, t.value, v);
           return;
         }
-        console.log(l.value), !((g = l.value) != null && g.dragging) && (t.value = f, S(e.onClick, t.value, v), S(t.value ? e.onOpen : e.onClose));
+        (g = l.value) != null && g.dragging || (t.value = f, S(e.onClick, t.value, v), S(t.value ? e.onOpen : e.onClose));
       }
     }, s = (v, f) => {
       e.trigger !== "hover" || e.disabled || f === 0 || (t.value = v, S(t.value ? e.onOpen : e.onClose));
