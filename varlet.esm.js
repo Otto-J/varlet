@@ -17244,8 +17244,8 @@ function uC(e, r) {
               key: 0,
               class: c(e.n("loading")),
               style: K({
-                width: e.multiplySizeUnit(e.radius, 2),
-                height: e.multiplySizeUnit(e.radius, 2)
+                width: e.radius,
+                height: e.radius
               })
             },
             sC,
@@ -17328,7 +17328,7 @@ var Ov = ee({
           width: ur(C, 2)
         }
       };
-    }), f = R(() => ur(e.size, 0.4)), m = (C) => {
+    }), f = R(() => ur(e.size, 0.8)), m = (C) => {
       var {
         onClick: O,
         onChange: T,
