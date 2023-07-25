@@ -14011,27 +14011,16 @@ function J0(e, r) {
       [A(
         "div",
         {
-          class: c(e.n("linear-block")),
+          class: c(e.classes(e.n("linear-block"), [e.track, e.n("linear-background")])),
           style: K({
-            height: e.toSizeUnit(e.lineWidth)
+            height: e.toSizeUnit(e.lineWidth),
+            background: e.trackColor
           })
         },
-        [e.track ? (h(), $(
+        [e.indeterminate ? (h(), $(
           "div",
           {
             key: 0,
-            class: c(e.n("linear-background")),
-            style: K({
-              background: e.trackColor
-            })
-          },
-          null,
-          6
-          /* CLASS, STYLE */
-        )) : x("v-if", !0), e.indeterminate ? (h(), $(
-          "div",
-          {
-            key: 1,
             class: c(e.classes([e.indeterminate, e.n("linear-indeterminate")]))
           },
           [A(
@@ -14062,7 +14051,7 @@ function J0(e, r) {
         )) : (h(), $(
           "div",
           {
-            key: 2,
+            key: 1,
             class: c(e.classes(e.n("linear-certain"), e.n("linear--" + e.type), [e.ripple, e.n("linear-ripple")])),
             style: K({
               background: e.color,
