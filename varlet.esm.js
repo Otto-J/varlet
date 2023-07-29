@@ -1850,6 +1850,9 @@ var tc = {
     validator: ru,
     default: "normal"
   },
+  alt: {
+    type: String
+  },
   color: {
     type: String
   },
@@ -1884,7 +1887,7 @@ var tc = {
 }, {
   n: oc,
   classes: ic
-} = re("avatar"), lc = ["src", "lazy-loading", "lazy-error"], sc = ["src"];
+} = re("avatar"), lc = ["src", "alt", "lazy-loading", "lazy-error"], sc = ["src", "alt"];
 function uc(e, r) {
   var n = Ae("lazy");
   return h(), $(
@@ -1911,6 +1914,7 @@ function uc(e, r) {
         key: 0,
         class: c(e.n("image")),
         src: e.src,
+        alt: e.alt,
         style: K({
           objectFit: e.fit
         }),
@@ -1923,6 +1927,7 @@ function uc(e, r) {
         key: 1,
         class: c(e.n("image")),
         src: e.src,
+        alt: e.alt,
         style: K({
           objectFit: e.fit
         }),
