@@ -272,22 +272,22 @@ function dn(e, r, n, a = {}) {
   const s = (m) => na(m) ? m() : ua(m), u = (m) => {
     if (l || i)
       return;
-    const g = s(m);
-    g && (g.addEventListener(r, n, {
+    const y = s(m);
+    y && (y.addEventListener(r, n, {
       passive: t,
       capture: o
     }), l = !0);
   }, d = (m) => {
     if (!l || i)
       return;
-    const g = s(m);
-    g && (g.removeEventListener(r, n, {
+    const y = s(m);
+    y && (y.removeEventListener(r, n, {
       capture: o
     }), l = !1);
   };
   let v;
-  Xv(e) && (v = se(() => e.value, (m, g) => {
-    d(g), u(m);
+  Xv(e) && (v = se(() => e.value, (m, y) => {
+    d(y), u(m);
   }));
   const f = () => {
     v == null || v(), d(e), i = !0;
@@ -2915,7 +2915,7 @@ var ku = ee({
       bottomNavigationItems: u,
       bindBottomNavigationItem: d
     } = am(), v = () => {
-      s.value === 0 || f() || m() || g();
+      s.value === 0 || f() || m() || y();
     }, f = () => u.find((p) => {
       var {
         name: k
@@ -2926,11 +2926,11 @@ var ku = ee({
         index: k
       } = p;
       return t.value === k.value;
-    }), g = () => {
+    }), y = () => {
       nr(t.value) && (t.value < 0 ? C(e["onUpdate:active"], 0) : t.value > s.value - 1 && C(e["onUpdate:active"], s.value - 1));
     }, b = (p) => {
-      t.value !== p && (e.onBeforeChange ? y(p) : w(p));
-    }, y = (p) => {
+      t.value !== p && (e.onBeforeChange ? g(p) : w(p));
+    }, g = (p) => {
       var k = jt(C(e.onBeforeChange, p));
       Promise.all(k).then((F) => {
         F.every(Boolean) && w(p);
@@ -3098,8 +3098,8 @@ var $u = ee({
       name: r,
       index: t
     }, v = () => i.value === r.value || i.value === t.value ? s.value : u.value, f = () => {
-      var m, g = (m = r.value) != null ? m : t.value;
-      C(e.onClick, g), C(o.onToggle, g);
+      var m, y = (m = r.value) != null ? m : t.value;
+      C(e.onClick, y), C(o.onToggle, y);
     };
     return l(d), se(() => n.value, (m) => {
       a.value = m === !0 ? fm : n.value;
@@ -3572,8 +3572,8 @@ var Mu = ee({
   },
   props: Bm,
   setup(e) {
-    var r = P(null), n = P(null), a = P("auto"), t = P("auto"), o = P("100%"), l = P("100%"), i = P("auto"), s = P("auto"), u = P(void 0), d = P("hidden"), v = P("0px"), f = P("0"), m = R(() => e.layout === "row"), g = P(!1), b = P(!1), {
-      zIndex: y
+    var r = P(null), n = P(null), a = P("auto"), t = P("auto"), o = P("100%"), l = P("100%"), i = P("auto"), s = P("auto"), u = P(void 0), d = P("hidden"), v = P("0px"), f = P("0"), m = R(() => e.layout === "row"), y = P(!1), b = P(!1), {
+      zIndex: g
     } = Vt(() => e.floating, 1);
     co(() => e.floating, () => !m.value);
     var w = "auto", O = "auto", T = null, S = P(null), M = /* @__PURE__ */ function() {
@@ -3585,14 +3585,14 @@ var Mu = ee({
             left: B,
             top: H
           } = Qe(r.value);
-          a.value = be(F), t.value = be(L), o.value = a.value, l.value = t.value, i.value = be(H), s.value = be(B), u.value = "fixed", w = i.value, O = s.value, g.value = !0, yield Dr(), i.value = "0", s.value = "0", o.value = "100vw", l.value = "100vh", v.value = "auto", f.value = "1", d.value = "auto", b.value = !0;
+          a.value = be(F), t.value = be(L), o.value = a.value, l.value = t.value, i.value = be(H), s.value = be(B), u.value = "fixed", w = i.value, O = s.value, y.value = !0, yield Dr(), i.value = "0", s.value = "0", o.value = "100vw", l.value = "100vh", v.value = "auto", f.value = "1", d.value = "auto", b.value = !0;
         }), e.ripple ? Dm : 0);
       });
       return function() {
         return k.apply(this, arguments);
       };
     }(), I = () => {
-      clearTimeout(T), clearTimeout(S.value), S.value = null, o.value = a.value, l.value = t.value, i.value = w, s.value = O, v.value = "0px", f.value = "0", g.value = !1, T = setTimeout(() => {
+      clearTimeout(T), clearTimeout(S.value), S.value = null, o.value = a.value, l.value = t.value, i.value = w, s.value = O, v.value = "0px", f.value = "0", y.value = !1, T = setTimeout(() => {
         a.value = "auto", t.value = "auto", o.value = "100%", l.value = "100%", i.value = "auto", s.value = "auto", w = "auto", O = "auto", d.value = "hidden", u.value = void 0, b.value = !1;
       }, e.floatingDuration);
     }, A = () => {
@@ -3623,10 +3623,10 @@ var Mu = ee({
       floaterOverflow: d,
       contentHeight: v,
       opacity: f,
-      zIndex: y,
+      zIndex: g,
       isRow: m,
       close: A,
-      showFloatingButtons: g,
+      showFloatingButtons: y,
       floated: b,
       formatElevation: pr,
       handleClick: p
@@ -4051,7 +4051,7 @@ var Du = ee({
       validateWithTrigger: f,
       validate: m,
       // expose
-      resetValidation: g
+      resetValidation: y
     } = Or(), b = (p) => {
       Ae(() => {
         var {
@@ -4061,7 +4061,7 @@ var Du = ee({
         } = e;
         f(k, p, F, L);
       });
-    }, y = (p) => {
+    }, g = (p) => {
       r.value = p;
       var {
         checkedValue: k,
@@ -4079,7 +4079,7 @@ var Du = ee({
       if (!(u != null && u.disabled.value || k) && (C(H, p), !(u != null && u.readonly.value || F))) {
         t.value = !0;
         var E = o ? o.checkedCount.value >= Number(o.max.value) : !1;
-        !n.value && E || y(n.value ? B : L);
+        !n.value && E || g(n.value ? B : L);
       }
     }, O = (p) => {
       var {
@@ -4090,13 +4090,13 @@ var Du = ee({
     }, T = () => {
       t.value = !1;
     }, S = () => {
-      C(e["onUpdate:modelValue"], e.uncheckedValue), g();
+      C(e["onUpdate:modelValue"], e.uncheckedValue), y();
     }, M = (p) => {
       var {
         checkedValue: k,
         uncheckedValue: F
       } = e, L = ![k, F].includes(p);
-      L && (p = n.value ? F : k), y(p);
+      L && (p = n.value ? F : k), g(p);
     }, I = () => m(e.rules, e.modelValue);
     se(() => e.modelValue, (p) => {
       r.value = p;
@@ -4108,7 +4108,7 @@ var Du = ee({
       checked: n,
       sync: O,
       validate: I,
-      resetValidation: g,
+      resetValidation: y,
       reset: S,
       resetWithAnimation: T
     };
@@ -4127,7 +4127,7 @@ var Du = ee({
       toggle: M,
       reset: S,
       validate: I,
-      resetValidation: g
+      resetValidation: y
     };
   }
 });
@@ -4216,7 +4216,7 @@ var Au = ee({
       });
     }, m = (A) => {
       C(e["onUpdate:modelValue"], A), C(e.onChange, A), f("onChange");
-    }, g = (A) => {
+    }, y = (A) => {
       var {
         modelValue: p
       } = e;
@@ -4226,7 +4226,7 @@ var Au = ee({
         modelValue: p
       } = e;
       p.includes(A) && m(p.filter((k) => k !== A));
-    }, y = () => t.forEach((A) => {
+    }, g = () => t.forEach((A) => {
       var {
         sync: p
       } = A;
@@ -4257,13 +4257,13 @@ var Au = ee({
     }, S = () => {
       C(e["onUpdate:modelValue"], []), d();
     }, M = () => u(e.rules, e.modelValue);
-    se(() => e.modelValue, y, {
+    se(() => e.modelValue, g, {
       deep: !0
-    }), se(() => a.value, y);
+    }), se(() => a.value, g);
     var I = {
       max: r,
       checkedCount: n,
-      onChecked: g,
+      onChecked: y,
       onUnchecked: b,
       validate: M,
       resetValidation: d,
@@ -4621,58 +4621,58 @@ var Yu = ee({
       length: r,
       collapseItem: n,
       bindCollapseItem: a
-    } = gp(), t = R(() => e.modelValue), o = R(() => e.offset), l = R(() => e.divider), i = R(() => e.elevation), s = () => !e.accordion && !Ve(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be an Array'), !1) : e.accordion && Ve(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be a String or Number'), !1) : !0, u = (b, y) => s() ? y ? e.accordion ? b : [...e.modelValue, b] : e.accordion ? null : e.modelValue.filter((w) => w !== b) : null, d = (b, y) => {
-      var w = u(b, y);
+    } = gp(), t = R(() => e.modelValue), o = R(() => e.offset), l = R(() => e.divider), i = R(() => e.elevation), s = () => !e.accordion && !Ve(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be an Array'), !1) : e.accordion && Ve(e.modelValue) ? (console.error('[Varlet] Collapse: type of prop "modelValue" should be a String or Number'), !1) : !0, u = (b, g) => s() ? g ? e.accordion ? b : [...e.modelValue, b] : e.accordion ? null : e.modelValue.filter((w) => w !== b) : null, d = (b, g) => {
+      var w = u(b, g);
       C(e["onUpdate:modelValue"], w), C(e.onChange, w);
     }, v = () => {
       if (e.accordion)
-        return n.find((y) => {
+        return n.find((g) => {
           var {
             name: w
-          } = y;
+          } = g;
           return e.modelValue === w.value;
         });
-      var b = n.filter((y) => {
+      var b = n.filter((g) => {
         var {
           name: w
-        } = y;
+        } = g;
         return w.value === void 0 ? !1 : e.modelValue.includes(w.value);
       });
       return b.length ? b : void 0;
     }, f = () => e.accordion ? n.find((b) => {
       var {
-        index: y,
+        index: g,
         name: w
       } = b;
-      return w.value === void 0 && e.modelValue === y.value;
+      return w.value === void 0 && e.modelValue === g.value;
     }) : n.filter((b) => {
       var {
-        index: y,
+        index: g,
         name: w
       } = b;
-      return w.value === void 0 && e.modelValue.includes(y.value);
+      return w.value === void 0 && e.modelValue.includes(g.value);
     }), m = () => {
       if (s()) {
         var b = v() || f();
         if (e.accordion && !b || !e.accordion && !b.length) {
-          n.forEach((y) => {
-            y.init(e.accordion, !1);
+          n.forEach((g) => {
+            g.init(e.accordion, !1);
           });
           return;
         }
-        n.forEach((y) => {
-          var w = e.accordion ? b === y : b.includes(y);
-          y.init(e.accordion, w);
+        n.forEach((g) => {
+          var w = e.accordion ? b === g : b.includes(g);
+          g.init(e.accordion, w);
         });
       }
-    }, g = {
+    }, y = {
       active: t,
       offset: o,
       divider: l,
       elevation: i,
       updateItem: d
     };
-    return a(g), se(() => r.value, () => Ae().then(m)), se(() => e.modelValue, () => Ae().then(m)), {
+    return a(y), se(() => r.value, () => Ae().then(m)), se(() => e.modelValue, () => Ae().then(m)), {
       n: bp,
       divider: l
     };
@@ -4807,11 +4807,11 @@ var Hu = ee({
       divider: d,
       elevation: v,
       updateItem: f
-    } = n, m = R(() => e.name), g = (M, I) => {
+    } = n, m = R(() => e.name), y = (M, I) => {
       s.value === void 0 || M && Ve(s.value) || I === i.value || (i.value = I, b(!0));
     }, b = (M) => {
       e.disabled || M || f(e.name || r.value, !i.value);
-    }, y = () => {
+    }, g = () => {
       o.value && (o.value.style.height = "", l.value = !0, br(() => {
         var {
           offsetHeight: M
@@ -4838,10 +4838,10 @@ var Hu = ee({
     }, S = {
       index: r,
       name: m,
-      init: g
+      init: y
     };
     return a(S), se(i, (M) => {
-      M ? y() : O();
+      M ? g() : O();
     }), {
       n: kp,
       start: w,
@@ -4904,19 +4904,19 @@ var Fu = ee({
       minutes: 0,
       seconds: 0,
       milliseconds: 0
-    }), a = 0, t = !1, o = 0, l = 0, i, s = (g, b) => {
-      var y = Object.values(b), w = ["DD", "HH", "mm", "ss"], O = [24, 60, 60, 1e3];
+    }), a = 0, t = !1, o = 0, l = 0, i, s = (y, b) => {
+      var g = Object.values(b), w = ["DD", "HH", "mm", "ss"], O = [24, 60, 60, 1e3];
       if (w.forEach((S, M) => {
-        g.includes(S) ? g = g.replace(S, Sn("" + y[M], 2, "0")) : y[M + 1] += y[M] * O[M];
-      }), g.includes("S")) {
-        var T = Sn("" + y[y.length - 1], 3, "0");
-        g.includes("SSS") ? g = g.replace("SSS", T) : g.includes("SS") ? g = g.replace("SS", T.slice(0, 2)) : g = g.replace("S", T.slice(0, 1));
+        y.includes(S) ? y = y.replace(S, Sn("" + g[M], 2, "0")) : g[M + 1] += g[M] * O[M];
+      }), y.includes("S")) {
+        var T = Sn("" + g[g.length - 1], 3, "0");
+        y.includes("SSS") ? y = y.replace("SSS", T) : y.includes("SS") ? y = y.replace("SS", T.slice(0, 2)) : y = y.replace("S", T.slice(0, 1));
       }
-      return g;
-    }, u = (g) => {
-      var b = Math.floor(g / Ol), y = Math.floor(g % Ol / oi), w = Math.floor(g % oi / ti), O = Math.floor(g % ti / ai), T = Math.floor(g % ai), S = {
+      return y;
+    }, u = (y) => {
+      var b = Math.floor(y / Ol), g = Math.floor(y % Ol / oi), w = Math.floor(y % oi / ti), O = Math.floor(y % ti / ai), T = Math.floor(y % ai), S = {
         days: b,
-        hours: y,
+        hours: g,
         minutes: w,
         seconds: O,
         milliseconds: T
@@ -4924,16 +4924,16 @@ var Fu = ee({
       n.value = S, C(e.onChange, n.value), r.value = s(e.format, S);
     }, d = () => {
       var {
-        time: g,
+        time: y,
         onEnd: b
-      } = e, y = performance.now();
-      if (a || (a = y + U(g)), l = a - y, l < 0 && (l = 0), u(l), l === 0) {
+      } = e, g = performance.now();
+      if (a || (a = g + U(y)), l = a - g, l < 0 && (l = 0), u(l), l === 0) {
         C(b);
         return;
       }
       t && (o = br(d));
-    }, v = function(g) {
-      g === void 0 && (g = !1), !(t && !g) && (t = !0, a = performance.now() + (l || U(e.time)), d());
+    }, v = function(y) {
+      y === void 0 && (y = !1), !(t && !y) && (t = !0, a = performance.now() + (l || U(e.time)), d());
     }, f = () => {
       t = !1, ml(o);
     }, m = () => {
@@ -5231,18 +5231,18 @@ J.logarithm = J.log = function(e) {
   return ye = !0, me(s, v, f);
 };
 J.minus = J.sub = function(e) {
-  var r, n, a, t, o, l, i, s, u, d, v, f, m = this, g = m.constructor;
-  if (e = new g(e), !m.d || !e.d)
-    return !m.s || !e.s ? e = new g(NaN) : m.d ? e.s = -e.s : e = new g(e.d || m.s !== e.s ? m : NaN), e;
+  var r, n, a, t, o, l, i, s, u, d, v, f, m = this, y = m.constructor;
+  if (e = new y(e), !m.d || !e.d)
+    return !m.s || !e.s ? e = new y(NaN) : m.d ? e.s = -e.s : e = new y(e.d || m.s !== e.s ? m : NaN), e;
   if (m.s != e.s)
     return e.s = -e.s, m.plus(e);
-  if (u = m.d, f = e.d, i = g.precision, s = g.rounding, !u[0] || !f[0]) {
+  if (u = m.d, f = e.d, i = y.precision, s = y.rounding, !u[0] || !f[0]) {
     if (f[0])
       e.s = -e.s;
     else if (u[0])
-      e = new g(m);
+      e = new y(m);
     else
-      return new g(s === 3 ? -0 : 0);
+      return new y(s === 3 ? -0 : 0);
     return ye ? me(e, i, s) : e;
   }
   if (n = tr(e.e / he), d = tr(m.e / he), u = u.slice(), o = d - n, o) {
@@ -5271,7 +5271,7 @@ J.minus = J.sub = function(e) {
     u.pop();
   for (; u[0] === 0; u.shift())
     --n;
-  return u[0] ? (e.d = u, e.e = yo(u, n), ye ? me(e, i, s) : e) : new g(s === 3 ? -0 : 0);
+  return u[0] ? (e.d = u, e.e = yo(u, n), ye ? me(e, i, s) : e) : new y(s === 3 ? -0 : 0);
 };
 J.modulo = J.mod = function(e) {
   var r, n = this, a = n.constructor;
@@ -5373,17 +5373,17 @@ J.toFixed = function(e, r) {
   return e === void 0 ? n = Yr(t) : (mr(e, 0, yn), r === void 0 ? r = o.rounding : mr(r, 0, 8), a = me(new o(t), e + t.e + 1, r), n = Yr(a, !1, e + a.e + 1)), t.isNeg() && !t.isZero() ? "-" + n : n;
 };
 J.toFraction = function(e) {
-  var r, n, a, t, o, l, i, s, u, d, v, f, m = this, g = m.d, b = m.constructor;
-  if (!g)
+  var r, n, a, t, o, l, i, s, u, d, v, f, m = this, y = m.d, b = m.constructor;
+  if (!y)
     return new b(m);
-  if (u = n = new b(1), a = s = new b(0), r = new b(a), o = r.e = Ku(g) - m.e - 1, l = o % he, r.d[0] = Je(10, l < 0 ? he + l : l), e == null)
+  if (u = n = new b(1), a = s = new b(0), r = new b(a), o = r.e = Ku(y) - m.e - 1, l = o % he, r.d[0] = Je(10, l < 0 ? he + l : l), e == null)
     e = o > 0 ? r : u;
   else {
     if (i = new b(e), !i.isInt() || i.lt(u))
       throw Error(cn + i);
     e = i.gt(r) ? o > 0 ? r : u : i;
   }
-  for (ye = !1, i = new b(rr(g)), d = b.precision, b.precision = o = g.length * he * 2; v = Ee(i, r, 0, 1, 1), t = n.plus(v.times(a)), t.cmp(e) != 1; )
+  for (ye = !1, i = new b(rr(y)), d = b.precision, b.precision = o = y.length * he * 2; v = Ee(i, r, 0, 1, 1), t = n.plus(v.times(a)), t.cmp(e) != 1; )
     n = a, a = t, t = u, u = s.plus(v.times(t)), s = t, t = r, r = i.minus(v.times(t)), i = t;
   return t = Ee(e.minus(n), a, 0, 1, 1), s = s.plus(t.times(u)), n = n.plus(t.times(a)), s.s = u.s = m.s, f = Ee(u, a, o, 1).minus(m).abs().cmp(Ee(s, n, o, 1).minus(m).abs()) < 1 ? [u, a] : [s, n], b.precision = d, ye = !0, f;
 };
@@ -5515,7 +5515,7 @@ var Ee = function() {
       a.shift();
   }
   return function(a, t, o, l, i, s) {
-    var u, d, v, f, m, g, b, y, w, O, T, S, M, I, A, p, k, F, L, B, H = a.constructor, E = a.s == t.s ? 1 : -1, z = a.d, j = t.d;
+    var u, d, v, f, m, y, b, g, w, O, T, S, M, I, A, p, k, F, L, B, H = a.constructor, E = a.s == t.s ? 1 : -1, z = a.d, j = t.d;
     if (!z || !z[0] || !j || !j[0])
       return new H(
         // Return NaN if either NaN, or both Infinity or 0.
@@ -5527,29 +5527,29 @@ var Ee = function() {
     for (s ? (m = 1, d = a.e - t.e) : (s = Nr, m = he, d = tr(a.e / m) - tr(t.e / m)), L = j.length, k = z.length, w = new H(E), O = w.d = [], v = 0; j[v] == (z[v] || 0); v++)
       ;
     if (j[v] > (z[v] || 0) && d--, o == null ? (I = o = H.precision, l = H.rounding) : i ? I = o + (a.e - t.e) + 1 : I = o, I < 0)
-      O.push(1), g = !0;
+      O.push(1), y = !0;
     else {
       if (I = I / m + 2 | 0, v = 0, L == 1) {
         for (f = 0, j = j[0], I++; (v < k || f) && I--; v++)
           A = f * s + (z[v] || 0), O[v] = A / j | 0, f = A % j | 0;
-        g = f || v < k;
+        y = f || v < k;
       } else {
         for (f = s / (j[0] + 1) | 0, f > 1 && (j = e(j, f, s), z = e(z, f, s), L = j.length, k = z.length), p = L, T = z.slice(0, L), S = T.length; S < L; )
           T[S++] = 0;
         B = j.slice(), B.unshift(0), F = j[0], j[1] >= s / 2 && ++F;
         do
-          f = 0, u = r(j, T, L, S), u < 0 ? (M = T[0], L != S && (M = M * s + (T[1] || 0)), f = M / F | 0, f > 1 ? (f >= s && (f = s - 1), b = e(j, f, s), y = b.length, S = T.length, u = r(b, T, y, S), u == 1 && (f--, n(b, L < y ? B : j, y, s))) : (f == 0 && (u = f = 1), b = j.slice()), y = b.length, y < S && b.unshift(0), n(T, b, S, s), u == -1 && (S = T.length, u = r(j, T, L, S), u < 1 && (f++, n(T, L < S ? B : j, S, s))), S = T.length) : u === 0 && (f++, T = [0]), O[v++] = f, u && T[0] ? T[S++] = z[p] || 0 : (T = [z[p]], S = 1);
+          f = 0, u = r(j, T, L, S), u < 0 ? (M = T[0], L != S && (M = M * s + (T[1] || 0)), f = M / F | 0, f > 1 ? (f >= s && (f = s - 1), b = e(j, f, s), g = b.length, S = T.length, u = r(b, T, g, S), u == 1 && (f--, n(b, L < g ? B : j, g, s))) : (f == 0 && (u = f = 1), b = j.slice()), g = b.length, g < S && b.unshift(0), n(T, b, S, s), u == -1 && (S = T.length, u = r(j, T, L, S), u < 1 && (f++, n(T, L < S ? B : j, S, s))), S = T.length) : u === 0 && (f++, T = [0]), O[v++] = f, u && T[0] ? T[S++] = z[p] || 0 : (T = [z[p]], S = 1);
         while ((p++ < k || T[0] !== void 0) && I--);
-        g = T[0] !== void 0;
+        y = T[0] !== void 0;
       }
       O[0] || O.shift();
     }
     if (m == 1)
-      w.e = d, ju = g;
+      w.e = d, ju = y;
     else {
       for (v = 1, f = O[0]; f >= 10; f /= 10)
         v++;
-      w.e = v + d * m - 1, me(w, i ? o + w.e + 1 : o, l, g);
+      w.e = v + d * m - 1, me(w, i ? o + w.e + 1 : o, l, y);
     }
     return w;
   };
@@ -5660,10 +5660,10 @@ function Ju(e, r, n) {
   return t;
 }
 function ui(e, r) {
-  var n, a, t, o, l, i, s, u = 0, d = 0, v = 0, f = e.constructor, m = f.rounding, g = f.precision;
+  var n, a, t, o, l, i, s, u = 0, d = 0, v = 0, f = e.constructor, m = f.rounding, y = f.precision;
   if (!e.d || !e.d[0] || e.e > 17)
     return new f(e.d ? e.d[0] ? e.s < 0 ? 0 : 1 / 0 : 1 : e.s ? e.s < 0 ? 0 : e : 0 / 0);
-  for (r == null ? (ye = !1, s = g) : s = r, i = new f(0.03125); e.e > -2; )
+  for (r == null ? (ye = !1, s = y) : s = r, i = new f(0.03125); e.e > -2; )
     e = e.times(i), v += 5;
   for (a = Math.log(Je(2, v)) / Math.LN10 * 2 + 5 | 0, s += a, n = o = l = new f(1), f.precision = s; ; ) {
     if (o = me(o.times(e), s, 1), n = n.times(++d), i = l.plus(Ee(o, n, s, 1)), rr(i.d).slice(0, s) === rr(l.d).slice(0, s)) {
@@ -5673,28 +5673,28 @@ function ui(e, r) {
         if (u < 3 && Da(l.d, s - a, m, u))
           f.precision = s += 10, n = o = i = new f(1), d = 0, u++;
         else
-          return me(l, f.precision = g, m, ye = !0);
+          return me(l, f.precision = y, m, ye = !0);
       else
-        return f.precision = g, l;
+        return f.precision = y, l;
     }
     l = i;
   }
 }
 function on(e, r) {
-  var n, a, t, o, l, i, s, u, d, v, f, m = 1, g = 10, b = e, y = b.d, w = b.constructor, O = w.rounding, T = w.precision;
-  if (b.s < 0 || !y || !y[0] || !b.e && y[0] == 1 && y.length == 1)
-    return new w(y && !y[0] ? -1 / 0 : b.s != 1 ? NaN : y ? 0 : b);
-  if (r == null ? (ye = !1, d = T) : d = r, w.precision = d += g, n = rr(y), a = n.charAt(0), Math.abs(o = b.e) < 15e14) {
+  var n, a, t, o, l, i, s, u, d, v, f, m = 1, y = 10, b = e, g = b.d, w = b.constructor, O = w.rounding, T = w.precision;
+  if (b.s < 0 || !g || !g[0] || !b.e && g[0] == 1 && g.length == 1)
+    return new w(g && !g[0] ? -1 / 0 : b.s != 1 ? NaN : g ? 0 : b);
+  if (r == null ? (ye = !1, d = T) : d = r, w.precision = d += y, n = rr(g), a = n.charAt(0), Math.abs(o = b.e) < 15e14) {
     for (; a < 7 && a != 1 || a == 1 && n.charAt(1) > 3; )
       b = b.times(e), n = rr(b.d), a = n.charAt(0), m++;
     o = b.e, a > 1 ? (b = new w("0." + n), o++) : b = new w(a + "." + n.slice(1));
   } else
-    return u = no(w, d + 2, T).times(o + ""), b = on(new w(a + "." + n.slice(1)), d - g).plus(u), w.precision = T, r == null ? me(b, T, O, ye = !0) : b;
+    return u = no(w, d + 2, T).times(o + ""), b = on(new w(a + "." + n.slice(1)), d - y).plus(u), w.precision = T, r == null ? me(b, T, O, ye = !0) : b;
   for (v = b, s = l = b = Ee(b.minus(1), b.plus(1), d, 1), f = me(b.times(b), d, 1), t = 3; ; ) {
     if (l = me(l.times(f), d, 1), u = s.plus(Ee(l, new w(t), d, 1)), rr(u.d).slice(0, d) === rr(s.d).slice(0, d))
       if (s = s.times(2), o !== 0 && (s = s.plus(no(w, d + 2, T).times(o + ""))), s = Ee(s, new w(m), d, 1), r == null)
-        if (Da(s.d, d - g, O, i))
-          w.precision = d += g, u = l = b = Ee(v.minus(1), v.plus(1), d, 1), f = me(b.times(b), d, 1), t = i = 1;
+        if (Da(s.d, d - y, O, i))
+          w.precision = d += y, u = l = b = Ee(v.minus(1), v.plus(1), d, 1), f = me(b.times(b), d, 1), t = i = 1;
         else
           return me(s, w.precision = T, O, ye = !0);
       else
@@ -5785,14 +5785,14 @@ function _u(e, r) {
   return r.minus(t).abs();
 }
 function Gi(e, r, n, a) {
-  var t, o, l, i, s, u, d, v, f, m = e.constructor, g = n !== void 0;
-  if (g ? (mr(n, 1, yn), a === void 0 ? a = m.rounding : mr(a, 0, 8)) : (n = m.precision, a = m.rounding), !e.isFinite())
+  var t, o, l, i, s, u, d, v, f, m = e.constructor, y = n !== void 0;
+  if (y ? (mr(n, 1, yn), a === void 0 ? a = m.rounding : mr(a, 0, 8)) : (n = m.precision, a = m.rounding), !e.isFinite())
     d = Qu(e);
   else {
-    for (d = Yr(e), l = d.indexOf("."), g ? (t = 2, r == 16 ? n = n * 4 - 3 : r == 8 && (n = n * 3 - 2)) : t = r, l >= 0 && (d = d.replace(".", ""), f = new m(1), f.e = d.length - l, f.d = Wt(Yr(f), 10, t), f.e = f.d.length), v = Wt(d, 10, t), o = s = v.length; v[--s] == 0; )
+    for (d = Yr(e), l = d.indexOf("."), y ? (t = 2, r == 16 ? n = n * 4 - 3 : r == 8 && (n = n * 3 - 2)) : t = r, l >= 0 && (d = d.replace(".", ""), f = new m(1), f.e = d.length - l, f.d = Wt(Yr(f), 10, t), f.e = f.d.length), v = Wt(d, 10, t), o = s = v.length; v[--s] == 0; )
       v.pop();
     if (!v[0])
-      d = g ? "0p+0" : "0";
+      d = y ? "0p+0" : "0";
     else {
       if (l < 0 ? o-- : (e = new m(e), e.d = v, e.e = o, e = Ee(e, f, n, a, 0, t), v = e.d, o = e.e, u = ju), l = v[n], i = t / 2, u = u || v[n + 1] !== void 0, u = a < 4 ? (l !== void 0 || u) && (a === 0 || a === (e.s < 0 ? 3 : 2)) : l > i || l === i && (a === 4 || u || a === 6 && v[n - 1] & 1 || a === (e.s < 0 ? 8 : 7)), v.length = n, u)
         for (; ++v[--n] > t - 1; )
@@ -5801,7 +5801,7 @@ function Gi(e, r, n, a) {
         ;
       for (l = 0, d = ""; l < s; l++)
         d += ii.charAt(v[l]);
-      if (g) {
+      if (y) {
         if (s > 1)
           if (r == 16 || r == 8) {
             for (l = r == 16 ? 4 : 3, --s; s % l; s++)
@@ -6262,7 +6262,7 @@ var ed = ee({
     } = Or(), {
       readonly: s,
       disabled: u
-    } = a ?? {}, d, v, f, m, g = () => l(e.rules, e.modelValue), b = (j) => {
+    } = a ?? {}, d, v, f, m, y = () => l(e.rules, e.modelValue), b = (j) => {
       Ae(() => {
         var {
           validateTrigger: q,
@@ -6271,14 +6271,14 @@ var ed = ee({
         } = e;
         o(q, j, ne, V);
       });
-    }, y = () => {
+    }, g = () => {
       var {
         min: j
       } = e;
       C(e["onUpdate:modelValue"], j != null ? U(j) : 0), i();
     }, w = {
-      reset: y,
-      validate: g,
+      reset: g,
+      validate: y,
       resetValidation: i
     }, O = R(() => {
       var {
@@ -6386,8 +6386,8 @@ var ed = ee({
       formReadonly: s,
       isMax: O,
       isMin: T,
-      validate: g,
-      reset: y,
+      validate: y,
+      reset: g,
       resetValidation: i,
       handleChange: M,
       decrement: I,
@@ -6545,7 +6545,7 @@ var Hh = function(r) {
       case Br:
         return l ? s(1, v) : s(0, v + 1);
       case Gt: {
-        var g = this.$locale().weekStart || 0, b = (d < g ? d + 7 : d) - g;
+        var y = this.$locale().weekStart || 0, b = (d < y ? d + 7 : d) - y;
         return s(l ? f - b : f + (6 - b), v);
       }
       case xr:
@@ -6597,11 +6597,11 @@ var Hh = function(r) {
     var t = this, o = this.$locale();
     if (!this.isValid())
       return o.invalidDate || Dl;
-    var l = a || Ih, i = Be.z(this), s = this.$H, u = this.$m, d = this.$M, v = o.weekdays, f = o.months, m = o.meridiem, g = function(T, S, M, I) {
+    var l = a || Ih, i = Be.z(this), s = this.$H, u = this.$m, d = this.$M, v = o.weekdays, f = o.months, m = o.meridiem, y = function(T, S, M, I) {
       return T && (T[S] || T(t, l)) || M[S].slice(0, I);
     }, b = function(T) {
       return Be.s(s % 12 || 12, T, "0");
-    }, y = m || function(O, T, S) {
+    }, g = m || function(O, T, S) {
       var M = O < 12 ? "AM" : "PM";
       return S ? M.toLowerCase() : M;
     }, w = {
@@ -6609,20 +6609,20 @@ var Hh = function(r) {
       YYYY: this.$y,
       M: d + 1,
       MM: Be.s(d + 1, 2, "0"),
-      MMM: g(o.monthsShort, d, f, 3),
-      MMMM: g(f, d),
+      MMM: y(o.monthsShort, d, f, 3),
+      MMMM: y(f, d),
       D: this.$D,
       DD: Be.s(this.$D, 2, "0"),
       d: String(this.$W),
-      dd: g(o.weekdaysMin, this.$W, v, 2),
-      ddd: g(o.weekdaysShort, this.$W, v, 3),
+      dd: y(o.weekdaysMin, this.$W, v, 2),
+      ddd: y(o.weekdaysShort, this.$W, v, 3),
       dddd: v[this.$W],
       H: String(s),
       HH: Be.s(s, 2, "0"),
       h: b(1),
       hh: b(2),
-      a: y(s, u, !0),
-      A: y(s, u, !1),
+      a: g(s, u, !0),
+      A: g(s, u, !1),
       m: String(u),
       mm: Be.s(u, 2, "0"),
       s: String(this.$s),
@@ -7047,7 +7047,7 @@ var dd = ee({
         return p && k;
       }
       return I === "month" ? T.includes(O) : S.some((F) => F.includes(O));
-    }, g = (O) => {
+    }, y = (O) => {
       var {
         choose: {
           chooseMonth: T
@@ -7074,7 +7074,7 @@ var dd = ee({
     }, b = (O, T) => {
       var S = T.currentTarget;
       S.classList.contains(Lt("button--disabled")) || n("choose-month", O);
-    }, y = (O) => {
+    }, g = (O) => {
       o.value = O === "prev", l.value += O === "prev" ? -1 : 1, n("check-preview", "year", O);
     }, w = (O) => {
       i.value.checkDate(O);
@@ -7099,10 +7099,10 @@ var dd = ee({
       panelKey: l,
       panelBtnDisabled: s,
       forwardRef: w,
-      buttonProps: g,
+      buttonProps: y,
       getMonthAbbr: v,
       chooseMonth: b,
-      checkDate: y
+      checkDate: g
     };
   }
 });
@@ -7172,8 +7172,8 @@ var vd = ee({
         if (m < u[0] && m > u[1] && (u = [u[0], m]), m >= u[0])
           return [m];
       }
-      for (var g = u[0]; g >= u[1]; g--)
-        o.push(g);
+      for (var y = u[0]; y >= u[1]; y--)
+        o.push(y);
       return o;
     }), t = (o) => {
       n("choose-year", o);
@@ -7342,10 +7342,10 @@ var fd = ee({
     }), m = R(() => {
       var p = sa.findIndex((k) => k.index === e.componentProps.firstDayOfWeek);
       return p === -1 || p === 0 ? sa : sa.slice(p).concat(sa.slice(0, p));
-    }), g = (p) => {
+    }), y = (p) => {
       var k, F;
       return (k = (F = _e.value.datePickerWeekDict) == null ? void 0 : F[p].abbr) != null ? k : "";
-    }, b = (p) => p > 0 ? p : "", y = () => {
+    }, b = (p) => p > 0 ? p : "", g = () => {
       var {
         preview: {
           previewMonth: p,
@@ -7442,9 +7442,9 @@ var fd = ee({
       u.value.checkDate(p);
     };
     return or(() => {
-      y(), w();
+      g(), w();
     }), se(() => e.preview, () => {
-      y(), w();
+      g(), w();
     }), {
       n: Nn,
       nDate: Ut,
@@ -7456,7 +7456,7 @@ var fd = ee({
       panelBtnDisabled: d,
       forwardRef: A,
       filterDay: b,
-      getDayAbbr: g,
+      getDayAbbr: y,
       checkDate: M,
       chooseDay: I,
       buttonProps: S
@@ -7628,7 +7628,7 @@ var cd = ee({
   },
   props: jh,
   setup(e) {
-    var r = 0, n = 0, a = "", t, o = de().format("YYYY-MM-D"), [l, i] = o.split("-"), s = qt.find((ue) => ue.index === i), u = P(!1), d = P(!1), v = P(!0), f = P(), m = P(), g = P(), b = P(s), y = P(l), w = P(!1), O = P([]), T = P([]), S = P([]), M = P([]), I = P(null), A = P(null), p = Re({
+    var r = 0, n = 0, a = "", t, o = de().format("YYYY-MM-D"), [l, i] = o.split("-"), s = qt.find((ue) => ue.index === i), u = P(!1), d = P(!1), v = P(!0), f = P(), m = P(), y = P(), b = P(s), g = P(l), w = P(!1), O = P([]), T = P([]), S = P([]), M = P([]), I = P(null), A = P(null), p = Re({
       allowedDates: e.allowedDates,
       type: e.type,
       color: e.color,
@@ -7642,14 +7642,14 @@ var cd = ee({
     }), k = R(() => ({
       chooseMonth: f.value,
       chooseYear: m.value,
-      chooseDay: g.value,
+      chooseDay: y.value,
       chooseMonths: O.value,
       chooseDays: T.value,
       chooseRangeMonth: S.value,
       chooseRangeDay: M.value
     })), F = R(() => ({
       previewMonth: b.value,
-      previewYear: y.value
+      previewYear: g.value
     })), L = R(() => {
       var {
         multiple: ue,
@@ -7674,19 +7674,19 @@ var cd = ee({
       }
       if (Pe)
         return "" + T.value.length + _e.value.datePickerSelected;
-      if (!m.value || !f.value || !g.value)
+      if (!m.value || !f.value || !y.value)
         return "";
-      var wr = de(m.value + "-" + f.value.index + "-" + g.value).day(), En = sa.find((Vo) => Vo.index === "" + wr), ol = (ue = (Ce = _e.value.datePickerWeekDict) == null ? void 0 : Ce[En.index].name) != null ? ue : "", Gv = (ge = (Te = _e.value.datePickerMonthDict) == null ? void 0 : Te[f.value.index].name) != null ? ge : "", qv = Sn(g.value, 2, "0");
-      return _e.value.lang === "zh-CN" ? f.value.index + "-" + qv + " " + ol.slice(0, 3) : ol.slice(0, 3) + ", " + Gv.slice(0, 3) + " " + g.value;
+      var wr = de(m.value + "-" + f.value.index + "-" + y.value).day(), En = sa.find((Vo) => Vo.index === "" + wr), ol = (ue = (Ce = _e.value.datePickerWeekDict) == null ? void 0 : Ce[En.index].name) != null ? ue : "", Gv = (ge = (Te = _e.value.datePickerMonthDict) == null ? void 0 : Te[f.value.index].name) != null ? ge : "", qv = Sn(y.value, 2, "0");
+      return _e.value.lang === "zh-CN" ? f.value.index + "-" + qv + " " + ol.slice(0, 3) : ol.slice(0, 3) + ", " + Gv.slice(0, 3) + " " + y.value;
     }), H = R(() => u.value ? "year" : e.type === "month" || d.value ? "month" : e.type === "date" ? "date" : ""), E = R(() => !e.touchable || ["", "year"].includes(H.value)), z = R(() => {
-      var ue, Ce, ge, Te, Pe = de(m.value + "-" + ((ue = f.value) == null ? void 0 : ue.index) + "-" + g.value).day(), Ye = g.value ? Sn(g.value, 2, "0") : "";
+      var ue, Ce, ge, Te, Pe = de(m.value + "-" + ((ue = f.value) == null ? void 0 : ue.index) + "-" + y.value).day(), Ye = y.value ? Sn(y.value, 2, "0") : "";
       return {
         week: "" + Pe,
         year: (Ce = m.value) != null ? Ce : "",
         month: (ge = (Te = f.value) == null ? void 0 : Te.index) != null ? ge : "",
         date: Ye
       };
-    }), j = R(() => k.value.chooseRangeDay.map((ue) => de(ue).format("YYYY-MM-DD"))), q = R(() => m.value === y.value), ne = R(() => {
+    }), j = R(() => k.value.chooseRangeDay.map((ue) => de(ue).format("YYYY-MM-DD"))), q = R(() => m.value === g.value), ne = R(() => {
       var ue;
       return ((ue = f.value) == null ? void 0 : ue.index) === b.value.index;
     }), V = (ue) => {
@@ -7723,7 +7723,7 @@ var cd = ee({
     }, _ = (ue, Ce) => {
       var ge = Ce === "month" ? O : T, Te = Ce === "month" ? "YYYY-MM" : "YYYY-MM-DD", Pe = ge.value.map((sr) => de(sr).format(Te)), Ye = Pe.findIndex((sr) => sr === ue);
       Ye === -1 ? Pe.push(ue) : Pe.splice(Ye, 1), C(e["onUpdate:modelValue"], Pe), C(e.onChange, Pe);
-    }, ve = (ue, Ce) => !m.value || !f.value ? !1 : q.value ? ue === "month" ? Ce.index < f.value.index : ne.value ? Ce < U(g.value) : f.value.index > b.value.index : m.value > y.value, Se = (ue) => {
+    }, ve = (ue, Ce) => !m.value || !f.value ? !1 : q.value ? ue === "month" ? Ce.index < f.value.index : ne.value ? Ce < U(y.value) : f.value.index > b.value.index : m.value > g.value, Se = (ue) => {
       var {
         readonly: Ce,
         range: ge,
@@ -7733,7 +7733,7 @@ var cd = ee({
       } = e;
       if (!(ue < 0 || Ce)) {
         w.value = ve("day", ue);
-        var sr = y.value + "-" + b.value.index + "-" + ue, wr = de(sr).format("YYYY-MM-DD");
+        var sr = g.value + "-" + b.value.index + "-" + ue, wr = de(sr).format("YYYY-MM-DD");
         ge ? Z(wr, "day") : Te ? _(wr, "day") : (C(Ye, wr), C(Pe, wr));
       }
     }, Ie = (ue) => {
@@ -7747,22 +7747,22 @@ var cd = ee({
         "onUpdate:modelValue": wr
       } = e;
       if (w.value = ve("month", ue), Ce === "month" && !ge) {
-        var En = y.value + "-" + ue.index;
+        var En = g.value + "-" + ue.index;
         Te ? Z(En, "month") : Pe ? _(En, "month") : (C(wr, En), C(Ye, En));
       } else
-        b.value = ue, C(sr, U(y.value), U(b.value.index));
+        b.value = ue, C(sr, U(g.value), U(b.value.index));
       d.value = !1;
     }, ie = (ue) => {
-      y.value = "" + ue, u.value = !1, d.value = !0, C(e.onPreview, U(y.value), U(b.value.index));
+      g.value = "" + ue, u.value = !1, d.value = !0, C(e.onPreview, U(g.value), U(b.value.index));
     }, fe = (ue, Ce) => {
       var ge = Ce === "prev" ? -1 : 1;
       if (ue === "year")
-        y.value = "" + (U(y.value) + ge);
+        g.value = "" + (U(g.value) + ge);
       else {
         var Te = U(b.value.index) + ge;
-        Te < 1 && (y.value = "" + (U(y.value) - 1), Te = 12), Te > 12 && (y.value = "" + (U(y.value) + 1), Te = 1), b.value = qt.find((Pe) => U(Pe.index) === Te);
+        Te < 1 && (g.value = "" + (U(g.value) - 1), Te = 12), Te > 12 && (g.value = "" + (U(g.value) + 1), Te = 1), b.value = qt.find((Pe) => U(Pe.index) === Te);
       }
-      C(e.onPreview, U(y.value), U(b.value.index));
+      C(e.onPreview, U(g.value), U(b.value.index));
     }, pe = () => (e.multiple || e.range) && !Ve(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be an Array'), !1) : !e.multiple && !e.range && Ve(e.modelValue) ? (console.error('[Varlet] DatePicker: type of prop "modelValue" should be a String'), !1) : !0, Oe = (ue) => Ve(ue) ? !1 : ue === "Invalid Date" ? (console.error('[Varlet] DatePicker: "modelValue" is an Invalid Date'), !0) : !1, je = (ue, Ce) => {
       var ge = Ce === "month" ? S : M, Te = Ce === "month" ? "YYYY-MM" : "YYYY-MM-D", Pe = ue.map((wr) => de(wr).format(Te)).slice(0, 2), Ye = ge.value.some((wr) => Oe(wr));
       if (!Ye) {
@@ -7777,7 +7777,7 @@ var cd = ee({
       var Ce = de(ue).format("YYYY-MM-D");
       if (!Oe(Ce)) {
         var [ge, Te, Pe] = Ce.split("-"), Ye = qt.find((sr) => sr.index === Te);
-        f.value = Ye, m.value = ge, g.value = Pe, b.value = Ye, y.value = ge;
+        f.value = Ye, m.value = ge, y.value = Pe, b.value = Ye, g.value = ge;
       }
     }, Ge = () => {
       n = 0, r = 0, a = "", t = void 0;
@@ -7805,8 +7805,8 @@ var cd = ee({
       currentDate: o,
       chooseMonth: f,
       chooseYear: m,
-      chooseDay: g,
-      previewYear: y,
+      chooseDay: y,
+      previewYear: g,
       isYearPanel: u,
       isMonthPanel: d,
       getMonthTitle: L,
@@ -8383,16 +8383,16 @@ var hd = ee({
       right: 0
     }), i = P(!1), s = P(!1), u = P(!1), {
       disabled: d
-    } = oa(), v = !1, f = 0, m = 0, g = null, b = (B) => {
+    } = oa(), v = !1, f = 0, m = 0, y = null, b = (B) => {
       if (!e.disabled) {
-        g && window.clearTimeout(g);
+        y && window.clearTimeout(y);
         var {
           clientX: H,
           clientY: E
         } = B.touches[0];
         T(), f = H, m = E, v = !0, u.value = !1;
       }
-    }, y = /* @__PURE__ */ function() {
+    }, g = /* @__PURE__ */ function() {
       var B = hg(function* (H) {
         if (!(!v || e.disabled)) {
           H.preventDefault(), s.value = !1, i.value = !0, u.value = !0;
@@ -8407,7 +8407,7 @@ var hd = ee({
         return B.apply(this, arguments);
       };
     }(), w = () => {
-      e.disabled || (v = !1, s.value = !0, I(), g = window.setTimeout(() => {
+      e.disabled || (v = !1, s.value = !0, I(), y = window.setTimeout(() => {
         u.value = !1;
       }));
     }, O = (B) => {
@@ -8510,7 +8510,7 @@ var hd = ee({
       classes: yg,
       getAttrs: k,
       handleTouchstart: b,
-      handleTouchmove: y,
+      handleTouchmove: g,
       handleTouchend: w,
       handleClick: O,
       resize: F,
@@ -8812,7 +8812,7 @@ function Wg(e, r) {
 }
 function Sd(e, r) {
   r === void 0 && (r = {});
-  var n = r, a = n.placement, t = a === void 0 ? e.placement : a, o = n.strategy, l = o === void 0 ? e.strategy : o, i = n.boundary, s = i === void 0 ? Cg : i, u = n.rootBoundary, d = u === void 0 ? gd : u, v = n.elementContext, f = v === void 0 ? ia : v, m = n.altBoundary, g = m === void 0 ? !1 : m, b = n.padding, y = b === void 0 ? 0 : b, w = jg(typeof y != "number" ? y : Wg(y, So)), O = f === ia ? Sg : ia, T = e.rects.popper, S = e.elements[g ? O : f], M = Yg($n(S) ? S : S.contextElement || bn(e.elements.popper), s, d, l), I = Zn(e.elements.reference), A = Cd({
+  var n = r, a = n.placement, t = a === void 0 ? e.placement : a, o = n.strategy, l = o === void 0 ? e.strategy : o, i = n.boundary, s = i === void 0 ? Cg : i, u = n.rootBoundary, d = u === void 0 ? gd : u, v = n.elementContext, f = v === void 0 ? ia : v, m = n.altBoundary, y = m === void 0 ? !1 : m, b = n.padding, g = b === void 0 ? 0 : b, w = jg(typeof g != "number" ? g : Wg(g, So)), O = f === ia ? Sg : ia, T = e.rects.popper, S = e.elements[y ? O : f], M = Yg($n(S) ? S : S.contextElement || bn(e.elements.popper), s, d, l), I = Zn(e.elements.reference), A = Cd({
     reference: I,
     element: T,
     strategy: "absolute",
@@ -8834,22 +8834,22 @@ function Sd(e, r) {
 }
 function Gg(e, r) {
   r === void 0 && (r = {});
-  var n = r, a = n.placement, t = n.boundary, o = n.rootBoundary, l = n.padding, i = n.flipVariations, s = n.allowedAutoPlacements, u = s === void 0 ? yd : s, d = Ua(a), v = d ? i ? Ll : Ll.filter(function(g) {
-    return Ua(g) === d;
-  }) : So, f = v.filter(function(g) {
-    return u.indexOf(g) >= 0;
+  var n = r, a = n.placement, t = n.boundary, o = n.rootBoundary, l = n.padding, i = n.flipVariations, s = n.allowedAutoPlacements, u = s === void 0 ? yd : s, d = Ua(a), v = d ? i ? Ll : Ll.filter(function(y) {
+    return Ua(y) === d;
+  }) : So, f = v.filter(function(y) {
+    return u.indexOf(y) >= 0;
   });
   f.length === 0 && (f = v, process.env.NODE_ENV !== "production" && console.error(["Popper: The `allowedAutoPlacements` option did not allow any", "placements. Ensure the `placement` option matches the variation", "of the allowed placements.", 'For example, "auto" cannot be used to allow "bottom-start".', 'Use "auto-start" instead.'].join(" ")));
-  var m = f.reduce(function(g, b) {
-    return g[b] = Sd(e, {
+  var m = f.reduce(function(y, b) {
+    return y[b] = Sd(e, {
       placement: b,
       boundary: t,
       rootBoundary: o,
       padding: l
-    })[Gr(b)], g;
+    })[Gr(b)], y;
   }, {});
-  return Object.keys(m).sort(function(g, b) {
-    return m[g] - m[b];
+  return Object.keys(m).sort(function(y, b) {
+    return m[y] - m[b];
   });
 }
 function qg(e) {
@@ -8861,13 +8861,13 @@ function qg(e) {
 function Xg(e) {
   var r = e.state, n = e.options, a = e.name;
   if (!r.modifiersData[a]._skip) {
-    for (var t = n.mainAxis, o = t === void 0 ? !0 : t, l = n.altAxis, i = l === void 0 ? !0 : l, s = n.fallbackPlacements, u = n.padding, d = n.boundary, v = n.rootBoundary, f = n.altBoundary, m = n.flipVariations, g = m === void 0 ? !0 : m, b = n.allowedAutoPlacements, y = r.options.placement, w = Gr(y), O = w === y, T = s || (O || !g ? [Xt(y)] : qg(y)), S = [y].concat(T).reduce(function(Z, _) {
+    for (var t = n.mainAxis, o = t === void 0 ? !0 : t, l = n.altAxis, i = l === void 0 ? !0 : l, s = n.fallbackPlacements, u = n.padding, d = n.boundary, v = n.rootBoundary, f = n.altBoundary, m = n.flipVariations, y = m === void 0 ? !0 : m, b = n.allowedAutoPlacements, g = r.options.placement, w = Gr(g), O = w === g, T = s || (O || !y ? [Xt(g)] : qg(g)), S = [g].concat(T).reduce(function(Z, _) {
       return Z.concat(Gr(_) === Co ? Gg(r, {
         placement: _,
         boundary: d,
         rootBoundary: v,
         padding: u,
-        flipVariations: g,
+        flipVariations: y,
         allowedAutoPlacements: b
       }) : _);
     }, []), M = r.rects.reference, I = r.rects.popper, A = /* @__PURE__ */ new Map(), p = !0, k = S[0], F = 0; F < S.length; F++) {
@@ -8889,7 +8889,7 @@ function Xg(e) {
       A.set(L, V);
     }
     if (p)
-      for (var N = g ? 3 : 1, X = function(_) {
+      for (var N = y ? 3 : 1, X = function(_) {
         var ve = S.find(function(Se) {
           var Ie = A.get(Se);
           if (Ie)
@@ -8956,14 +8956,14 @@ function xg(e) {
   };
 }
 function Fl(e) {
-  var r, n = e.popper, a = e.popperRect, t = e.placement, o = e.variation, l = e.offsets, i = e.position, s = e.gpuAcceleration, u = e.adaptive, d = e.roundOffsets, v = e.isFixed, f = l.x, m = f === void 0 ? 0 : f, g = l.y, b = g === void 0 ? 0 : g, y = typeof d == "function" ? d({
+  var r, n = e.popper, a = e.popperRect, t = e.placement, o = e.variation, l = e.offsets, i = e.position, s = e.gpuAcceleration, u = e.adaptive, d = e.roundOffsets, v = e.isFixed, f = l.x, m = f === void 0 ? 0 : f, y = l.y, b = y === void 0 ? 0 : y, g = typeof d == "function" ? d({
     x: m,
     y: b
   }) : {
     x: m,
     y: b
   };
-  m = y.x, b = y.y;
+  m = g.x, b = g.y;
   var w = l.hasOwnProperty("x"), O = l.hasOwnProperty("y"), T = sn, S = Wr, M = window;
   if (u) {
     var I = _i(n), A = "clientHeight", p = "clientWidth";
@@ -9243,7 +9243,7 @@ function my(e) {
             return parseFloat(L);
           }) && console.warn(['Popper: CSS "margin" styles cannot be used to apply padding', "between the popper and its reference element or boundary.", "To replicate margin, use the `offset` modifier, as well as", "the `padding` option in the `preventOverflow` and `flip`", "modifiers."].join(" "));
         }
-        return g(), m.update();
+        return y(), m.update();
       },
       // Sync update – it will always be executed, even if not necessary. This
       // is useful for low frequency updates where sync behavior simplifies the
@@ -9285,8 +9285,8 @@ function my(e) {
       // Async and optimistically optimized update – it will not be executed if
       // not necessary (debounced to run at most once-per-tick)
       update: sy(function() {
-        return new Promise(function(y) {
-          m.forceUpdate(), y(d);
+        return new Promise(function(g) {
+          m.forceUpdate(), g(d);
         });
       }),
       destroy: function() {
@@ -9295,12 +9295,12 @@ function my(e) {
     };
     if (!ql(i, s))
       return process.env.NODE_ENV !== "production" && console.error(Wl), m;
-    m.setOptions(u).then(function(y) {
-      !f && u.onFirstUpdate && u.onFirstUpdate(y);
+    m.setOptions(u).then(function(g) {
+      !f && u.onFirstUpdate && u.onFirstUpdate(g);
     });
-    function g() {
-      d.orderedModifiers.forEach(function(y) {
-        var w = y.name, O = y.options, T = O === void 0 ? {} : O, S = y.effect;
+    function y() {
+      d.orderedModifiers.forEach(function(g) {
+        var w = g.name, O = g.options, T = O === void 0 ? {} : O, S = g.effect;
         if (typeof S == "function") {
           var M = S({
             state: d,
@@ -9314,8 +9314,8 @@ function my(e) {
       });
     }
     function b() {
-      v.forEach(function(y) {
-        return y();
+      v.forEach(function(g) {
+        return g();
       }), v = [];
     }
     return m;
@@ -9501,7 +9501,7 @@ function $d(e) {
     };
   }(), m = () => {
     e.trigger === "hover" && (i = !0);
-  }, g = /* @__PURE__ */ function() {
+  }, y = /* @__PURE__ */ function() {
     var k = Kl(function* () {
       e.trigger === "hover" && (i = !1, yield Dr(), !s && p());
     });
@@ -9510,10 +9510,10 @@ function $d(e) {
     };
   }(), b = () => {
     e.closeOnClickReference && t.value ? p() : A();
-  }, y = () => {
+  }, g = () => {
     p();
   }, w = (k) => {
-    e.trigger === "click" && (y(), C(e.onClickOutside, k));
+    e.trigger === "click" && (g(), C(e.onClickOutside, k));
   }, O = () => {
     I(), C(e.onClosed);
   }, T = () => {
@@ -9666,9 +9666,9 @@ function $d(e) {
     handleHostClick: b,
     handleHostMouseenter: v,
     handleHostMouseleave: f,
-    handlePopoverClose: y,
+    handlePopoverClose: g,
     handlePopoverMouseenter: m,
-    handlePopoverMouseleave: g,
+    handlePopoverMouseleave: y,
     handleClosed: O,
     resize: I,
     open: A,
@@ -9844,11 +9844,11 @@ var Td = ee({
       handlePopoverClose: f,
       handleClosed: m,
       // expose
-      open: g,
+      open: y,
       // expose
       close: b,
       // expose
-      resize: y
+      resize: g
     } = $d(e);
     return {
       toSizeUnit: be,
@@ -9867,8 +9867,8 @@ var Td = ee({
       handlePopoverMouseenter: d,
       handlePopoverMouseleave: v,
       handleClosed: m,
-      resize: y,
-      open: g,
+      resize: g,
+      open: y,
       close: b
     };
   }
@@ -10097,13 +10097,12 @@ const Ha = ee({
       slots: n,
       attrs: a
     } = r, t = Us(e, "active"), o = P(null), l = P(null), i = (v, f, m) => {
-      var g;
       if (v.stopPropagation(), !(e.trigger !== "click" || e.disabled)) {
         if (m === 0) {
           C(e.onClick, t.value, v);
           return;
         }
-        (g = l.value) != null && g.dragging || (t.value = f, C(e.onClick, t.value, v), C(t.value ? e.onOpen : e.onClose));
+        t.value = f, C(e.onClick, t.value, v), C(t.value ? e.onOpen : e.onClose);
       }
     }, s = (v, f) => {
       e.trigger !== "hover" || e.disabled || f === 0 || (t.value = v, C(t.value ? e.onOpen : e.onClose));
@@ -10137,7 +10136,7 @@ const Ha = ee({
       var v;
       (v = l.value) == null || v.reset();
     }), Ls(o, "click", u), () => {
-      var v, f, m = Rs((f = C(n.default)) != null ? f : []), g = Bi(e.drag) ? {} : e.drag;
+      var v, f, m = Rs((f = C(n.default)) != null ? f : []), y = Bi(e.drag) ? {} : e.drag;
       return Q(Xn, De({
         ref: l,
         class: Eo(hr("--position-" + e.position), [!e.fixed, hr("--absolute")]),
@@ -10150,14 +10149,15 @@ const Ha = ee({
         zIndex: e.zIndex,
         teleport: e.teleport,
         disabled: e.disabled || !e.drag || !e.fixed,
-        direction: g.direction,
-        attraction: g.attraction,
-        boundary: g.boundary
-      }, a), {
+        direction: y.direction,
+        attraction: y.attraction,
+        boundary: y.boundary
+      }, a, {
+        onClick: (b) => i(b, !t.value, m.length)
+      }), {
         default: () => [Q("div", {
           class: Eo(hr(), hr("--direction-" + e.direction), [e.safeArea, hr("--safe-area")]),
           ref: o,
-          onClick: (b) => i(b, !t.value, m.length),
           onMouseleave: () => s(!1, m.length),
           onMouseenter: () => s(!0, m.length)
         }, [Q(Ue, {
@@ -10258,21 +10258,21 @@ var Od = ee({
       }, 300);
     }, l = /* @__PURE__ */ function() {
       var d = Gy(function* () {
-        var v = yield Promise.all(a.map((y) => {
+        var v = yield Promise.all(a.map((g) => {
           var {
             validate: w
-          } = y;
+          } = g;
           return w();
         }));
         if (e.scrollToError) {
-          var [, f] = tf(v, (y) => y === !1, e.scrollToError), m = f > -1;
+          var [, f] = tf(v, (g) => g === !1, e.scrollToError), m = f > -1;
           if (m) {
-            var g, b = (g = a[f].instance.proxy) == null ? void 0 : g.$el;
+            var y, b = (y = a[f].instance.proxy) == null ? void 0 : y.$el;
             o(b);
           }
           return !m;
         }
-        return v.every((y) => y === !0);
+        return v.every((g) => g === !0);
       });
       return function() {
         return d.apply(this, arguments);
@@ -10599,7 +10599,7 @@ var Bd = ee({
     } = rb(), {
       popup: v,
       bindPopup: f
-    } = Bf(), m = !1, g = !1, b = -1, y, w, O, T, S, M = (W) => s.find((Z) => {
+    } = Bf(), m = !1, y = !1, b = -1, g, w, O, T, S, M = (W) => s.find((Z) => {
       var {
         index: _
       } = Z;
@@ -10643,7 +10643,7 @@ var Bd = ee({
           clientX: Z,
           clientY: _
         } = W.touches[0];
-        y = Z, w = _, O = performance.now(), g = !0, H(), F(() => {
+        g = Z, w = _, O = performance.now(), y = !0, H(), F(() => {
           l.value = !0;
         });
       }
@@ -10652,11 +10652,11 @@ var Bd = ee({
         touchable: Z,
         vertical: _
       } = e;
-      if (!(!g || !Z)) {
+      if (!(!y || !Z)) {
         var {
           clientX: ve,
           clientY: Se
-        } = W.touches[0], Ie = Math.abs(ve - y), ie = Math.abs(Se - w), fe = E(Ie, ie), pe = _ ? "vertical" : "horizontal";
+        } = W.touches[0], Ie = Math.abs(ve - g), ie = Math.abs(Se - w), fe = E(Ie, ie), pe = _ ? "vertical" : "horizontal";
         if (fe === pe) {
           W.preventDefault();
           var Oe = T !== void 0 ? ve - T : 0, je = S !== void 0 ? Se - S : 0;
@@ -10664,12 +10664,12 @@ var Bd = ee({
         }
       }
     }, q = () => {
-      if (g) {
+      if (y) {
         var {
           vertical: W,
           onChange: Z
-        } = e, _ = W ? S < w : T < y, ve = Math.abs(W ? w - S : y - T), Se = performance.now() - O <= nb && ve >= ab, Ie = Se ? A(_ ? i.value + 1 : i.value - 1) : A();
-        g = !1, l.value = !1, T = void 0, S = void 0, o.value = Ie * -n.value;
+        } = e, _ = W ? S < w : T < g, ve = Math.abs(W ? w - S : g - T), Se = performance.now() - O <= nb && ve >= ab, Ie = Se ? A(_ ? i.value + 1 : i.value - 1) : A();
+        y = !1, l.value = !1, T = void 0, S = void 0, o.value = Ie * -n.value;
         var ie = i.value;
         i.value = p(Ie), B(), ie !== i.value && C(Z, i.value);
       }
@@ -10995,13 +10995,13 @@ var Nd = ee({
         return U(X);
       var ae = V.findIndex((W) => W === N);
       return ae >= 0 ? ae : 0;
-    }), a = P(1), t = P(0), o = P(0), l = P(void 0), i = P(void 0), s = P(!0), u = P(null), d = null, v = null, f = null, m = null, g = !1, b = R(() => {
+    }), a = P(1), t = P(0), o = P(0), l = P(void 0), i = P(void 0), s = P(!0), u = P(null), d = null, v = null, f = null, m = null, y = !1, b = R(() => {
       var {
         imagePreventDefault: V,
         show: N
       } = e;
       return N && V;
-    }), y = (V, N) => {
+    }), g = (V, N) => {
       var {
         clientX: X,
         clientY: ae
@@ -11021,11 +11021,11 @@ var Nd = ee({
       }, es);
     }, T = () => {
       a.value = 1, t.value = 0, o.value = 0, s.value = !0, v = null, l.value = void 0, i.value = void 0;
-    }, S = (V) => v ? y(v, V) <= No && V.timestamp - v.timestamp <= xl && v.target === V.target : !1, M = (V) => !V || !d || !v ? !1 : y(d, v) <= No && performance.now() - v.timestamp < cb && (V === d.target || V.parentNode === d.target), I = () => {
-      window.clearTimeout(m), g = !1, d = null;
+    }, S = (V) => v ? g(v, V) <= No && V.timestamp - v.timestamp <= xl && v.target === V.target : !1, M = (V) => !V || !d || !v ? !1 : g(d, v) <= No && performance.now() - v.timestamp < cb && (V === d.target || V.parentNode === d.target), I = () => {
+      window.clearTimeout(m), y = !1, d = null;
     }, A = (V) => {
-      if (window.clearTimeout(m), g) {
-        g = !1;
+      if (window.clearTimeout(m), y) {
+        y = !1;
         return;
       }
       var N = M(V.target);
@@ -11039,7 +11039,7 @@ var Nd = ee({
         var {
           onLongPress: ae
         } = e;
-        g = !0, C(ae, N);
+        y = !0, C(ae, N);
       }, mb), S(X)) {
         a.value > 1 ? T() : O();
         return;
@@ -11087,7 +11087,7 @@ var Nd = ee({
     }, B = (V, N, X) => V + N >= X ? X : V + N <= -X ? -X : V + N, H = (V) => {
       if (v) {
         var N = V.currentTarget, X = w(V.touches[0], N);
-        if (y(X, v) > No && window.clearTimeout(m), a.value > 1) {
+        if (g(X, v) > No && window.clearTimeout(m), a.value > 1) {
           var ae = X.clientX - v.clientX, W = X.clientY - v.clientY, Z = F(N), _ = L(N);
           t.value = B(t.value, ae, Z), o.value = B(o.value, W, _);
         }
@@ -11284,7 +11284,7 @@ var Dd = ee({
   name: "VarSticky",
   props: Kt,
   setup(e) {
-    var r = P(null), n = P(null), a = P(!1), t = P("0px"), o = P("0px"), l = P("auto"), i = P("auto"), s = P("auto"), u = P("auto"), d = R(() => !e.disabled && e.cssMode), v = R(() => !e.disabled && !e.cssMode && a.value), f = R(() => Le(e.offsetTop)), m, g = () => {
+    var r = P(null), n = P(null), a = P(!1), t = P("0px"), o = P("0px"), l = P("auto"), i = P("auto"), s = P("auto"), u = P("auto"), d = R(() => !e.disabled && e.cssMode), v = R(() => !e.disabled && !e.cssMode && a.value), f = R(() => Le(e.offsetTop)), m, y = () => {
       var {
         cssMode: T,
         disabled: S
@@ -11311,12 +11311,12 @@ var Dd = ee({
       }
     }, b = () => {
       if (m) {
-        var T = g();
+        var T = y();
         T && C(e.onScroll, T.offsetTop, T.isFixed);
       }
-    }, y = /* @__PURE__ */ function() {
+    }, g = /* @__PURE__ */ function() {
       var T = ns(function* () {
-        a.value = !1, yield gf(), g();
+        a.value = !1, yield gf(), y();
       });
       return function() {
         return T.apply(this, arguments);
@@ -11331,10 +11331,10 @@ var Dd = ee({
     }(), O = () => {
       m !== window && m.removeEventListener("scroll", b);
     };
-    return se(() => e.disabled, y), or(w), fo(O), Pt(y), dn(() => window, "scroll", b), {
+    return se(() => e.disabled, g), or(w), fo(O), Pt(g), dn(() => window, "scroll", b), {
       n: bb,
       classes: wb,
-      resize: y,
+      resize: g,
       stickyEl: r,
       wrapperEl: n,
       isFixed: a,
@@ -11432,14 +11432,14 @@ var zd = ee({
       zIndex: f
     } = n, m = () => {
       i.value && (t.value = i.value.$el ? i.value.$el.offsetTop : i.value.offsetTop);
-    }, g = (y) => {
-      o.value = y;
+    }, y = (g) => {
+      o.value = g;
     }, b = {
       index: r,
       name: l,
       ownTop: t,
       setOwnTop: m,
-      setDisabled: g
+      setDisabled: y
     };
     return a(b), {
       n: Tb,
@@ -11571,18 +11571,18 @@ var Ld = ee({
       length: r,
       indexAnchors: n,
       bindIndexAnchors: a
-    } = Sb(), t = P(""), o = P(null), l = P([]), i = P(), s = R(() => e.sticky), u = R(() => e.stickyCssMode || e.cssMode), d = R(() => Le(e.stickyOffsetTop)), v = R(() => e.zIndex), f = null, m = !1, g = {
+    } = Sb(), t = P(""), o = P(null), l = P([]), i = P(), s = R(() => e.sticky), u = R(() => e.stickyCssMode || e.cssMode), d = R(() => Le(e.stickyOffsetTop)), v = R(() => e.zIndex), f = null, m = !1, y = {
       active: i,
       sticky: s,
       cssMode: u,
       stickyOffsetTop: d,
       zIndex: v
     };
-    a(g);
+    a(y);
     var b = (A, p) => {
       var k = Ei(A) ? A.name.value : A;
       k === i.value || k === void 0 || (i.value = k, (p == null ? void 0 : p.event) !== !1 && C(e.onChange, k));
-    }, y = () => {
+    }, g = () => {
       if (Ni(f))
         return 0;
       var {
@@ -11594,7 +11594,7 @@ var Ld = ee({
       } = Qe(o.value);
       return p - A + k;
     }, w = () => {
-      var A = ha(f), p = f === window ? document.body.scrollHeight : f.scrollHeight, k = y();
+      var A = ha(f), p = f === window ? document.body.scrollHeight : f.scrollHeight, k = g();
       n.forEach((F, L) => {
         var B = F.ownTop.value, H = A - B + d.value - k, E = L === n.length - 1 ? p : n[L + 1].ownTop.value - F.ownTop.value;
         F.setDisabled(!0), H >= 0 && H < E && t.value === "" && (F.setDisabled(!1), b(F));
@@ -11614,7 +11614,7 @@ var Ld = ee({
             return k === q.value;
           });
           if (B) {
-            var H = y(), E = B.ownTop.value - d.value + H, z = Ai(f);
+            var H = g(), E = B.ownTop.value - d.value + H, z = Ai(f);
             t.value = k, b(k, L), yield ga(f, {
               left: z,
               top: E,
@@ -11918,14 +11918,14 @@ var Rd = ee({
         size: v,
         hint: f,
         variant: m,
-        placeholder: g
+        placeholder: y
       } = e;
-      if (!g || !f || m !== "outlined") {
+      if (!y || !f || m !== "outlined") {
         t.value = "";
         return;
       }
-      var b = Bn(a.value), y = "var(--field-decorator-outlined-" + v + "-placeholder-space)";
-      t.value = "calc(" + b.width + " * 0.75 + " + y + " * 2)";
+      var b = Bn(a.value), g = "var(--field-decorator-outlined-" + v + "-placeholder-space)";
+      t.value = "calc(" + b.width + " * 0.75 + " + g + " * 2)";
     }, u = (v) => {
       C(e.onClear, v);
     }, d = (v) => {
@@ -12198,7 +12198,7 @@ var Yd = ee({
       validateWithTrigger: f,
       validate: m,
       // expose
-      resetValidation: g
+      resetValidation: y
     } = Or(), b = (V) => {
       Ae(() => {
         var {
@@ -12208,7 +12208,7 @@ var Yd = ee({
         } = e;
         f(N, V, X, ae);
       });
-    }, y = (V) => {
+    }, g = (V) => {
       a.value = !0, C(e.onFocus, V), b("onFocus");
     }, w = (V) => {
       a.value = !1, C(e.onBlur, V), b("onBlur");
@@ -12260,7 +12260,7 @@ var Yd = ee({
       d != null && d.disabled.value || N || V.target === n.value || (j(), V.preventDefault());
     }
     var E = () => {
-      C(e["onUpdate:modelValue"], ""), g();
+      C(e["onUpdate:modelValue"], ""), y();
     }, z = () => m(e.rules, e.modelValue), j = () => {
       var V;
       (V = n.value) == null || V.focus();
@@ -12269,7 +12269,7 @@ var Yd = ee({
     }, ne = {
       reset: E,
       validate: z,
-      resetValidation: g
+      resetValidation: y
     };
     return C(u, ne), or(() => {
       e.autofocus && j();
@@ -12288,7 +12288,7 @@ var Yd = ee({
       n: Yb,
       classes: Hb,
       isEmpty: Fr,
-      handleFocus: y,
+      handleFocus: g,
       handleBlur: w,
       handleInput: M,
       handleChange: I,
@@ -12299,7 +12299,7 @@ var Yd = ee({
       handleCompositionEnd: S,
       handleMousedown: H,
       validate: z,
-      resetValidation: g,
+      resetValidation: y,
       reset: E,
       focus: j,
       blur: q
@@ -12884,11 +12884,11 @@ var _d = ee({
       handlePopoverClose: f,
       handleClosed: m,
       // expose
-      open: g,
+      open: y,
       // expose
       close: b,
       // expose
-      resize: y
+      resize: g
     } = $d(e);
     return {
       popover: n,
@@ -12908,8 +12908,8 @@ var _d = ee({
       handlePopoverMouseleave: v,
       handlePopoverClose: f,
       handleClosed: m,
-      resize: y,
-      open: g,
+      resize: g,
+      open: y,
       close: b
     };
   }
@@ -13018,16 +13018,16 @@ var ev = ee({
       onSelect: u,
       computeLabel: d
     } = o, v = () => {
-      i.value && (r.value = !r.value), u(g);
-    }, f = () => u(g), m = (b) => {
+      i.value && (r.value = !r.value), u(y);
+    }, f = () => u(y), m = (b) => {
       r.value = b;
-    }, g = {
+    }, y = {
       label: a,
       value: t,
       selected: n,
       sync: m
     };
-    return se([() => e.label, () => e.value], d), l(g), {
+    return se([() => e.label, () => e.value], d), l(y), {
       n: P0,
       classes: O0,
       optionSelected: r,
@@ -13352,7 +13352,7 @@ var rv = ee({
     var r = P(!1), n = P(""), a = P("1"), t = P(!1), o = P(!1), l = P(U(e.current) || 1), i = P(U(e.size) || 10), s = P([]), u = R(() => Math.ceil(e.maxPagerCount / 2)), d = R(() => Math.ceil(U(e.total) / U(i.value))), v = R(() => {
       var S = i.value * (l.value - 1) + 1, M = Math.min(i.value * l.value, U(e.total));
       return [S, M];
-    }), f = R(() => e.showTotal ? e.showTotal(U(e.total), v.value) : ""), m = (S, M) => nr(S) ? !1 : M === 1 ? t.value : o.value, g = (S, M) => nr(S) ? "basic" : M === 1 ? "head" : "tail", b = (S, M) => {
+    }), f = R(() => e.showTotal ? e.showTotal(U(e.total), v.value) : ""), m = (S, M) => nr(S) ? !1 : M === 1 ? t.value : o.value, y = (S, M) => nr(S) ? "basic" : M === 1 ? "head" : "tail", b = (S, M) => {
       if (!(S === l.value || e.disabled)) {
         if (S === "...") {
           l.value = M === 1 ? Math.max(l.value - e.maxPagerCount, 1) : Math.min(l.value + e.maxPagerCount, d.value);
@@ -13368,7 +13368,7 @@ var rv = ee({
         }
         nr(S) && (l.value = S);
       }
-    }, y = () => {
+    }, g = () => {
       e.disabled || (r.value = !0);
     }, w = (S) => {
       i.value = S, r.value = !1;
@@ -13429,10 +13429,10 @@ var rv = ee({
       quickJumperValue: n,
       simpleCurrentValue: a,
       totalText: f,
-      getMode: g,
+      getMode: y,
       isHideEllipsis: m,
       clickItem: b,
-      showMenu: y,
+      showMenu: g,
       clickSize: w,
       setPage: T,
       toNumber: U,
@@ -13774,12 +13774,12 @@ var av = ee({
         texts: E,
         indexes: z
       };
-    }, g = function(E, z) {
+    }, y = function(E, z) {
       z === void 0 && (z = 0), f(E), E.duration = z;
     }, b = (E, z, j) => {
       E.translate += Math.abs(z / j) / 3e-3 * (z < 0 ? -1 : 1);
-    }, y = (E, z) => {
-      i || (E.index = z, E.scrolling = !0, g(E, us));
+    }, g = (E, z) => {
+      i || (E.index = z, E.scrolling = !0, y(E, us));
     }, w = (E) => {
       E.touching = !0, E.translate = Mo(E.scrollEl);
     }, O = (E, z) => {
@@ -13797,7 +13797,7 @@ var av = ee({
       var j = z.translate - z.momentumPrevY, q = performance.now() - z.momentumTime, ne = Math.abs(j) >= j0 && q <= ss;
       ne && b(z, j, q), z.index = v(z, z.translate);
       var V = z.translate, N = f(z);
-      z.scrolling = N !== V, g(z, ne ? W0 : us), z.scrolling || F(z), br(() => {
+      z.scrolling = N !== V, y(z, ne ? W0 : us), z.scrolling || F(z), br(() => {
         i = !1;
       });
     }, S = (E) => {
@@ -13819,7 +13819,7 @@ var av = ee({
         scrollEl: null,
         scrolling: !1
       };
-      return g(V), V;
+      return y(V), V;
     }), I = (E) => {
       var z = [];
       return A(z, E, 0, !0), z;
@@ -13842,7 +13842,7 @@ var av = ee({
           scrollEl: null,
           scrolling: !1
         };
-        E.push(N), g(N), A(E, N.columns[N.index].children, j + 1, q);
+        E.push(N), y(N), A(E, N.columns[N.index].children, j + 1, q);
       }
     }, p = (E) => {
       r.value.splice(r.value.indexOf(E) + 1), A(r.value, E.columns[E.index].children, E.columnIndex + 1);
@@ -13870,10 +13870,10 @@ var av = ee({
     }, L = () => {
       if (e.cascade) {
         var E = r.value.find((z) => z.scrolling);
-        E && (E.index = v(E, Mo(E.scrollEl)), E.scrolling = !1, g(E), p(E));
+        E && (E.index = v(E, Mo(E.scrollEl)), E.scrolling = !1, y(E), p(E));
       } else
         r.value.forEach((z) => {
-          z.index = v(z, Mo(z.scrollEl)), g(z);
+          z.index = v(z, Mo(z.scrollEl)), y(z);
         });
     }, B = () => {
       L();
@@ -13918,7 +13918,7 @@ var av = ee({
       confirm: B,
       cancel: H,
       dt: uo,
-      handleClick: y
+      handleClick: g
     };
   }
 });
@@ -14346,12 +14346,12 @@ var ov = ee({
       return function(F) {
         return p.apply(this, arguments);
       };
-    }(), g = R(() => i.value !== "loading" && i.value !== "success" && !e.disabled), b = R(() => ({
+    }(), y = R(() => i.value !== "loading" && i.value !== "success" && !e.disabled), b = R(() => ({
       transform: "translate3d(0px, " + (Fe(o.value) ? o.value : o.value + "px") + ", 0px) translate(-50%, 0)",
       transition: s.value ? "transform " + e.animationDuration + "ms" : void 0,
       background: w.value ? e.successBgColor : e.bgColor,
       color: w.value ? e.successColor : e.color
-    })), y = R(() => Math.abs(2 * r.value)), w = R(() => i.value === "success"), O = (p) => {
+    })), g = R(() => Math.abs(2 * r.value)), w = R(() => i.value === "success"), O = (p) => {
       var k = "classList" in u ? u : document.body;
       k.classList[p](cs() + "--lock");
     }, T = (p) => {
@@ -14363,18 +14363,18 @@ var ov = ee({
       }
       v = p.touches[0].clientY, f = 0, d = un(p.target);
     }, S = (p) => {
-      if (!(!g.value || !d) && !(d !== u && ha(d) > 0)) {
+      if (!(!y.value || !d) && !(d !== u && ha(d) > 0)) {
         var k = ha(u);
         if (!(k > 0)) {
           var F = k === 0, L = p.touches[0];
           f = L.clientY - v, F && f >= 0 && p.preventDefault(), i.value !== "pulling" && (i.value = "pulling", t.value = p.touches[0].clientY), F && nr(o.value) && o.value > r.value && O("add");
           var B = (p.touches[0].clientY - t.value) / 2 + r.value;
-          o.value = B >= y.value ? y.value : B, m(o.value >= y.value * 0.2 ? "refresh" : "arrow-down");
+          o.value = B >= g.value ? g.value : B, m(o.value >= g.value * 0.2 ? "refresh" : "arrow-down");
         }
       }
     }, M = /* @__PURE__ */ function() {
       var p = fs(function* () {
-        g.value && (s.value = !0, U(o.value) >= y.value * 0.2 ? (yield m("refresh"), i.value = "loading", o.value = y.value * 0.3, C(e["onUpdate:modelValue"], !0), Ae(() => {
+        y.value && (s.value = !0, U(o.value) >= g.value * 0.2 ? (yield m("refresh"), i.value = "loading", o.value = g.value * 0.3, C(e["onUpdate:modelValue"], !0), Ae(() => {
           C(e.onRefresh);
         }), O("remove")) : (i.value = "loosing", l.value = "arrow-down", o.value = r.value, setTimeout(() => {
           s.value = !1, O("remove");
@@ -14577,7 +14577,7 @@ var lv = ee({
       validate: f,
       // expose
       resetValidation: m
-    } = Or(), g = (I) => {
+    } = Or(), y = (I) => {
       Ae(() => {
         var {
           validateTrigger: A,
@@ -14591,8 +14591,8 @@ var lv = ee({
         checkedValue: A,
         onChange: p
       } = e;
-      t && r.value === A || (r.value = I, C(e["onUpdate:modelValue"], r.value), C(p, r.value), t == null || t.onToggle(A), g("onChange"));
-    }, y = (I) => {
+      t && r.value === A || (r.value = I, C(e["onUpdate:modelValue"], r.value), C(p, r.value), t == null || t.onToggle(A), y("onChange"));
+    }, g = (I) => {
       var {
         disabled: A,
         readonly: p,
@@ -14638,7 +14638,7 @@ var lv = ee({
       handleHovering: i,
       n: d1,
       classes: v1,
-      handleClick: y,
+      handleClick: g,
       toggle: S,
       reset: O,
       validate: T,
@@ -14717,30 +14717,30 @@ var sv = ee({
       validate: i,
       // expose
       resetValidation: s
-    } = Or(), u = R(() => o.value), d = (y) => {
+    } = Or(), u = R(() => o.value), d = (g) => {
       Ae(() => {
         var {
           validateTrigger: w,
           rules: O,
           modelValue: T
         } = e;
-        l(w, y, O, T);
+        l(w, g, O, T);
       });
-    }, v = () => n.forEach((y) => {
+    }, v = () => n.forEach((g) => {
       var {
         sync: w
-      } = y;
+      } = g;
       return w(e.modelValue);
-    }), f = (y) => {
-      C(e["onUpdate:modelValue"], y), C(e.onChange, y), d("onChange");
-    }, m = () => i(e.rules, e.modelValue), g = () => {
+    }), f = (g) => {
+      C(e["onUpdate:modelValue"], g), C(e.onChange, g), d("onChange");
+    }, m = () => i(e.rules, e.modelValue), y = () => {
       C(e["onUpdate:modelValue"], void 0), s();
     };
     se(() => e.modelValue, v), se(() => r.value, v);
     var b = {
       onToggle: f,
       validate: m,
-      reset: g,
+      reset: y,
       resetValidation: s,
       errorMessage: u
     };
@@ -14748,7 +14748,7 @@ var sv = ee({
       errorMessage: o,
       n: p1,
       classes: h1,
-      reset: g,
+      reset: y,
       validate: m,
       resetValidation: s
     };
@@ -14947,7 +14947,7 @@ var uv = ee({
         M.offsetX <= Math.floor(p / 2) && (S -= 0.5);
       }
       u === S && A && (S = 0), u = S, C(e["onUpdate:modelValue"], S);
-    }, g = () => o(e.rules, U(e.modelValue)), b = () => Ae(() => t(["onChange"], "onChange", e.rules, e.modelValue)), y = (S, M) => {
+    }, y = () => o(e.rules, U(e.modelValue)), b = () => Ae(() => t(["onChange"], "onChange", e.rules, e.modelValue)), g = (S, M) => {
       var {
         readonly: I,
         disabled: A,
@@ -14960,7 +14960,7 @@ var uv = ee({
       C(e["onUpdate:modelValue"], 0), l();
     }, T = {
       reset: O,
-      validate: g,
+      validate: y,
       resetValidation: l
     };
     return C(n, T), {
@@ -14970,12 +14970,12 @@ var uv = ee({
       getStyle: d,
       getClass: v,
       getCurrentState: f,
-      handleClick: y,
+      handleClick: g,
       hovering: i,
       currentHoveringValue: s,
       createHoverHandler: w,
       reset: O,
-      validate: g,
+      validate: y,
       resetValidation: l,
       toSizeUnit: be,
       toNumber: U,
@@ -15636,10 +15636,10 @@ var yv = ee({
     } = Vr(), {
       length: f,
       options: m,
-      bindOptions: g
+      bindOptions: y
     } = k0(), {
       errorMessage: b,
-      validateWithTrigger: y,
+      validateWithTrigger: g,
       validate: w,
       // expose
       resetValidation: O
@@ -15668,7 +15668,7 @@ var yv = ee({
           rules: _,
           modelValue: ve
         } = e;
-        y(Z, W, _, ve);
+        g(Z, W, _, ve);
       });
     }, k = (W) => {
       var {
@@ -15792,7 +15792,7 @@ var yv = ee({
       validate: N,
       resetValidation: O
     };
-    return g(ae), C(d, ae), {
+    return y(ae), C(d, ae), {
       offsetY: u,
       isFocus: r,
       showMenu: n,
@@ -16265,7 +16265,7 @@ var wv = ee({
       currentOffset: 0,
       active: !1,
       percentValue: 0
-    }), m = () => Ae(() => t(["onChange"], "onChange", e.rules, e.modelValue)), g = P(null), b = P(0), y = P(!1), w = Re({
+    }), m = () => Ae(() => t(["onChange"], "onChange", e.rules, e.modelValue)), y = P(null), b = P(0), g = P(!1), w = Re({
       [qe.First]: f(),
       [qe.Second]: f()
     }), O = R(() => U(e.max) - U(e.min)), T = R(() => b.value / O.value * U(e.step)), S = R(() => {
@@ -16357,8 +16357,8 @@ var wv = ee({
     }, V = () => {
       document.removeEventListener("touchmove", X), document.removeEventListener("touchend", ae), document.removeEventListener("touchcancel", ae);
     }, N = (ie, fe) => {
-      if (b.value || (b.value = g.value.offsetWidth), I.value || (w[fe].active = !0), k = fe, ne(), !(I.value || A.value)) {
-        C(e.onStart), y.value = !0;
+      if (b.value || (b.value = y.value.offsetWidth), I.value || (w[fe].active = !0), k = fe, ne(), !(I.value || A.value)) {
+        C(e.onStart), g.value = !0;
         var {
           clientX: pe,
           clientY: Oe
@@ -16366,7 +16366,7 @@ var wv = ee({
         w[fe].startPosition = p.value ? Oe : pe;
       }
     }, X = (ie) => {
-      if (ie.preventDefault(), !(I.value || A.value || !y.value)) {
+      if (ie.preventDefault(), !(I.value || A.value || !g.value)) {
         var {
           startPosition: fe,
           currentOffset: pe
@@ -16389,7 +16389,7 @@ var wv = ee({
         var Ke = [];
         w[k].currentOffset = w[k].percentValue * T.value;
         var We = w[k].percentValue * U(Oe) + U(je);
-        ie && Ve(fe) && (Ke = k === qe.First ? [We, fe[1]] : [fe[0], We]), C(pe, ie ? Ke : We), y.value = !1;
+        ie && Ve(fe) && (Ke = k === qe.First ? [We, fe[1]] : [fe[0], We]), C(pe, ie ? Ke : We), g.value = !1;
       }
     }, W = (ie) => {
       if (!(I.value || A.value) && !ie.target.closest("." + ps("thumb"))) {
@@ -16425,16 +16425,16 @@ var wv = ee({
     };
     return C(r, Ie), se([() => e.modelValue, () => e.step], (ie) => {
       var [fe, pe] = ie;
-      !Z() || !_() || y.value || ve(fe, U(pe));
+      !Z() || !_() || g.value || ve(fe, U(pe));
     }), se(b, () => ve()), or(() => {
-      !Z() || !_() || (b.value = g.value[p.value ? "offsetHeight" : "offsetWidth"]);
+      !Z() || !_() || (b.value = y.value[p.value ? "offsetHeight" : "offsetWidth"]);
     }), lo(() => {
       V();
     }), {
       n: ps,
       classes: $w,
       Thumbs: qe,
-      sliderEl: g,
+      sliderEl: y,
       getFillStyle: M,
       isDisabled: I,
       isVertical: p,
@@ -16902,10 +16902,10 @@ const st = ee({
         wrap: s,
         direction: u,
         size: d
-      } = e, v = (t = C(n.default)) != null ? t : [], f = Ov(d), [m, g] = a(d, f);
+      } = e, v = (t = C(n.default)) != null ? t : [], f = Ov(d), [m, y] = a(d, f);
       v = Rs(v);
-      var b = v.length - 1, y = v.map((w, O) => {
-        var T = Kw(m, g, {
+      var b = v.length - 1, g = v.map((w, O) => {
+        var T = Kw(m, y, {
           direction: u,
           justify: l,
           index: O,
@@ -16926,7 +16926,7 @@ const st = ee({
           flexWrap: s ? "wrap" : "nowrap",
           margin: u === "row" ? "calc(-1 * " + m + " / 2) 0" : void 0
         }
-      }, [y]);
+      }, [g]);
     };
   }
 });
@@ -17383,22 +17383,22 @@ var Bv = ee({
         var L = A === p ? k : p;
         C(T, L), C(F, L), d();
       }
-    }, g = (w) => {
+    }, y = (w) => {
       e.disabled || n != null && n.disabled.value || s(w);
     }, b = () => {
       C(e["onUpdate:modelValue"], e.inactiveValue), l();
-    }, y = {
+    }, g = {
       reset: b,
       validate: u,
       resetValidation: l
     };
-    return C(r, y), {
+    return C(r, g), {
       n: vC,
       classes: fC,
       multiplySizeUnit: ur,
       switchActive: m,
       hovering: i,
-      hover: g,
+      hover: y,
       radius: f,
       styleComputed: v,
       errorMessage: a,
@@ -17487,7 +17487,7 @@ var Nv = ee({
       inactiveColor: v,
       disabledColor: f,
       itemDirection: m,
-      resize: g
+      resize: y
     } = l, b = {
       name: n,
       index: o,
@@ -17495,7 +17495,7 @@ var Nv = ee({
       element: t
     };
     i(b);
-    var y = () => e.name != null ? u.value === e.name : u.value === (o == null ? void 0 : o.value), w = () => e.disabled ? f.value : y() ? d.value : v.value, O = () => e.disabled ? Ft("$-tab--disabled") : y() ? Ft("$-tab--active") : Ft("$-tab--inactive"), T = (S) => {
+    var g = () => e.name != null ? u.value === e.name : u.value === (o == null ? void 0 : o.value), w = () => e.disabled ? f.value : g() ? d.value : v.value, O = () => e.disabled ? Ft("$-tab--disabled") : g() ? Ft("$-tab--active") : Ft("$-tab--inactive"), T = (S) => {
       var {
         disabled: M,
         name: I,
@@ -17503,7 +17503,7 @@ var Nv = ee({
       } = e;
       M || (C(A, I ?? o.value, S), s(b));
     };
-    return se(() => e.name, g), se(() => e.disabled, g), {
+    return se(() => e.name, y), se(() => e.disabled, y), {
       n: Ft,
       classes: wC,
       tabEl: r,
@@ -17805,9 +17805,9 @@ var zv = ee({
   props: EC,
   setup(e) {
     var r = P("0px"), n = P("0px"), a = P("0px"), t = P("0px"), o = P(!1), l = P(null), i = R(() => e.active), s = R(() => e.indicatorPosition === "reverse" ? "-reverse" : ""), u = R(() => e.activeColor), d = R(() => e.inactiveColor), v = R(() => e.disabledColor), f = R(() => e.itemDirection), m = P(null), {
-      tabList: g,
+      tabList: y,
       bindTabList: b,
-      length: y
+      length: g
     } = yC(), w = (L) => {
       var B, H = (B = L.name.value) != null ? B : L.index.value, {
         active: E,
@@ -17815,28 +17815,28 @@ var zv = ee({
         onClick: j
       } = e;
       C(e["onUpdate:active"], H), C(j, H), H !== E && C(z, H);
-    }, O = () => g.find((L) => {
+    }, O = () => y.find((L) => {
       var {
         name: B
       } = L;
       return e.active === B.value;
-    }), T = (L) => g.find((B) => {
+    }), T = (L) => y.find((B) => {
       var {
         index: H
       } = B;
       return (L ?? e.active) === H.value;
     }), S = () => {
-      if (y.value !== 0) {
+      if (g.value !== 0) {
         var {
           active: L
         } = e;
         if (nr(L)) {
-          var B = Un(L, 0, y.value - 1);
+          var B = Un(L, 0, g.value - 1);
           return C(e["onUpdate:active"], B), T(B);
         }
       }
     }, M = () => {
-      o.value = e.scrollable === "always" || g.length >= 5;
+      o.value = e.scrollable === "always" || y.length >= 5;
     }, I = (L) => {
       var {
         element: B
@@ -17881,7 +17881,7 @@ var zv = ee({
       resize: p,
       onTabClick: w
     };
-    return b(F), se(() => y.value, /* @__PURE__ */ bs(function* () {
+    return b(F), se(() => g.value, /* @__PURE__ */ bs(function* () {
       yield Dr(), p();
     })), se(() => e.active, p), se(() => e.scrollable, p), pn(p), Pt(p), {
       stickyComponent: m,
@@ -17985,20 +17985,20 @@ var Lv = ee({
       return v === m.value;
     }), i = (v) => o(v) || l(v), s = (v) => {
       var f, m = i(v);
-      m && (n.forEach((g) => {
+      m && (n.forEach((y) => {
         var {
           setCurrent: b
-        } = g;
+        } = y;
         return b(!1);
       }), m.setCurrent(!0), (f = r.value) == null || f.to(m.index.value));
     }, u = (v) => {
       var f, m = n.find((b) => {
         var {
-          index: y
+          index: g
         } = b;
-        return y.value === v;
-      }), g = (f = m.name.value) != null ? f : m.index.value;
-      C(e["onUpdate:active"], g);
+        return g.value === v;
+      }), y = (f = m.name.value) != null ? f : m.index.value;
+      C(e["onUpdate:active"], y);
     }, d = () => r.value;
     return a({}), se(() => e.active, s), se(() => t.value, /* @__PURE__ */ LC(function* () {
       yield Dr(), s(e.active);
@@ -18251,17 +18251,17 @@ var VS = {
     return !0;
   if (i && !s) {
     var {
-      hour: g,
+      hour: y,
       minute: b
     } = cr(i);
-    f = g === v && a > b;
+    f = y === v && a > b;
   }
   if (!i && s) {
     var {
-      hour: y,
+      hour: g,
       minute: w
     } = cr(s);
-    f = y === v && a < w;
+    f = g === v && a < w;
   }
   if (i && s) {
     var {
@@ -18287,16 +18287,16 @@ var VS = {
   } = e, {
     hourStr: v,
     hourNum: f
-  } = tl(t, o, l), m = !1, g = !1;
+  } = tl(t, o, l), m = !1, y = !1;
   if (d.includes(v))
     return !0;
   if (s && !u) {
     var {
       hour: b,
-      minute: y,
+      minute: g,
       second: w
     } = cr(s);
-    m = b === f && y < i || y === i && a > w;
+    m = b === f && g < i || g === i && a > w;
   }
   if (!s && u) {
     var {
@@ -18318,7 +18318,7 @@ var VS = {
     } = cr(u);
     m = M === f && I < i || p === f && k > i || M === f && I === i && a > A || p === f && k === i && a < F;
   }
-  return (r = e.allowedTime) != null && r.seconds && (g = (n = e.allowedTime) == null ? void 0 : n.seconds(a)), m || g;
+  return (r = e.allowedTime) != null && r.seconds && (y = (n = e.allowedTime) == null ? void 0 : n.seconds(a)), m || y;
 }, {
   n: MS,
   classes: IS
@@ -18443,14 +18443,14 @@ var Hv = ee({
       borderColor: d()
     })), i = R(() => {
       if (e.rad !== void 0) {
-        var y = e.rad / 30;
-        return y >= 0 ? y : y + 12;
+        var g = e.rad / 30;
+        return g >= 0 ? g : g + 12;
       }
-    }), s = R(() => e.type === "hour" ? Cr : Cs), u = (y, w) => {
+    }), s = R(() => e.type === "hour" ? Cr : Cs), u = (g, w) => {
       var O;
-      y = (O = y) != null ? O : e.type === "minute" ? e.time.minute : e.time.second;
+      g = (O = g) != null ? O : e.type === "minute" ? e.time.minute : e.time.second;
       var T = e.type === "minute" ? Uv : Yv, S = {
-        time: U(y),
+        time: U(g),
         format: e.format,
         ampm: e.ampm,
         hour: e.time.hour,
@@ -18464,18 +18464,18 @@ var Hv = ee({
     }, d = () => {
       if (i.value === void 0)
         return e.color;
-      var y = e.isInner ? dr[i.value] : s.value[i.value];
-      return s.value === Cs ? u() ? "#bdbdbd" : e.color : f(y) ? "#bdbdbd" : e.color;
-    }, v = (y, w) => w ? i.value === y && e.isInner : i.value === y && (!e.isInner || e.type !== "hour"), f = (y) => {
+      var g = e.isInner ? dr[i.value] : s.value[i.value];
+      return s.value === Cs ? u() ? "#bdbdbd" : e.color : f(g) ? "#bdbdbd" : e.color;
+    }, v = (g, w) => w ? i.value === g && e.isInner : i.value === g && (!e.isInner || e.type !== "hour"), f = (g) => {
       if (e.type === "hour") {
         if (Rv(e.format, e.ampm))
-          return t.value.includes(y);
-        var w = Cr.findIndex((O) => O === y);
+          return t.value.includes(g);
+        var w = Cr.findIndex((O) => O === g);
         return o.value.includes(w);
       }
-      return u(y, !0);
-    }, m = (y, w, O) => {
-      var T = 2 * Math.PI / 12 * y - Math.PI / 2, S = 50 * (1 + Math.cos(T)), M = 50 * (1 + Math.sin(T)), I = () => v(y, O) ? f(w) ? {
+      return u(g, !0);
+    }, m = (g, w, O) => {
+      var T = 2 * Math.PI / 12 * g - Math.PI / 2, S = 50 * (1 + Math.cos(T)), M = 50 * (1 + Math.sin(T)), I = () => v(g, O) ? f(w) ? {
         backgroundColor: "#bdbdbd",
         color: "#fff"
       } : {
@@ -18494,30 +18494,30 @@ var Hv = ee({
         backgroundColor: A,
         color: p
       };
-    }, g = () => {
+    }, y = () => {
       var {
-        width: y,
+        width: g,
         height: w
       } = Qe(a.value);
       return {
-        width: y,
+        width: g,
         height: w
       };
     }, b = () => {
       if (i.value !== void 0) {
-        var y = e.ampm === "am" ? Cr : dr;
-        return Sn(y[i.value], 2, "0");
+        var g = e.ampm === "am" ? Cr : dr;
+        return Sn(g[i.value], 2, "0");
       }
     };
-    return se([i, () => e.isInner], (y, w) => {
-      var [O, T] = y, [S, M] = w, I = O === S && T === M;
+    return se([i, () => e.isInner], (g, w) => {
+      var [O, T] = g, [S, M] = w, I = O === S && T === M;
       if (!(I || e.type !== "hour" || i.value === void 0)) {
         var A = T ? dr[i.value] : b(), p = e.useSeconds ? ":" + e.time.second : "", k = A + ":" + e.time.minute + p;
         e.preventNextUpdate || n("update", k), n("change-prevent-update");
       }
-    }), se(() => e.rad, (y, w) => {
-      if (!(e.type === "hour" || y === void 0 || w === void 0)) {
-        var O = y / 6 >= 0 ? y / 6 : y / 6 + 60, T = w / 6 >= 0 ? w / 6 : w / 6 + 60;
+    }), se(() => e.rad, (g, w) => {
+      if (!(e.type === "hour" || g === void 0 || w === void 0)) {
+        var O = g / 6 >= 0 ? g / 6 : g / 6 + 60, T = w / 6 >= 0 ? w / 6 : w / 6 + 60;
         if (O !== T) {
           var S, {
             hourStr: M
@@ -18533,8 +18533,8 @@ var Hv = ee({
           n("update", S);
         }
       }
-    }), se([() => e.max, () => e.min, () => e.allowedTime], (y) => {
-      var [w, O, T] = y;
+    }), se([() => e.max, () => e.min, () => e.allowedTime], (g) => {
+      var [w, O, T] = g;
       if (t.value = [], w && !O) {
         var {
           hour: S
@@ -18574,7 +18574,7 @@ var Hv = ee({
       disableHour: t,
       isActive: v,
       isDisable: f,
-      getSize: g,
+      getSize: y,
       getStyle: m,
       activeItemIndex: i
     };
@@ -18737,7 +18737,7 @@ var Fv = ee({
   },
   props: VS,
   setup(e) {
-    var r = P(null), n = P(null), a = P(null), t = P(!1), o = P(!1), l = P(!1), i = P(!1), s = P(!1), u = P(void 0), d = P(0), v = P(0), f = P("hour"), m = P("am"), g = P(!1), b = P(!1), y = P({
+    var r = P(null), n = P(null), a = P(null), t = P(!1), o = P(!1), l = P(!1), i = P(!1), s = P(!1), u = P(void 0), d = P(0), v = P(0), f = P("hour"), m = P("am"), y = P(!1), b = P(!1), g = P({
       hour: "00",
       minute: "00",
       second: "00"
@@ -18754,14 +18754,14 @@ var Fv = ee({
     }, A = (N) => {
       var {
         disableHour: X
-      } = a.value, ae = Cr.findIndex((_) => U(_) === U(y.value.hour)), W = N === "am" ? Cr : dr, Z = [...W.slice(ae), ...W.slice(0, ae)];
+      } = a.value, ae = Cr.findIndex((_) => U(_) === U(g.value.hour)), W = N === "am" ? Cr : dr, Z = [...W.slice(ae), ...W.slice(0, ae)];
       return Z.find((_, ve) => (o.value = ve !== 0, !X.includes(_)));
     }, p = (N) => {
       if (!e.readonly) {
         m.value = N;
         var X = A(N);
         if (X) {
-          var ae = e.useSeconds ? ":" + y.value.second : "", W = Sn(X, 2, "0") + ":" + y.value.minute + ae;
+          var ae = e.useSeconds ? ":" + g.value.second : "", W = Sn(X, 2, "0") + ":" + g.value.minute + ae;
           S(W);
         }
       }
@@ -18801,7 +18801,7 @@ var Fv = ee({
       var Z = Math.round(ae / 30) * 30 + 90, _ = L(Z), ve = t.value ? Cr[_] : dr[_];
       if (W.includes(ve) || (t.value = e.format === "24hr" ? k(N, X) : !1), t.value === l.value) {
         var Se = t.value || m.value === "pm" ? dr[_] : Cr[_];
-        g.value = W.includes(Se), !g.value && (u.value = Z, i.value = !0);
+        y.value = W.includes(Se), !y.value && (u.value = Z, i.value = !0);
       }
     }, E = (N) => {
       var {
@@ -18810,7 +18810,7 @@ var Fv = ee({
         time: W,
         format: e.format,
         ampm: m.value,
-        hour: y.value.hour,
+        hour: g.value.hour,
         max: e.max,
         min: e.min,
         disableHour: X,
@@ -18824,8 +18824,8 @@ var Fv = ee({
         time: W,
         format: e.format,
         ampm: m.value,
-        hour: y.value.hour,
-        minute: U(y.value.minute),
+        hour: g.value.hour,
+        minute: U(g.value.minute),
         max: e.max,
         min: e.min,
         disableHour: X,
@@ -18875,7 +18875,7 @@ var Fv = ee({
           minute: ae,
           second: W
         } = cr(N), Z = de().hour(X).format("hh"), _ = de().hour(X).format("HH"), ve = de().minute(ae).format("mm"), Se = de().second(W).format("ss");
-        u.value = (Z === "12" ? 0 : U(Z)) * 30, d.value = U(ve) * 6, v.value = U(Se) * 6, y.value = F(N), e.format !== "24hr" && (m.value = Sn("" + X, 2, "0") === _ && dr.includes(_) ? "pm" : "am"), t.value = e.format === "24hr" && dr.includes(_);
+        u.value = (Z === "12" ? 0 : U(Z)) * 30, d.value = U(ve) * 6, v.value = U(Se) * 6, g.value = F(N), e.format !== "24hr" && (m.value = Sn("" + X, 2, "0") === _ && dr.includes(_) ? "pm" : "am"), t.value = e.format === "24hr" && dr.includes(_);
       }
     }, {
       immediate: !0
@@ -18883,7 +18883,7 @@ var Fv = ee({
       n: NS,
       classes: DS,
       getRad: T,
-      time: y,
+      time: g,
       container: r,
       inner: a,
       picker: n,
@@ -19178,7 +19178,7 @@ var jv = ee({
         hideList: ne
       } = e;
       return ne ? [] : q;
-    }), g = (q) => {
+    }), y = (q) => {
       var {
         disabled: ne,
         readonly: V,
@@ -19201,7 +19201,7 @@ var jv = ee({
       name: q.name,
       file: q,
       progress: 0
-    }), y = (q) => {
+    }), g = (q) => {
       var ne = q.target, {
         files: V
       } = ne;
@@ -19261,7 +19261,7 @@ var jv = ee({
             return function(ue) {
               return We.apply(this, arguments);
             };
-          }(), fe = y(ne), pe = fe.map(b);
+          }(), fe = g(ne), pe = fe.map(b);
           pe = yield ie(pe), pe = V != null ? Se(pe) : pe, pe = N != null ? Ie(pe) : pe;
           var Oe = yield Promise.all(O(pe)), je = yield Promise.all(T(Oe)), Ke = je.filter((We) => {
             var {
@@ -19347,7 +19347,7 @@ var jv = ee({
       handleHovering: f,
       isHTMLSupportVideo: dl,
       isHTMLSupportImage: ul,
-      preview: g,
+      preview: y,
       handleChange: S,
       handleRemove: M,
       getSuccess: I,
@@ -19554,10 +19554,10 @@ var Wv = ee({
       slots: n
     } = r, a = P(""), t = P(""), o = P(""), l = P(null), i = P(null), s = () => !!(n.content || e.content && !e.image), u = /* @__PURE__ */ function() {
       var m = $s(function* () {
-        return new Promise((g) => {
-          var b = document.createElement("canvas"), y = b.getContext("2d"), w = new Image();
+        return new Promise((y) => {
+          var b = document.createElement("canvas"), g = b.getContext("2d"), w = new Image();
           w.crossOrigin = "anonymous", w.referrerPolicy = "no-referrer", w.src = e.image, w.onload = () => {
-            b.width = w.width, b.height = w.height, y.drawImage(w, 0, 0), g(b.toDataURL());
+            b.width = w.width, b.height = w.height, g.drawImage(w, 0, 0), y(b.toDataURL());
           };
         });
       });
@@ -19565,10 +19565,10 @@ var Wv = ee({
         return m.apply(this, arguments);
       };
     }(), d = (m) => {
-      var g = new Blob([m], {
+      var y = new Blob([m], {
         type: "image/svg+xml"
       });
-      return URL.createObjectURL(g);
+      return URL.createObjectURL(y);
     }, v = () => {
       a.value && URL.revokeObjectURL(a.value);
     }, f = /* @__PURE__ */ function() {
