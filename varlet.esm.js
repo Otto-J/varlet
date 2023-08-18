@@ -10151,10 +10151,9 @@ const Ha = ee({
         disabled: e.disabled || !e.drag || !e.fixed,
         direction: y.direction,
         attraction: y.attraction,
-        boundary: y.boundary
-      }, a, {
+        boundary: y.boundary,
         onClick: (b) => i(b, !t.value, m.length)
-      }), {
+      }, a), {
         default: () => [Q("div", {
           class: Eo(hr(), hr("--direction-" + e.direction), [e.safeArea, hr("--safe-area")]),
           ref: o,
