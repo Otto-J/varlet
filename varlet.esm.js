@@ -17432,15 +17432,15 @@ var Ev = ne({
     return C(r, p), {
       n: cC,
       classes: mC,
-      multiplySizeUnit: ur,
-      switchActive: m,
       hovering: i,
-      hover: b,
       radius: f,
       styleComputed: v,
       errorMessage: a,
       formDisabled: n == null ? void 0 : n.disabled,
-      formReadonly: n == null ? void 0 : n.readonly
+      formReadonly: n == null ? void 0 : n.readonly,
+      multiplySizeUnit: ur,
+      switchActive: m,
+      hover: b
     };
   }
 });
