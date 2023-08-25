@@ -4532,14 +4532,16 @@ var Lu = ne({
       e.disabled || M || f(e.name || r.value, !i.value);
     }, h = () => {
       o.value && (o.value.style.height = "", l.value = !0, yr(() => {
-        var {
-          offsetHeight: M
-        } = o.value;
-        o.value.style.height = "0px", yr(() => {
-          o.value.style.height = M + "px", t && fo(() => {
-            t && O();
+        if (o.value) {
+          var {
+            offsetHeight: M
+          } = o.value;
+          o.value.style.height = "0px", yr(() => {
+            o.value && (o.value.style.height = M + "px", t && fo(() => {
+              t && O();
+            }));
           });
-        });
+        }
       }));
     }, w = () => {
       t = !1;
