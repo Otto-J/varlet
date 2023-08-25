@@ -12365,7 +12365,7 @@ var nk = Ka, j0 = {
     type: Boolean,
     default: !0
   },
-  teleport: String,
+  teleport: [String, Object, Boolean],
   onClick: U(),
   "onUpdate:show": U()
 };
@@ -16230,9 +16230,7 @@ var Ck = Io, vw = {
   loadingColor: String,
   closeColor: String,
   size: [String, Number],
-  rules: {
-    type: Array
-  },
+  rules: Array,
   ripple: {
     type: Boolean,
     default: !0
