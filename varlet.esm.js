@@ -11412,7 +11412,7 @@ function d0(e, r) {
     "div",
     {
       class: c(e.classes(e.n(), e.n("$--box"))),
-      onMousedown: r[14] || (r[14] = function() {
+      onMousedown: r[13] || (r[13] = function() {
         return e.handleMousedown && e.handleMousedown(...arguments);
       })
     },
@@ -11482,13 +11482,10 @@ function d0(e, r) {
           onChange: r[3] || (r[3] = function() {
             return e.handleChange && e.handleChange(...arguments);
           }),
-          onTouchstart: r[4] || (r[4] = function() {
-            return e.handleTouchstart && e.handleTouchstart(...arguments);
-          }),
-          onCompositionstart: r[5] || (r[5] = function() {
+          onCompositionstart: r[4] || (r[4] = function() {
             return e.handleCompositionStart && e.handleCompositionStart(...arguments);
           }),
-          onCompositionend: r[6] || (r[6] = function() {
+          onCompositionend: r[5] || (r[5] = function() {
             return e.handleCompositionEnd && e.handleCompositionEnd(...arguments);
           })
         }, `
@@ -11510,22 +11507,22 @@ function d0(e, r) {
             caretColor: e.errorMessage ? void 0 : e.focusColor,
             "--input-placeholder-color": e.placeholderColor
           }),
-          onFocus: r[7] || (r[7] = function() {
+          onFocus: r[6] || (r[6] = function() {
             return e.handleFocus && e.handleFocus(...arguments);
           }),
-          onBlur: r[8] || (r[8] = function() {
+          onBlur: r[7] || (r[7] = function() {
             return e.handleBlur && e.handleBlur(...arguments);
           }),
-          onInput: r[9] || (r[9] = function() {
+          onInput: r[8] || (r[8] = function() {
             return e.handleInput && e.handleInput(...arguments);
           }),
-          onChange: r[10] || (r[10] = function() {
+          onChange: r[9] || (r[9] = function() {
             return e.handleChange && e.handleChange(...arguments);
           }),
-          onCompositionstart: r[11] || (r[11] = function() {
+          onCompositionstart: r[10] || (r[10] = function() {
             return e.handleCompositionStart && e.handleCompositionStart(...arguments);
           }),
-          onCompositionend: r[12] || (r[12] = function() {
+          onCompositionend: r[11] || (r[11] = function() {
             return e.handleCompositionEnd && e.handleCompositionEnd(...arguments);
           })
         }, null, 46, u0))]),
@@ -11541,7 +11538,7 @@ function d0(e, r) {
     ), x(a, {
       "error-message": e.errorMessage,
       "extra-message": e.maxlengthText,
-      onMousedown: r[13] || (r[13] = Tr(() => {
+      onMousedown: r[12] || (r[12] = Tr(() => {
       }, ["stop"]))
     }, Jt({
       _: 2
