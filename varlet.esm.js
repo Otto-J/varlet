@@ -11663,6 +11663,7 @@ var JS = Qn, d0 = {
   },
   href: String,
   target: String,
+  rel: String,
   to: [String, Object],
   replace: Boolean,
   underline: {
@@ -11701,22 +11702,20 @@ var Ld = ne({
         href: o,
         target: l,
         to: i,
-        replace: s
+        replace: s,
+        rel: u
       } = e;
       return t ? {} : o ? {
         href: o,
-        target: l
+        target: l,
+        rel: u
       } : i ? {
         to: i,
         target: l,
         replace: s
       } : {};
     }), a = (t) => {
-      var {
-        disabled: o,
-        onClick: l
-      } = e;
-      o || C(l, t);
+      e.disabled || C(e.onClick, t);
     };
     return {
       n: v0,
