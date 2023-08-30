@@ -11402,7 +11402,7 @@ var a0 = ki({
 }, xe(rl, ["size", "variant", "placeholder", "line", "hint", "textColor", "focusColor", "blurColor", "disabled", "clearable", "onClick"])), {
   n: t0,
   classes: o0
-} = te("input"), i0 = ["placeholder", "enterkeyhint"], l0 = ["id", "disabled", "type", "value", "placeholder", "maxlength", "rows", "enterkeyhint", "inputmode"], s0 = ["id", "disabled", "type", "value", "placeholder", "maxlength", "enterkeyhint", "inputmode"];
+} = te("input"), i0 = ["placeholder", "enterkeyhint"], l0 = ["id", "disabled", "readonly", "type", "value", "placeholder", "maxlength", "rows", "enterkeyhint", "inputmode"], s0 = ["id", "disabled", "readonly", "type", "value", "placeholder", "maxlength", "enterkeyhint", "inputmode"];
 function u0(e, r) {
   var n = se("var-field-decorator"), a = se("var-form-details");
   return p(), T(
@@ -11453,7 +11453,8 @@ function u0(e, r) {
           ref: "el",
           autocomplete: "new-password",
           id: e.id,
-          disabled: e.formDisabled || e.disabled || e.formReadonly || e.readonly,
+          disabled: e.formDisabled || e.disabled,
+          readonly: e.formReadonly || e.readonly,
           type: e.normalizedType,
           value: e.modelValue,
           placeholder: e.hint ? void 0 : e.placeholder,
@@ -11492,7 +11493,8 @@ function u0(e, r) {
           ref: "el",
           autocomplete: "new-password",
           id: e.id,
-          disabled: e.formDisabled || e.disabled || e.formReadonly || e.readonly,
+          disabled: e.formDisabled || e.disabled,
+          readonly: e.formReadonly || e.readonly,
           type: e.normalizedType,
           value: e.modelValue,
           placeholder: e.hint ? void 0 : e.placeholder,
