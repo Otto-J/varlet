@@ -1,1 +1,0 @@
-import"./logger-9a144f5d.js";import{u as i}from"./useChildren-05343878.js";const n=Symbol("TABS_ITEMS_BIND_TAB_ITEM_KEY");function o(){const{bindChildren:t,childProviders:e,length:T}=i(n);return{length:T,tabItemList:e,bindTabItem:t}}export{n as T,o as u};
