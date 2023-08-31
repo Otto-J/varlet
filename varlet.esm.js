@@ -28,7 +28,7 @@ const yr = He(Ms), Je = (e) => typeof e == "string", Ni = (e) => typeof e == "bo
   return [null, -1];
 }, Gt = (e) => Me(e) ? e : [e], un = (e, r, n) => Math.min(n, Math.max(r, e)), of = (e, r) => un(e, 0, r.length - 1), Es = () => typeof globalThis < "u" ? globalThis : bn() ? window : typeof global < "u" ? global : self, pa = (e) => {
   const r = Es();
-  return r.requestAnimationFrame ? r.requestAnimationFrame(e) : r.setTimeout(e, 16);
+  return r.requestAnimationFrame ? r.requestAnimationFrame(e) : r.setTimeout(e);
 }, dl = (e) => {
   const r = Es();
   r.cancelAnimationFrame ? r.cancelAnimationFrame(e) : r.clearTimeout(e);
