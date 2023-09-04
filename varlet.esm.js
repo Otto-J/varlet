@@ -2364,7 +2364,7 @@ function Rc(e, r) {
     2
     /* CLASS */
   ), ee(a, {
-    hovering: e.hovering
+    hovering: e.disabled ? !1 : e.hovering
   }, null, 8, ["hovering"])], 46, Lc)), [[t, {
     disabled: e.disabled || !e.ripple
   }], [o, e.handleHovering, "desktop"]]);
