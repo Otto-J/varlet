@@ -1,0 +1,1 @@
+import{d as a,a8 as r}from"./index-7996f2ff.js";const t=a({name:"AppType",setup(n,{slots:e}){return()=>{var p;return r("div",{class:"app-type"},[(p=e.default)===null||p===void 0?void 0:p.call(e)])}}});export{t as A};
