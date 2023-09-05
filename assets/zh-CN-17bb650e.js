@@ -1,24 +1,18 @@
-import{_ as h,b as c,e as o,l as r,m as a,p as t,w as l,P as s,Z as d}from"./index-61d1c817.js";const p={components:{}},i={class:"varlet-site-doc"},g=a("h1",null,"Image",-1),j={class:"card"},m={id:"Intro"},u=a("p",null,[s("Components provide more convenient size, fill mode, rounded corner Settings, ripple effect enhanced picture click interactive experience. Supports "),a("code",null,"Lazy load"),s(", "),a("code",null,"loading images"),s(", "),a("code",null,"error images"),s(", and default Settings for applying Lazy instructions.")],-1),_={class:"card"},v={id:"Basic Use"},f=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+import{_ as d,b as c,e as p,l as r,m as a,p as t,w as l,P as s,Z as h}from"./index-61d1c817.js";const o={components:{}},i={class:"varlet-site-doc"},j=a("h1",null,"图片",-1),g={class:"card"},m={id:"介绍"},_=a("p",null,[s("组件提供了更方便的尺寸，填充模式，圆角的设置方式，水波效果增强图片点击交互体验。 支持 "),a("code",null,"懒加载"),s("、 "),a("code",null,"loading 图片"),s("、 "),a("code",null,"error 图片"),s("、应用 "),a("code",null,"Lazy"),s(" 指令的默认设置。")],-1),u={class:"card"},v={id:"基本使用"},f=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(" />")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),y={class:"card"},x={id:"Fit Mode"},w=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),x={class:"card"},w={id:"填充模式"},y=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-space"),s(),a("span",{class:"hljs-attr"},":size"),s("="),a("span",{class:"hljs-string"},'"[20, 20]"'),s(">")]),s(`
-    `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(`
-      `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
-      `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
-      `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(`
-    />`)]),s(`
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(` 
       `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(` 
-      `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
-      `),a("span",{class:"hljs-attr"},"fit"),s("="),a("span",{class:"hljs-string"},'"cover"'),s(` 
+      `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(` 
       `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(` 
     />`)]),s(`
 
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(` 
-      `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
-      `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(` 
-      `),a("span",{class:"hljs-attr"},"fit"),s("="),a("span",{class:"hljs-string"},'"contain"'),s(`
+      `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(` 
+      `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
+      `),a("span",{class:"hljs-attr"},"fit"),s("="),a("span",{class:"hljs-string"},'"cover"'),s(` 
       `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(` 
     />`)]),s(`
 
@@ -32,12 +26,19 @@ import{_ as h,b as c,e as o,l as r,m as a,p as t,w as l,P as s,Z as d}from"./ind
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(` 
       `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
       `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(` 
+      `),a("span",{class:"hljs-attr"},"fit"),s("="),a("span",{class:"hljs-string"},'"contain"'),s(`
+      `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(` 
+    />`)]),s(`
+
+    `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(` 
+      `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
+      `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(` 
       `),a("span",{class:"hljs-attr"},"fit"),s("="),a("span",{class:"hljs-string"},'"scale-down"'),s(`
       `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(` 
     />`)]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-space"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),b={class:"card"},L={id:"Set Radius"},S=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),b={class:"card"},k={id:"设置圆角"},L=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-space"),s(),a("span",{class:"hljs-attr"},":size"),s("="),a("span",{class:"hljs-string"},'"[20, 20]"'),s(">")]),s(`
     `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(`
       `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
@@ -56,23 +57,23 @@ import{_ as h,b as c,e as o,l as r,m as a,p as t,w as l,P as s,Z as d}from"./ind
     />`)]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-space"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),z={class:"card"},k={id:"Use Ripple"},U=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(`
-    `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
+`)])],-1),V={class:"card"},z={id:"开启水波"},A=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(` 
+    `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(` 
     `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
     `),a("span",{class:"hljs-attr"},"ripple"),s(`
     `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(`
   />`)]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),I={class:"card"},V={id:"Use LazyLoad"},A=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(`
+`)])],-1),C={class:"card"},N={id:"开启懒加载"},B=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(` 
     `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
-    `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`
-    `),a("span",{class:"hljs-attr"},"lazy"),s(`
-    `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(`
+    `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(`  
+    `),a("span",{class:"hljs-attr"},"lazy"),s(` 
+    `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(` 
   />`)]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),E={class:"card"},B={id:"Set Lazy Loading State"},P=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),E={class:"card"},$={id:"设置懒加载状态图片"},H=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(` 
     `),a("span",{class:"hljs-attr"},"lazy"),s(`
     `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"85px"'),s(` 
@@ -82,7 +83,7 @@ import{_ as h,b as c,e as o,l as r,m as a,p as t,w as l,P as s,Z as d}from"./ind
     `),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"https://varlet.gitee.io/varlet-ui/cat.jpg"'),s(`
   />`)]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),F={class:"card"},R={id:"Load Failure Slot"},W=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),M={class:"card"},P={id:"加载失败插槽"},q=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(` 
     `),a("span",{class:"hljs-attr"},"width"),s("="),a("span",{class:"hljs-string"},'"22.666vw"'),s(` 
     `),a("span",{class:"hljs-attr"},"height"),s("="),a("span",{class:"hljs-string"},'"22.666vw"'),s(` 
@@ -99,7 +100,7 @@ import{_ as h,b as c,e as o,l as r,m as a,p as t,w as l,P as s,Z as d}from"./ind
     `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"var-image"),s(">")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),C={class:"card"},M={id:"Use local paths"},N=a("p",null,[s("In the file "),a("code",null,".vue"),s(", the "),a("code",null,"Vue component"),s(" will not be automatically processed by the build tool like the native img module, so you need to import the image resources manually. Here's how the different build tools are used.")],-1),T=a("h4",null,"Vite",-1),D=a("p",null,[s("Automatic preprocessing with "),a("a",{href:"https://github.com/vitejs/vite/tree/main/packages/plugin-vue#asset-url-handling"},"@vitejs/plugin-vue"),s(".")],-1),$=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-comment"},"// vite.config.js"),s(`
+`)])],-1),I={class:"card"},S={id:"使用本地路径"},T=a("p",null,[s("在 "),a("code",null,".vue"),s(" 文件中，"),a("code",null,"Vue组件"),s(" 不会如同原生 img 一样被构建工具自动处理模块请求，所以需要手动导入图片资源。 下面是不同构建工具的使用方式。")],-1),U=a("h4",null,"Vite",-1),W=a("p",null,[s("推荐使用 "),a("a",{href:"https://github.com/vitejs/vite/tree/main/packages/plugin-vue#asset-url-handling"},"@vitejs/plugin-vue"),s(" 进行路径预处理。")],-1),Z=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-comment"},"// vite.config.js"),s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" vue "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'@vitejs/plugin-vue'"),s(`
 
 `),a("span",{class:"hljs-keyword"},"export"),s(),a("span",{class:"hljs-keyword"},"default"),s(` defineConfig({
@@ -113,17 +114,17 @@ import{_ as h,b as c,e as o,l as r,m as a,p as t,w as l,P as s,Z as d}from"./ind
     })
   ],
 })
-`)])],-1),H=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),D=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(),a("span",{class:"hljs-attr"},"src"),s("="),a("span",{class:"hljs-string"},'"../../assets/logo.png"'),s("/>")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),q=a("p",null,"Or import separately",-1),O=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`)])],-1),F=a("p",null,"或者单独导入",-1),G=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
 `),a("span",{class:"hljs-keyword"},"import"),s(" logo "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'../../assets/logo.png'"),s(`
 `)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
 
 `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(),a("span",{class:"hljs-attr"},":src"),s("="),a("span",{class:"hljs-string"},'"logo"'),s("/>")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),Z=a("h4",null,"Webpack",-1),G=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),J=a("h4",null,"Webpack",-1),K=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
   `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-image"),s(),a("span",{class:"hljs-attr"},":src"),s("="),a("span",{class:"hljs-string"},`"require('../../assets/logo.png')"`),s("/>")]),s(`
 `),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
-`)])],-1),J=a("h2",null,"API",-1),K={class:"card"},Q={id:"Props"},X=d("<table><thead><tr><th>Prop</th><th>Description</th><th>Type</th><th>Default</th></tr></thead><tbody><tr><td><code>src</code></td><td>Image src</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>fit</code></td><td>Image fit mode, optional value is <code>fill</code> <code>contain</code> <code>cover</code> <code>none</code> <code>scale-down</code></td><td><em>string</em></td><td><code>fill</code></td></tr><tr><td><code>alt</code></td><td>Image alt text, the same as the native attribute of the <code>img</code> tag</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>width</code></td><td>Image title text, the same as the native attribute of the <code>img</code> tag</td><td><em>string | number</em></td><td><code>-</code></td></tr><tr><td><code>height</code></td><td>Image height</td><td><em>string | number</em></td><td><code>-</code></td></tr><tr><td><code>radius</code></td><td>Image radius</td><td><em>string | number</em></td><td><code>-</code></td></tr><tr><td><code>lazy</code></td><td>Whether to enable lazy loading</td><td><em>boolean</em></td><td><code>false</code></td></tr><tr><td><code>loading</code></td><td>When lazy loading is enabled, the image displayed in loading</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>error</code></td><td>When lazy loading is enabled, the image displayed in error</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>ripple</code></td><td>Whether to enable ripple</td><td><em>boolean</em></td><td><code>false</code></td></tr><tr><td><code>block</code></td><td>Whether it is a block element</td><td><em>boolean</em></td><td><code>true</code></td></tr></tbody></table>",1),Y={class:"card"},ss={id:"Events"},as=d("<table><thead><tr><th>Event</th><th>Description</th><th>Arguments</th></tr></thead><tbody><tr><td><code>click</code></td><td>Triggered when you click on Image</td><td><code>event: Event</code></td></tr><tr><td><code>load</code></td><td>Triggered when the image is successfully loaded (when the image fails in lazy loading mode, it will only be triggered when the image is successfully loaded)</td><td><code>event: Event</code></td></tr><tr><td><code>error</code></td><td>Triggered when an image fails to load (when an image fails in lazy loading mode, it will only be triggered when the number of attempts ends)</td><td><code>event: Event</code></td></tr></tbody></table>",1),ts={class:"card"},ls={id:"Slots"},ns=a("table",null,[a("thead",null,[a("tr",null,[a("th",null,"Name"),a("th",null,"Description"),a("th",null,"SlotProps")])]),a("tbody",null,[a("tr",null,[a("td",null,[a("code",null,"error")]),a("td",null,"Load failure slot"),a("td",null,[a("code",null,"-")])])])],-1);function es(cs,ds,hs,os,rs,ps){const n=c("router-link"),e=c("var-site-code-example");return o(),r("div",i,[g,a("div",j,[a("h3",m,[t(n,{to:"#Intro"},{default:l(()=>[s("#")]),_:1}),s("Intro")]),u]),a("div",_,[a("h3",v,[t(n,{to:"#Basic Use"},{default:l(()=>[s("#")]),_:1}),s("Basic Use")]),t(e,null,{default:l(()=>[f]),_:1})]),a("div",y,[a("h3",x,[t(n,{to:"#Fit Mode"},{default:l(()=>[s("#")]),_:1}),s("Fit Mode")]),t(e,null,{default:l(()=>[w]),_:1})]),a("div",b,[a("h3",L,[t(n,{to:"#Set Radius"},{default:l(()=>[s("#")]),_:1}),s("Set Radius")]),t(e,null,{default:l(()=>[S]),_:1})]),a("div",z,[a("h3",k,[t(n,{to:"#Use Ripple"},{default:l(()=>[s("#")]),_:1}),s("Use Ripple")]),t(e,null,{default:l(()=>[U]),_:1})]),a("div",I,[a("h3",V,[t(n,{to:"#Use LazyLoad"},{default:l(()=>[s("#")]),_:1}),s("Use LazyLoad")]),t(e,null,{default:l(()=>[A]),_:1})]),a("div",E,[a("h3",B,[t(n,{to:"#Set Lazy Loading State"},{default:l(()=>[s("#")]),_:1}),s("Set Lazy Loading State")]),t(e,{"playground-ignore":""},{default:l(()=>[P]),_:1})]),a("div",F,[a("h3",R,[t(n,{to:"#Load Failure Slot"},{default:l(()=>[s("#")]),_:1}),s("Load Failure Slot")]),t(e,null,{default:l(()=>[W]),_:1})]),a("div",C,[a("h3",M,[t(n,{to:"#Use local paths"},{default:l(()=>[s("#")]),_:1}),s("Use local paths")]),N,T,D,t(e,{"playground-ignore":""},{default:l(()=>[$]),_:1}),t(e,{"playground-ignore":""},{default:l(()=>[H]),_:1}),q,t(e,{"playground-ignore":""},{default:l(()=>[O]),_:1}),Z,t(e,{"playground-ignore":""},{default:l(()=>[G]),_:1})]),J,a("div",K,[a("h3",Q,[t(n,{to:"#Props"},{default:l(()=>[s("#")]),_:1}),s("Props")]),X]),a("div",Y,[a("h3",ss,[t(n,{to:"#Events"},{default:l(()=>[s("#")]),_:1}),s("Events")]),as]),a("div",ts,[a("h3",ls,[t(n,{to:"#Slots"},{default:l(()=>[s("#")]),_:1}),s("Slots")]),ns])])}const gs=h(p,[["render",es]]);export{gs as default};
+`)])],-1),O=a("h2",null,"API",-1),Q={class:"card"},R={id:"属性"},X=h("<table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td><code>src</code></td><td>图片地址</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>fit</code></td><td>填充模式, 可选值为 <code>fill contain cover none scale-down</code></td><td><em>string</em></td><td><code>fill</code></td></tr><tr><td><code>alt</code></td><td>替代文本，和 <code>img</code> 标签原生属性一致</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>title</code></td><td>图片描述性文字，和 <code>img</code> 标签原生属性一致</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>width</code></td><td>图片宽度</td><td><em>string | number</em></td><td><code>-</code></td></tr><tr><td><code>height</code></td><td>图片高度</td><td><em>string | number</em></td><td><code>-</code></td></tr><tr><td><code>radius</code></td><td>图片圆角</td><td><em>string | number</em></td><td><code>-</code></td></tr><tr><td><code>lazy</code></td><td>是否开启懒加载</td><td><em>boolean</em></td><td><code>false</code></td></tr><tr><td><code>loading</code></td><td>当开启懒加载时, 加载中显示的图片</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>error</code></td><td>当开启懒加载时, 加载失败显示的图片</td><td><em>string</em></td><td><code>-</code></td></tr><tr><td><code>ripple</code></td><td>是否开启水波</td><td><em>boolean</em></td><td><code>false</code></td></tr><tr><td><code>block</code></td><td>是否是块级元素</td><td><em>boolean</em></td><td><code>true</code></td></tr></tbody></table>",1),Y={class:"card"},ss={id:"事件"},as=h("<table><thead><tr><th>事件名</th><th>说明</th><th>参数</th></tr></thead><tbody><tr><td><code>click</code></td><td>点击图片时触发</td><td><code>event: Event</code></td></tr><tr><td><code>load</code></td><td>图片成功加载时触发(懒加载模式下失败时会多次尝试加载图片，只会在成功加载时触发)</td><td><code>event: Event</code></td></tr><tr><td><code>error</code></td><td>图片失败加载时触发(懒加载模式下失败时会多次尝试加载图片，只会在尝试次数结束时触发)</td><td><code>event: Event</code></td></tr></tbody></table>",1),ts={class:"card"},ls={id:"插槽"},ns=a("table",null,[a("thead",null,[a("tr",null,[a("th",null,"插槽名"),a("th",null,"说明"),a("th",null,"参数")])]),a("tbody",null,[a("tr",null,[a("td",null,[a("code",null,"error")]),a("td",null,"加载失败插槽"),a("td",null,[a("code",null,"-")])])])],-1);function es(cs,hs,ds,ps,rs,os){const n=c("router-link"),e=c("var-site-code-example");return p(),r("div",i,[j,a("div",g,[a("h3",m,[t(n,{to:"#介绍"},{default:l(()=>[s("#")]),_:1}),s("介绍")]),_]),a("div",u,[a("h3",v,[t(n,{to:"#基本使用"},{default:l(()=>[s("#")]),_:1}),s("基本使用")]),t(e,null,{default:l(()=>[f]),_:1})]),a("div",x,[a("h3",w,[t(n,{to:"#填充模式"},{default:l(()=>[s("#")]),_:1}),s("填充模式")]),t(e,null,{default:l(()=>[y]),_:1})]),a("div",b,[a("h3",k,[t(n,{to:"#设置圆角"},{default:l(()=>[s("#")]),_:1}),s("设置圆角")]),t(e,null,{default:l(()=>[L]),_:1})]),a("div",V,[a("h3",z,[t(n,{to:"#开启水波"},{default:l(()=>[s("#")]),_:1}),s("开启水波")]),t(e,null,{default:l(()=>[A]),_:1})]),a("div",C,[a("h3",N,[t(n,{to:"#开启懒加载"},{default:l(()=>[s("#")]),_:1}),s("开启懒加载")]),t(e,null,{default:l(()=>[B]),_:1})]),a("div",E,[a("h3",$,[t(n,{to:"#设置懒加载状态图片"},{default:l(()=>[s("#")]),_:1}),s("设置懒加载状态图片")]),t(e,{"playground-ignore":""},{default:l(()=>[H]),_:1})]),a("div",M,[a("h3",P,[t(n,{to:"#加载失败插槽"},{default:l(()=>[s("#")]),_:1}),s("加载失败插槽")]),t(e,null,{default:l(()=>[q]),_:1})]),a("div",I,[a("h3",S,[t(n,{to:"#使用本地路径"},{default:l(()=>[s("#")]),_:1}),s("使用本地路径")]),T,U,W,t(e,{"playground-ignore":""},{default:l(()=>[Z]),_:1}),t(e,{"playground-ignore":""},{default:l(()=>[D]),_:1}),F,t(e,{"playground-ignore":""},{default:l(()=>[G]),_:1}),J,t(e,{"playground-ignore":""},{default:l(()=>[K]),_:1})]),O,a("div",Q,[a("h3",R,[t(n,{to:"#属性"},{default:l(()=>[s("#")]),_:1}),s("属性")]),X]),a("div",Y,[a("h3",ss,[t(n,{to:"#事件"},{default:l(()=>[s("#")]),_:1}),s("事件")]),as]),a("div",ts,[a("h3",ls,[t(n,{to:"#插槽"},{default:l(()=>[s("#")]),_:1}),s("插槽")]),ns])])}const js=d(o,[["render",es]]);export{js as default};
