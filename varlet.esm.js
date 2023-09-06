@@ -10051,7 +10051,10 @@ function Bb(e, r) {
       /* CLASS, STYLE, HYDRATE_EVENTS */
     ), Y(e.$slots, "indicator", {
       index: e.index,
-      length: e.length
+      length: e.length,
+      prev: e.prev,
+      next: e.next,
+      to: e.to
     }, () => [e.indicator && e.length ? (p(), T(
       "div",
       {
