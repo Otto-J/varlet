@@ -1,0 +1,1 @@
+import{a1 as I}from"./index-176acade.js";const n=Symbol("SWIPE_BIND_SWIPE_ITEM_KEY");function r(){const{childProviders:e,length:s,bindChildren:i}=I(n);return{length:s,swipeItems:e,bindSwipeItems:i}}export{n as S,r as u};
