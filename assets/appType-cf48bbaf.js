@@ -1,1 +1,0 @@
-import{d as e,aa as r}from"./index-176acade.js";const t=e({name:"AppType",setup(n,{slots:a}){return()=>{var p;return r("div",{class:"app-type"},[(p=a.default)===null||p===void 0?void 0:p.call(a)])}}});export{t as A};
