@@ -18863,18 +18863,17 @@ var _v = re({
     function w($) {
       var {
         disabled: E,
-        readonly: q,
-        previewed: j
+        previewed: q
       } = e;
-      if (!(o != null && o.disabled.value || o != null && o.readonly.value || E || q || !j)) {
+      if (!(o != null && o.disabled.value || E || !q)) {
         var {
-          url: F
+          url: j
         } = $;
-        if (Je(F) && Pl(F)) {
-          Rn(F);
+        if (Je(j) && Pl(j)) {
+          Rn(j);
           return;
         }
-        Je(F) && Ol(F) && (a.value = $, r.value = !0);
+        Je(j) && Ol(j) && (a.value = $, r.value = !0);
       }
     }
     function M($) {
