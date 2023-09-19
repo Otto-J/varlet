@@ -265,8 +265,8 @@ function br() {
   };
 }
 function gm() {
-  const e = S(), n = Tt(), t = process.env.NODE_ENV === "test", o = $d(n.type.name);
-  return e.value = t ? o : `${o}-${n.uid}`, e;
+  const e = S(), n = Tt(), t = $d(n.type.name);
+  return e.value = process.env.NODE_ENV === "test" ? t : `${t}-${n.uid}`, e;
 }
 var bm = Object.defineProperty, cl = Object.getOwnPropertySymbols, ym = Object.prototype.hasOwnProperty, $m = Object.prototype.propertyIsEnumerable, fl = (e, n, t) => n in e ? bm(e, n, { enumerable: !0, configurable: !0, writable: !0, value: t }) : e[n] = t, vl = (e, n) => {
   for (var t in n || (n = {}))
