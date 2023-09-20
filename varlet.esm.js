@@ -13422,10 +13422,10 @@ const _f = ne({
       circleProps: o,
       progressColor: r,
       linearGradientProgress: a,
-      isPlainObject: io,
       n: nC,
       classes: tC,
-      toSizeUnit: we
+      toSizeUnit: we,
+      isPlainObject: io
     };
   }
 });
