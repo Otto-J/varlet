@@ -1,0 +1,1 @@
+import{a3 as p,a1 as r}from"./index-95102025.js";const o=Symbol("POPUP_BIND_POPUP_ITEM_KEY");function s(){const{bindParent:n,parentProvider:P,index:e}=p(o);return{index:e,popup:P,bindPopup:n}}function u(){const{bindChildren:n,childProviders:P,length:e}=r(o);return{length:e,popupItems:P,bindPopupItems:n}}export{s as a,u};

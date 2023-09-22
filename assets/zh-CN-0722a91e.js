@@ -1,0 +1,8 @@
+import{_ as c,b as a,e as d,m as _,p as s,q as o,w as l,Q as e}from"./index-95102025.js";const r={components:{}},i={class:"varlet-site-doc"},p=s("h1",null,"国际化",-1),u={class:"card"},h={id:"介绍"},m=s("p",null,[e("组件库使用中文作为默认语言，支持多语言切换，内置支持 "),s("code",null,"中文"),e("，"),s("code",null,"英文"),e("。")],-1),g={class:"card"},f={id:"多语言切换"},j=s("p",null,[e("引入 "),s("code",null,"Locale"),e(" 组件实现多语言切换，使用 "),s("code",null,"Locale.add"),e(" 进行语言扩展。")],-1),L=s("pre",{class:"hljs"},[s("code",null,[s("span",{class:"hljs-keyword"},"import"),e(" { Locale } "),s("span",{class:"hljs-keyword"},"from"),e(),s("span",{class:"hljs-string"},"'@varlet/ui'"),e(`
+
+Locale.add(`),s("span",{class:"hljs-string"},"'en-US'"),e(`, Locale.enUS)
+`)])],-1),v=s("p",null,[e("使用 "),s("code",null,"Locale.use"),e(" 进行切换语言。")],-1),x=s("pre",{class:"hljs"},[s("code",null,[e("Locale.use("),s("span",{class:"hljs-string"},"'en-US'"),e(`)
+`)])],-1),k=s("p",null,[e("使用 "),s("code",null,"Locale.merge"),e(" 进行语言合并。")],-1),y=s("pre",{class:"hljs"},[s("code",null,[e("Locale.merge("),s("span",{class:"hljs-string"},"'en-US'"),e(`, {
+  `),s("span",{class:"hljs-attr"},"dialogTitle"),e(": "),s("span",{class:"hljs-string"},"'Hello'"),e(`
+})
+`)])],-1);function w(N,S,U,$,B,C){const t=a("router-link"),n=a("var-site-code-example");return d(),_("div",i,[p,s("div",u,[s("h3",h,[o(t,{to:"#介绍"},{default:l(()=>[e("#")]),_:1}),e("介绍")]),m]),s("div",g,[s("h3",f,[o(t,{to:"#多语言切换"},{default:l(()=>[e("#")]),_:1}),e("多语言切换")]),j,o(n,{"playground-ignore":""},{default:l(()=>[L]),_:1}),v,o(n,{"playground-ignore":""},{default:l(()=>[x]),_:1}),k,o(n,{"playground-ignore":""},{default:l(()=>[y]),_:1})])])}const T=c(r,[["render",w]]);export{T as default};

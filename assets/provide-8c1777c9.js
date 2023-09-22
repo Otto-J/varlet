@@ -1,0 +1,1 @@
+import{a1 as n}from"./index-95102025.js";const _=Symbol("TABS_ITEMS_BIND_TAB_ITEM_KEY");function r(){const{bindChildren:t,childProviders:e,length:T}=n(_);return{length:T,tabItemList:e,bindTabItem:t}}export{_ as T,r as u};

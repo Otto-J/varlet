@@ -1,0 +1,60 @@
+import{_ as o,b as n,e as r,m as h,p as a,q as t,w as l,Q as s,Z as d}from"./index-95102025.js";const p={components:{}},i={class:"varlet-site-doc"},j=a("h1",null,"开关",-1),m={class:"card"},_={id:"介绍"},u=a("p",null,"开关选择器。",-1),v={class:"card"},g={id:"基本使用"},f=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
+
+`),a("span",{class:"hljs-keyword"},"const"),s(" value = ref("),a("span",{class:"hljs-literal"},"true"),s(`)
+`)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
+
+`),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(" />")]),s(`
+`),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),w={class:"card"},y={id:"不可用"},k=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
+
+`),a("span",{class:"hljs-keyword"},"const"),s(" value = ref("),a("span",{class:"hljs-literal"},"true"),s(`)
+`)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
+
+`),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(),a("span",{class:"hljs-attr"},"disabled"),s(" />")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(),a("span",{class:"hljs-attr"},"readonly"),s(" />")]),s(`
+`),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),b={class:"card"},x={id:"自定义颜色"},z=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
+
+`),a("span",{class:"hljs-keyword"},"const"),s(" value = ref("),a("span",{class:"hljs-literal"},"true"),s(`)
+`)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
+
+`),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(),a("span",{class:"hljs-attr"},":ripple"),s("="),a("span",{class:"hljs-string"},'"false"'),s(" />")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(),a("span",{class:"hljs-attr"},"color"),s("="),a("span",{class:"hljs-string"},'"#ff9f00"'),s(),a("span",{class:"hljs-attr"},"close-color"),s("="),a("span",{class:"hljs-string"},'"#f5cb90"'),s(" />")]),s(`
+`),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),N={class:"card"},C={id:"不同大小"},V=a("p",null,[s("通过 "),a("code",null,"size"),s(" 属性改变 Switch 大小。")],-1),$=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
+
+`),a("span",{class:"hljs-keyword"},"const"),s(" value = ref("),a("span",{class:"hljs-literal"},"true"),s(`)
+`)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
+
+`),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(),a("span",{class:"hljs-attr"},"size"),s("="),a("span",{class:"hljs-string"},'"15"'),s(" />")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(" />")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(),a("span",{class:"hljs-attr"},"size"),s("="),a("span",{class:"hljs-string"},'"25"'),s(" />")]),s(`
+`),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),B={class:"card"},S={id:"加载状态"},E=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
+
+`),a("span",{class:"hljs-keyword"},"const"),s(" value = ref("),a("span",{class:"hljs-literal"},"true"),s(`)
+`)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
+
+`),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},":model-value"),s("="),a("span",{class:"hljs-string"},'"true"'),s(),a("span",{class:"hljs-attr"},"loading"),s(" />")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},":model-value"),s("="),a("span",{class:"hljs-string"},'"true"'),s(),a("span",{class:"hljs-attr"},"size"),s("="),a("span",{class:"hljs-string"},'"25"'),s(),a("span",{class:"hljs-attr"},"loading"),s(),a("span",{class:"hljs-attr"},"loading-color"),s("="),a("span",{class:"hljs-string"},'"#ff9f00"'),s(" />")]),s(`
+`),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),P={class:"card"},q={id:"值的校验"},A=a("p",null,[s("通过传入一个校验器数组可以对值进行校验，校验器返回 "),a("code",null,"true"),s(" 则为校验通过。 以外的值将转换为文本作为用户提示。")],-1),I=a("pre",{class:"hljs"},[a("code",null,[a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"script"),s(),a("span",{class:"hljs-attr"},"setup"),s(">")]),a("span",{class:"javascript"},[s(`
+`),a("span",{class:"hljs-keyword"},"import"),s(" { ref } "),a("span",{class:"hljs-keyword"},"from"),s(),a("span",{class:"hljs-string"},"'vue'"),s(`
+
+`),a("span",{class:"hljs-keyword"},"const"),s(" value = ref("),a("span",{class:"hljs-literal"},"true"),s(`)
+`)]),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"script"),s(">")]),s(`
+
+`),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+  `),a("span",{class:"hljs-tag"},[s("<"),a("span",{class:"hljs-name"},"var-switch"),s(),a("span",{class:"hljs-attr"},"v-model"),s("="),a("span",{class:"hljs-string"},'"value"'),s(),a("span",{class:"hljs-attr"},":rules"),s("="),a("span",{class:"hljs-string"},`"[(v) => v === true || '错误！']"`),s("/>")]),s(`
+`),a("span",{class:"hljs-tag"},[s("</"),a("span",{class:"hljs-name"},"template"),s(">")]),s(`
+`)])],-1),Q=a("h2",null,"API",-1),T={class:"card"},Z={id:"属性"},D=d("<table><thead><tr><th>参数</th><th>说明</th><th>类型</th><th>默认值</th></tr></thead><tbody><tr><td><code>v-model</code></td><td>开关选中状态</td><td><em>any</em></td><td><code>false</code></td></tr><tr><td><code>active-value</code></td><td>开关打开时的值</td><td><em>any</em></td><td><code>true</code></td></tr><tr><td><code>inactive-value</code></td><td>开关关闭时的值</td><td><em>any</em></td><td><code>false</code></td></tr><tr><td><code>disabled</code></td><td>是否禁用</td><td><em>boolean</em></td><td><code>false</code></td></tr><tr><td><code>readonly</code></td><td>是否只读</td><td><em>boolean</em></td><td><code>false</code></td></tr><tr><td><code>loading</code></td><td>是否为加载状态</td><td><em>boolean</em></td><td><code>false</code></td></tr><tr><td><code>ripple</code></td><td>是否启用水波纹</td><td><em>boolean</em></td><td><code>true</code></td></tr><tr><td><code>color</code></td><td>打开状态下的颜色</td><td><em>string</em></td><td><code>#2979ff</code></td></tr><tr><td><code>loading-color</code></td><td>加载图标的颜色</td><td><em>string</em></td><td><code>#fff</code></td></tr><tr><td><code>close-color</code></td><td>关闭状态下的颜色</td><td><em>string</em></td><td><code>#fff</code></td></tr><tr><td><code>size</code></td><td>switch 的大小</td><td><em>string | number</em></td><td>-</td></tr><tr><td><code>rules</code></td><td>校验规则</td><td><em>array</em></td><td>-</td></tr></tbody></table>",1),F={class:"card"},G={id:"事件"},H=d("<table><thead><tr><th>事件名</th><th>说明</th><th>回调参数</th></tr></thead><tbody><tr><td><code>click</code></td><td>点击时触发</td><td><code>event: Event</code></td></tr><tr><td><code>change</code></td><td>开关状态切换时触发</td><td><code>value: any</code></td></tr></tbody></table>",1),J={class:"card"},K={id:"样式变量"},L=d('<p>以下为组件使用的 css 变量，可以使用 <a href="#/zh-CN/style-provider">StyleProvider 组件</a> 进行样式定制。</p><table><thead><tr><th>变量名</th><th>默认值</th></tr></thead><tbody><tr><td><code>--switch-track-background</code></td><td><code>#fff</code></td></tr><tr><td><code>--switch-track-active-background</code></td><td><code>var(--color-primary)</code></td></tr><tr><td><code>--switch-track-error-background</code></td><td><code>var(--color-danger)</code></td></tr><tr><td><code>--switch-ripple-color</code></td><td><code>var(--color-primary)</code></td></tr><tr><td><code>--switch-handle-background</code></td><td><code>#fff</code></td></tr><tr><td><code>--switch-handle-color</code></td><td><code>#fff</code></td></tr><tr><td><code>--switch-handle-active-background</code></td><td><code>var(--color-primary)</code></td></tr><tr><td><code>--switch-handle-error-background</code></td><td><code>var(--color-danger)</code></td></tr><tr><td><code>--switch-disabled-opacity</code></td><td><code>var(--opacity-disabled)</code></td></tr></tbody></table>',2);function M(O,R,U,W,X,Y){const e=n("router-link"),c=n("var-site-code-example");return r(),h("div",i,[j,a("div",m,[a("h3",_,[t(e,{to:"#介绍"},{default:l(()=>[s("#")]),_:1}),s("介绍")]),u]),a("div",v,[a("h3",g,[t(e,{to:"#基本使用"},{default:l(()=>[s("#")]),_:1}),s("基本使用")]),t(c,null,{default:l(()=>[f]),_:1})]),a("div",w,[a("h3",y,[t(e,{to:"#不可用"},{default:l(()=>[s("#")]),_:1}),s("不可用")]),t(c,null,{default:l(()=>[k]),_:1})]),a("div",b,[a("h3",x,[t(e,{to:"#自定义颜色"},{default:l(()=>[s("#")]),_:1}),s("自定义颜色")]),t(c,null,{default:l(()=>[z]),_:1})]),a("div",N,[a("h3",C,[t(e,{to:"#不同大小"},{default:l(()=>[s("#")]),_:1}),s("不同大小")]),V,t(c,null,{default:l(()=>[$]),_:1})]),a("div",B,[a("h3",S,[t(e,{to:"#加载状态"},{default:l(()=>[s("#")]),_:1}),s("加载状态")]),t(c,null,{default:l(()=>[E]),_:1})]),a("div",P,[a("h3",q,[t(e,{to:"#值的校验"},{default:l(()=>[s("#")]),_:1}),s("值的校验")]),A,t(c,null,{default:l(()=>[I]),_:1})]),Q,a("div",T,[a("h3",Z,[t(e,{to:"#属性"},{default:l(()=>[s("#")]),_:1}),s("属性")]),D]),a("div",F,[a("h3",G,[t(e,{to:"#事件"},{default:l(()=>[s("#")]),_:1}),s("事件")]),H]),a("div",J,[a("h3",K,[t(e,{to:"#样式变量"},{default:l(()=>[s("#")]),_:1}),s("样式变量")]),L])])}const as=o(p,[["render",M]]);export{as as default};
