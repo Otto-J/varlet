@@ -17774,7 +17774,9 @@ function gT(e, n) {
             2
             /* CLASS */
           )), [
-            [i, { disabled: e.disabled || e.formDisabled || e.readonly || e.formReadonly || !e.ripple || e.$slots.default }],
+            [i, {
+              disabled: e.disabled || e.formDisabled || e.readonly || e.formReadonly || !e.ripple || !!e.$slots.default
+            }],
             [l, e.handleHovering, "desktop"]
           ]) : Q("v-if", !0)
         ],
