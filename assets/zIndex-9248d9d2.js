@@ -1,1 +1,0 @@
-import{c as e}from"./index-9e8d5e39.js";import{r as a,G as x}from"./index-e0bbb7d4.js";function m(n,r){const t=a(e.zIndex);return x(n,o=>{o&&(e.zIndex+=r,t.value=e.zIndex)},{immediate:!0}),{zIndex:t}}export{m as u};
